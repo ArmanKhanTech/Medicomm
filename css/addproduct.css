@@ -1,0 +1,367 @@
+.add-product-form{
+    border-radius: 20px;
+    background: #dbf3ff;
+    padding: 30px;
+    margin: 30px;
+}
+
+#product-name{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 800px;
+    padding: 10px;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+#short-des{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 800px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+textarea{
+    border-radius: 10px;
+    border: none;
+    height: 300px;
+    width: 800px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.upload-pic{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.img-upload-btn{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: none;
+    height: 35px;
+    width: 100px;
+    margin-left: 20px;
+    outline: none;
+    background-color: #1fa4cc;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.product-images{
+    width: 100%;
+    height: 320px;
+    border: none;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.link-img1{
+    display: inline;
+    border-radius: 10px;
+    border: none;
+    min-height: 40px;
+    min-width: 500px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.link-img2{
+    display: inline;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 500px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.link-img3{
+    display: inline;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 500px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.link-img4{
+    display: inline;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 500px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.product-pic1{
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 320px;
+    height: 320px;
+    background-color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-pic1 img{
+    margin: auto;
+}
+
+.product-pic2{
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 320px;
+    height: 320px;
+    background-color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-pic2 img{
+    margin: auto;
+}
+
+
+.product-pic3{
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 320px;
+    height: 320px;
+    background-color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-pic3 img{
+    margin: auto;
+}
+
+
+.product-pic4{
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 320px;
+    height: 320px;
+    background-color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-pic4 img{
+    margin: auto;
+}
+
+
+.fileupload{
+    border: none;
+    width: 150px;
+    outline: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    color: transparent;
+}
+
+.label{
+    font-size: 18px;
+}
+
+.hide{
+    display: none;
+}
+
+#sell-price{
+    display: inline;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 175px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#discount{
+    display: inline;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 175px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#actual-price{
+    display: inline;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 175px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#stock{
+    display: inline;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 185px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+} 
+
+#use{
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#cate{
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.checkbox{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background: #fff;
+    margin-top: 20px;
+    border: 1px solid #1fa4cc;
+    cursor: pointer;
+}
+
+.checkbox:checked{
+    background: #1fa4cc;
+}
+
+.checkbox::after{
+    content: '';
+    top: 60%;
+    left: 50%;
+    position: relative;;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url(../images/check.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.checkbox:checked::after{
+    display: block;
+}
+
+label{
+    text-transform: capitalize;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #383838;
+}
+
+.loader{
+    position: fixed;
+    display: none;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #1fa4cc;
+}
+
+.confirm-btn{
+    margin-top: 10px;
+    border: none;
+    width: 150px;
+    outline: none;
+    background-color: #1fa4cc;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* alert */
+.alert-box{
+    width: 310px;
+    min-height: 310px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.alert-box.show{
+    opacity: 1;
+    pointer-events: all;
+    top: 50%;
+}
+
+.alert-img{
+    display: block;
+    height: 60px;
+    margin-top: 28%;
+    margin-left: 37%;
+    margin-bottom: 10%;
+}
+
+.alert-msg{
+    color: #e24c4b;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+}

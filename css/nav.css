@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    transition: 0.4s;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    background: #dbf3ff;
+    z-index: 9;
+}
+
+.nav{
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo{
+    height: 100px;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 500px;
+    display: flex;
+}
+
+.search-box{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 0.1px solid #1fa4cc;
+    background: none;
+    color: #000000;
+    outline: none;
+}
+
+.search-btn{
+    width: 20%;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1fa4cc;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-box::placeholder{
+    color: #1fa4cc;
+}
+
+.nav-items a{
+    margin-left: 20px;
+}
+
+.nav-items a img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    border-top: 2px solid #1fa4cc;
+    list-style: none;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.link{
+    text-transform: capitalize;
+    padding: 20px;
+    text-decoration: none;
+    color: #1fa4cc;
+    font-size: large;
+    font-weight: bold;
+    opacity: 0.75;
+    transition: .5s;
+    
+}
+
+.link:hover{
+    opacity: 1;
+    font-size: small;
+}
+
+.login-logout-popup{
+    position: absolute;
+    left: 84%;
+    top : 18%;
+    transform: translate(-50%);
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    width: 200px;
+    transition: .5s;
+    border: 2px solid #1fa4cc;
+}
+
+.login-logout-popup::after{
+    content: '';
+    position: absolute;
+    left: 48%;
+    top : -9.5px;
+    transform: translate(-50%) rotate(45deg);
+    background: #fff;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #1fa4cc;
+    border-left: 2px solid #1fa4cc;
+}
+
+.account-info{
+    font-size: 15px;
+}
+
+.btn{
+    padding: 5px;
+    background-color: #1fa4cc;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+    border: 1px solid #1fa4cc;
+}
+
+.hide{
+    opacity: 0;
+    pointer-events: none;
+}

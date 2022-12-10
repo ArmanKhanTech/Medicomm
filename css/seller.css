@@ -1,0 +1,491 @@
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: roboto, san-serif;
+    margin-bottom: 25px;
+}
+
+/* alert */
+.alert-box{
+    width: 310px;
+    min-height: 310px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.alert-box.show{
+    opacity: 1;
+    pointer-events: all;
+    top: 50%;
+}
+
+.alert-img{
+    display: block;
+    height: 60px;
+    margin-top: 28%;
+    margin-left: 37%;
+    margin-bottom: 10%;
+}
+
+.alert-msg{
+    color: #e24c4b;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.loader{
+    position: fixed;
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #1fa4cc;
+}
+
+.become-seller{
+    border-radius: 20px;
+    background: #dbf3ff;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 30px;
+    padding-bottom: 50px;
+}
+
+.hide{
+    display: none;
+}
+
+.heading{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.des{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: none;
+    line-height: 25px;
+}
+
+.btnseller{
+    border: none;
+    outline: none;
+    background-color: #1fa4cc;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sub-btn{
+    margin: 20px;
+    border: none;
+    width: 100px;
+    outline: none;
+    background-color: #1fa4cc;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.apply-form{
+    background: #dbf3ff;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.heading2{
+    margin: 20px;
+    font-weight: 0;
+}
+
+.business-name{
+    display: block;
+    width: 300px;
+    height: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    color: #383838;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    font-family: 'roboto', sans-serif;
+}
+
+.business-add{
+    display: block;
+    width: 50%;
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    color: #383838;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    font-family: 'roboto', sans-serif;
+}
+
+.about{
+    display: block;
+    width: 50%;
+    height: 130px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    color: #383838;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    font-family: 'roboto', sans-serif;
+}
+
+.number{
+    display: block;
+    width: 300px;
+    height: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    color: #383838;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    font-family: 'roboto', sans-serif;
+}
+
+/* checkbox styles */
+
+.checkbox{
+    -webkit-appearance: none;
+    margin-left: 20px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #1fa4cc;
+    cursor: pointer;
+}
+
+.checkbox:checked{
+    background: #1fa4cc;
+}
+
+.checkbox::after{
+    content: '';
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url(../images/check.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.checkbox:checked::after{
+    display: block;
+}
+
+.product-list{
+    background: #dbf3ff;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.add-product{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.no-product-pic{
+    margin-left: 35%;
+    display: flex;
+}
+
+.add-product-btn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    width: 150px;
+    outline: none;
+    background-color: #1fa4cc;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 54px;
+    grid-row-gap: 50px;
+    height: auto;
+    width: auto;
+    padding-bottom: 40px;
+}
+
+.product-container::-webkit-scrollbar{
+    display: none;
+}
+
+.product-card{
+    flex: 0 0 auto;
+    width: 300px;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 5px 5px #383838;
+    border: 1px solid black;
+    border-radius: 5px;  
+    background: #fff;
+}
+
+.product-image{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img{
+    display: block;
+    margin: auto;
+}
+
+.product-thumb{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card:hover .action-btn{
+    opacity: 5;
+    pointer-events: all;
+}
+
+.product-info{
+    width: 100%;
+    height: 75px;
+    padding-top: 10px;
+    padding: 0px;
+}
+
+.product-brand{
+    text-transform: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+.product-shortdes{
+    text-transform: none;
+    font-size: 15px;
+    padding: 0px;
+    margin-bottom: 2px;
+}
+
+.product-usage{
+    width: auto;
+    height: 27px;
+    padding: 0px;
+    background: #1fa4cc;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    padding-left: 10px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.discount-tag{
+    position: absolute;
+    background: #f73030;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    right: 72%;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.actual-price{
+    margin-left: 10px;
+    opacity: 0.5;
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+.action-btn{
+    opacity: 0;
+    position: absolute;
+    left: 75%;
+    top: 10px;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .5s;
+    background: #1fa4cc;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-btn{
+    top: 20px;
+}
+
+.open-btn{
+    top: 60px;
+}
+
+.delete-btn{
+    top: 100px;
+    background-color: red;
+}
+
+.delete-alert{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-img{
+    height: 20px;
+    width: 20px;
+    border: none;
+
+}
+
+.delete-alert{
+    display: none;
+}
+
+.alert1{
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    background: #fff;
+    position: fixed;
+    padding: 15px;
+}
+
+.close-btn{
+    position: absolute;
+    border: none;
+    top: 15px;
+    right: 15px;
+    background: none;
+    cursor: pointer;
+}
+
+.del-warn-img{
+    height: 200px;
+    width: 200px;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.del-warn-text{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.del1-btn{
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    background: #ff3e3e;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 125px;
+}

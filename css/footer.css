@@ -1,0 +1,41 @@
+footer{
+    position: absolute;
+    width: 100%;
+    margin-top: auto;
+    padding: 30px 10vw;
+    padding-bottom: 80px;
+    background: #dbf3ff;
+}
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-content .logo{
+    height: 160px;
+}
+
+.footer-ul-container{
+    width: 45%;
+    display: grid;
+    grid-row: 1;
+    height: 50px;
+}
+
+.footer-credit{
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #1fa4cc;
+    background: #dbf3ff;
+    border-top: 2px solid #1fa4cc;
+}
+
+.logo{
+    border-radius: 10px;
+}

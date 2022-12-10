@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Medicomm : Sell</title>
+
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/seller.css">
+    </head>
+
+    <body>
+
+        <!-- nav popup not working fix it(onload is getting overridden)-->
+        
+        <nav class="navbar"></nav>
+
+        <img src="images/loader.gif" class="loader" alt="">
+
+        <!-- become a seller -->
+
+        <div class="become-seller hide">
+            <p class="heading">Become a Seller</p>
+            <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam suscipit labore et. Ipsum minima excepturi repellat corporis facilis velit est inventore eaque cum accusamus, cumque doloribus fugiat reprehenderit molestiae quam.</p>
+            <button class="btnseller" id="apply-btn">Apply for Business Account</button>
+        </div>
+
+        <!-- apply form to become one -->
+
+        <div class="apply-form hide">
+            <h1 class="heading2">Application Form : </h1>
+            <input type="text" class="business-name" autocomplete="off" id="business-name" placeholder="Business  / Company / Shop Name"><br>
+            <textarea id="business-add" class="business-add" placeholder="Address"></textarea><br>
+            <textarea id="about" class="about" placeholder="About"></textarea><br>
+            <input type="text" class="number" autocomplete="off" id="number" placeholder="Number"><br>
+            <input type="checkbox" checked class="checkbox" id="terms-and-cond">
+            <label for="terms-and-cond">Agree to Our <a href="">Terms and Conditions</a></label>
+            <br>
+            <button class="sub-btn" id="apply-form-btn">Apply</button>
+        </div>
+
+        <!-- product list of seller -->
+        
+        <div class="product-list hide">
+            <div class="add-product">
+                <button class="add-product-btn">Add Product</button>
+            </div>
+            <div class="product-container">
+                <!-- createProduct.js -->
+            </div>
+        </div>
+
+        <!-- delete alert -->
+        <div class="delete-alert">
+            <div class="alert1">
+                <button class="close-btn">
+                    <img src="images/close.png" class="close-img" alt="">
+                </button>
+                <img src="images/deletewarning.png" class="del-warn-img" alt="">
+                <p class="del-warn-text">Are You Sure You Wanna Delete This Product ?</p>
+                <button class="del1-btn">Delete</button>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <img src="images/error.png" class="alert-img" alt="">
+            <p class="alert-msg">Error message</p>
+        </div>
+
+        <script src="js/nav.js"></script>
+        <script src="js/token.js"></script>
+        <script src="js/seller.js"></script>
+        <script src="js/createProduct.js"></script>
+
+    </body>
+
+</html>

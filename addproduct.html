@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Medicomm : New Product</title>
+
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/addproduct.css">
+    </head>
+
+    <body>
+        <nav class="navbar"></nav>
+
+        <div class="add-product-form">
+            <h1>Add Product :</h1>
+            <input type="text" autocomplete="off" id="product-name" placeholder="Product Name"><br>
+            <input type="text" autocomplete="off" id="short-des" placeholder="Short Description"><br>
+            <textarea id="descirption" placeholder="Description"></textarea><br>
+
+            <p class="upload-pic">Upload Images : </p>
+            <input type="url" class="link-img1" id="link-img-1" placeholder="Link Image 1"><br>
+            <input type="url" class="link-img2" id="link-img-2" placeholder="Link Image 2"><br>
+            <input type="url" class="link-img3" id="link-img-3" placeholder="Link Image 3"><br>
+            <input type="url" class="link-img4" id="link-img-4" placeholder="Link Image 4">
+            <button class="img-upload-btn" id="img-upload-btn">Upload</button>
+            <div class="product-images"> 
+                <div class="product-pic1">
+                    <img src="" class="product-pic1s"/>
+                </div>
+                <div class="product-pic2">
+                    <img src="" class="product-pic2s"/>
+                </div>
+                <div class="product-pic3">
+                    <img src="" class="product-pic3s"/>
+                </div>
+                <div class="product-pic4">
+                    <img src="" class="product-pic4s"/>
+                </div>
+            </div>
+
+
+            <input type="number" id="actual-price" placeholder="Actual Price">
+            <input type="number" id="discount" placeholder="Discount Percentage">
+            <input type="number" id="sell-price" placeholder="Selling Price"> 
+            <input type="number" id="stock" min="20" placeholder="In Stocks (Minimum 20)"><br>
+        
+            <input type="text" id="use" placeholder="Enter Usage , for eg - Fever, Cold, Pain">
+            <input type="text" id="cate" placeholder="Enter Category , for eg - Tablet, Syrup "><br>
+        
+            <input type="checkbox" class="checkbox" id="tac" checked>
+            <label for="tac">Medicomm Takes 30% From Your Total Revenue</label>
+        
+            <div class="buttons">
+                <button class="confirm-btn" id="add-btn">Add Product</button>
+            </div>
+        </div>
+    </div>
+
+
+        <img src="../images/loader.gif" class="loader" alt="">
+
+        <div class="alert-box">
+            <img src="../images/error.png" class="alert-img" alt="">
+            <p class="alert-msg"></p>
+        </div>
+
+        <script src="../js/addproduct.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/token.js"></script>
+
+    </body>
+</html>
