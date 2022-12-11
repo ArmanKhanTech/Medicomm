@@ -309,6 +309,11 @@ app.get('/product/:id', (req, res) => {
     res.sendFile(path.join(staticPath, "product.html"));
 })
 
+// product page
+app.get('cart', (req, res) => {
+    res.sendFile(path.join(staticPath, "cart.html"));
+})
+
 //search route
 app.get('/search', (req, res) => {
     res.sendFile(path.join(staticPath, "search.html"));
