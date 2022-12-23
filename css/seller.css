@@ -255,6 +255,12 @@ body{
     padding-right: 10px;
     border-radius: 10px;
     margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.heading4{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .no-product-pic{
@@ -279,7 +285,7 @@ body{
 .product-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 54px;
+    grid-column-gap: 10px;
     grid-row-gap: 50px;
     height: auto;
     width: auto;

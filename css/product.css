@@ -36,19 +36,16 @@ body{
 .usage{
     font-size: 22px;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #1fa4cc;
     text-transform: capitalize;
 }
 
 .use{
-    background: #1fa4cc;
-    color: white;
-    padding: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
+    color: #1fa4cc;
     border-radius: 5px;
     text-transform: capitalize;
+    font-weight: bold;
 }
 
 
@@ -84,7 +81,7 @@ body{
 }
 
 .div1{
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 
@@ -97,12 +94,8 @@ body{
 
 .sold-by{
     font-weight: 300;
-    font-size: 22px;
-    padding: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid #1fa4cc;
-    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .product-sub-heading{
@@ -148,7 +141,7 @@ body{
 
 .detail-des{
     padding: 0 10vw;
-    padding-left: 125px;
+    padding-left: 90px;
     text-transform: capitalize;
 }
 
@@ -174,7 +167,7 @@ body{
     padding: 10px;
     display: grid;
     margin: 50px;
-    margin-left: 120px;
+    margin-left: 80px;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 50px;
 }
@@ -190,8 +183,8 @@ body{
 }
 
 .pro-imgs img{
-    height: 395px;
-    width: 395px;
+    height: 398px;
+    width: 398px;
     margin: auto;
     padding: auto;
 }
@@ -199,6 +192,6 @@ body{
 .product-category{
     padding: 0px;
     margin: 0px;
-    margin-top: 20px;
-    margin-left: 60px;
+    margin-top: 25px;
+    margin-left: 50px;
 }

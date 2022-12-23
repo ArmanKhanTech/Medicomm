@@ -51,18 +51,17 @@ const setFromsData = (data) => {
     sellingPrice.textContent = data.sellPrice;
     discountPercentage.textContent = data.discount;
 
-    let quanValue = document.querySelector('.quantity');
-    var quantity = quanValue.value;
+    const quanValue = document.querySelector('#quantity');
 
     const addCartBtn = document.querySelector('.cart-btn');
     const addWishlistBtn = document.querySelector('.wish-btn');
 
     addCartBtn.addEventListener('click', () => {
-        addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quantity);
+        addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value);
     })
 
     addWishlistBtn.addEventListener('click', () => {
-        addWishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data, quantity);
+        addWishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data, quanValue.value);
     })
 }
 
