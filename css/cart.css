@@ -108,6 +108,20 @@
     font-weight: bold;
 }
 
+.add-to-cart{
+    text-align: center;
+    font-size: 14px;
+    background: #1fa4cc;
+    width: 125px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-right: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
 .sm-price{
     font-size: 30px;
     font-weight: 500;
@@ -151,7 +165,7 @@
     border: 1px solid #1fa4cc;
     padding: 20px;
     margin: 10px;
-    margin-top: 90px;
+    margin-top: 70px;
 }
 
 .text{

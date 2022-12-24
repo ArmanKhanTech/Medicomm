@@ -8,13 +8,19 @@ const add_product_to_cart_or_wishlist = (type, product, quan) => {
         quan = 1;
     }
 
+    var priceInNum = product.actualPrice;
+    priceInNum = priceInNum.slice(1);
+    priceInNum = parseInt(priceInNum);
+
+    var quanInNum = parseInt(quan);
+    
     product = {
         item: 1,
         name: product.name,
-        actualPrice: product.actualPrice,
+        actualPrice: priceInNum,
         shortDes: product.shortDes,
         image: product.image1,
-        quantity: quan
+        quantity: quanInNum
     }
 
     data.push(product);

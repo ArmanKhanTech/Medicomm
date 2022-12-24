@@ -42,8 +42,7 @@ const setFromsData = (data) => {
     link4s = data.image4;
 
     showImg();
-
-    //fix if(get-seller(server.js))
+    
     fetchSellerName(data);
 
     use.textContent = data.use;
