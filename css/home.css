@@ -32,8 +32,8 @@
     padding-bottom: 0px;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 10px;
-    margin-top: 20px;
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
 .product-category2{
@@ -42,7 +42,7 @@
     padding-bottom: 0px;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 40px;
 }
 
@@ -52,16 +52,17 @@
     padding-bottom: 0px;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 20px;
 }
 
 .product-container{
-    padding-left: 3.5vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    grid-row-gap: 10px;
+    padding-left: 3.7vw;
+    height: auto;
+    width: auto;
 }
 
 .product-container::-webkit-scrollbar{
@@ -232,18 +233,21 @@
 }
 
 .product-container1{
-    padding-left: 3.5vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    grid-row-gap: 10px;
+    padding-left: 3.7vw;
+    height: auto;
+    width: auto;
 }
 
 .product-container2{
-    padding-left: 3.5vw;
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 10px;
+    padding-left: 3.7vw;
+    height: auto;
+    width: auto;
 }
 
 .product-container1::-webkit-scrollbar{
@@ -364,36 +368,6 @@
     opacity: 0.5;
     font-size: 20px;
     text-decoration: line-through;
-}
-
-.pre-btn1, .nxt-btn1{
-    border: none;
-    width: 10vw;
-    height: 35%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    cursor: pointer;
-    z-index: 8;
-}
-
-.pre-btn1{
-    left: 0;
-    transform: rotate(180deg);
-}
-
-.nxt-btn1{
-    right: 0;
-}
-
-.pre-btn1 img, .nxt-btn1 img{
-    opacity: 0.2;
-}
-
-.pre-btn1:hover img, .nxt-btn1:hover img{
-    opacity: 1;
 }
 
 .collection-container{
@@ -565,36 +539,6 @@
     margin-left: 40px;
     margin-right: 10px;
     margin-top: 5px;
-}
-
-.pre-btn2, .nxt-btn2{
-    border: none;
-    width: 10vw;
-    height: 70%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    cursor: pointer;
-    z-index: 8;
-}
-
-.pre-btn2{
-    left: 0;
-    transform: rotate(180deg);
-}
-
-.nxt-btn2{
-    right: 0;
-}
-
-.pre-btn2 img, .nxt-btn2 img{
-    opacity: 0.2;
-}
-
-.pre-btn2:hover img, .nxt-btn2:hover img{
-    opacity: 1;
 }
 
 .collection-container1{

@@ -1,3 +1,4 @@
+//popup name not working
 let loader = document.querySelector('.loader');
 let user = JSON.parse(sessionStorage.user || null);
 let emptySvg = document.querySelector('no-product-pic');
@@ -33,19 +34,15 @@ const productList= document.querySelector('.product-list');
 const applyForm = document.querySelector('.apply-form');
 const showApplyFormBtn = document.querySelector('#apply-btn');
 
-// product list div not showing(becuase of compareToken(fix it later))
 window.onload = () => {
     if(user){
-       // if(compareToken(user.authToken, user.email)){
-            if(!user.seller){
-                loader.style.display = 'none';
-                becomeSeller.classList.remove('hide');
-            } else {
-              //productList.classList.remove('hide');
-              loader.style.display = 'block';
-              setupProducts();
-            }
-       // }
+        if(!user.seller){
+            loader.style.display = 'none';
+            becomeSeller.classList.remove('hide');
+        } else {
+            loader.style.display = 'block';
+            setupProducts();
+        }
     } else{
         location.replace('/login')
     }
@@ -101,7 +98,7 @@ const setupProducts = () => {
         loader.style.display = 'none';
         productList.classList.remove('hide');
         if(data == 'no-products'){
-            // show something
+            // show no product img or text
         } else { 
             data.forEach(product => createProduct(product));
         }

@@ -34,12 +34,14 @@ const createWishlist = (data) => {
 
 let totalBill = parseInt(0);
 let billPrice = document.querySelector('.bill');
+const checkoutSection = document.querySelector('.checkout-section');
 
 const setProducts = (name) => {
     const element = document.querySelector(`.${name}`);
     let data = JSON.parse(localStorage.getItem(name));
-    if(data == null){
+    if(data.length == 0){
         element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
+        checkoutSection.style.display = 'none';
     } else {
         let temp = '';
         for(let i = 0; i < data.length; i++){
@@ -65,7 +67,7 @@ const updateBill = (value, operation) => {
     } else if(operation == 'new'){
         billPrice.innerHTML = `₹${parseInt(totalBill)}`;
     }
-    billPrice.innerHTML = `₹${parseInt(totalBill)}`;
+    billPrice.textContent= `₹${parseInt(totalBill)}`;
 }
 
 const setupEvents = (name) => {
@@ -78,6 +80,7 @@ const setupEvents = (name) => {
 
     let product = JSON.parse(localStorage.getItem(name));
 
+    // loop executing twice fix it
     if(name == 'cart'){
         counts.forEach((item, i) => {
             let cost = price[i].getAttribute('data-price');
@@ -85,7 +88,7 @@ const setupEvents = (name) => {
             counterMinus[i].addEventListener('click', () => {
                 if(item.innerHTML > 1){
                     item.innerHTML--;
-                    totalBill -= cost;
+                    totalBill -= parseInt(cost);
                     price[i].innerHTML = `₹${cost * item.innerHTML}`;
                     cost = parseInt(cost);
                     updateBill(cost, 'remove');
@@ -95,7 +98,7 @@ const setupEvents = (name) => {
             counterPlus[i].addEventListener('click', () => {
                 if(item.innerHTML < 100){
                     item.innerHTML++;
-                    totalBill += cost;
+                    totalBill += parseInt(cost);
                     price[i].innerHTML = `₹${cost * item.innerHTML}`;
                     cost = parseInt(cost);
                     updateBill(cost, 'add');
@@ -103,6 +106,14 @@ const setupEvents = (name) => {
             });
         });
     } 
+
+    deleteBtn.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            product = product.filter((data, index) => index != i);
+            localStorage.setItem(name, JSON.stringify(product));
+            location.reload();
+        });
+    });
 }
 
 if(sessionStorage.getItem('user') != null){

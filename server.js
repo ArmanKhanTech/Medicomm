@@ -268,27 +268,40 @@ app.post('/get-search-result', (req, res) => {
         products.forEach(items => {
             let data = items.data();
             data.id = items.id;
-            prArr.push(data);
-        })
-    })
-
-    docref2.get().then(products => {
+            if(data.length != 0){
+                prArr.push(data);
+            }
+        });
+    }).then(() => {
+        docref2.get().then(products => {
         
-        products.forEach(items => {
-            let data = items.data();
-            data.id = items.id;
-            prArr.push(data);
+            products.forEach(items => {
+                let data = items.data();
+                data.id = items.id;
+                console.log(data);
+                if(data.length != 0){
+                    prArr.push(data);
+                    console.log(data);
+                }
+            });
         })
-    })
-
-    docref3.get().then(products => {
+    }).then(() => {
+        docref3.get().then(products => {
         
-        products.forEach(items => {
-            let data = items.data();
-            data.id = items.id;
-            prArr.push(data);
+            products.forEach(items => {
+                let data = items.data();
+                data.id = items.id;
+                if(data.length != 0){
+                    prArr.push(data);
+                }
+            });
+        }).then(() => {
+            if(prArr.length != 0){
+                res.json(prArr);
+            } else{
+                res.json('no-products');
+            }
         })
-        return res.json(prArr);
     })
 })
 

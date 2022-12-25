@@ -199,7 +199,7 @@ body{
 /* checkbox styles */
 
 .checkbox{
-    -webkit-appearance: none;
+    appearance: none;
     margin-left: 20px;
     position: relative;
     width: 15px;
@@ -285,8 +285,7 @@ body{
 .product-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 50px;
+    grid-row-gap: 60px;
     height: auto;
     width: auto;
     padding-bottom: 40px;

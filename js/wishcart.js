@@ -8,7 +8,7 @@ const add_product_to_cart_or_wishlist = (type, product, quan) => {
         quan = 1;
     }
 
-    var priceInNum = product.actualPrice;
+    var priceInNum = product.sellPrice;
     priceInNum = priceInNum.slice(1);
     priceInNum = parseInt(priceInNum);
 

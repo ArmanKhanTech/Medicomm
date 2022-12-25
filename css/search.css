@@ -9,6 +9,7 @@
     font-weight: 400;
     margin-top: 60px;
     padding: 0 4vw;
+    margin-left: 10px;
 }
 
 .heading span{
@@ -27,8 +28,8 @@
 .product-container1{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 54px;
-    grid-row-gap: 50px;
+    grid-column-gap: 2px;
+    grid-row-gap: 10px;
     padding-left: 20px;
     height: auto;
     width: auto;
@@ -184,4 +185,31 @@
 
 .prev-btn img, .next-btn img{
     opacity: 1;
+}
+
+.loader{
+    position: fixed;
+    display: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #1fa4cc;
+}
+
+.hide{
+    display: none;
+}
+
+.no-result{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 700;
+    color: #1fa4cc;
 }

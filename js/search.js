@@ -2,6 +2,8 @@ let tac = true;
 
 const btnContainer = document.querySelector('.collection-container');
 const bottomPadding = document.querySelector('.product-container1');
+const searchcontainer = document.querySelector('.search-results');
+let loader = document.querySelector('.loader');
 
 const getAllProducts = (tac) => {
     fetch('/get-all-products', {
@@ -25,9 +27,7 @@ const createProductCards = (data, parent) => {
     let end = '</div>';
 
     const ids = data.map(o => o.id)
-    data = data.filter(({id}, index) => !ids.includes(id, index + 1))
-
-    console.log(data);
+    data = data.filter(({id}, index) => !ids.includes(id, index + 1));
 
     for(let i = 0; i < data.length; i++)
     {
@@ -48,13 +48,22 @@ const createProductCards = (data, parent) => {
         </div>`;
     }
 
-    if(data.length < 16){
-        btnContainer.style.display = 'none';
+    if(data.length > 16){
+        btnContainer.classList.remove('hide');
         bottomPadding.style.paddingBottom = '100px';
+    } else{
+        bottomPadding.style.paddingBottom = '60px';
     }
 
     p.innerHTML = start + middle + end;
+    loader.style.display = 'none';
+    searchcontainer.classList.remove('hide');
 }
+
+const searchKey = decodeURI(location.pathname.split('/').pop());
+const searchSpanElement = document.querySelector('#result-key');
+const noSearchResultImg = document.querySelector('.no-result');
+const heading = document.querySelector('.heading');
 
 const getProducts = (searchKey) => {
     fetch('/get-search-result', {
@@ -63,13 +72,14 @@ const getProducts = (searchKey) => {
         body: JSON.stringify({key: searchKey})
     }).then(res => res.json())
     .then(data => {
-        createProductCards(data, '.results');
+        if(data == 'no-products'){
+            noSearchResultImg.classList.remove('hide');
+            loader.style.display = 'none';
+        } else{
+            createProductCards(data, '.results');
+        }
     })
 }
-
-const searchKey = decodeURI(location.pathname.split('/').pop());
-const searchSpanElement = document.querySelector('#result-key');
-const heading = document.querySelector('.heading');
 
 if(searchKey == null || searchKey == "search.html"){
     heading.style.display = 'none';

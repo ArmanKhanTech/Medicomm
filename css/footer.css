@@ -39,3 +39,23 @@ footer{
 .logo{
     border-radius: 10px;
 }
+
+.four-0-four-image{
+    width: 600px;
+    height: 300px;
+    justify-content: center;
+    display: absolute;
+    position: absolute;
+    left: 30%;
+    top: 35%;
+}
+
+.four-0-four-msg{
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    display: absolute;
+    position: absolute;
+    left: 38%;
+    top: 80%;
+}
