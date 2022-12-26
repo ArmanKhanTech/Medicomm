@@ -141,7 +141,7 @@ body{
 
 .detail-des{
     padding: 0 10vw;
-    padding-left: 90px;
+    padding-left: 88px;
     text-transform: capitalize;
 }
 
@@ -160,7 +160,10 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow-x: auto;
-    scroll-behavior: smooth;
+}
+
+.product-container3::-webkit-scrollbar{
+    display: none;
 }
 
 .pro-imgs{

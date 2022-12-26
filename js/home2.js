@@ -28,7 +28,7 @@ const createProductCards2 = (data, parent) => {
             <div class="product-image1">
                 <span class="discount-tag2">${data[i].discount}</span>
                 <img src="${data[i].image1}" class="product-thumb1" alt="">
-                <button class="card-btn1">add to wishlist</button>
+                <button class="card-btn2" id="card-btn2">add to wishlist</button>
             </div>
             <div class="product-info1">
                 <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
@@ -41,6 +41,17 @@ const createProductCards2 = (data, parent) => {
     }
 
     p.innerHTML = start + middle + end;
+    setupEvents2(data);
+}
+
+const setupEvents2 = (data) => {
+    const wishlistBtn = document.querySelectorAll('#card-btn2');
+
+    for(let i = 0; i < data.length; i++){
+        wishlistBtn[i].addEventListener('click', () => {
+            add_to_wishlist(data[i]);
+        });
+    }
 }
 
 getProducts2(cate2);

@@ -34,14 +34,14 @@ const createProductCards = (data, parent) => {
         middle += `
         <div class="product-card1">
             <div class="product-image1">
-                <span class="discount-tag1">${data[i].discount}</span>
+                <span class="discount-tag1" id="discount-tag1">${data[i].discount}</span>
                 <img src="${data[i].image1}" class="product-thumb1" alt="">
-                <button class="card-btn1">add to wishlist</button>
+                <button class="card-btn1" id="card-btn1">add to wishlist</button>
             </div>
             <div class="product-info1">
                 <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
                 <p class="product-short-des1">${data[i].shortDes}</p>
-                <p class="product-usage1">${data[i].use}</p>
+                <p class="product-usage1" id="product-usage1">${data[i].use}</p>
                 <span class="price1">${data[i].sellPrice}</span>
                 <span class="actual-price1">${data[i].actualPrice}</span>
             </div>
@@ -58,6 +58,31 @@ const createProductCards = (data, parent) => {
     p.innerHTML = start + middle + end;
     loader.style.display = 'none';
     searchcontainer.classList.remove('hide');
+    setupEvents(data);
+    setbgcolor(data);
+}
+
+const setupEvents = (data) => {
+    const wishlistBtn = document.querySelectorAll('#card-btn1');
+
+    for(let i = 0; i < data.length; i++){
+        wishlistBtn[i].addEventListener('click', () => {
+            add_to_wishlist(data[i]);
+        });
+    }
+}
+
+const setbgcolor = (data) => {
+    const wishlistBtnBg = document.querySelectorAll('.card-btn1');
+    const discountTagBg = document.querySelectorAll('.discount-tag1');
+    const usageBg = document.querySelectorAll('.product-usage1');
+
+    for(let i = 0; i < data.length; i++){
+        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        wishlistBtnBg[i].style.background = randomColor;
+        discountTagBg[i].style.background = randomColor;
+        usageBg[i].style.background = randomColor;
+    }
 }
 
 const searchKey = decodeURI(location.pathname.split('/').pop());

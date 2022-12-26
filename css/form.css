@@ -19,11 +19,11 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 650px;
-    height: 500px;
-    display: none;
+    width: 350px;
+    height: 300px;
     border-radius: 10px;
-    border: 2px solid #1fa4cc;
+    border: 1px solid #1fa4cc;
+    display: none;
     background: #fff;
 }
 
@@ -83,7 +83,6 @@ textarea{
 /* checkbox styles */
 
 .checkbox{
-    -webkit-appearance: none;
     width: 15px;
     height: 15px;
     border-radius: 2px;

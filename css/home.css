@@ -32,7 +32,7 @@
     padding-bottom: 0px;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 15px;
+    margin-left: 12px;
     margin-top: 10px;
 }
 
@@ -131,6 +131,29 @@
     top: 10px;
     text-transform: capitalize;
     opacity: 1;
+}
+
+.card-btn2{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-weight: bold;
+    background: #fc92c4;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn2{
+    opacity: 5;
 }
 
 .Usage{
@@ -604,26 +627,26 @@
 
 .feature-2s-sub{
     padding: 50px;
-    background: #ff7828;
+    background: yellow;
     border-radius: 0px 10px 10px 0px;
     width: 430px;
 }
 
 .feature-2s-text{
     font-size: 45px;
-    color: #fff;
+    color: #ff7828;
     font-family: monospace;
     text-align: left;
 }
 
 .know-more{
     font-size: 30px;
-    color: #ff7828;
+    color: white;
     font-family: monospace;
     text-decoration: none;
     text-align: center;
     margin-top: 20px;
-    background: yellow;
+    background: #ff7828;
     border-radius: 5px;
     font-weight: bold;
     border: none;

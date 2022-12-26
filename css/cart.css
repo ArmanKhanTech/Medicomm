@@ -112,7 +112,7 @@
     text-align: center;
     font-size: 14px;
     background: #1fa4cc;
-    width: 125px;
+    width: 115px;
     color: white;
     font-weight: bold;
     border: none;
@@ -145,7 +145,29 @@
     cursor: pointer;
 }
 
+.sm-delete-btn2{
+    position: absolute;
+    top: 5%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
 .sm-delete-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+.sm-delete-btn2 img{
     width: 20px;
     height: 20px;
 }

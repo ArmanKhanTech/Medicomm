@@ -336,6 +336,11 @@ app.get('/search/:key', (req, res) => {
     res.sendFile(path.join(staticPath, "search.html"));
 })
 
+// checkout route
+app.get('/checkout', (req, res) => {
+    res.sendFile(path.join(staticPath, "checkout.html"));
+})
+
 // 404 route
 app.get('/404', (req, res) => {
     res.sendFile(path.join(staticPath, "404.html"));
