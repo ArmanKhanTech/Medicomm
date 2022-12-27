@@ -1,4 +1,4 @@
-const add_product_to_cart_or_wishlist = (type, product, quan) => {
+const add_product_to_cart_or_wishlist = (type, product, quan, seller) => {
     let data = JSON.parse(localStorage.getItem(type));
     if(data == null){
         data = [];
@@ -20,10 +20,12 @@ const add_product_to_cart_or_wishlist = (type, product, quan) => {
         actualPrice: priceInNum,
         shortDes: product.shortDes,
         image: product.image1,
-        quantity: quanInNum
+        quantity: quanInNum,
+        soldby: seller
     }
 
     data.push(product);
+    console.log(data);
     localStorage.setItem(type, JSON.stringify(data));
     return 'added';
 }

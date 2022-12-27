@@ -630,6 +630,7 @@
     background: yellow;
     border-radius: 0px 10px 10px 0px;
     width: 430px;
+    border: 2px solid #ff7828;
 }
 
 .feature-2s-text{

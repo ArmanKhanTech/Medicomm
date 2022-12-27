@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Medicomm : Checkout</title>
+
+        <link rel="stylesheet" href="../css/checkout.css">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/footer.css">
+
+    </head>
+
+    <body>
+        <nav class="navbar"></nav>
+
+        <div class="alert-box">
+            <img src="../images/error.png" class="alert-img" alt="alert">
+            <p class="alert-msg"></p>
+        </div>
+
+        <div class="form-checkout">
+            <h1 class="form-heading">Checkout</h1>
+            <p class="text1">Delivery Address : </p>
+            <input type="text" id="address" placeholder="Address"><br>
+            <input type="text" id="street" placeholder="Street">
+            <div class="three-input-container">
+                <input type="text" id="city" placeholder="City">
+                <input type="text" id="state" placeholder="State">
+                <input type="text" id="pincode" placeholder="Pincode">
+                <input type="text" id="landmark" placeholder="Landmark">
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <div class="product-list">
+                <p class="section-heading">Your Cart : </p>
+                <div class="cart">
+                    
+                </div>
+            </div>
+            <div class="checkout-section">
+                <div class="checkout-box">
+                    <p class="text">Your Total Bill : </p>
+                    <h1 class="bill">₹</h1>
+                    <radio class="radio-btn">
+                        <input type="radio" name="payment" value="cash" checked>
+                        <label for="cash">Cash on Delivery</label><br>
+                        <input type="radio" name="payment" value="card">
+                        <label for="card">Online Payment</label>
+                    </radio>
+                    <button class="place-order" id="place-order">Place Order</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/checkout.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/token.js"></script>
+
+    </body>
+
+</html>

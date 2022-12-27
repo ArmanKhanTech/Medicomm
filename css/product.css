@@ -39,6 +39,10 @@ body{
     margin-bottom: 10px;
     color: #1fa4cc;
     text-transform: capitalize;
+    border-radius: 5px;
+    border: 1px solid #1fa4cc;
+    padding: 5px;
+    width: fit-content;
 }
 
 .use{
@@ -90,6 +94,10 @@ body{
     margin-top: 15px;
     font-weight: 300;
     text-transform: capitalize;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    width: fit-content;
 }
 
 .sold-by{

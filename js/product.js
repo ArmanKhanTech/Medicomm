@@ -20,6 +20,7 @@ var link1s = "";
 var link2s = "";
 var link3s = "";
 var link4s = "";
+var sell = '';
 
 const fetchSellerName = (data) => {
     fetch('/get-seller', {
@@ -27,7 +28,7 @@ const fetchSellerName = (data) => {
         headers: new Headers ({'Content-Type': 'application/json'}),
         body: JSON.stringify({email: data.email})
     }).then((res) => res.json()).then(data => {
-        var sell = data.name;
+        sell = data.name;
         seller.textContent = sell;
     })
 }
@@ -56,11 +57,11 @@ const setFromsData = (data) => {
     const addWishlistBtn = document.querySelector('.wish-btn');
 
     addCartBtn.addEventListener('click', () => {
-        addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value);
+        addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value, sell);
     })
 
     addWishlistBtn.addEventListener('click', () => {
-        addWishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data, quanValue.value);
+        addWishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data, quanValue.value, sell);
     })
 }
 

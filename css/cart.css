@@ -204,26 +204,19 @@
     color: white;
     font-size: 20px;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
     cursor: pointer;
-    margin-top: 20px;
     margin-bottom: 10px;
 }
 
 .bill{
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
-input[type="radio"] {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5); 
-    transform: scale(1.5);
-    margin-top: 15px;
-    margin-left: 5px;
-}  
-
-.radio-btn label{
-    font-size: 20px;
-    font-weight: 500;
+.checkoutgif{
+    width: 312.5px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
 }

@@ -2,6 +2,7 @@ const express = require('express');
 const admin = require('firebase-admin');
 const bcrypt = require('bcrypt');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 //firebase admin setup
 let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json");
@@ -322,7 +323,7 @@ app.get('/product/:id', (req, res) => {
     res.sendFile(path.join(staticPath, "product.html"));
 })
 
-// product page
+// cart page
 app.get('cart', (req, res) => {
     res.sendFile(path.join(staticPath, "cart.html"));
 })
@@ -339,6 +340,28 @@ app.get('/search/:key', (req, res) => {
 // checkout route
 app.get('/checkout', (req, res) => {
     res.sendFile(path.join(staticPath, "checkout.html"));
+})
+
+// continue tommorow
+app.post('/order', (req, res) => {
+    const { email, order, address} = req.body;
+    let docName = email + parseInt(100000000);
+    
+    let temp = '';
+        for(let i = 0; i < order.length; i++){
+            if(temp != order[i].name){
+                order.pop(order[i]);
+                temp = order[i].name;
+            } 
+        }
+
+    db.collection('orders').doc(docName).set(req.body)
+    .then(data => {
+        //const transporter = nodemailer.createTransport({
+        res.json('success');
+    }).catch(err => {
+        res.json('err');
+    })
 })
 
 // 404 route
