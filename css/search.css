@@ -28,7 +28,7 @@
 .product-container1{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 2px;
+    grid-column-gap: 6px;
     grid-row-gap: 10px;
     padding-left: 20px;
     height: auto;

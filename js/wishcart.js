@@ -14,6 +14,12 @@ const add_product_to_cart_or_wishlist = (type, product, quan, seller) => {
 
     var quanInNum = parseInt(quan);
     
+    for(let i = 0; i < data.length; i++){
+        if(data[i].id == product.id){
+            return 'already added';
+        }
+    }
+
     product = {
         item: 1,
         name: product.name,
@@ -21,11 +27,11 @@ const add_product_to_cart_or_wishlist = (type, product, quan, seller) => {
         shortDes: product.shortDes,
         image: product.image1,
         quantity: quanInNum,
-        soldby: seller
+        soldby: seller,
+        id: product.id
     }
 
     data.push(product);
-    console.log(data);
     localStorage.setItem(type, JSON.stringify(data));
     return 'added';
 }

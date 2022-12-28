@@ -34,20 +34,6 @@ const productList= document.querySelector('.product-list');
 const applyForm = document.querySelector('.apply-form');
 const showApplyFormBtn = document.querySelector('#apply-btn');
 
-window.onload = () => {
-    if(user){
-        if(!user.seller){
-            loader.style.display = 'none';
-            becomeSeller.classList.remove('hide');
-        } else {
-            loader.style.display = 'block';
-            setupProducts();
-        }
-    } else{
-        location.replace('/login')
-    }
-}
-
 showApplyFormBtn.addEventListener('click', () =>{
     becomeSeller.classList.add('hide');
     applyForm.classList.remove('hide');
@@ -103,5 +89,17 @@ const setupProducts = () => {
             data.forEach(product => createProduct(product));
         }
     });
+}
+
+if(user){
+    if(!user.seller){
+        loader.style.display = 'none';
+        becomeSeller.classList.remove('hide');
+    } else {
+        loader.style.display = 'block';
+        setupProducts();
+    }
+} else{
+    location.replace('/login')
 }
 

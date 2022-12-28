@@ -1,13 +1,10 @@
 let user = JSON.parse(sessionStorage.user || null);
 let loader = document.querySelector('.loader');
 
-// checknig user is logged in or not
-window.onload = () => {
-    if(!user){
-        //if(!compareToken(user.authToken, user.email)){
-            location.replace('/login.html');
-        //}
-    }
+if(!user){
+    //if(!compareToken(user.authToken, user.email)){
+        location.replace('/login.html');
+    //}
 }
 
 // price calc
@@ -135,6 +132,9 @@ const validateForm = () => {
 }
 
 const productData = () => {
+    if(proId == null){
+        proId = `${productName.value.toLowerCase()}-${Math.floor(Math.random() * 5000)}`;
+    }
     return data = {
         name: productName.value,
         shortDes: shortLine.value,
@@ -157,6 +157,12 @@ const productData = () => {
 
 let proId = null;
 proId = decodeURI(location.pathname.split('/').pop());
+
+if(proId == decodeURI("addproduct.html")){
+    proId = null;
+}
+
+console.log(proId);
 
 addProductBtn.addEventListener('click', () => {
     if(validateForm()){ // validateForm return true or false while doing validation

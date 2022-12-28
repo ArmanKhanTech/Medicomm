@@ -14,7 +14,8 @@ const add_to_wishlist = (product) => {
         actualPrice: priceInNum,
         shortDes: product.shortDes,
         image: product.image1,
-        quantity: 0
+        quantity: 0,
+        id: product.id
     }
 
     data.push(product);

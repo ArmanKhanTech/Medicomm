@@ -154,16 +154,7 @@ app.post('/add-product', (req, res) => {
         return res.json({'alert': 'You Must Agree Our Terms and Conditions'});
     }
 
-    let docName = '';
-    var tmp = "addproduct.html";
-
-    if(id == null || id == tmp || id == undefined){
-        docName = `${name.toLowerCase()}-${Math.floor(Math.random() * 5000)}`;
-    } else{
-        docName = id;
-    }
-    
-    db.collection('products').doc(docName).set(req.body)
+    db.collection('products').doc(id).set(req.body)
     .then(data => {
         res.json({'product': name});
     })

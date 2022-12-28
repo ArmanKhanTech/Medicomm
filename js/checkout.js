@@ -43,9 +43,8 @@ const createSmallCart = (data) => {
             <p class="sm-des">${data.shortDes}</p>
         </div>
         <div class="item-counter">
-            <button class="counter-btn decrement" id="decrement">-</button>
+            <p class="quantity" id="quantity">Quantity:</p>
             <p class="item-count" id="item-count">${data.quantity}</p>
-            <button class="counter-btn increment" id="increment">+</button>
         </div>
         <p class="sm-price" data-price="${data.actualPrice}" id="sm-price">₹${data.actualPrice * data.quantity}</p>
         <button class="sm-delete-btn" id="sm-delete-btn"><img src="images/close.png"></button>
@@ -93,10 +92,7 @@ const updateBill = (value, operation) => {
 
 // fix it
 const setupEvents3 = (name) => {
-    const counterMinus = document.querySelectorAll('#decrement');
-    const counterPlus = document.querySelectorAll('#increment');
     const counts = document.querySelectorAll('#item-count');
-    const price = document.querySelectorAll('#sm-price');
     const deleteBtn = document.querySelectorAll('#sm-delete-btn');
 
     let product = JSON.parse(localStorage.getItem(name));
@@ -104,28 +100,6 @@ const setupEvents3 = (name) => {
     // loop executing twice fix it
     if(name == 'cart'){
         counts.forEach((item, i) => {
-            let cost = price[i].getAttribute('data-price');
-
-            counterMinus[i].addEventListener('click', () => {
-                if(item.innerHTML > 1){
-                    item.innerHTML--;
-                    totalBill -= parseInt(cost);
-                    price[i].innerHTML = `₹${cost * item.innerHTML}`;
-                    cost = parseInt(cost);
-                    updateBill(cost, 'remove');
-                }
-            });
-
-            counterPlus[i].addEventListener('click', () => {
-                if(item.innerHTML < 100){
-                    item.innerHTML++;
-                    totalBill += parseInt(cost);
-                    price[i].innerHTML = `₹${cost * item.innerHTML}`;
-                    cost = parseInt(cost);
-                    updateBill(cost, 'add');
-                }
-            });
-
             deleteBtn.forEach((item, i) => {
                 item.addEventListener('click', () => {
                     product = product.filter((data, index) => index != i);

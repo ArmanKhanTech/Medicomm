@@ -11,14 +11,16 @@
     align-items: center;
 }
 
-
 .hero-section .sub-heading{
-    margin-left: 50px;
     text-align: left;
     color: #fff;
+    width: 100%;
+    height: calc(100vh - 0px);
     text-transform: capitalize;
     font-size: 90px;
     font-weight: 300;
+    padding-left: 50px;
+    padding-top: 250px;
 }
 
 .product{
@@ -84,7 +86,7 @@
     padding-top: 10px;
     margin-top: 60px;
     padding-bottom: 5px;
-    margin-right: 70px;
+    margin-right: 76px;
     margin-bottom: 5px;
     border: 1px solid black;
     border-radius: 5px;   
@@ -286,7 +288,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 60px;
-    margin-right: 70px;
+    margin-right: 76px;
     margin-bottom: 5px;
     box-shadow: 5px 5px #383838;
     border: 1px solid black;

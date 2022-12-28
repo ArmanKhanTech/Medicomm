@@ -109,17 +109,14 @@
 }
 
 .add-to-cart{
-    text-align: center;
-    font-size: 14px;
     background: #1fa4cc;
-    width: 115px;
-    color: white;
+    color: #fff;
+    padding: 3px;
     font-weight: bold;
-    border: none;
     margin-right: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 3px;
     border-radius: 2px;
+    border: none;
 }
 
 .sm-price{

@@ -39,20 +39,14 @@ const checkoutSection = document.querySelector('.checkout-section');
 const setProducts = (name) => {
     const element = document.querySelector(`.${name}`);
     let data = JSON.parse(localStorage.getItem(name));
-    if(data.length == 0 && name == 'cart'){
+    if(data == null || data.length == 0 && name == 'cart'){
         element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
         checkoutSection.style.display = 'none';
     } else {
-        let temp = '';
         for(let i = 0; i < data.length; i++){
-            if(temp != data[i].name && name == 'cart'){
-                element.innerHTML += createSmallCart(data[i]);
-                temp = data[i].name;
-                totalBill = parseInt(totalBill + (data[i].actualPrice  * data[i].quantity));
-            } else if(temp != data[i].name && name == 'wishlist'){
-                element.innerHTML += createWishlist(data[i]);
-                temp = data[i].name;
-            }
+            element.innerHTML += createSmallCart(data[i]);
+            temp = data[i].name;
+            totalBill = parseInt(totalBill + (data[i].actualPrice  * data[i].quantity)); 
         }
         updateBill(totalBill, 'new');
     }
@@ -63,15 +57,12 @@ const setProducts2 = (name) => {
     const element = document.querySelector(`.${name}`);
     let data = JSON.parse(localStorage.getItem(name));
 
-    if(data.length == 0 && name == 'wishlist'){
+    if(data == null || data.length == 0 && name == 'wishlist'){
         element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
     } else {
-        let temp = '';
         for(let i = 0; i < data.length; i++){
-            if(temp != data[i].name && name == 'wishlist'){
-                element.innerHTML += createWishlist(data[i]);
-                temp = data[i].name;
-            }
+            element.innerHTML += createWishlist(data[i]);
+            temp = data[i].name;
         }
     }
     setupEvents2(name);
@@ -157,3 +148,23 @@ if(sessionStorage.getItem('user') != null){
 } else{
     location.href = 'login.html';
 }
+
+const checkoutBtn = document.querySelector('.checkout-btn');
+checkoutBtn.addEventListener('click', () => {
+    const counts = document.querySelectorAll('#item-count');
+    let orderArr = [];
+
+    let product = JSON.parse(localStorage.getItem('cart'));
+    let temp = '';
+
+    product.forEach((item, i) => {
+        if(temp != item.id){
+            orderArr.push(item.id + '-' + counts[i].innerHTML);
+            temp = item.id;
+        }
+    });
+
+    localStorage.setItem('totalBill', totalBill);
+    localStorage.setItem('quantity', orderArr);
+    location.href = 'checkout.html';
+});
