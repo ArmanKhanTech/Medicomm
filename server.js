@@ -6,6 +6,7 @@ const nodemailer = require('nodemailer');
 
 //firebase admin setup
 let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json");
+const { randomInt } = require('crypto');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
@@ -270,10 +271,8 @@ app.post('/get-search-result', (req, res) => {
             products.forEach(items => {
                 let data = items.data();
                 data.id = items.id;
-                console.log(data);
                 if(data.length != 0){
                     prArr.push(data);
-                    console.log(data);
                 }
             });
         })
@@ -336,20 +335,93 @@ app.get('/checkout', (req, res) => {
 // continue tommorow
 app.post('/order', (req, res) => {
     const { email, order, address} = req.body;
-    let docName = email + parseInt(100000000);
-    
-    let temp = '';
-        for(let i = 0; i < order.length; i++){
-            if(temp != order[i].name){
-                order.pop(order[i]);
-                temp = order[i].name;
-            } 
+    let docName = email + '-' + randomInt(10000, 99999);
+
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'ak2341776@gmail.com',
+            pass: 'ptxvhrnyalztibzv'
         }
+    })
+
+    const mailOptions = {
+        from: 'ak2341776@gmail.com',
+        to: email,
+        subject: 'Order Confirmation',
+        html: `
+            <!DOCTYPE html>
+            <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                    <title>Medicomm</title>
+
+                    <style>
+                        body{
+                            background-color: #f2f2f2;
+                            min-height: 90vh;
+                            font-family: sans-serif;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .heading{
+                            text-align: center;
+                            font-size: 40px;
+                            margin: 30px auto 60px;
+                            width: 100%;
+                            display: block;
+                            line-height: 50px;
+                        }
+                        .span{
+                            text-align: center;
+                            font-size: 20px;
+                            margin: 30px auto 60px;
+                            width: 50%;
+                            display: block;
+                            line-height: 30px;
+                        }
+                        .btn{
+                            display: block;
+                            margin: 0 auto;
+                            padding: 10px 20px;
+                            background-color: #f2f2f2;
+                            border: 1px solid #000;
+                            border-radius: 5px;
+                            font-size: 20px;
+                            cursor: pointer;
+                        }
+                    </style>
+                </head>
+
+                <body>
+
+                    <div class="mail">
+                        <h1 class="heading">Thank You For Shopping With Us</h1>
+                        <p class="span">Your Order Has Been Placed Successfully. We Will Contact You Soon.</p>
+                        <p class="span">Regards, Medicomm</p>
+                        <button class="btn">Check Status</button>
+                    </div>
+
+                </body>
+
+            </html>
+        `
+    }
 
     db.collection('orders').doc(docName).set(req.body)
     .then(data => {
-        //const transporter = nodemailer.createTransport({
-        res.json('success');
+        transporter.sendMail(mailOptions, (err, info) => {
+            if(err){
+                console.log(err);
+               res.json({'alert': 'Opps! It seems like there is some problem with our server. Please try again later.'});
+            } else{
+                res.json({'alert': 'Your Order Was Placed Successfully.'});
+            }
+        })
     }).catch(err => {
         res.json('err');
     })

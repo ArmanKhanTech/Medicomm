@@ -1,22 +1,40 @@
 const placeorder = document.querySelector('#place-order');
 placeorder.addEventListener('click', () => {
     let address = getAddress();
+    let finalOrder = JSON.parse(localStorage.getItem('order'));
 
     if(address){
         fetch('/order', {
             method: 'POST',
             headers: new Headers({'Content-Type': 'application/json'}),
             body: JSON.stringify({
-                order: JSON.parse(localStorage.getItem('cart')),
+                order: finalOrder,
                 email: JSON.parse(sessionStorage.user).email,
                 address: address,
             })
         }).then(res => res.json())
         .then(data => {
-            alert(data);
+            if(data.alert == 'Your Order Was Placed Successfully.'){
+                localStorage.removeItem('cart');
+                localStorage.removeItem('order');
+                localStorage.removeItem('totalBill');
+                showAlert1(data.alert, 'success');
+                setTimeout(function(){
+                    location.href = 'index.html';
+                }, 5000); 
+            } else{
+                showAlert1(data.alert);
+            }
         })
     }
 });
+
+const finalOrder = () => {
+    let orderArray = localStorage.getItem('order');
+    orderArray = JSON.parse(orderArray);
+
+    return orderArray;
+}
 
 const getAddress = () => {
     let address = document.querySelector('#address').value;
@@ -35,6 +53,19 @@ const getAddress = () => {
 }
 
 const createSmallCart = (data) => {
+    let orderArray = localStorage.getItem('order');
+    var price = parseInt(0);
+    var quantity = parseInt(0);
+
+    orderArray = JSON.parse(orderArray);
+
+    orderArray.forEach((item, i) => {
+        if(orderArray[i].id == data.id){
+            quantity = orderArray[i].quantity;
+            price = orderArray[i].price;
+        }
+    });
+
     return `
     <div class="sm-product">
         <img src="${data.image}" class="sm-product-img" alt="">
@@ -44,10 +75,9 @@ const createSmallCart = (data) => {
         </div>
         <div class="item-counter">
             <p class="quantity" id="quantity">Quantity:</p>
-            <p class="item-count" id="item-count">${data.quantity}</p>
+            <p class="item-count" id="item-count">${quantity}</p>
         </div>
-        <p class="sm-price" data-price="${data.actualPrice}" id="sm-price">₹${data.actualPrice * data.quantity}</p>
-        <button class="sm-delete-btn" id="sm-delete-btn"><img src="images/close.png"></button>
+        <p class="sm-price" data-price="${data.actualPrice}" id="sm-price">${price}</p>
     </div>
     `;
 }
@@ -59,35 +89,17 @@ const checkoutSection = document.querySelector('.checkout-section');
 const setProducts = (name) => {
     const element = document.querySelector(`.${name}`);
     let data = JSON.parse(localStorage.getItem(name));
-    if(data.length == 0 && name == 'cart'){
+    if(data.length == 0 || data == null && name == 'cart'){
         element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
         checkoutSection.style.display = 'none';
     } else {
-        let temp = '';
         for(let i = 0; i < data.length; i++){
-            if(temp != data[i].name && name == 'cart'){
-                element.innerHTML += createSmallCart(data[i]);
-                temp = data[i].name;
-                totalBill = parseInt(totalBill + (data[i].actualPrice  * data[i].quantity));
-            } else if(temp != data[i].name && name == 'wishlist'){
-                element.innerHTML += createWishlist(data[i]);
-                temp = data[i].name;
-            }
+            element.innerHTML += createSmallCart(data[i]);
+            totalBill = localStorage.getItem('totalBill');
+            billPrice.innerHTML = `₹${totalBill}`;
         }
-        updateBill(totalBill, 'new');
     }
     setupEvents3(name);
-}
-
-const updateBill = (value, operation) => {
-    if(operation == 'add'){
-        totalBill = parseInt(totalBill) + parseInt(value);
-    } else if(operation == 'remove'){
-        totalBill = parseInt(totalBill) - parseInt(value);
-    } else if(operation == 'new'){
-        billPrice.innerHTML = `₹${parseInt(totalBill)}`;
-    }
-    billPrice.textContent= `₹${parseInt(totalBill)}`;
 }
 
 // fix it

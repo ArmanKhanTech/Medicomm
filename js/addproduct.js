@@ -2,9 +2,7 @@ let user = JSON.parse(sessionStorage.user || null);
 let loader = document.querySelector('.loader');
 
 if(!user){
-    //if(!compareToken(user.authToken, user.email)){
-        location.replace('/login.html');
-    //}
+    location.replace('/login.html');
 }
 
 // price calc
@@ -161,8 +159,6 @@ proId = decodeURI(location.pathname.split('/').pop());
 if(proId == decodeURI("addproduct.html")){
     proId = null;
 }
-
-console.log(proId);
 
 addProductBtn.addEventListener('click', () => {
     if(validateForm()){ // validateForm return true or false while doing validation

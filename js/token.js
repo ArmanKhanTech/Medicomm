@@ -29,7 +29,30 @@ const compareToken = (token, key) => {
 const showAlert = (msg) => {
     let alertBox = document.querySelector('.alert-box');
     let alertMsg = document.querySelector('.alert-msg');
+
     alertMsg.innerHTML = msg;
+
+    alertBox.classList.add('show');
+    setTimeout(() => {
+        alertBox.classList.remove('show');
+    }, 3000);
+}
+
+const showAlert1 = (msg, type) => {
+    let alertBox = document.querySelector('.alert-box');
+    let alertMsg = document.querySelector('.alert-msg');
+    let alertImg = document.querySelector('.alert-img');
+
+    alertMsg.innerHTML = msg;
+
+    if(type = 'success'){
+        alertImg.src = '/images/success.png';
+        alertMsg.style.color = '#00ff00';
+    } else{
+        alertImg.src = '/images/error.png';
+        alertMsg.style.color = null;
+    }
+
     alertBox.classList.add('show');
     setTimeout(() => {
         alertBox.classList.remove('show');

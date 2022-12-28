@@ -22,7 +22,7 @@ const createWishlist = (data) => {
     <div class="sm-product">
         <img src="${data.image}" class="sm-product-img" alt="">
         <div class="sm-text">
-            <p class="sm-product-name">${data.name}</p>
+            <p class="sm-product-name" id="sm-product-name">${data.name}</p>
             <p class="sm-des">${data.shortDes}</p>
         </div>
         <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
@@ -152,19 +152,23 @@ if(sessionStorage.getItem('user') != null){
 const checkoutBtn = document.querySelector('.checkout-btn');
 checkoutBtn.addEventListener('click', () => {
     const counts = document.querySelectorAll('#item-count');
-    let orderArr = [];
+    const price = document.querySelectorAll('#sm-price');
 
+    let orderArr = [];
     let product = JSON.parse(localStorage.getItem('cart'));
-    let temp = '';
 
     product.forEach((item, i) => {
-        if(temp != item.id){
-            orderArr.push(item.id + '-' + counts[i].innerHTML);
-            temp = item.id;
-        }
+        orderArr.push({
+            name: item.name,
+            quantity: counts[i].innerHTML,
+            price: price[i].innerHTML,
+            id: item.id,
+            soldby: item.soldby,
+            image: item.image
+        });
     });
 
+    localStorage.setItem('order', JSON.stringify(orderArr));
     localStorage.setItem('totalBill', totalBill);
-    localStorage.setItem('quantity', orderArr);
     location.href = 'checkout.html';
 });
