@@ -308,6 +308,40 @@ app.post('/delete-product', (req, res) => {
     })
 })
 
+// display products
+app.post('/disEna-product', (req, res) => {
+    const {data} = req.body;
+
+    let id='';
+    let status = '';
+
+    id = data.id;
+    status = data.status;
+
+    db.collection("products").doc(id).update({status: status});
+
+    res.json('success');
+})
+
+app.post('/get-date', (req, res) => {
+    const {id} = req.body;
+    let docref = db.collection('products').where('id', '==' ,id);
+    let prArr = [];
+
+    docref.get().then(products => {
+        
+        products.forEach(items => {
+            let data = items.data();
+            data.id = items.id;
+            if(data.length != 0){
+                prArr.push(data);
+            }
+        });
+    }).then(() => {
+        res.json(prArr);
+    })
+})
+
 // product page
 app.get('/product/:id', (req, res) => {
     res.sendFile(path.join(staticPath, "product.html"));
@@ -338,7 +372,7 @@ app.post('/order', (req, res) => {
     let docName = email + '-' + randomInt(10000, 99999);
 
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: "smtp.gmail.com",
         auth: {
             user: 'ak2341776@gmail.com',
             pass: 'ptxvhrnyalztibzv'

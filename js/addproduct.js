@@ -10,6 +10,10 @@ const actualPrice = document.querySelector('#actual-price');
 const discountPercentage = document.querySelector('#discount');
 const sellingPrice = document.querySelector('#sell-price');
 
+const manDate = document.querySelector('#manDate');
+const exDate = document.querySelector('#exDate');
+const perscription = document.querySelector('#perscription');
+
 var a = "";
 var s = "";
 var d = "";
@@ -119,7 +123,14 @@ const validateForm = () => {
         return showAlert('Enter Category of the Product');
     } else if(!tac.checked){
         return showAlert('You Must Agree Our Terms and Conditions');
-    } 
+    } else if(!manDate.value.length){
+        return showAlert('Enter Manufacturing Date of the Product');
+    } else if(!exDate.value.length){
+        return showAlert('Enter Expiry Date of the Product');
+    } else if(!perscription.value.length){
+        return showAlert('Enter Perscription Detail of the Product');
+    }
+
     d = discount.value;
     d = d + "% Off";
     a = actualPrice.value;
@@ -129,27 +140,72 @@ const validateForm = () => {
     return true;
 }
 
+let addDate = new Date();
+let modifyDate = new Date();
+let todayDate = new Date();
+
+
 const productData = () => {
+    todayDate = todayDate.toDateString();
+    
     if(proId == null){
         proId = `${productName.value.toLowerCase()}-${Math.floor(Math.random() * 5000)}`;
+        addDate = addDate.toDateString();
+        modifyDate = null;
+    } else{
+        modifyDate = modifyDate.toDateString();
     }
-    return data = {
-        name: productName.value,
-        shortDes: shortLine.value,
-        des: des.value,
-        image1: link1s,
-        image2: link2s,
-        image3: link3s,
-        image4: link4s,
-        actualPrice: a,
-        discount: d,
-        sellPrice: s,
-        stock: stock.value,
-        use: use.value,
-        cate : cate.value,
-        tac: tac.checked,
-        email: user.email,
-        id: proId
+
+    if(addDate == todayDate){
+        return data = {
+            name: productName.value,
+            shortDes: shortLine.value,
+            des: des.value,
+            image1: link1s,
+            image2: link2s,
+            image3: link3s,
+            image4: link4s,
+            actualPrice: a,
+            discount: d,
+            sellPrice: s,
+            stock: stock.value,
+            use: use.value,
+            cate : cate.value,
+            tac: tac.checked,
+            email: user.email,
+            id: proId,
+            addDate: addDate,
+            modifyDate: modifyDate,
+            manDate: manDate.value,
+            exDate: exDate.value,
+            perscription: perscription.value,
+            status: "Active"
+        }
+    } else{
+        return data = {
+            name: productName.value,
+            shortDes: shortLine.value,
+            des: des.value,
+            image1: link1s,
+            image2: link2s,
+            image3: link3s,
+            image4: link4s,
+            actualPrice: a,
+            discount: d,
+            sellPrice: s,
+            stock: stock.value,
+            use: use.value,
+            cate : cate.value,
+            tac: tac.checked,
+            email: user.email,
+            id: proId,
+            addDate: addDate,
+            modifyDate: modifyDate,
+            manDate: manDate.value,
+            exDate: exDate.value,
+            perscription: perscription.value,
+            status: "Active"
+        }
     }
 }
 
@@ -185,6 +241,12 @@ const setFormsData = (data) => {
     actualPrice.value = data.actualPrice;
     sellingPrice.value = data.sellPrice;
     discountPercentage.value = data.discount;
+
+    addDate = data.addDate;
+
+    manDate.value = data.manDate;
+    exDate.value = data.exDate;
+    perscription.value = data.perscription;
 }
 
 const fetchProductData = () => {

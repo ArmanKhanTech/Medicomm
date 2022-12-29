@@ -21,7 +21,7 @@ placeorder.addEventListener('click', () => {
                 showAlert1(data.alert, 'success');
                 setTimeout(function(){
                     location.href = 'index.html';
-                }, 5000); 
+                }, 2000); 
             } else{
                 showAlert1(data.alert);
             }

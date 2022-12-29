@@ -10,6 +10,31 @@
     padding-bottom: 40px;
 }
 
+body{
+    overflow-x: hidden;
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1fa4cc; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1fa4cc; 
+  }
+
 .product-list{
     width: 40%
 }
