@@ -11,6 +11,16 @@ const actualPrice = document.querySelector('.product-actual-price');
 const discountPercentage = document.querySelector('.product-discount');
 const sellingPrice = document.querySelector('.product-price');
 
+const exDate = document.querySelector('.expiry-date');
+const manDate = document.querySelector('.man-date');
+const perscription = document.querySelector('.per-ans');
+
+const userPincode = document.querySelector('.check-box');
+const pinBtn = document.querySelector('.check-btn');
+const pinAns = document.querySelector('.pin-ans1');
+
+let sellerPincode = '';
+
 const img1 = document.querySelector('.image');
 const img2 = document.querySelector('#img1');
 const img3 = document.querySelector('#img2');
@@ -50,6 +60,10 @@ const setFromsData = (data) => {
     actualPrice.textContent = data.actualPrice;
     sellingPrice.textContent = data.sellPrice;
     discountPercentage.textContent = data.discount;
+
+    exDate.textContent = data.exDate;
+    manDate.textContent = data.manDate;
+    perscription.textContent = data.perscription;
 
     const quanValue = document.querySelector('#quantity');
 

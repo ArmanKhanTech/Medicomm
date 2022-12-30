@@ -60,6 +60,7 @@ const createProductCards = (data, parent) => {
     p.innerHTML = start + middle + end;
     loader.style.display = 'none';
     searchcontainer.classList.remove('hide');
+
     setupEvents(data);
     setbgcolor(data);
 }
@@ -68,9 +69,11 @@ const setupEvents = (data) => {
     const wishlistBtn = document.querySelectorAll('#card-btn1');
 
     for(let i = 0; i < data.length; i++){
-        wishlistBtn[i].addEventListener('click', () => {
-            add_to_wishlist(data[i]);
-        });
+        if(wishlistBtn[i]){
+            wishlistBtn[i].addEventListener('click', () => {
+                add_to_wishlist(data[i]);
+            });
+        }
     }
 }
 
@@ -80,10 +83,12 @@ const setbgcolor = (data) => {
     const usageBg = document.querySelectorAll('.product-usage1');
 
     for(let i = 0; i < data.length; i++){
-        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-        wishlistBtnBg[i].style.background = randomColor;
-        discountTagBg[i].style.background = randomColor;
-        usageBg[i].style.background = randomColor;
+        if(wishlistBtnBg[i] && discountTagBg[i] && usageBg[i]){
+            var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+            wishlistBtnBg[i].style.background = randomColor;
+            discountTagBg[i].style.background = randomColor;
+            usageBg[i].style.background = randomColor;
+        }
     }
 }
 

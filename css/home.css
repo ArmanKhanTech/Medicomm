@@ -635,6 +635,7 @@ body{
 
 .feature-2{
     padding: 50px;
+    padding-top: 45px;
     border-radius: 10px;
     border: none;
 }
@@ -647,8 +648,8 @@ body{
 }
 
 .feature-2s img{
-    width: 550px;
-    height: 400px;
+    width: 560px;
+    height: 410px;
     border-radius: 10px 0px 0px 10px;
 }
 

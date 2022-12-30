@@ -50,9 +50,11 @@ const setupEvents = (data) => {
     const wishlistBtn = document.querySelectorAll('#card-btn');
 
     for(let i = 0; i < data.length; i++){
-        wishlistBtn[i].addEventListener('click', () => {
-            add_to_wishlist(data[i]);
-        });
+        if(wishlistBtn[i]){
+            wishlistBtn[i].addEventListener('click', () => {
+                add_to_wishlist(data[i]);
+            });
+        }
     }
 }
 

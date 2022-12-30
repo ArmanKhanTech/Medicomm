@@ -37,7 +37,7 @@ body{
     border-radius: 10px;
     margin: 50px;
     margin-left: 80px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .product-images{
@@ -199,19 +199,25 @@ body{
 }
 
 .detail-des{
-    padding: 0 10vw;
-    padding-left: 88px;
+    width: 90%;
+    padding: 40px 8vw;
+    padding-left: 4vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    margin-left: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-transform: capitalize;
 }
 
 .heading{
     font-size: 30px;
-    margin-bottom: 30px;
 }
 
 .des{
     color: black;
     font-size: 20px;
+    margin-top: 10px;
 }
 
 .product-container3{
@@ -226,12 +232,16 @@ body{
 }
 
 .pro-imgs{
-    padding: 10px;
-    display: grid;
+    width: 90%;
+    padding: 40px 8vw;
+    padding-left: 4vw;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;
     margin: 50px;
     margin-left: 80px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .pro-imgs div{
@@ -242,6 +252,7 @@ body{
     display: block;
     align-items: center;
     justify-content: center;
+    margin-left: 15px;
 }
 
 .pro-imgs img{
@@ -254,6 +265,157 @@ body{
 .product-category{
     padding: 0px;
     margin: 0px;
-    margin-top: 25px;
+    margin-top: 70px;
     margin-left: 50px;
+}
+
+.product-spec{
+    width: 90%;
+    padding: 40px 8vw;
+    padding-left: 4vw;
+    padding-bottom: 3.5vw;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    margin-left: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ex-details{
+    margin-top: 42px;
+    height: fit-content;
+}
+
+.expiry{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid red;
+    padding: 5px;
+    width: fit-content;
+    margin-top: 30px;
+    color: red;
+}
+
+.expiry-date{
+    font-weight: 300;
+    font-size: 20px;
+    font-weight: bold;
+    background: red;
+    color: #fff;
+    padding: 6px;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 30px;
+    width: fit-content;
+}
+
+.man{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid purple;
+    color: purple;
+    padding: 5px;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.man-date{
+    font-weight: 300;
+    font-size: 20px;
+    font-weight: bold;
+    background: purple;
+    color: #fff;
+    padding: 6px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.per{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid rgb(255, 89, 0);
+    color: rgb(255, 89, 0);
+    padding: 5px;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.per-ans{
+    font-weight: 300;
+    font-size: 21px;
+    font-weight: bold;
+    background: rgb(255, 89, 0);
+    color: #fff;
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.pin-check{
+    margin-left: 258px;
+    border-left: 2px solid rgb(255, 89, 0);
+    padding-left: 20px;
+}
+
+.pin-field{
+    display: flex;
+    margin-top: 30px;
+    width: fit-content;
+    border-bottom: 1px solid rgb(255, 1, 166);
+    padding-bottom: 25px;
+}
+
+.check-box{
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid rgb(255, 1, 166);
+    background: none;
+    color: rgb(255, 1, 166);
+    outline: none;
+    font-size: 20px;
+}
+
+.check-btn{
+    width: 20%;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(255, 1, 166);
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.check-box::placeholder{
+    color: rgb(255, 1, 166);
+    font-size: 20px;
+    padding: 5px;
+}
+
+.pin-ans{
+    margin-top: 23px;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 10px;
+    padding-top: 11px;
+}
+
+.pin-ans1{
+    color: darkgreen;
+    font-size: 20px;
+    margin-left: 5px;
 }

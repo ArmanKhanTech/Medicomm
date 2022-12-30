@@ -1,5 +1,16 @@
 let openEditor;
 
+// fix this
+const setUpColor = (data) => {
+    const proStatus = document.querySelectorAll('#product-status');
+
+    for(let i = 0; i < data.length; i++){
+        if(data[i].status == 'Active'){
+            proStatus[i].style.color = '#1fa4cc';
+        }
+    }
+}
+
 const createProduct = (data) => {
 
     openEditor = (id) => {
@@ -22,7 +33,7 @@ const createProduct = (data) => {
         <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">${data.discount}</span>
-                <span class="product-status">${data.status}</span>
+                <span class="product-status" id="product-status">${data.status}</span>
                 <img src=${data.image1}>
                 <button class="action-btn edit-btn" onClick="openEditor('${data.id}')">
                     Edit
@@ -50,7 +61,7 @@ const createProduct = (data) => {
         <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">${data.discount}</span>
-                <span class="product-status">${data.status}</span>
+                <span class="product-status" id="product-status">${data.status}</span>
                 <img src=${data.image1}>
                 <button class="action-btn edit-btn" onClick="openEditor('${data.id}')">
                     Edit
@@ -74,6 +85,8 @@ const createProduct = (data) => {
             </div>
         </div> `;
     }
+
+    setUpColor(data);
 }
 
 const openDelPopup = (id) => {
