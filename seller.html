@@ -31,8 +31,9 @@
             <h1 class="heading2">Application Form : </h1>
             <input type="text" class="business-name" autocomplete="off" id="business-name" placeholder="Business  / Company / Shop Name"><br>
             <textarea id="business-add" class="business-add" placeholder="Address"></textarea><br>
+            <input type="number" class="pincode" autocomplete="off" id="pincode" placeholder="Pincode"><br>
             <textarea id="about" class="about" placeholder="About"></textarea><br>
-            <input type="text" class="number" autocomplete="off" id="number" placeholder="Number"><br>
+            <input type="number" class="number" autocomplete="off" id="number" placeholder="Number"><br>
             <input type="checkbox" checked class="checkbox" id="terms-and-cond">
             <label for="terms-and-cond">Agree to Our <a href="">Terms and Conditions</a></label>
             <br>
@@ -43,13 +44,13 @@
         
         <div class="product-list hide">
             <div class="add-product">
-                <h1 class="heading3">Your Products : </h1>
+                <h1 class="heading3">Your Products : <span class="pro-count">0</span></h1>
                 <button class="add-product-btn">Add Product</button>
             </div>
             <div class="product-container">
                 <!-- createProduct.js -->
             </div>
-            <h1 class="heading4">Your Orders : </h1>
+            <h1 class="heading4">Your Orders : <span class="order-count">0</span></h1>
             <div class="order-list">
                 <div class="order-container">
                     <!-- order.js -->

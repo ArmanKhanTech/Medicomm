@@ -14,6 +14,7 @@ const sellingPrice = document.querySelector('.product-price');
 const exDate = document.querySelector('.expiry-date');
 const manDate = document.querySelector('.man-date');
 const perscription = document.querySelector('.per-ans');
+const stock = document.querySelector('.stock-ans');
 
 const userPincode = document.querySelector('.check-box');
 const pinBtn = document.querySelector('.check-btn');
@@ -31,6 +32,7 @@ var link2s = "";
 var link3s = "";
 var link4s = "";
 var sell = '';
+var sellerPin = '';
 
 const fetchSellerName = (data) => {
     fetch('/get-seller', {
@@ -39,9 +41,19 @@ const fetchSellerName = (data) => {
         body: JSON.stringify({email: data.email})
     }).then((res) => res.json()).then(data => {
         sell = data.name;
+        sellerPin = data.pincode;
         seller.textContent = sell;
     })
 }
+
+const comparePincode = (sellerPin, userPin) => {
+    
+    console.log(result);
+}
+
+pinBtn.addEventListener('click', () => {
+    comparePincode(sellerPin, userPincode.value);
+})
 
 const setFromsData = (data) => {
     productName.textContent = data.name;
@@ -65,15 +77,25 @@ const setFromsData = (data) => {
     manDate.textContent = data.manDate;
     perscription.textContent = data.perscription;
 
+    stock.textContent = data.stock;
+
     const quanValue = document.querySelector('#quantity');
 
     const addCartBtn = document.querySelector('.cart-btn');
     const addWishlistBtn = document.querySelector('.wish-btn');
 
-    addCartBtn.addEventListener('click', () => {
-        addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value, sell);
-    })
+    let remStock = parseInt(data.stock);
 
+        addCartBtn.addEventListener('click', () => {
+            if(remStock > parseInt(quanValue.value)){
+                addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value, sell);
+            }
+            else {
+                showAlert('Out of Stock');
+            }
+        
+        })
+        
     addWishlistBtn.addEventListener('click', () => {
         addWishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data, quanValue.value, sell);
     })

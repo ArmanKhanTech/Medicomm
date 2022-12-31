@@ -461,6 +461,13 @@ app.post('/order', (req, res) => {
     })
 })
 
+// update product stocks
+app.post('/update-stock', (req, res) => {
+    const {id , stock} = req.body;
+
+    db.collection("products").doc(id).update({stock: stock});
+})
+
 // 404 route
 app.get('/404', (req, res) => {
     res.sendFile(path.join(staticPath, "404.html"));

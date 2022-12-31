@@ -44,7 +44,7 @@ const createProduct = (data) => {
                 <button class="action-btn delete-btn" onClick="openDelPopup('${data.id}')">
                     Delete
                 </button>
-                <button class="action-btn disable-btn" onClick="openDisPopup('${data.id}', '${disabled}')">
+                <button class="action-btn disable-btn" onClick="disableProduct('${data.id}', '${disabled}')">
                     Disable
                 </button>
             </div>
@@ -72,7 +72,7 @@ const createProduct = (data) => {
                 <button class="action-btn delete-btn" onClick="openDelPopup('${data.id}')">
                     Delete
                 </button>
-                <button class="action-btn disable-btn" onClick="openDisPopup('${data.id}', '${active}')">
+                <button class="action-btn disable-btn" onClick="disableProduct('${data.id}', '${active}')">
                     Enable
                 </button>
             </div>
@@ -85,8 +85,6 @@ const createProduct = (data) => {
             </div>
         </div> `;
     }
-
-    setUpColor(data);
 }
 
 const openDelPopup = (id) => {
@@ -100,7 +98,7 @@ const openDelPopup = (id) => {
     delBtn.addEventListener('click', () =>  delProduct(id));
 }
 
-const openDisPopup = (id, status) => {
+const disableProduct = (id, status) => {
     let data = {
         id: id,
         status: status
@@ -134,3 +132,13 @@ const delProduct = (id) => {
         }
     })
 }
+
+const setCount = (pro, order) => {
+    const proCount = document.querySelector('.pro-count');
+    const orderCount = document.querySelector('.order-count');
+
+    proCount.innerHTML = pro;
+    orderCount.innerHTML = order;
+}
+
+

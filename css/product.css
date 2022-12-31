@@ -221,7 +221,7 @@ body{
 }
 
 .product-container3{
-    padding-left: 3.5vw;
+    padding-left: 3.6vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow-x: auto;
@@ -265,8 +265,8 @@ body{
 .product-category{
     padding: 0px;
     margin: 0px;
-    margin-top: 70px;
-    margin-left: 50px;
+    margin-top: 60px;
+    margin-left: 55px;
 }
 
 .product-spec{
@@ -355,6 +355,28 @@ body{
     border-radius: 0px 5px 5px 0px;
 }
 
+.stock{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid darkgreen;
+    color: darkgreen;
+    padding: 5px;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.stock-ans{
+    font-weight: 300;
+    font-size: 21px;
+    font-weight: bold;
+    background: darkgreen;
+    color: #fff;
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+}
+
 .pin-check{
     margin-left: 258px;
     border-left: 2px solid rgb(255, 89, 0);
@@ -418,4 +440,48 @@ body{
     color: darkgreen;
     font-size: 20px;
     margin-left: 5px;
+}
+
+.alert-box{
+    width: 310px;
+    min-height: 310px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.alert-box.show{
+    opacity: 1;
+    pointer-events: all;
+    top: 70%;
+}
+
+.alert-img{
+    display: block;
+    height: 60px;
+    margin-top: 25%;
+    margin-left: 38%;
+    margin-bottom: 10%;
+}
+
+.alert-msg{
+    color: #e24c4b;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
 }

@@ -222,6 +222,23 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
+.pincode{
+    display: block;
+    width: 300px;
+    height: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    color: #383838;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    font-family: 'roboto', sans-serif;
+}
+
 /* checkbox styles */
 
 .checkbox{
@@ -287,6 +304,7 @@ body{
 .heading4{
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .no-product-pic{
@@ -330,7 +348,7 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-top: 5px;
-    margin-left: 30px;
+    margin-left: 33px;
     margin-right: 30px;
     box-shadow: 5px 5px #383838;
     border: 1px solid black;
@@ -538,4 +556,18 @@ body{
 .product-card:hover .action-btn{
     opacity: 5;
     pointer-events: all;
+}
+
+.pro-count{
+    color: #1fa4cc;
+    border: 1px solid #1fa4cc;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.order-count{
+    color: #1fa4cc;
+    border: 1px solid #1fa4cc;
+    padding: 3px;
+    border-radius: 5px;
 }

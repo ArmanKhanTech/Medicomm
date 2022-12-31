@@ -15,19 +15,50 @@ placeorder.addEventListener('click', () => {
         }).then(res => res.json())
         .then(data => {
             if(data.alert == 'Your Order Was Placed Successfully.'){
+                updateProStock(finalOrder);
                 localStorage.removeItem('cart');
                 localStorage.removeItem('order');
                 localStorage.removeItem('totalBill');
                 showAlert1(data.alert, 'success');
-                setTimeout(function(){
-                    location.href = 'index.html';
-                }, 2000); 
+                setTimeout(() => {
+                    location.replace('/');
+                }, 2000);
             } else{
                 showAlert1(data.alert);
             }
         })
     }
 });
+
+const updateProStock = (finalOrder) => {
+    finalOrder.forEach((item, i) => {
+        fetch('/get-product', {
+            method: 'POST',
+            headers: new Headers({'Content-Type': 'application/json'}),
+            body: JSON.stringify({
+                id: finalOrder[i].id,
+            })
+        }).then(res => res.json())
+        .then(data => {
+            var stock = parseInt(data.stock) - parseInt(finalOrder[i].quantity);
+            updateStock(finalOrder[i].id, stock);
+        })
+    });
+}
+
+const updateStock = (id, diff) => {
+    fetch('/update-stock', {
+        method: 'POST',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({
+            id: id,
+            stock: diff,
+        })
+    }).then(res => res.json())
+    .then(data => {
+        //
+    })
+}
 
 const finalOrder = () => {
     let orderArray = localStorage.getItem('order');

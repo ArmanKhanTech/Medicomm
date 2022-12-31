@@ -1,33 +1,6 @@
 //popup name not working
 let loader = document.querySelector('.loader');
 let user = JSON.parse(sessionStorage.user || null);
-let emptySvg = document.querySelector('no-product-pic');
-
-const userImageButton1 = document.querySelector('#user-img');
-const cartImageButton1 = document.querySelector('#cart-img');
-
-userImageButton1.addEventListener('click', () =>{
-    const userImageButton = document.querySelector('#user-img');
-    const userPopup = document.querySelector('.login-logout-popup');
-    const popupText = document.querySelector('.account-info');
-    const actionBtn = document.querySelector('#user-btn');
-    if(user != null){
-        // means user is logged in
-        popupText.innerHTML = `Logged-in as, ${user.name}`;
-        actionBtn.innerHTML = 'Log-Out';
-        actionBtn.addEventListener('click', () => {
-            sessionStorage.clear();
-            location.reload();
-        })
-    } else{
-        // he is not
-        popupText.innerHTML = 'Log-In to Place Order';
-        actionBtn.innerHTML = 'Log-In';
-        actionBtn.addEventListener('click', () => {
-            location.href = '/login';
-        })
-    }
-})
 
 const becomeSeller= document.querySelector('.become-seller');
 const productList= document.querySelector('.product-list');
@@ -43,6 +16,7 @@ showApplyFormBtn.addEventListener('click', () =>{
 const applyBtn = document.querySelector('#apply-form-btn');
 const businessName = document.querySelector('#business-name');
 const businessAdd = document.querySelector('#business-add');
+const pincode = document.querySelector('#pincode');
 const about = document.querySelector('#about');
 const number = document.querySelector('#number');
 const tac = document.querySelector('#terms-and-cond');
@@ -61,6 +35,7 @@ applyBtn.addEventListener('click', () =>{
             about: about.value, 
             number: number.value, 
             tac: true,
+            pincode: pincode.value,
             email: JSON.parse(sessionStorage.user).email
         })
     }
@@ -83,11 +58,10 @@ const setupProducts = () => {
     }).then(res => res.json()).then(data => {
         loader.style.display = 'none';
         productList.classList.remove('hide');
-        if(data == 'no-products'){
-            // show no product img or text
-        } else { 
+        if(data != 'no-products'){
             data.forEach(product => createProduct(product));
-        }
+            setCount(data.length, 0);
+        } 
     });
 }
 
@@ -102,4 +76,3 @@ if(user){
 } else{
     location.replace('/login')
 }
-

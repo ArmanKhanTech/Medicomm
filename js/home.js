@@ -59,3 +59,4 @@ const setupEvents = (data) => {
 }
 
 getProducts(cate);
+
