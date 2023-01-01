@@ -47,8 +47,10 @@ const fetchSellerName = (data) => {
 }
 
 const comparePincode = (sellerPin, userPin) => {
-    
-    console.log(result);
+    sellerPin = parseInt(sellerPin);
+    userPin = parseInt(userPin);
+
+    // continue here
 }
 
 pinBtn.addEventListener('click', () => {

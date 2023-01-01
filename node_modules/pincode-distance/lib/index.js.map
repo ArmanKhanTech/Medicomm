@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["PincodeDistance"],"mappings":";;;;;;;AAAA;;;;eACeA,mB","sourcesContent":["import PincodeDistance from \"./methods\"\nexport default PincodeDistance;"],"file":"index.js"}

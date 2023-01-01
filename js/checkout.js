@@ -1,5 +1,60 @@
 const placeorder = document.querySelector('#place-order');
+const radio = document.querySelector('input[name="payment"]:checked').value;
+let order_id = '';
+
 placeorder.addEventListener('click', () => {
+    if(document.getElementById('cash').checked){
+        let address = getAddress();
+        let finalOrder = JSON.parse(localStorage.getItem('order'));
+
+        if(address){
+            fetch('/order', {
+                method: 'POST',
+                headers: new Headers({'Content-Type': 'application/json'}),
+                body: JSON.stringify({
+                    order: finalOrder,
+                    email: JSON.parse(sessionStorage.user).email,
+                    address: address,
+                    mode: 'cash'
+                })
+            }).then(res => res.json())
+            .then(data => {
+                if(data.alert == 'Your Order Was Placed Successfully.'){
+                    updateProStock(finalOrder);
+                    localStorage.removeItem('cart');
+                    localStorage.removeItem('order');
+                    localStorage.removeItem('totalBill');
+                    showAlert1(data.alert, 'success');
+                    setTimeout(() => {
+                        location.replace('/');
+                    }, 2000);
+                } else{
+                    showAlert1(data.alert);
+                }
+            })
+        }
+    } else if(document.getElementById('online').checked){
+        let receipt = Math.floor(Math.random() * 100000) + 1;
+        totalBill = parseInt(localStorage.getItem('totalBill')) * 100;
+
+        fetch('/order-online', {
+            method: 'POST',
+            headers: new Headers({'Content-Type': 'application/json'}),
+            body: JSON.stringify({
+                amount: totalBill,
+                currency: 'INR',
+                receipt: receipt,
+                notes: 'Order Created',
+            })
+        }).then(res => res.json())
+        .then(data => {
+           order_id = data.id;
+           onlineCheckout();
+        })
+    }
+});
+
+const paymentSuccess = () => {
     let address = getAddress();
     let finalOrder = JSON.parse(localStorage.getItem('order'));
 
@@ -11,6 +66,7 @@ placeorder.addEventListener('click', () => {
                 order: finalOrder,
                 email: JSON.parse(sessionStorage.user).email,
                 address: address,
+                mode: 'online'
             })
         }).then(res => res.json())
         .then(data => {
@@ -28,7 +84,7 @@ placeorder.addEventListener('click', () => {
             }
         })
     }
-});
+}
 
 const updateProStock = (finalOrder) => {
     finalOrder.forEach((item, i) => {

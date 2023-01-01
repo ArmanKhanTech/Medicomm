@@ -4,14 +4,16 @@
     "bcrypt": "^5.1.0",
     "bootstrap": "^5.3.0-alpha1",
     "dotenv": "^16.0.3",
+    "easyinvoice": "^2.3.3",
     "ejs": "^3.1.8",
     "express.js": "^1.0.0",
     "firebase-admin": "^11.3.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.8.0",
     "nodemon": "^2.0.20",
-    "pincode-distance": "^1.0.0",
-    "pincode-distance-calculator": "^1.1.1"
+    "pincode-distance": "^1.0.2",
+    "pincode-distance-calculator": "^1.1.1",
+    "razorpay": "^2.8.4"
   },
   "scripts": {
     "start": "nodemon server.js"

@@ -4,6 +4,12 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
+const Razorpay = require('razorpay')
+const razorpay = new Razorpay({
+    key_id: 'rzp_test_DOYACvZKE9x1en',
+    key_secret: '7GygcrDRlCqmMkSVl8OtaVEx'
+})
+
 //firebase admin setup
 let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json");
 const { randomInt } = require('crypto');
@@ -308,6 +314,20 @@ app.post('/delete-product', (req, res) => {
     })
 })
 
+// online payment
+app.post('/order-online', (req, res)=>{ 
+    const {amount, currency, receipt, notes}  = req.body;
+
+    razorpay.orders.create({amount, currency, receipt, notes}, 
+        (err, order)=>{
+          if(!err)
+            res.json(order)
+          else
+            res.send(err);
+        }
+    )
+});
+
 // display products
 app.post('/disEna-product', (req, res) => {
     const {data} = req.body;
@@ -366,9 +386,9 @@ app.get('/checkout', (req, res) => {
     res.sendFile(path.join(staticPath, "checkout.html"));
 })
 
-// continue tommorow
+// continue it
 app.post('/order', (req, res) => {
-    const { email, order, address} = req.body;
+    const { email, order, address, mode} = req.body;
     let docName = email + '-' + randomInt(10000, 99999);
 
     let transporter = nodemailer.createTransport({
@@ -444,6 +464,7 @@ app.post('/order', (req, res) => {
 
             </html>
         `
+
     }
 
     db.collection('orders').doc(docName).set(req.body)
