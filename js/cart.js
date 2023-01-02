@@ -164,7 +164,8 @@ checkoutBtn.addEventListener('click', () => {
             price: price[i].innerHTML,
             id: item.id,
             soldby: item.soldby,
-            image: item.image
+            image: item.image,
+            status: 'Waiting for Dispatch'
         });
     });
 

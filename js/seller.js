@@ -2,6 +2,9 @@
 let loader = document.querySelector('.loader');
 let user = JSON.parse(sessionStorage.user || null);
 
+const noProduct = document.querySelector('.no-products-img');
+const noOrder = document.querySelector('.no-orders-img');
+
 const becomeSeller= document.querySelector('.become-seller');
 const productList= document.querySelector('.product-list');
 const applyForm = document.querySelector('.apply-form');
@@ -60,9 +63,27 @@ const setupProducts = () => {
         productList.classList.remove('hide');
         if(data != 'no-products'){
             data.forEach(product => createProduct(product));
-            setCount(data.length, 0);
-        } 
-    });
+            setCount(data.length);
+        } else{
+            noProduct.style.display = 'block';
+        }
+    }).then(() => {
+        fetch('/get-orders', {
+            method :'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+            body: JSON.stringify({email: user.email}),
+        }).then(res => res.json()).then(data => {
+            if(data != 'no-orders'){
+                data.forEach(order => createHistory(order));
+                setCount1(data.length);
+            } else{
+                noOrder.style.display = 'block';
+            }
+        })
+    })
 }
 
 if(user){

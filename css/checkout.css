@@ -361,4 +361,5 @@ input[type="radio"] {
 
 .item-count{
     border-radius: 0px 3px 3px 0px;
+    padding-right: 2px;
 }

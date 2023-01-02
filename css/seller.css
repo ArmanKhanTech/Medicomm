@@ -571,3 +571,27 @@ body{
     padding: 3px;
     border-radius: 5px;
 }
+
+.hide{
+    display: none;
+}
+
+.no-products-img{
+    width: 400px;
+    height: 400px;
+    margin-left: 40px;
+    border: 1px solid #1fa4cc;
+    border-radius: 10px;
+    display: none;
+    padding: 20px;
+}
+
+.no-orders-img{
+    width: 400px;
+    height: 400px;
+    margin-left: 40px;
+    border: 1px solid #1fa4cc;
+    border-radius: 10px;
+    display: none;
+    padding: 20px;
+}

@@ -87,6 +87,39 @@ const createProduct = (data) => {
     }
 }
 
+const createOrders = (data) => {
+
+    openProduct = (id) => {
+        sessionStorage.tempProduct = JSON.stringify(data);
+        location.href = `/product/${id}`;
+    }
+
+    let orderConatiner = document.querySelector('.order-container');
+
+    
+    orderConatiner.innerHTML += `
+    <div class="product-card">
+        <div class="product-image">
+            <span class="discount-tag">${data.discount}</span>
+            <span class="product-status" id="product-status">${data.status}</span>
+            <img src=${data.image1}>
+            <button class="action-btn open-btn" onClick="openProduct('${data.id}')">
+                Open
+            </button>
+            <button class="action-btn disable-btn" onClick="disableProduct('${data.id}', '${disabled}')">
+                Disable
+            </button>
+        </div>
+        <div class="product-info">
+            <p class="product-brand">${data.name}</p>
+            <p class="product-shortdes">${data.shortDes}</p>
+            <p class="product-usage">${data.use}</p>
+            <span class="price">${data.sellPrice}</span>
+            <span class="actual-price">${data.actualPrice}</span>
+        </div>
+    </div> `;  
+}
+
 const openDelPopup = (id) => {
     let deleteAlert = document.querySelector('.delete-alert');
     deleteAlert.style.display = 'flex';
@@ -133,12 +166,13 @@ const delProduct = (id) => {
     })
 }
 
-const setCount = (pro, order) => {
+const setCount = (pro) => {
     const proCount = document.querySelector('.pro-count');
-    const orderCount = document.querySelector('.order-count');
-
     proCount.innerHTML = pro;
-    orderCount.innerHTML = order;
 }
 
+const setCount1 = (order) => {
+    const orderCount = document.querySelector('.order-count');
+    orderCount.innerHTML = order;
+}
 

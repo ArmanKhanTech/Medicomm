@@ -485,3 +485,20 @@ body{
     line-height: 30px;
     font-weight: 500;
 }
+
+.loader{
+    position: fixed;
+    display: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #1fa4cc;
+}
+
+.hide{
+    display: none;
+}

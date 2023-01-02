@@ -1,4 +1,5 @@
 let proId = null;
+let loader = document.querySelector('.loader');
 
 const productName = document.querySelector('.product-brand');
 const shortLine = document.querySelector('.product-short-des');
@@ -89,7 +90,7 @@ const setFromsData = (data) => {
     let remStock = parseInt(data.stock);
 
         addCartBtn.addEventListener('click', () => {
-            if(remStock > parseInt(quanValue.value)){
+            if(remStock => parseInt(quanValue.value)){
                 addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value, sell);
             }
             else {
@@ -115,6 +116,11 @@ const fetchProductData = () => {
     .then(data => {
         setFromsData(data);
         getProducts2(data.cate).then(data => createProductCards(data, '.product'))
+        .then(() => {
+            const productSec = document.querySelector('.product-data');
+            productSec.classList.remove('hide');
+            loader.style.display = 'none';
+        })
     }).catch(err => {
         location.replace('/404');
     })

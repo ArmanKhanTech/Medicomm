@@ -362,6 +362,60 @@ app.post('/get-date', (req, res) => {
     })
 })
 
+app.post('/fetch-orders', (req, res) => {
+    const {email} = req.body;
+
+    let docref = db.collection('orders').where('email', '==' ,email);
+    let prArr = [];
+
+    docref.get().then(orders => {
+
+        orders.forEach(items => {
+            let data = items.data();
+            data.id = items.id;
+            if(data.length != 0){
+                prArr.push(data);
+            } else{
+                res.json('no-orders');
+            }
+        });
+    }).then(() => {
+        res.json(prArr);
+    })
+})
+
+app.post('/get-orders', (req, res) => {
+    const {email} = req.body;
+
+    let docref = db.collection('sellers').where('email', '==' ,email);
+    let sellerName = "";
+    let prArr = [];
+
+    docref.get().then(seller => {
+        seller.forEach(items => {
+        sellerName = items.data().name;
+        });
+    }).then(() => {
+        // continue
+        let docref1 = db.collection('orders').where('order', '==' ,sellerName);
+
+        docref1.get().then(orders => {    
+            orders.forEach(items => {
+                let data = items.data();
+                data.id = items.id;
+                if(data.length != 0){
+                    prArr.push(data);
+                } else{
+                    res.json('no-orders');
+                }
+            });
+        }).then(() => {
+            console.log(prArr);
+            res.json(prArr);
+        })
+    })
+})
+
 // product page
 app.get('/product/:id', (req, res) => {
     res.sendFile(path.join(staticPath, "product.html"));
@@ -388,7 +442,7 @@ app.get('/checkout', (req, res) => {
 
 // continue it
 app.post('/order', (req, res) => {
-    const { email, order, address, mode} = req.body;
+    const { email, order, address, mode, status} = req.body;
     let docName = email + '-' + randomInt(10000, 99999);
 
     let transporter = nodemailer.createTransport({
