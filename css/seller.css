@@ -297,13 +297,18 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 10px;
 }
 
 .heading4{
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.heading5{
+    margin-bottom: 40px;
     margin-left: 10px;
 }
 
@@ -565,7 +570,8 @@ body{
     border-radius: 5px;
 }
 
-.order-count{
+.order-count,
+.order-history-count{
     color: #1fa4cc;
     border: 1px solid #1fa4cc;
     padding: 3px;
@@ -594,4 +600,137 @@ body{
     border-radius: 10px;
     display: none;
     padding: 20px;
+}
+
+.order-list,
+.order-histroy-list{
+    background: #dbf3ff;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    padding-left: 0px;
+    border-radius: 10px;
+}
+
+.order-container,
+.order-history-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 60px;
+    height: auto;
+    width: auto;
+    padding-bottom: 40px;
+}
+
+.change-status-btn{
+    top: 20px;
+    padding: 3px;
+    height: 40px;
+}
+
+.cancel-btn{
+    top: 70px;
+    background-color: grey;
+}
+
+.delete-btn1{
+    top: 110px;
+    background-color: red;
+}
+
+.num{
+    position: absolute;
+    background: #1fa4cc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: #fff;
+    right: 88%;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.product-card-order{
+    flex: 0 0 auto;
+    width: 300px;
+    height: 470px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-left: 33px;
+    margin-right: 30px;
+    box-shadow: 5px 5px #383838;
+    border: 1px solid black;
+    border-radius: 5px;  
+    background: #fff;
+}
+
+.address-order{
+    border: 1px solid #1fa4cc;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.add-text-title{
+    color: #1fa4cc;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.add-text{
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-card-order:hover .action-btn{
+    opacity: 5;
+    pointer-events: all;
+}
+
+.price1{
+    font-weight: bold;
+    font-size: 22px;
+    background-color: crimson;
+    color: white;
+    padding: 2px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 0px;
+    border-radius: 5px;
+}
+
+.price1-ans{
+    border-radius: 0px 5px 5px 0px;
+    color: crimson;
+    padding: 2px;
+    background: white;
+    border: 1px solid crimson;
+    font-size: 20px;
+}
+
+.quan{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    background: deeppink;
+    color: white;
+    padding: 2px;
+    padding-left: 5px;
+    margin-top: 5px;
+    padding-right: 0px;
+    border-radius: 5px;
+}
+
+.quan-ans{
+    border-radius: 0px 5px 5px 0px;
+    color: deeppink;
+    padding: 2px;
+    background: white;
+    font-size: 20px;
+    border: 1px solid deeppink;
 }

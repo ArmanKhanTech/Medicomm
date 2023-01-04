@@ -46,7 +46,8 @@ const createHistory = (data) => {
     for(let i = 0; i < data.length; i++){
         for(let j = 0; j < data[i].order.length; j++){
             if(data[i].order[j].status == 'Delivered' || data[i].order[j].status == 'Failed' || data[i].order[j].status == 'Cancelled'){
-                hisContainer.innerHTML += `<div class="sm-product">
+                hisContainer.innerHTML += 
+                `<div class="sm-product">
                     <img src="${data[i].order[j].image}" class="sm-product-img" alt="">
                     <div class="sm-text">
                         <p class="sm-product-name">${data[i].order[j].name}</p>

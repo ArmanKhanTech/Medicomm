@@ -1,4 +1,5 @@
-//popup name not working
+let soldby = '';
+
 let loader = document.querySelector('.loader');
 let user = JSON.parse(sessionStorage.user || null);
 
@@ -73,16 +74,24 @@ const setupProducts = () => {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-              },
-            body: JSON.stringify({email: user.email}),
+              }
         }).then(res => res.json()).then(data => {
             if(data != 'no-orders'){
-                data.forEach(order => createHistory(order));
-                setCount1(data.length);
+                createOrders(data, soldby);
             } else{
                 noOrder.style.display = 'block';
             }
         })
+    })
+}
+
+const findSeller = () => {
+    fetch('/get-seller', {
+        method: 'post',
+        headers: new Headers ({'Content-Type': 'application/json'}),
+        body: JSON.stringify({email: user.email})
+    }).then((res) => res.json()).then(data => {
+        soldby = data.name;
     })
 }
 
@@ -93,6 +102,7 @@ if(user){
     } else {
         loader.style.display = 'block';
         setupProducts();
+        findSeller();
     }
 } else{
     location.replace('/login')

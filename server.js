@@ -385,34 +385,22 @@ app.post('/fetch-orders', (req, res) => {
 })
 
 app.post('/get-orders', (req, res) => {
-    const {email} = req.body;
-
-    let docref = db.collection('sellers').where('email', '==' ,email);
-    let sellerName = "";
     let prArr = [];
 
-    docref.get().then(seller => {
-        seller.forEach(items => {
-        sellerName = items.data().name;
+    let docref1 = db.collection('orders');
+
+    docref1.get().then(orders => {    
+        orders.forEach(items => {
+            let data = items.data();
+            data.id = items.id;
+            if(data.length != 0){
+                prArr.push(data);
+            } else{
+                res.json('no-orders');
+            }
         });
     }).then(() => {
-        // continue
-        let docref1 = db.collection('orders').where('order', '==' ,sellerName);
-
-        docref1.get().then(orders => {    
-            orders.forEach(items => {
-                let data = items.data();
-                data.id = items.id;
-                if(data.length != 0){
-                    prArr.push(data);
-                } else{
-                    res.json('no-orders');
-                }
-            });
-        }).then(() => {
-            console.log(prArr);
-            res.json(prArr);
-        })
+        res.json(prArr);
     })
 })
 
