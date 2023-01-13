@@ -437,7 +437,7 @@ app.post('/order', (req, res) => {
         host: "smtp.gmail.com",
         auth: {
             user: 'ak2341776@gmail.com',
-            pass: 'ptxvhrnyalztibzv'
+            pass: 'zokctrncqwvztcdq'
         }
     })
 
@@ -468,7 +468,7 @@ app.post('/order', (req, res) => {
                             text-align: center;
                             font-size: 40px;
                             margin: 30px auto 60px;
-                            width: 100%;
+                            width: fit-content;
                             display: block;
                             line-height: 50px;
                         }
@@ -476,7 +476,7 @@ app.post('/order', (req, res) => {
                             text-align: center;
                             font-size: 20px;
                             margin: 30px auto 60px;
-                            width: 50%;
+                            width: fit-content;
                             display: block;
                             line-height: 30px;
                         }
@@ -502,11 +502,13 @@ app.post('/order', (req, res) => {
                         <button class="btn">Check Status</button>
                     </div>
 
+                    <script>
+
+                    </script>
                 </body>
 
             </html>
         `
-
     }
 
     db.collection('orders').doc(docName).set(req.body)

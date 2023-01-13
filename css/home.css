@@ -54,33 +54,39 @@ body{
 }
 
 .product-category{
-    padding: 40px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding: 20px;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 12px;
+    margin-left: 30px;
     margin-top: 10px;
-}
-
-.product-category2{
-    padding: 40px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: 40px;
-    font-weight: bold;
-    margin-left: 15px;
-    margin-top: 40px;
+    color: #8a30f7;
+    border: 1px solid #8a30f7;
+    width: fit-content;
+    border-radius: 10px;
 }
 
 .product-category1{
-    padding: 40px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding: 20px;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 15px;
-    margin-top: 20px;
+    margin-left: 30px;
+    margin-top: 60px;
+    color: #ee7c19;
+    border: 1px solid #ee7c19;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.product-category2{
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 40px;
+    color: deeppink;
+    border: 1px solid deeppink;
+    width: fit-content;
+    border-radius: 10px;
 }
 
 .product-container{
@@ -150,7 +156,7 @@ body{
 
 .discount-tag2{
     position: absolute;
-    background: #fc92c4;
+    background: deeppink;
     padding: 5px;
     border-radius: 5px;
     color: #fff;
@@ -172,7 +178,7 @@ body{
     color: #fff;
     outline: none;
     font-weight: bold;
-    background: #fc92c4;
+    background: deeppink;
     border-radius: 10px;
     transition: 0.5s;
     cursor: pointer;
@@ -201,7 +207,7 @@ body{
     width: auto;
     height: 27px;
     padding: 0px;
-    background: #fc92c4;
+    background: deeppink;
     border-radius: 5px;
     color: #fff;
     padding: 5px;
@@ -270,16 +276,6 @@ body{
     opacity: 0.5;
     font-size: 20px;
     text-decoration: line-through;
-}
-
-.product-category1{
-    padding: 40px;
-    padding-bottom: 0px;
-    font-size: 40px;
-    font-weight: bold;
-    margin: 20px;
-    margin-bottom: 0px;
-    margin-left: 10px;
 }
 
 .product-container1{
@@ -474,7 +470,7 @@ body{
 }
 
 .promotextbg{
-    background: #fc92c4;
+    background: deeppink;
     border-radius: 0px 10px 10px 0px;
     border: none;
 }

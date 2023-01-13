@@ -7,6 +7,7 @@
     margin: 50px;
     margin-right: 50px;
     padding-bottom: 40px;
+    justify-content: space-between;
 }
 
 .order-heading{
@@ -14,7 +15,18 @@
     margin: 20px 0;
 }
 
-.no-orders-img{
+.no-orders-img1{
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    margin-left: 40px;
+    border: 1px solid #1fa4cc;
+    border-radius: 10px;
+    display: block;
+    padding: 20px;
+}
+
+.no-orders-img2{
     width: 400px;
     height: 400px;
     margin-top: 40px;
@@ -39,6 +51,11 @@
 .product-list{
     width: 40%;
     margin-left: 15px;
+}
+
+.history-list{
+    width: 40%;
+    margin-right: 20px;
 }
 
 .order .history{
@@ -175,6 +192,15 @@
 
 .order-heading2{
     font-size: 30px;
-    margin: 20px 0;
-    margin-top: 40px;
+    margin: 20px;
+    margin-left: 0px;
 }
+
+.vl {
+    border-left: 1px solid #1fa4cc;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+  

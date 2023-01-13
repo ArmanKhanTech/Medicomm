@@ -24,18 +24,17 @@ const createOrders = (data) => {
             }
         }
     }
+    
+    const orderSection = document.querySelector('.order-section');
+    let loader = document.querySelector('.loader');
+    loader.style.display = 'none';
+    orderSection.classList.remove('hide');
+    orderCount.innerHTML = totalOrders;
+    setupEvents(data);
 
     if(totalOrders == 0){
-        orderContainer.innerHTML = `<img src="images/no-orders.png" alt="empty-cart" class="no-orders-img">`;
-    } else {
-        const orderSection = document.querySelector('.order-section');
-        let loader = document.querySelector('.loader');
-        loader.style.display = 'none';
-        orderSection.classList.remove('hide');
-        orderCount.innerHTML = totalOrders;
+        document.querySelector('.no-orders-img1').classList.remove('hide');
     }
-
-    setupEvents(data);
 }
 
 const createHistory = (data) => {
@@ -64,11 +63,11 @@ const createHistory = (data) => {
             }
         }
     }
+        
+    hisCount.innerHTML = totalOrders;
 
     if(totalOrders == 0){
-        hisContainer.innerHTML += `<img src="images/no-orders.png" alt="empty-cart" class="no-orders-img">`;
-    } else {
-        hisCount.innerHTML = totalOrders;
+        document.querySelector('.no-orders-img2').classList.remove('hide');
     }
 }
 

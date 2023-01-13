@@ -62,36 +62,6 @@
         <script src="js/token.js"></script>
         <button id="rzp-button1">Pay</button>
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script> 
-        <script> 
-            const onlineCheckout = () => {
-                var options = {
-                    "key": "rzp_test_DOYACvZKE9x1en", 
-                    "amount": totalBill, 
-                    "currency": "INR",
-                    "name": "Medicomm",
-                    "description": "Pay & Checkout",
-                    "order_id": order_id,  
-                    "handler": function (response){
-                        paymentSuccess();
-                    },
-                    "prefill": {
-                        "name": JSON.parse(sessionStorage.getItem("user")).name,  
-                        "email": JSON.parse(sessionStorage.getItem("user")).email,
-                    }, 
-                    "theme": {
-                        "color": "#1fa4cc"
-                    }
-                };
-
-                var razorpayObject = new Razorpay(options);
-
-                razorpayObject.open();
-                
-                razorpayObject.on('payment.failed', function (response){
-                        alert("This step of Payment Failed");
-                });
-        }
-        </script>
 
     </body>
 

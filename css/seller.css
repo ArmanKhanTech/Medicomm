@@ -298,17 +298,16 @@ body{
     padding-right: 10px;
     border-radius: 10px;
     margin-bottom: 30px;
-    margin-top: 10px;
 }
 
 .heading4{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 35px;
     margin-left: 10px;
 }
 
 .heading5{
-    margin-bottom: 40px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     margin-left: 10px;
 }
 
@@ -612,6 +611,11 @@ body{
     border-radius: 10px;
 }
 
+.order-list{
+    margin-top : 15px;
+    padding-bottom: 0px;
+}
+
 .order-container,
 .order-history-container{
     display: grid;
@@ -693,44 +697,83 @@ body{
 }
 
 .price1{
-    font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     background-color: crimson;
     color: white;
     padding: 2px;
-    margin-top: 5px;
+    margin-top: 10px;
     padding-left: 5px;
-    padding-right: 0px;
     border-radius: 5px;
 }
 
 .price1-ans{
     border-radius: 0px 5px 5px 0px;
-    color: crimson;
-    padding: 2px;
-    background: white;
+    color: white;
+    background: crimson;
     border: 1px solid crimson;
     font-size: 20px;
+    padding-top: 1px;
+    padding-right: 3px;
+    font-weight: bold;
 }
 
 .quan{
     margin-left: 10px;
-    font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     background: deeppink;
     color: white;
     padding: 2px;
     padding-left: 5px;
-    margin-top: 5px;
-    padding-right: 0px;
+    margin-top: 10px;
     border-radius: 5px;
 }
 
 .quan-ans{
     border-radius: 0px 5px 5px 0px;
-    color: deeppink;
-    padding: 2px;
-    background: white;
+    color: white;
+    background: deeppink;
     font-size: 20px;
     border: 1px solid deeppink;
+    font-weight: bold;
+    padding-top: 1px;
+    padding-right: 3px;
+}
+
+.container{
+    border: #1fa4cc 1px solid;
+    border-radius: 10px;
+    width: fit-content;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tabs{
+	display: flex;
+	background-color: none;
+	border-radius: 10px; 
+	z-index: 2;
+}
+
+input[type="radio"]{
+    color: #1fa4cc;
+	display: none;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #1fa4cc;
+    color: #fff;
+}
+
+.tab{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 150px;
+	font-size: 20px;
+	border-radius: 10px; 
+	cursor: pointer;
+    color: #1fa4cc;
 }

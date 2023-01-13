@@ -1,5 +1,33 @@
 let openEditor;
 
+const radio = document.querySelector('.tabs');
+radio.addEventListener('change', () => {
+    const radioVal = document.querySelector('input[name="tabs"]:checked').value;
+    if(radioVal == 'products'){
+        document.querySelector('.add-product').classList.remove('hide');
+        document.querySelector('.product-container').classList.remove('hide');
+        document.querySelector('.heading4').classList.add('hide');
+        document.querySelector('.order-list').classList.add('hide');
+        document.querySelector('.heading5').classList.add('hide');
+        document.querySelector('.order-history-list').classList.add('hide');
+    } else if(radioVal == 'orders'){
+        document.querySelector('.heading4').classList.remove('hide');
+        document.querySelector('.order-list').classList.remove('hide');
+        document.querySelector('.add-product').classList.add('hide');
+        document.querySelector('.product-container').classList.add('hide');
+        document.querySelector('.heading5').classList.add('hide');
+        document.querySelector('.order-history-list').classList.add('hide');
+    } else if(radioVal == 'history'){
+        document.querySelector('.heading5').classList.remove('hide');
+        document.querySelector('.order-history-list').classList.remove('hide');
+        document.querySelector('.heading4').classList.add('hide');
+        document.querySelector('.order-list').classList.add('hide');
+        document.querySelector('.add-product').classList.add('hide');
+        document.querySelector('.product-container').classList.add('hide');
+    }
+    
+})
+
 // fix this
 const setUpColor = (data) => {
     const proStatus = document.querySelectorAll('#product-status');
@@ -116,8 +144,8 @@ const createOrders = (data, seller) => {
                     </div>
                     <div class="product-info">
                         <p class="product-brand">${data[i].order[j].name}</p>
-                        <span class="price1">Total <span class="price1-ans">${data[i].order[j].price}</span></span>
-                        <span class="quan">Quantity <span class="quan-ans">${data[i].order[j].quantity}</span></span>
+                        <span class="price1">Total : <span class="price1-ans">${data[i].order[j].price}</span></span>
+                        <span class="quan">Quantity : <span class="quan-ans">${data[i].order[j].quantity}</span></span>
                         <div class="address-order">
                             <span class="address1 add-text-title">Address : <span class="add-text">${data[i].address.address}</span></span><br>
                             <span class="street1 add-text-title">Street : <span class="add-text">${data[i].address.street}</span></span><br>
@@ -156,8 +184,8 @@ const setUpHistory = (data, seller) => {
                     </div>
                     <div class="product-info">
                         <p class="product-brand">${data[i].order[j].name}</p>
-                        <span class="price1">Total <span class="price1-ans">${data[i].order[j].price}</span></span>
-                        <span class="quan">Quantity <span class="quan-ans">${data[i].order[j].quantity}</span></span>
+                        <span class="price1">Total : <span class="price1-ans">${data[i].order[j].price}</span></span>
+                        <span class="quan">Quantity : <span class="quan-ans">${data[i].order[j].quantity}</span></span>
                         <div class="address-order">
                             <span class="address1 add-text-title">Address : <span class="add-text">${data[i].address.address}</span></span><br>
                             <span class="street1 add-text-title">Street : <span class="add-text">${data[i].address.street}</span></span><br>
@@ -237,4 +265,7 @@ const setCount2 = (order) => {
     const orderCount = document.querySelector('.order-history-count');
     orderCount.innerHTML = order - 1;
 }
+
+document.querySelector('.add-product').classList.remove('hide');
+document.querySelector('.product-container').classList.remove('hide');
 

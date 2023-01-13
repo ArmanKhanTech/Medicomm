@@ -43,24 +43,35 @@
         <!-- product list of seller -->
         
         <div class="product-list hide">
-            <div class="add-product">
+            <div class="container">
+                <div class="tabs">
+                    <input type="radio" id="radio-1" name="tabs" value="products" checked />
+                    <label class="tab" for="radio-1">Products</label>
+                    <input type="radio" id="radio-2" name="tabs" value="orders"/>
+                    <label class="tab" for="radio-2">Orders</label>
+                    <input type="radio" id="radio-3" name="tabs" value="history"/>
+                    <label class="tab" for="radio-3">History</label>
+                </div>
+            </div>
+
+            <div class="add-product hide">
                 <h1 class="heading3">Your Products : <span class="pro-count">0</span></h1>
                 <button class="add-product-btn">Add Product</button>
             </div>
-            <div class="product-container">
+            <div class="product-container hide">
                 <img src="images/no-orders.png" alt="empty-cart" class="no-products-img">
                 <!-- createProduct.js -->
             </div>
-            <hr style="height:2px;border-width:0;color:#1fa4cc;background-color:#1fa4cc">
-            <h1 class="heading4">Your Orders : <span class="order-count">0</span></h1>
-            <div class="order-list">
+
+            <h1 class="heading4 hide">Your Orders : <span class="order-count">0</span></h1>
+            <div class="order-list hide">
                 <div class="order-container">
                     <img src="images/no-orders.png" alt="empty-cart" class="no-orders-img">
                 </div>
             </div>
-            <hr style="height:2px;border-width:0;color:#1fa4cc;background-color:#1fa4cc;margin-bottom: 20px;">
-            <h1 class="heading5">Order History : <span class="order-history-count">0</span></h1>
-            <div class="order-history-list">
+            
+            <h1 class="heading5 hide">Order History : <span class="order-history-count">0</span></h1>
+            <div class="order-history-list hide">
                 <div class="order-history-container">
                     <img src="images/no-orders.png" alt="empty-cart" class="no-orders-img">
                 </div>

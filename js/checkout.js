@@ -54,6 +54,36 @@ placeorder.addEventListener('click', () => {
     }
 });
 
+const onlineCheckout = () => {
+    var options = {
+        "key": "rzp_test_DOYACvZKE9x1en", 
+        "amount": totalBill, 
+        "currency": "INR",
+        "name": "Medicomm",
+        "image": "../images/mainlogo.png",
+        "description": "Pay & Checkout",
+        "order_id": order_id,  
+        "handler": function (response){
+            paymentSuccess();
+        },
+        "prefill": {
+            "name": JSON.parse(sessionStorage.getItem("user")).name,  
+            "email": JSON.parse(sessionStorage.getItem("user")).email,
+        }, 
+        "theme": {
+            "color": "#1fa4cc"
+        }
+    };
+
+    var razorpayObject = new Razorpay(options);
+
+    razorpayObject.open();
+    
+    razorpayObject.on('payment.failed', function (response){
+            alert("This step of Payment Failed");
+    });
+}
+
 const paymentSuccess = () => {
     let address = getAddress();
     let finalOrder = JSON.parse(localStorage.getItem('order'));

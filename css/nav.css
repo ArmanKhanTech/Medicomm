@@ -49,6 +49,7 @@
     background: none;
     color: #000000;
     outline: none;
+    text-transform: capitalize;
 }
 
 .search-btn{

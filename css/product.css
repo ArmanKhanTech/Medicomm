@@ -383,6 +383,18 @@ body{
     padding-left: 20px;
 }
 
+.product-category3{
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 60px;
+    color: #8a30f7;
+    border: 1px solid #8a30f7;
+    width: fit-content;
+    border-radius: 10px;
+}
+
 .pin-field{
     display: flex;
     margin-top: 30px;
