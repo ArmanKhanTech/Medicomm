@@ -51,7 +51,24 @@ const comparePincode = (sellerPin, userPin) => {
     sellerPin = parseInt(sellerPin);
     userPin = parseInt(userPin);
 
-    // continue here
+    let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=tvYX1BKFtH5CRA4Bk5DSqf8iO2gHZ`;
+    
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        let distance = data.rows[0].elements[0].distance.text;
+        let time = data.rows[0].elements[0].duration.text;
+        if(sellerPin != userPin){
+            let tempDis = parseInt(distance.split(' '));
+            if(tempDis < 1000){
+                pinAns.textContent = `Delivery Time : ${time}, Distance : ${distance}`;
+            } else {
+                pinAns.textContent = `Delivery Not Available`;
+            }
+        } else if(sellerPin == userPin){
+            pinAns.textContent = 'Delivery Within an Hour';
+        }
+    }) 
 }
 
 pinBtn.addEventListener('click', () => {
@@ -87,17 +104,15 @@ const setFromsData = (data) => {
     const addCartBtn = document.querySelector('.cart-btn');
     const addWishlistBtn = document.querySelector('.wish-btn');
 
-    let remStock = parseInt(data.stock);
-
-        addCartBtn.addEventListener('click', () => {
-            if(remStock => parseInt(quanValue.value)){
-                addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value, sell);
-            }
-            else {
-                showAlert('Out of Stock');
-            }
-        
-        })
+    addCartBtn.addEventListener('click', () => {
+        if(parseInt(data.stock) > parseInt(quanValue.value)){
+            addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value, sell);
+        }
+        else {
+            addCartBtn.innerHTML = 'Out of Stock';
+        }
+    
+    })
         
     addWishlistBtn.addEventListener('click', () => {
         addWishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data, quanValue.value, sell);

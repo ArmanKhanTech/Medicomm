@@ -362,6 +362,14 @@ app.post('/get-date', (req, res) => {
     })
 })
 
+app.post('/cancel-order', (req, res) => {
+    const {order, email} = req.body;
+
+    let docref = db.collection('orders').doc(order);
+
+    // continue here
+})
+
 app.post('/fetch-orders', (req, res) => {
     const {email} = req.body;
 

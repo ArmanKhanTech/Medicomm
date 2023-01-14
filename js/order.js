@@ -17,7 +17,7 @@ const createOrders = (data) => {
                         <p class="item-count" id="item-count">${data[i].order[j].quantity}</p>
                     </div>
                     <p class="sm-price" id="sm-price">${data[i].order[j].price}</p>
-                    <button class="sm-delete-btn" id="sm-delete-btn"><img src="images/close.png"></button>
+                    <button class="sm-delete-btn" id="sm-delete-btn"><img src="../images/close.png"></button>
                 </div>
                 `;
                 totalOrders++; 
@@ -35,6 +35,32 @@ const createOrders = (data) => {
     if(totalOrders == 0){
         document.querySelector('.no-orders-img1').classList.remove('hide');
     }
+}
+
+const openDelPopup = (order) => {
+    document.querySelector('.delete-alert').style.display='flex';
+
+    document.querySelector('.del1-btn').addEventListener('click', () => {
+        fetch('/cancel-order', {
+            method: 'post',
+            headers: new Headers({'Content-Type': 'application/json'}),
+            body: JSON.stringify({
+                order: order,
+                email: user.email
+            })
+        }).then(res => res.json())
+        .then(data => {
+            if(data.status == 'success'){
+                location.reload();
+            } else {
+                showAlert('Something went wrong');
+            }
+        })
+    });
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+        document.querySelector('.delete-alert').style.display='none';
+    });
 }
 
 const createHistory = (data) => {
@@ -91,11 +117,8 @@ const setupEvents = (data) => {
 
     for(let i = 0; i < data.length; i++){
         for(let j = 0; j < data[i].order.length; j++){
-            deleteBtn.forEach((item, i) => {
-                item.addEventListener('click', () => {
-                    // continue to delete
-                    console.log('delete');
-                });
+            deleteBtn[i].addEventListener('click', () => {
+                    openDelPopup(data[i].order[j]);
             });
         }
     } 

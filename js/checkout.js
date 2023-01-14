@@ -8,6 +8,7 @@ placeorder.addEventListener('click', () => {
         let finalOrder = JSON.parse(localStorage.getItem('order'));
 
         if(address){
+            document.querySelector('.loader').style.display = 'block';
             fetch('/order', {
                 method: 'POST',
                 headers: new Headers({'Content-Type': 'application/json'}),
@@ -21,6 +22,7 @@ placeorder.addEventListener('click', () => {
             .then(data => {
                 if(data.alert == 'Your Order Was Placed Successfully.'){
                     updateProStock(finalOrder);
+                    document.querySelector('.loader').style.display = 'none';
                     localStorage.removeItem('cart');
                     localStorage.removeItem('order');
                     localStorage.removeItem('totalBill');
@@ -36,6 +38,8 @@ placeorder.addEventListener('click', () => {
     } else if(document.getElementById('online').checked){
         let receipt = Math.floor(Math.random() * 100000) + 1;
         totalBill = parseInt(localStorage.getItem('totalBill')) * 100;
+
+        document.querySelector('.loader').style.display = 'block';
 
         fetch('/order-online', {
             method: 'POST',
@@ -101,6 +105,7 @@ const paymentSuccess = () => {
         }).then(res => res.json())
         .then(data => {
             if(data.alert == 'Your Order Was Placed Successfully.'){
+                document.querySelector('.loader').style.display = 'none';
                 updateProStock(finalOrder);
                 localStorage.removeItem('cart');
                 localStorage.removeItem('order');

@@ -363,3 +363,22 @@ input[type="radio"] {
     border-radius: 0px 3px 3px 0px;
     padding-right: 2px;
 }
+
+.section-heading{
+    font-weight: bold;
+}
+
+.loader{
+    position: fixed;
+    display: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #1fa4cc;
+    display: none;
+    z-index: 1000;
+}

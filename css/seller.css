@@ -297,18 +297,33 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+}
+
+.heading3{
+    border: #1fa4cc 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .heading4{
     margin-top: 35px;
     margin-left: 10px;
+    border: 1px solid #1fa4cc;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .heading5{
     margin-top: 35px;
     margin-bottom: 35px;
     margin-left: 10px;
+    border: 1px solid #1fa4cc;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .no-product-pic{
@@ -562,43 +577,20 @@ body{
     pointer-events: all;
 }
 
-.pro-count{
-    color: #1fa4cc;
-    border: 1px solid #1fa4cc;
-    padding: 3px;
-    border-radius: 5px;
-}
-
-.order-count,
-.order-history-count{
-    color: #1fa4cc;
-    border: 1px solid #1fa4cc;
-    padding: 3px;
-    border-radius: 5px;
-}
-
 .hide{
     display: none;
 }
 
-.no-products-img{
+.no-products-img,
+.no-orders-img,
+.no-history-img{
     width: 400px;
     height: 400px;
-    margin-left: 40px;
+    margin: auto;
     border: 1px solid #1fa4cc;
     border-radius: 10px;
-    display: none;
     padding: 20px;
-}
-
-.no-orders-img{
-    width: 400px;
-    height: 400px;
-    margin-left: 40px;
-    border: 1px solid #1fa4cc;
-    border-radius: 10px;
-    display: none;
-    padding: 20px;
+    margin-left: 20px;
 }
 
 .order-list,
@@ -698,8 +690,8 @@ body{
 
 .price1{
     font-size: 20px;
-    background-color: crimson;
-    color: white;
+    border: 1px solid crimson;
+    color: crimson;
     padding: 2px;
     margin-top: 10px;
     padding-left: 5px;
@@ -708,9 +700,6 @@ body{
 
 .price1-ans{
     border-radius: 0px 5px 5px 0px;
-    color: white;
-    background: crimson;
-    border: 1px solid crimson;
     font-size: 20px;
     padding-top: 1px;
     padding-right: 3px;
@@ -720,8 +709,8 @@ body{
 .quan{
     margin-left: 10px;
     font-size: 20px;
-    background: deeppink;
-    color: white;
+    border: 1px solid deeppink;
+    color: deeppink;
     padding: 2px;
     padding-left: 5px;
     margin-top: 10px;
@@ -730,10 +719,7 @@ body{
 
 .quan-ans{
     border-radius: 0px 5px 5px 0px;
-    color: white;
-    background: deeppink;
     font-size: 20px;
-    border: 1px solid deeppink;
     font-weight: bold;
     padding-top: 1px;
     padding-right: 3px;

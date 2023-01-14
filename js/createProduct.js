@@ -254,16 +254,30 @@ const delProduct = (id) => {
 const setCount = (pro) => {
     const proCount = document.querySelector('.pro-count');
     proCount.innerHTML = pro;
+
+    if(pro == 0){
+        document.querySelector('.no-products-img').classList.remove('hide');
+    }
 }
 
 const setCount1 = (order) => {
     const orderCount = document.querySelector('.order-count');
     orderCount.innerHTML = order - 1;
+
+    if(order-1 == 0){
+        console.log(order);
+        document.querySelector('.no-orders-img').classList.remove('hide');
+    }
 }
 
 const setCount2 = (order) => {
     const orderCount = document.querySelector('.order-history-count');
     orderCount.innerHTML = order - 1;
+
+    if(order-1 == 0){
+        console.log(order);
+        document.querySelector('.no-history-img').classList.remove('hide');
+    }
 }
 
 document.querySelector('.add-product').classList.remove('hide');
