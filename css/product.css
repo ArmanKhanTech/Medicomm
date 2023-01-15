@@ -151,11 +151,14 @@ body{
 
 .sold-by{
     font-weight: 300;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: bold;
     background: #000000;
     color: #fff;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2.5px;
     border-radius: 0px 5px 5px 0px;
 }
 
@@ -347,7 +350,7 @@ body{
 
 .per-ans{
     font-weight: 300;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: bold;
     background: rgb(255, 89, 0);
     color: #fff;
@@ -369,7 +372,7 @@ body{
 
 .stock-ans{
     font-weight: 300;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: bold;
     background: darkgreen;
     color: #fff;
@@ -378,7 +381,7 @@ body{
 }
 
 .pin-check{
-    margin-left: 258px;
+    margin-left: 262px;
     border-left: 2px solid rgb(255, 89, 0);
     padding-left: 20px;
 }
@@ -407,6 +410,7 @@ body{
     width: 500px;
     height: 50px;
     padding: 10px;
+    padding-top: 7px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: 1px solid rgb(255, 1, 166);
@@ -443,10 +447,9 @@ body{
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    height: 50px;
     padding: 10px;
-    padding-top: 11px;
-    height: fit-content;
+    padding-top: 12px;
+    height: 50px;
 }
 
 .pin-ans1{
@@ -470,4 +473,47 @@ body{
 
 .hide{
     display: none;
+}
+
+.seller-address-popup{
+    position: absolute;
+    left: 60%;
+    top : 87%;
+    transform: translate(-50%);
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    transition: .5s;
+    border: 1px solid black;
+}
+
+.seller-address-popup::after{
+    content: '';
+    position: absolute;
+    left: 48%;
+    top : -9.5px;
+    transform: translate(-50%) rotate(45deg);
+    background: #fff;
+    width: 15px;
+    height: 16px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.address{
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #1fa4cc;
+}
+
+.address-ans,
+.pincode,
+.number{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
 }

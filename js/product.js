@@ -44,6 +44,9 @@ const fetchSellerName = (data) => {
         sell = data.name;
         sellerPin = data.pincode;
         seller.textContent = sell;
+        document.querySelector('.address-ans').textContent = data.address;
+        document.querySelector('.pincode').textContent = data.pincode;
+        document.querySelector('.number').textContent = data.number;
     })
 }
 
@@ -118,6 +121,10 @@ const setFromsData = (data) => {
         addWishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data, quanValue.value, sell);
     })
 }
+
+seller.addEventListener('click', () => {
+    document.querySelector('.seller-address-popup').classList.toggle('hide');
+})
 
 const fetchProductData = () => {
     fetch('/get-product', {

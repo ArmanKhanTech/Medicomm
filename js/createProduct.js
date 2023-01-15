@@ -138,9 +138,6 @@ const createOrders = (data, seller) => {
                         <button class="action-btn change-status-btn" onClick="updateStatus('${data[i].order[j]})">
                             Change Status
                         </button>
-                        <button class="action-btn cancel-btn" onClick="openProduct('${data[i].order[j].id}')">
-                            Cancel
-                        </button>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">${data[i].order[j].name}</p>
