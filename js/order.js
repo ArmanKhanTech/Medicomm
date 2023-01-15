@@ -2,6 +2,7 @@ const createOrders = (data) => {
     const orderContainer = document.querySelector('.order');
     const orderCount = document.querySelector('.order-count');
     var totalOrders = parseInt(0);
+    let orderArr = [];
 
     for(let i = 0; i < data.length; i++){
         for(let j = 0; j < data[i].order.length; j++){
@@ -20,7 +21,8 @@ const createOrders = (data) => {
                     <button class="sm-delete-btn" id="sm-delete-btn"><img src="../images/close.png"></button>
                 </div>
                 `;
-                totalOrders++; 
+                totalOrders++;
+                orderArr.push(data[i].order[j]);
             }
         }
     }
@@ -30,6 +32,7 @@ const createOrders = (data) => {
     loader.style.display = 'none';
     orderSection.classList.remove('hide');
     orderCount.innerHTML = totalOrders;
+    setupEvents(orderArr);
 
     if(totalOrders == 0){
         document.querySelector('.no-orders-img1').classList.remove('hide');
@@ -49,7 +52,7 @@ const openDelPopup = (order) => {
             })
         }).then(res => res.json())
         .then(data => {
-            if(data.status == 'success'){
+            if(data == 'success'){
                 location.reload();
             } else {
                 showAlert('Something went wrong');
@@ -108,21 +111,17 @@ const getOrders = (email) => {
     .then(data => {
         createOrders(data);
         createHistory(data);
-        // continue here
-        // setupEvents(data);
     })
 }
 
-const setupEvents = (data) => {
+const setupEvents = (order) => {
     const deleteBtn = document.querySelectorAll('#sm-delete-btn');
 
-    for(let i = 0; i < data.length; i++){
-        for(let j = 0; j < data[i].order.length; j++){
-            if(data[i].order[j].status != 'Delivered' && data[i].order[j].status != 'Failed' && data[i].order[j].status != 'Cancelled'){
-                deleteBtn[i].addEventListener('click', () => {
-                    openDelPopup(data[i].order[j]);
-                });
-            }
+     for(let i = 0; i < order.length; i++){
+        if(deleteBtn[i]){
+            deleteBtn[i].addEventListener('click', () => {
+                openDelPopup(order[i]);
+            });
         }
     } 
 }

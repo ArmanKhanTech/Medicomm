@@ -118,10 +118,7 @@ const createProduct = (data) => {
 const createOrders = (data, seller) => {
 
     let count = parseInt(1);
-
-    updateStatus = (order) => {
-
-    }
+    let orderArr = [];
 
     let orderConatiner = document.querySelector('.order-container');
 
@@ -135,7 +132,7 @@ const createOrders = (data, seller) => {
                     <span class="num">${count}</span>
                         <span class="product-status" id="product-status">${data[i].order[j].status}</span>
                         <img src=${data[i].order[j].image}>
-                        <button class="action-btn change-status-btn" onClick="updateStatus('${data[i].order[j]})">
+                        <button class="action-btn change-status-btn" id="change-status-btn">
                             Change Status
                         </button>
                     </div>
@@ -153,7 +150,7 @@ const createOrders = (data, seller) => {
                         </div>
                     </div>
                 </div> `;  
-
+                orderArr.push(data[i]);
                 count++;
             }
         }
@@ -161,6 +158,34 @@ const createOrders = (data, seller) => {
   
     setUpHistory(data, seller);
     setCount1(count);
+    setUpEventsForOrderStatUpdate(orderArr);
+}
+
+const setUpEventsForOrderStatUpdate = (data) => {
+    let statUpdate = document.querySelectorAll('#change-status-btn');
+
+    for(let i = 0; i < data.length; i++){
+        for(let j = 0; j < data[i].order.length; j++){
+            if(statUpdate[i]){
+                statUpdate[i].addEventListener('click', () => {
+                    fetch('/update-status', {
+                        method: 'post',
+                        headers: new Headers({'Content-Type': 'application/json'}),
+                        body: JSON.stringify({
+                            order: data[i].order[j],
+                            email: data[i].email,
+                        })
+                    }).then(res => res.json())
+                    .then(data => {
+                        if(data == 'success'){
+                            location.reload();
+                            console.log('Order Updated');
+                        } 
+                    })
+                })
+            }
+        }
+    }
 }
 
 const setUpHistory = (data, seller) => {

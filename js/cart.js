@@ -165,7 +165,8 @@ checkoutBtn.addEventListener('click', () => {
             id: item.id,
             soldby: item.soldby,
             image: item.image,
-            status: 'Waiting for Dispatch'
+            status: 'Waiting for Dispatch',
+            orderid: Math.floor(Math.random() * 100000)
         });
     });
 

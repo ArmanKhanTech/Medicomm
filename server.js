@@ -383,8 +383,55 @@ app.post('/cancel-order', (req, res) => {
             }
         })
     }).then(() => {
-        res.json('sucesss');
+        res.json('success');
     })
+
+})
+
+app.post('/update-status', (req, res) => {
+    const {order, email} = req.body;
+
+    if(order.status == 'Waiting for Dispatch'){
+        let docref = db.collection("orders")
+        .where("email", "==", email)
+        .where("order", "array-contains", order);
+        
+        docref.get().then(orders => {
+            orders.forEach(items => {
+                let data = items.data();
+                for(let i=0; i<data.order.length; i++){
+                    if(data.order[i].id == order.id){
+                        data.order[i].status = 'Out for Delivery';
+                        db.collection("orders").doc(items.id).update({
+                            order: data.order
+                        });
+                    }
+                }
+            })
+        }).then(() => {
+            res.json('success');
+        })
+    } else if(order.status == 'Out for Delivery'){
+        let docref = db.collection("orders")
+        .where("email", "==", email)
+        .where("order", "array-contains", order);
+        
+        docref.get().then(orders => {
+            orders.forEach(items => {
+                let data = items.data();
+                for(let i=0; i<data.order.length; i++){
+                    if(data.order[i].id == order.id){
+                        data.order[i].status = 'Delivered';
+                        db.collection("orders").doc(items.id).update({
+                            order: data.order
+                        });
+                    }
+                }
+            })
+        }).then(() => {
+            res.json('success');
+        })
+    }
 
 })
     
