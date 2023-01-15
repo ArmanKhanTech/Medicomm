@@ -30,11 +30,10 @@ const createOrders = (data) => {
     loader.style.display = 'none';
     orderSection.classList.remove('hide');
     orderCount.innerHTML = totalOrders;
-    setupEvents(data);
 
     if(totalOrders == 0){
         document.querySelector('.no-orders-img1').classList.remove('hide');
-    }
+    } 
 }
 
 const openDelPopup = (order) => {
@@ -94,7 +93,7 @@ const createHistory = (data) => {
 
     if(totalOrders == 0){
         document.querySelector('.no-orders-img2').classList.remove('hide');
-    }
+    } 
 }
 
 const getOrders = (email) => {
@@ -109,6 +108,8 @@ const getOrders = (email) => {
     .then(data => {
         createOrders(data);
         createHistory(data);
+        // continue here
+        // setupEvents(data);
     })
 }
 
@@ -117,9 +118,11 @@ const setupEvents = (data) => {
 
     for(let i = 0; i < data.length; i++){
         for(let j = 0; j < data[i].order.length; j++){
-            deleteBtn[i].addEventListener('click', () => {
+            if(data[i].order[j].status != 'Delivered' && data[i].order[j].status != 'Failed' && data[i].order[j].status != 'Cancelled'){
+                deleteBtn[i].addEventListener('click', () => {
                     openDelPopup(data[i].order[j]);
-            });
+                });
+            }
         }
     } 
 }

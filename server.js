@@ -13,6 +13,7 @@ const razorpay = new Razorpay({
 //firebase admin setup
 let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json");
 const { randomInt } = require('crypto');
+const { CONNREFUSED } = require('dns');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
@@ -365,11 +366,28 @@ app.post('/get-date', (req, res) => {
 app.post('/cancel-order', (req, res) => {
     const {order, email} = req.body;
 
-    let docref = db.collection('orders').doc(order);
+    let docref = db.collection("orders")
+    .where("email", "==", email)
+    .where("order", "array-contains", order);
+    
+    docref.get().then(orders => {
+        orders.forEach(items => {
+            let data = items.data();
+            for(let i=0; i<data.order.length; i++){
+                if(data.order[i].id == order.id){
+                    data.order[i].status = 'Cancelled';
+                    db.collection("orders").doc(items.id).update({
+                        order: data.order
+                    });
+                }
+            }
+        })
+    }).then(() => {
+        res.json('sucesss');
+    })
 
-    // continue here
 })
-
+    
 app.post('/fetch-orders', (req, res) => {
     const {email} = req.body;
 

@@ -253,4 +253,42 @@
     font-weight: bold;
     margin-left: 125px;
 }
+
+.alert-box{
+    width: 310px;
+    min-height: 310px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.alert-box.show{
+    opacity: 1;
+    pointer-events: all;
+    top: 50%;
+}
+
+.alert-img{
+    display: block;
+    height: 60px;
+    margin-top: 25%;
+    margin-left: 38%;
+    margin-bottom: 10%;
+}
+
+.alert-msg{
+    color: #e24c4b;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+}
   
