@@ -1,6 +1,10 @@
 @import "nav.css";
 @import "footer.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
 .hero-section{
     width: 100%;
     height: calc(100vh - 0px);

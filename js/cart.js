@@ -127,9 +127,13 @@ const setupEvents = (name) => {
 
 const setupEvents2 = (name) => {
     const deleteBtn = document.querySelectorAll('#sm-delete-btn2');
-    const addToCart = document.querySelectorAll('#add-to-cart');
+    const addToCartBtn = document.querySelectorAll('#add-to-cart');
 
     let product = JSON.parse(localStorage.getItem(name));
+
+    let res;
+    let data = JSON.parse(localStorage.getItem(name));
+
 
     if(name == 'wishlist'){
         deleteBtn.forEach((item, i) => {
@@ -139,6 +143,21 @@ const setupEvents2 = (name) => {
                 location.reload();
             });
         });
+
+        addToCartBtn.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                res = from_wish_to_cart('cart', data[i], 1, data[i].soldby);
+
+                if(res=='Added'){
+                    product = product.filter((data, index) => index != i);
+                    localStorage.setItem(name, JSON.stringify(product));
+                    location.reload();
+                } else if(res=='Already Added'){
+                    showAlert('Item Already Exists in Cart');
+                }   
+            });
+        });
+
     }
 }
 

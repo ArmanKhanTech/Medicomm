@@ -89,6 +89,14 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(staticPath, "login.html"));
 })
 
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(staticPath, "about.html"));
+})
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(staticPath, "contact.html"));
+})
+
 app.post('/login', (req, res) => {
     let { email, password } = req.body;
     
@@ -340,6 +348,16 @@ app.post('/disEna-product', (req, res) => {
     status = data.status;
 
     db.collection("products").doc(id).update({status: status});
+
+    res.json('success');
+})
+
+app.post('/submit-query', (req, res) => {
+    const {name, email, phone, message} = req.body;
+
+    let docName = email + '-' + randomInt(10000, 99999);
+
+    db.collection("grievance").doc(docName).set(req.body);
 
     res.json('success');
 })

@@ -66,8 +66,8 @@ const createNav = () => {
         <li class="link-item"><a href="/search.html" class="link">buy</a></li>
         <li class="link-item"><a href="/seller.html" class="link">sell</a></li>
         <li class="link-item"><a href="/order.html" class="link">Orders</a></li>
-        <li class="link-item"><a href="#" class="link">about</a></li>
-        <li class="link-item"><a href="#" class="link">contact</a></li>
+        <li class="link-item"><a href="/about.html" class="link">about</a></li>
+        <li class="link-item"><a href="/contact.html" class="link">contact</a></li>
     </ul>
     `;
 }

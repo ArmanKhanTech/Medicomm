@@ -1,0 +1,119 @@
+body{
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1fa4cc; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1fa4cc; 
+  }
+
+.contact-section{
+    margin: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #dbf3ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.contact input{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 800px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.contact textarea{
+    border-radius: 10px;
+    border: none;
+    height: 200px;
+    width: 800px;
+    padding: 10px;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.btn{
+    background: #1fa4cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* alert */
+.alert-box{
+    width: 310px;
+    min-height: 310px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.alert-box.show{
+    opacity: 1;
+    pointer-events: all;
+    top: 50%;
+}
+
+.alert-img{
+    display: block;
+    height: 60px;
+    margin-top: 25%;
+    margin-left: 38%;
+    margin-bottom: 10%;
+}
+
+.alert-msg{
+    color: #e24c4b;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+}
