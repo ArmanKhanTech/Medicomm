@@ -21,7 +21,7 @@ g. Search(By Name, Type, Category or Use)<br>
 h. Submit Grieviance<br>
 i. Sign Up and Log In
 
-**Images :**<br>
+**Images :<br>
 a. Home Page :
 ![mainpage1](https://user-images.githubusercontent.com/92728787/213467529-6678c745-c302-4b10-acff-eda3a7174249.png)
 ![mainpage2](https://user-images.githubusercontent.com/92728787/213467632-b101c384-30a4-4c6b-a3b4-65caefb12f7b.png)
@@ -55,7 +55,7 @@ h. Cart :
 
 i. Checkout and Online Payment : 
 ![checkoutpage](https://user-images.githubusercontent.com/92728787/213468614-a5636c99-cc80-4910-91ef-47ffe4177138.png)
-![onlinepaymentpage](https://user-images.githubusercontent.com/92728787/213468648-4b3ab7eb-65df-4699-a94e-d8ef5495e44a.png)
+![onlinepaymentpage](https://user-images.githubusercontent.com/92728787/213468648-4b3ab7eb-65df-4699-a94e-d8ef5495e44a.png)**
 
 
 
