@@ -42,19 +42,19 @@ i. Sign Up and Log In
 
 **d. Seller Dashboard :**<br><br>
 <kbd>
-![sellerdashboard1](https://user-images.githubusercontent.com/92728787/213467967-11a91cda-6bea-4884-b094-950022ddcd1d.png)
+![sellerdashboard1](https://user-images.githubusercontent.com/92728787/213467967-11a91cda-6bea-4884-b094-950022ddcd1d.png)<br>
 </kbd>
 <br>
 <kbd>
-![sellerdashboard2](https://user-images.githubusercontent.com/92728787/213476767-88dd6684-f9dc-4525-b763-6879880348c5.png)
+![sellerdashboard2](https://user-images.githubusercontent.com/92728787/213476767-88dd6684-f9dc-4525-b763-6879880348c5.png)<br>
 </kbd>
 <br>
 <kbd>
-![sellerdashboard3](https://user-images.githubusercontent.com/92728787/213476840-6f4a35ea-6db8-4e8a-a320-232cb7c7c84c.png)
+![sellerdashboard3](https://user-images.githubusercontent.com/92728787/213476840-6f4a35ea-6db8-4e8a-a320-232cb7c7c84c.png)<br>
 </kbd>
 <br>
 
-New Product : <br><br>
+**New Product :**<br><br>
 <kbd>
 ![addproductpage](https://user-images.githubusercontent.com/92728787/213468113-4951938f-006c-426f-85d3-2e176677b94c.png)
 <kbd>
@@ -80,7 +80,7 @@ New Product : <br><br>
 
 **h. Sign Up and Log In :**<br><br>
 <kbd>
-![signuppage](https://user-images.githubusercontent.com/92728787/213468410-cd43e13e-d895-480b-b636-61038c33af55.png)
+![signuppage](https://user-images.githubusercontent.com/92728787/213468410-cd43e13e-d895-480b-b636-61038c33af55.png)<br>
 </kbd>
 <br>
 <kbd>
@@ -96,7 +96,7 @@ New Product : <br><br>
 
 **j. Checkout and Online Payment :**<br><br>
 <kbd>
-![checkoutpage](https://user-images.githubusercontent.com/92728787/213468614-a5636c99-cc80-4910-91ef-47ffe4177138.png)
+![checkoutpage](https://user-images.githubusercontent.com/92728787/213468614-a5636c99-cc80-4910-91ef-47ffe4177138.png)<br>
 ![onlinepaymentpage](https://user-images.githubusercontent.com/92728787/213468648-4b3ab7eb-65df-4699-a94e-d8ef5495e44a.png)
 </kbd>
 <br>
