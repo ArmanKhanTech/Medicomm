@@ -21,7 +21,7 @@ g. Search(By Name, Type, Category or Use)<br>
 h. Submit Grieviance<br>
 i. Sign Up and Log In
 
-**Images :**<br>
+**Images :**<br><br>
 **a. Home Page :**<br><br>
 <kbd>
 ![mainpage](https://user-images.githubusercontent.com/92728787/213473781-ada15585-fc68-41ae-bd5f-223312995798.png)
