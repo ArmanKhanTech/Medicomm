@@ -12,7 +12,7 @@ f. Firebase(Database)<br>
 
 **Features :**<br>
 a. Buy<br>
-b. Sell with Order Tracking and History<br>
+b. Sell Dashboard with Order Tracking and History<br>
 c. Cart/Wishlist<br>
 d. Order Tracking and History along with its Cancelling<br>
 e. Online Payment with Razorpay<br>
@@ -37,7 +37,7 @@ i. Sign Up and Log In
 ![sellerdashboard2](https://user-images.githubusercontent.com/92728787/213467982-9e83be65-e9ff-4105-92fe-e15488e87fc1.png)
 ![sellerdashboard3](https://user-images.githubusercontent.com/92728787/213467991-dbb6b646-7c73-4027-8506-1c342c8f0592.png)
 
-New Product : 
+New Product : <br><br>
 ![addproductpage](https://user-images.githubusercontent.com/92728787/213468113-4951938f-006c-426f-85d3-2e176677b94c.png)
 
 **e. Product Landing :**<br><br>
