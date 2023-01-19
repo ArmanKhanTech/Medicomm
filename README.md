@@ -21,7 +21,7 @@ g. Search(By Name, Type, Category or Use)<br>
 h. Submit Grieviance<br>
 i. Sign Up and Log In
 
-**Images :**<br><br>
+**Images :**<br>
 **a. Home Page :**<br><br>
 <kbd>
 ![mainpage](https://user-images.githubusercontent.com/92728787/213473781-ada15585-fc68-41ae-bd5f-223312995798.png)
@@ -46,11 +46,11 @@ i. Sign Up and Log In
 </kbd>
 <br>
 <kbd>
-![sellerdashboard2](https://user-images.githubusercontent.com/92728787/213467982-9e83be65-e9ff-4105-92fe-e15488e87fc1.png)
+![sellerdashboard2](https://user-images.githubusercontent.com/92728787/213476767-88dd6684-f9dc-4525-b763-6879880348c5.png)
 </kbd>
 <br>
 <kbd>
-![sellerdashboard3](https://user-images.githubusercontent.com/92728787/213467991-dbb6b646-7c73-4027-8506-1c342c8f0592.png)
+![sellerdashboard3](https://user-images.githubusercontent.com/92728787/213476840-6f4a35ea-6db8-4e8a-a320-232cb7c7c84c.png)
 </kbd>
 <br>
 
