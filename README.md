@@ -24,9 +24,9 @@ i. Sign Up and Log In
 **Images :**<br><br>
 **a. Home Page :**<br><br>
 <kbd>
-![mainpage1](https://user-images.githubusercontent.com/92728787/213467529-6678c745-c302-4b10-acff-eda3a7174249.png)
-![mainpage2](https://user-images.githubusercontent.com/92728787/213467632-b101c384-30a4-4c6b-a3b4-65caefb12f7b.png)
+![mainpage](https://user-images.githubusercontent.com/92728787/213473781-ada15585-fc68-41ae-bd5f-223312995798.png)
 </kbd>
+<br>
 
 **b. Search Page :**<br><br>
 <kbd>
