@@ -1,4 +1,4 @@
 # Medicomm
 
-Online Medical Store(E-comm Pharma)
+Online Medical Store(E-Commerce Pharmacy)
 
