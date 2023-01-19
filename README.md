@@ -3,7 +3,7 @@
 Online Medical Store(E-Commerce Pharmacy)
 
 **Technologies Used :**<br>
-a. HTML<br><br>
+a. HTML<br>
 b. CSS<br>
 c. JavaSc<br>
 d. Nodejs(Backend)<br>
