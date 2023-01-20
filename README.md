@@ -1,6 +1,8 @@
 # Medicomm
 
 Online Medical Store(E-Commerce Pharmacy)
+<br>
+<br>
 
 **Technologies Used :**<br><br>
 a. HTML<br>
@@ -8,7 +10,7 @@ b. CSS<br>
 c. JavaSc<br>
 d. Nodejs(Backend)<br>
 e. Expressjs(API)<br>
-f. Firebase(Database)<br>
+f. Firebase(Database)
 <br>
 <br>
 
