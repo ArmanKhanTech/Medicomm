@@ -22,7 +22,7 @@ h. Submit Grieviance<br>
 i. Sign Up and Log In
 
 **Changes to be done :**<br>
-a. In server.js <br>
+a. In server.js <br><br>
 Line 7 : <br>
 Enter your Razorpay KEY & SECRET ID here<br>
 ```javascript
@@ -33,6 +33,7 @@ const razorpay = new Razorpay({
 })
 ```
 Line 13 : <br>
+Enter the name of your firebase credential file here(the one you will download from firebase console)<br>
 ```javascript
 let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
 ```
