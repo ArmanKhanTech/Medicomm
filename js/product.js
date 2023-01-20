@@ -54,7 +54,7 @@ const comparePincode = (sellerPin, userPin) => {
     sellerPin = parseInt(sellerPin);
     userPin = parseInt(userPin);
 
-    let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=tvYX1BKFtH5CRA4Bk5DSqf8iO2gHZ`;
+    let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID`;
     
     fetch(url)
     .then(response => response.json())
