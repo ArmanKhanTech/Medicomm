@@ -68,8 +68,13 @@ const onlineCheckout = () => {
     var options = {
         "key": "YOUR RAZORPAY KEY",
 ```
-<br>
-<br>
+<br>Make sure to install node.js on your system
+<br>Run :
+```javascript
+npm init 
+npm install express
+```
+<br><br>
 
 **Images :**<br><br>
 **a. Home Page :**<br><br>
