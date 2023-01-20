@@ -2,7 +2,7 @@
 
 Online Medical Store(E-Commerce Pharmacy)
 
-**Technologies Used :**<br>
+**Technologies Used :**<br><br>
 a. HTML<br>
 b. CSS<br>
 c. JavaSc<br>
@@ -10,7 +10,7 @@ d. Nodejs(Backend)<br>
 e. Expressjs(API)<br>
 f. Firebase(Database)<br>
 
-**Features :**<br>
+**Features :**<br><br>
 a. Buy<br>
 b. Sell Dashboard with Order Tracking and History<br>
 c. Cart/Wishlist<br>
@@ -21,7 +21,7 @@ g. Search(By Name, Type, Category or Use)<br>
 h. Submit Grieviance<br>
 i. Sign Up and Log In
 
-**Changes to be done :**<br>
+**Changes to be done :**<br><br>
 a. In /server.js :<br><br>
 Line 7 : <br>
 Enter your Razorpay KEY & SECRET ID here<br>
@@ -55,11 +55,11 @@ Enter your distancematrix.ai token here(or you could use Google Distance Matrix 
 ```javascript
 let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID`;
 ```
-
+<br>
 c. In /js/checkout.js
 
 
-**Images :**<br>
+**Images :**<br><br>
 **a. Home Page :**<br><br>
 <kbd>
 ![mainpage](https://user-images.githubusercontent.com/92728787/213473781-ada15585-fc68-41ae-bd5f-223312995798.png)
