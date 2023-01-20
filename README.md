@@ -55,7 +55,7 @@ Enter your distancematrix.ai token here(or you could use Google Distance Matrix 
 ```javascript
 let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID`;
 ```
-<br>
+
 c. In /js/checkout.js
 
 
