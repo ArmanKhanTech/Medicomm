@@ -22,7 +22,7 @@ h. Submit Grieviance<br>
 i. Sign Up and Log In
 
 **Changes to be done :**<br>
-a. In server.js <br><br>
+a. In /server.js :<br><br>
 Line 7 : <br>
 Enter your Razorpay KEY & SECRET ID here<br>
 ```javascript
@@ -38,6 +38,7 @@ Enter the name of your firebase credential file here(the one you will download f
 let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
 ```
 Line 577 : <br>
+Enter the E-mail ID AND password here(it will be used to send notification to customer after placing order)<br>
 ```javascript
 let transporter = nodemailer.createTransport({
 host: "smtp.gmail.com",
@@ -48,7 +49,7 @@ auth: {
 })
 ```
 <br>
-b. In js/product.js<br>
+b. In /js/product.js :<br>
 
 **Images :**<br>
 **a. Home Page :**<br><br>
