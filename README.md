@@ -38,11 +38,13 @@ const razorpay = new Razorpay({
     key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 ```
+<br>
 Line 13 : <br>
 Enter the name of your firebase credential file here(the one you will download from firebase console)<br>
 ```javascript
 let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
 ```
+<br>
 Line 577 : <br>
 Enter the E-mail ID AND password here(it will be used to send notification to customer after placing order)<br>
 ```javascript
@@ -56,7 +58,7 @@ auth: {
 ```
 <br>
 b. In /js/product.js :<br><br>
-
+Line 57 :
 Enter your distancematrix.ai token here(or you could use Google Distance Matrix API too)<br>
 ```javascript
 let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
