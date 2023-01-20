@@ -7,7 +7,7 @@ Online Medical Store(E-Commerce Pharmacy)
 **Technologies Used :**<br><br>
 a. HTML<br>
 b. CSS<br>
-c. JavaSc<br>
+c. JavaScript<br>
 d. Nodejs(Backend)<br>
 e. Expressjs(API)<br>
 f. Firebase(Database)
@@ -57,11 +57,11 @@ auth: {
 <br>
 b. In /js/product.js :<br><br>
 Line 57 :<br>
-Enter your distancematrix.ai token here(or you could use Google Distance Matrix API too)
+Enter your distancematrix.ai token here(or you could use Google Distance Matrix API too)<br>
 ```javascript
 let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID`;
 ```
-<br>
+
 c. In /js/checkout.js
 <br>
 <br>
