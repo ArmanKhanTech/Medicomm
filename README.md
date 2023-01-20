@@ -21,6 +21,10 @@ g. Search(By Name, Type, Category or Use)<br>
 h. Submit Grieviance<br>
 i. Sign Up and Log In
 
+**Changes to be done :**<br>
+a. In server.js <br>
+b. In js/product.js<br>
+
 **Images :**<br>
 **a. Home Page :**<br><br>
 <kbd>
