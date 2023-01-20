@@ -23,8 +23,8 @@ i. Sign Up and Log In
 
 **Changes to be done :**<br>
 a. In server.js <br>
-Enter your Razorpay KEY & SECRET ID here<br>
 Line 7 : <br>
+Enter your Razorpay KEY & SECRET ID here<br>
 ```javascript
 const Razorpay = require('razorpay')
 const razorpay = new Razorpay({
