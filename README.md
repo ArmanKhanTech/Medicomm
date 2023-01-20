@@ -32,14 +32,11 @@ const razorpay = new Razorpay({
     key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 ```
-<br>
-Line 13 :<br>
+Line 13 : <br>
 ```javascript
 let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
 ```
-<br>
-Enter your E-mail ID & password here(It will be used for sending notification to user after placing order)<br>
-Line 577 :<br>
+Line 577 : <br>
 ```javascript
 let transporter = nodemailer.createTransport({
 host: "smtp.gmail.com",
