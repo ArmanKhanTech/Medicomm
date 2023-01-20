@@ -4,7 +4,8 @@ Online Medical Store(E-Commerce Pharmacy)
 <br>
 <br>
 
-**Technologies Used :**<br><br>
+**Technologies Used :**<br>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 a. HTML<br>
 b. CSS<br>
 c. JavaScript<br>
@@ -14,7 +15,8 @@ f. Firebase(Database)
 <br>
 <br>
 
-**Features :**<br><br>
+**Features :**<br>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 a. Buy<br>
 b. Sell Dashboard with Order Tracking and History<br>
 c. Cart/Wishlist<br>
@@ -27,7 +29,8 @@ i. Sign Up and Log In
 <br>
 <br>
 
-**Getting Started :**<br><br>
+**Getting Started :**<br>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 <br>Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:
 ```javascript
 npm init 
@@ -76,7 +79,8 @@ const onlineCheckout = () => {
 <br>Run the project by typing localhost/3000 in your browser
 <br><br>
 
-**Images :**<br><br>
+**Images :**<br>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 **a. Home Page :**<br><br>
 <kbd>
 ![mainpage](https://user-images.githubusercontent.com/92728787/213473781-ada15585-fc68-41ae-bd5f-223312995798.png)
