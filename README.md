@@ -23,6 +23,12 @@ i. Sign Up and Log In
 
 **Changes to be done :**<br>
 a. In server.js <br>
+        On line 7 : <br>
+        const Razorpay = require('razorpay')<br>
+        const razorpay = new Razorpay({<br>
+            key_id: 'YOUR RAZORPAY ID',<br>
+            key_secret: 'YOUR RAZORPAY SECRET KEY'<br>
+        })
 b. In js/product.js<br>
 
 **Images :**<br>
