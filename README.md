@@ -23,8 +23,8 @@ i. Sign Up and Log In
 
 **Changes to be done :**<br>
 a. In server.js <br>
-Line 7 : <br>
 Enter your Razorpay KEY & SECRET ID here<br>
+Line 7 : <br>
 ```javascript
 const Razorpay = require('razorpay')
 const razorpay = new Razorpay({
@@ -33,14 +33,14 @@ const razorpay = new Razorpay({
 })
 ```
 <br>
-Line 13 :<br>
 Enter the name of your firebase credential file here(the one you will downalod from your firebase console)<br>
+Line 13 :<br>
 ```javascript
-let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");<br>
+let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
 ```
 <br>
-Line 577 :<br>
 Enter your E-mail ID & password here(It will be used for sending notification to user after placing order)<br>
+Line 577 :<br>
 ```javascript
 let transporter = nodemailer.createTransport({
 host: "smtp.gmail.com",
