@@ -56,7 +56,8 @@ auth: {
 ```
 <br>
 b. In /js/product.js :<br><br>
-
+Line 57 : <br>
+Enter your distancematrix.ai token here(or you could use Google Distance Matrix API too)<br>
 ```javascript
 let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
 ```
