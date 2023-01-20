@@ -94,15 +94,17 @@ const onlineCheckout = () => {
 
 <br><br>**d. Seller Dashboard :**<br><br>
 <kbd>
-![sellerdashboard1](https://user-images.githubusercontent.com/92728787/213467967-11a91cda-6bea-4884-b094-950022ddcd1d.png)<br>
+![sellerdashboard1](https://user-images.githubusercontent.com/92728787/213467967-11a91cda-6bea-4884-b094-950022ddcd1d.png)
 </kbd>
 <br>
-<kbd>
-![sellerdashboard2](https://user-images.githubusercontent.com/92728787/213476767-88dd6684-f9dc-4525-b763-6879880348c5.png)<br>
-</kbd>
 <br>
 <kbd>
-![sellerdashboard3](https://user-images.githubusercontent.com/92728787/213476840-6f4a35ea-6db8-4e8a-a320-232cb7c7c84c.png)<br>
+![sellerdashboard2](https://user-images.githubusercontent.com/92728787/213476767-88dd6684-f9dc-4525-b763-6879880348c5.png)
+</kbd>
+<br>
+<br>
+<kbd>
+![sellerdashboard3](https://user-images.githubusercontent.com/92728787/213476840-6f4a35ea-6db8-4e8a-a320-232cb7c7c84c.png)
 </kbd>
 
 <br>**New Product :**<br><br>
