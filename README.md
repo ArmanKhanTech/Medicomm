@@ -4,7 +4,7 @@ Online Medical Store(E-Commerce Pharmacy)
 <br>
 <br>
 
-**Technologies Used :**<br><br>
+## Technologies Used :
 a. HTML<br>
 b. CSS<br>
 c. JavaScript<br>
@@ -14,7 +14,7 @@ f. Firebase(Database)
 <br>
 <br>
 
-**Features :**<br><br>
+## Features :
 a. Buy<br>
 b. Sell Dashboard with Order Tracking and History<br>
 c. Cart/Wishlist<br>
@@ -27,14 +27,14 @@ i. Sign Up and Log In
 <br>
 <br>
 
-**Getting Started :**<br><br>
-<br><br>Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:
+## Getting Started :
+**Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:**
 ```javascript
 npm init 
 npm install express
 ```
-<br><br>a. In /server.js :<br><br>
-Line 7 : <br>
+<br>**a. In /server.js :**
+<br><br>Line 7 : <br>
 Enter your Razorpay ID & SECRET ID here<br>
 ```javascript
 const Razorpay = require('razorpay')
@@ -59,13 +59,13 @@ auth: {
   }
 })
 ```
-<br>b. In /js/product.js :
+<br>**b. In /js/product.js :**
 <br><br>Line 57 :
 <br>Enter your distancematrix.ai token here(or you could use Google Distance Matrix API too)
 ```javascript
 let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
 ```
-<br>c. In /js/checkout.js
+<br>**c. In /js/checkout.js**
 <br><br>Line 63 :
 <br>Enter your Razorpay ID here
 ```javascript
@@ -76,7 +76,7 @@ const onlineCheckout = () => {
 <br>Run the project by typing localhost/3000 in your browser
 <br><br>
 
-**Images :**<br><br>
+## Images :
 **a. Home Page :**<br><br>
 <kbd>
 ![mainpage](https://user-images.githubusercontent.com/92728787/213473781-ada15585-fc68-41ae-bd5f-223312995798.png)
