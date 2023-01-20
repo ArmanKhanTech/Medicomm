@@ -24,12 +24,12 @@ i. Sign Up and Log In
 **Changes to be done :**<br>
 a. In server.js <br>
         On line 7 : <br>
-        ```Javascript
+        ```javascript
         const Razorpay = require('razorpay')
         const razorpay = new Razorpay({
             key_id: 'YOUR RAZORPAY ID',
             key_secret: 'YOUR RAZORPAY SECRET KEY'
-        })<br>
+        })
         ```
         On line 13 :<br>
         ```
