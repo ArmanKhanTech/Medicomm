@@ -10,6 +10,10 @@ d. Nodejs(Backend)<br>
 e. Expressjs(API)<br>
 f. Firebase(Database)<br>
 
+<br>
+<br>
+<br>
+
 **Features :**<br><br>
 a. Buy<br>
 b. Sell Dashboard with Order Tracking and History<br>
@@ -20,6 +24,10 @@ f. Check Availiblity using Pincode<br>
 g. Search(By Name, Type, Category or Use)<br>
 h. Submit Grieviance<br>
 i. Sign Up and Log In
+
+<br>
+<br>
+<br>
 
 **Changes to be done :**<br><br>
 a. In /server.js :<br><br>
@@ -58,6 +66,9 @@ let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${
 <br>
 c. In /js/checkout.js
 
+<br>
+<br>
+<br>
 
 **Images :**<br><br>
 **a. Home Page :**<br><br>
