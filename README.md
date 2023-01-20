@@ -25,10 +25,10 @@ i. Sign Up and Log In
 a. In server.js <br>
         On line 7 : <br>
         ```Javascript
-        const Razorpay = require('razorpay')<br>
-        const razorpay = new Razorpay({<br>
-            key_id: 'YOUR RAZORPAY ID',<br>
-            key_secret: 'YOUR RAZORPAY SECRET KEY'<br>
+        const Razorpay = require('razorpay')
+        const razorpay = new Razorpay({
+            key_id: 'YOUR RAZORPAY ID',
+            key_secret: 'YOUR RAZORPAY SECRET KEY'
         })<br>
         ```
         On line 13 :<br>
