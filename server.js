@@ -6,12 +6,12 @@ const nodemailer = require('nodemailer');
 
 const Razorpay = require('razorpay')
 const razorpay = new Razorpay({
-    key_id: 'rzp_test_DOYACvZKE9x1en',
-    key_secret: '7GygcrDRlCqmMkSVl8OtaVEx'
+    key_id: 'YOUR RAZORPAY ID',
+    key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 
 //firebase admin setup
-let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json");
+let serviceAccount = require("./YOUR FIREBASE CREDENTAIL FILE");
 const { randomInt } = require('crypto');
 const { CONNREFUSED } = require('dns');
 admin.initializeApp({
@@ -527,13 +527,13 @@ app.post('/order', (req, res) => {
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         auth: {
-            user: 'ak2341776@gmail.com',
-            pass: 'zokctrncqwvztcdq'
+            user: 'YOUR EMAIL ID',
+            pass: 'YOUR EMAIL PASSWORD'
         }
     })
 
     const mailOptions = {
-        from: 'ak2341776@gmail.com',
+        from: 'YOUR EMAIL ID',
         to: email,
         subject: 'Order Confirmation',
         html: `
