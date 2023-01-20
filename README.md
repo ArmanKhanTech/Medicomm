@@ -27,8 +27,13 @@ i. Sign Up and Log In
 <br>
 <br>
 
-**Changes to be done :**<br><br>
-a. In /server.js :<br><br>
+**Getting Started :**<br><br>
+<br>Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:
+```javascript
+npm init 
+npm install express
+```
+<br><br>a. In /server.js :<br><br>
 Line 7 : <br>
 Enter your Razorpay ID & SECRET ID here<br>
 ```javascript
@@ -68,11 +73,7 @@ const onlineCheckout = () => {
     var options = {
         "key": "YOUR RAZORPAY KEY",
 ```
-<br>Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:
-```javascript
-npm init 
-npm install express
-```
+<br>Run the project by typing localhost/3000 in your browser
 <br><br>
 
 **Images :**<br><br>
