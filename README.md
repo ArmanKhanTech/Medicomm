@@ -121,35 +121,13 @@ const onlineCheckout = () => {
 </kbd>
 <br>
 
-**f. About :**<br><br>
-<kbd>
-![aboutuspage](https://user-images.githubusercontent.com/92728787/213468179-1f6e29ff-bdee-4a61-b79c-554018e9c46c.png)
-</kbd>
-<br>
-
-**g. Grieviance :**<br><br>
-<kbd>
-![contactpage](https://user-images.githubusercontent.com/92728787/213468314-95368d89-3ac9-4632-a500-50a236801f13.png)
-</kbd>
-<br>
-
-**h. Sign Up and Log In :**<br><br>
-<kbd>
-![signuppage](https://user-images.githubusercontent.com/92728787/213468410-cd43e13e-d895-480b-b636-61038c33af55.png)<br>
-</kbd>
-<br>
-<kbd>
-![loginpage](https://user-images.githubusercontent.com/92728787/213468445-773e4e71-6704-41bc-a293-21b15500842f.png)
-</kbd>
-<br>
-
-**i. Cart :**<br><br>
+**f. Cart :**<br><br>
 <kbd>
 ![cartpage](https://user-images.githubusercontent.com/92728787/213468519-40219b6e-7ac5-4b27-9bea-ba6790260120.png)
 </kbd>
 <br>
 
-**j. Checkout and Online Payment :**<br><br>
+**g. Checkout and Online Payment :**<br><br>
 <kbd>
 ![checkoutpage](https://user-images.githubusercontent.com/92728787/213468614-a5636c99-cc80-4910-91ef-47ffe4177138.png)<br>
 ![onlinepaymentpage](https://user-images.githubusercontent.com/92728787/213468648-4b3ab7eb-65df-4699-a94e-d8ef5495e44a.png)
