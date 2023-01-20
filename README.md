@@ -33,7 +33,6 @@ const razorpay = new Razorpay({
 })
 ```
 <br>
-Enter the name of your firebase credential file here(the one you will downalod from your firebase console)<br>
 Line 13 :<br>
 ```javascript
 let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
@@ -50,6 +49,7 @@ auth: {
   }
 })
 ```
+<br>
 b. In js/product.js<br>
 
 **Images :**<br>
