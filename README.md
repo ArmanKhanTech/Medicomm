@@ -29,9 +29,9 @@ i. Sign Up and Log In
 <br>
 <br>
 
-**Getting Started :**<br>
+**Getting Started :**
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-<br>Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:
+<br><br>Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:
 ```javascript
 npm init 
 npm install express
