@@ -68,8 +68,7 @@ const onlineCheckout = () => {
     var options = {
         "key": "YOUR RAZORPAY KEY",
 ```
-<br>Make sure to install node.js on your system
-<br>Run :
+<br>Make sure to install node.js on your system , delete the previous /node_module folder & run following command in project directory's terminal:
 ```javascript
 npm init 
 npm install express
