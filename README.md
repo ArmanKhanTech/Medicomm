@@ -30,7 +30,7 @@ i. Sign Up and Log In
 **Changes to be done :**<br><br>
 a. In /server.js :<br><br>
 Line 7 : <br>
-Enter your Razorpay KEY & SECRET ID here<br>
+Enter your Razorpay ID & SECRET ID here<br>
 ```javascript
 const Razorpay = require('razorpay')
 const razorpay = new Razorpay({
@@ -60,9 +60,14 @@ auth: {
 ```javascript
 let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
 ```
-<br>
-c. In /js/checkout.js<br><br>
-Line :<br>
+<br>c. In /js/checkout.js
+<br><br>Line 63 :
+<br>Enter your Razorpay ID here
+```javascript
+const onlineCheckout = () => {
+    var options = {
+        "key": "YOUR RAZORPAY KEY",
+```
 <br>
 <br>
 
