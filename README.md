@@ -73,7 +73,7 @@ const onlineCheckout = () => {
     var options = {
         "key": "YOUR RAZORPAY KEY",
 ```
-<br>Run the project by typing localhost/3000 in your browser
+<br>Run the project by typing localhost:3000 in your browser
 <br><br>
 
 **Note : This website isn't implemented using CSS Bootstrap.
