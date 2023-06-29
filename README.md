@@ -213,7 +213,7 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/299b7fe3-aa3a-4cbf-8917-f81457688e79">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/f462cc7b-167a-40a1-aad2-9a70c7644030">
   </kbd>
 </div>
 <br>
