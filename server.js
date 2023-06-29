@@ -13,7 +13,6 @@ const razorpay = new Razorpay({
 //firebase admin setup
 let serviceAccount = require("./YOUR FIREBASE CREDENTAIL FILE");
 const { randomInt } = require('crypto');
-const { CONNREFUSED } = require('dns');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
