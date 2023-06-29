@@ -48,6 +48,7 @@
       </ul>
     </li>
     <li><a href="#features">Features</a></li>
+    <li><a href="#images">Images</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -148,7 +149,7 @@ npm init
 
 
 
-<!-- USAGE EXAMPLES -->
+<!-- FEATURES -->
 ## Features 
 
 <ol>
@@ -181,6 +182,11 @@ npm init
   </li>
 </ol>
 
+
+
+<!-- IMAGES -->
+## Images
+
 <div>
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/dce6794f-b0ff-4b22-b2fa-a14337f2f012" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/13b11040-ba6a-4bde-988e-0e29a0e1d2ad" alt="Logo" width="300" height="600">
@@ -204,7 +210,7 @@ npm init
 - [x] Add Online payment
 - [x] Add Grievances
 
-See the [open issues](https://github.com/ArmanKhanTech/Medicomm/issues) for a full list of proposed features (and known issues)
+See the [open issues](https://github.com/ArmanKhanTech/Medicomm/issues) for a full list of proposed features (and known issues).
 
 
 
