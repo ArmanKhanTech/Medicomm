@@ -188,17 +188,65 @@ npm init
 ## Images
 
 <div>
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/d0f46583-2c26-4743-a6ca-48ee248967c4">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/19cdc4f7-6a80-43ac-96ed-cfd9653bf01f">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/a6f16965-cb30-4817-a88e-d6389f976a1a">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/5283c517-3b05-4648-85ed-63b6d9212cda">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/299b7fe3-aa3a-4cbf-8917-f81457688e79">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/9ac3a95f-247f-49f3-92af-1b438c9ec531">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/62364801-ca82-4596-9464-7b18c7bf1965">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/b888eb26-87ed-46c9-b1fb-e06951243f97">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/7c04ece5-7ab2-444e-89a9-515b18cfa882">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/3c8decee-caa5-45d9-a307-869976240a99">
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/d0f46583-2c26-4743-a6ca-48ee248967c4">
+  </kbd>
 </div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/19cdc4f7-6a80-43ac-96ed-cfd9653bf01f">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/a6f16965-cb30-4817-a88e-d6389f976a1a">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/5283c517-3b05-4648-85ed-63b6d9212cda">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/299b7fe3-aa3a-4cbf-8917-f81457688e79">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/9ac3a95f-247f-49f3-92af-1b438c9ec531">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/62364801-ca82-4596-9464-7b18c7bf1965">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/b888eb26-87ed-46c9-b1fb-e06951243f97">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/7c04ece5-7ab2-444e-89a9-515b18cfa882">
+  </kbd>
+</div>
+<br>
+<div>
+  <kbd>
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/3c8decee-caa5-45d9-a307-869976240a99">
+  </kbd>
+</div>
+
 
 
 
