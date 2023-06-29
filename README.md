@@ -107,7 +107,7 @@ npm init
     ```
    <br>
 2. Make the following changes : <br>
-    <br>**a. In /server.js :**<br><br>
+    <br>**a. in /server.js :**<br><br>
     _Line 7 : Enter your Razorpay ID & SECRET ID here(nessecary for online payment) :_
     ```javascript
     const Razorpay = require('razorpay')
@@ -131,13 +131,13 @@ npm init
     })
     ```
     
-    <br>**b. In /js/product.js :**<br><br>
+    <br>**b. in /js/product.js :**<br><br>
     _Line 57 : Enter your distancematrix.ai token here(or you can use Google Distance Matrix API too) :_
     ```javascript
     let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
     ```
     
-    <br>**c. In /js/checkout.js :**<br><br>
+    <br>**c. in /js/checkout.js :**<br><br>
     _Line 63 : Enter your Razorpay ID here :<br>_
     ```javascript
     const onlineCheckout = () => {
@@ -188,10 +188,16 @@ npm init
 ## Images
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/dce6794f-b0ff-4b22-b2fa-a14337f2f012" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/13b11040-ba6a-4bde-988e-0e29a0e1d2ad" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c98548d2-3203-4f9a-a3c4-4daf36810b3f" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/07357593-40c2-43a6-9b8f-b0cb7e475b7e" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/d0f46583-2c26-4743-a6ca-48ee248967c4">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/19cdc4f7-6a80-43ac-96ed-cfd9653bf01f">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/a6f16965-cb30-4817-a88e-d6389f976a1a">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/5283c517-3b05-4648-85ed-63b6d9212cda">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/299b7fe3-aa3a-4cbf-8917-f81457688e79">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/9ac3a95f-247f-49f3-92af-1b438c9ec531">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/62364801-ca82-4596-9464-7b18c7bf1965">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/4226014e-9b7a-4550-9132-1ed1f734eaad">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/02c68612-85e5-470e-b812-0c5c4c544f3e">
+<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/f24cc223-963d-4d27-996b-d2d4ef28db32">
 </div>
 
 
@@ -239,20 +245,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Arman Khan - ak2341776@gmail.com
 
-Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/ArmanKhanTech/Medicomm)
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* [Dr Greger's Daily Dozen](https://github.com/nutritionfactsorg/daily-dozen-android)
-
-**3rd Party Libraries**
-* [Phil Jay's MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
-* [Lottie Animations](https://github.com/airbnb/lottie-android)
-* [Daniel Martinus's Konfetti](https://github.com/DanielMartinus/Konfetti)
-* [Ozcan Alsalvar's Datepicker](https://github.com/OzcanAlasalvar/DatePicker)
+Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/ArmanKhanTech/Medicomm) 
 
 
 
