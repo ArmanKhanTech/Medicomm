@@ -199,8 +199,6 @@ npm init
 <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/02c68612-85e5-470e-b812-0c5c4c544f3e">
 <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/f24cc223-963d-4d27-996b-d2d4ef28db32">
 <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/b888eb26-87ed-46c9-b1fb-e06951243f97">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/5eb8bd8f-d445-4c12-a950-2efe187b6bc3">
-<img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/9177bee6-d314-43e0-bc7a-40b1ca9bb594">
 <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/7c04ece5-7ab2-444e-89a9-515b18cfa882">
 </div>
 
