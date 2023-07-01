@@ -64,7 +64,7 @@
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
-**Ideal to view only on 1920x1080p display since this rpoject does not yet feature bootstrap yet.**
+**Ideal to view only on 1920x1080p display since this project does not yet feature bootstrap yet.**
 
 ### Built With
 
