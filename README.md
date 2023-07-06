@@ -318,7 +318,7 @@ Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/Ar
 [JS-url]: https://www.w3schools.com/js/
 [Nodejs]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [Nodejs-url]: https://nodejs.org/
-[Expressjs]: https://img.shields.io/badge/Express.js-404D59?style=for-the-badge
+[Expressjs]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [Expressjs-url]: https://expressjs.com/
 [Firebase]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white
 [Firebase-url]: https://firebase.google.com/
