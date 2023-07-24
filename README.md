@@ -253,15 +253,15 @@ npm init
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Sign up & Log in
-- [x] Add Home paage
-- [x] Add Prodcut landing page
-- [x] Add Search page
-- [x] Add Cart & wishlist
-- [x] Add Seller's dashboard
+- [x] Add Sign-Up & Log-In
+- [x] Add Home Page
+- [x] Add Prodcut Landing Page
+- [x] Add Search Page
+- [x] Add Cart & Wishlist
+- [x] Add Seller's Dashboard
 - [x] Add Checkout
-- [x] Add Order tracking, history & cancelletion
-- [x] Add Online payment
+- [x] Add Order Tracking, History & Cancelletion
+- [x] Add Online Payment
 - [x] Add Grievances
 
 See the [open issues](https://github.com/ArmanKhanTech/Medicomm/issues) for a full list of proposed features (and known issues).
