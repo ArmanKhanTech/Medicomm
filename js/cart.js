@@ -1,4 +1,5 @@
 const createSmallCart = (data) => {
+    
     return `
     <div class="sm-product">
         <img src="${data.image}" class="sm-product-img" alt="">
@@ -18,6 +19,7 @@ const createSmallCart = (data) => {
 }
 
 const createWishlist = (data) => {
+    
     return `
     <div class="sm-product">
         <img src="${data.image}" class="sm-product-img" alt="">
@@ -39,6 +41,7 @@ const checkoutSection = document.querySelector('.checkout-section');
 const setProducts = (name) => {
     const element = document.querySelector(`.${name}`);
     let data = JSON.parse(localStorage.getItem(name));
+    
     if(data == null || data.length == 0 && name == 'cart'){
         element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
         checkoutSection.style.display = 'none';
@@ -79,7 +82,6 @@ const updateBill = (value, operation) => {
     billPrice.textContent= `₹${parseInt(totalBill)}`;
 }
 
-// fix it
 const setupEvents = (name) => {
     const counterMinus = document.querySelectorAll('#decrement');
     const counterPlus = document.querySelectorAll('#increment');
@@ -89,7 +91,6 @@ const setupEvents = (name) => {
 
     let product = JSON.parse(localStorage.getItem(name));
 
-    // loop executing twice fix it
     if(name == 'cart'){
         counts.forEach((item, i) => {
             let cost = price[i].getAttribute('data-price');
@@ -133,7 +134,6 @@ const setupEvents2 = (name) => {
 
     let res;
     let data = JSON.parse(localStorage.getItem(name));
-
 
     if(name == 'wishlist'){
         deleteBtn.forEach((item, i) => {
