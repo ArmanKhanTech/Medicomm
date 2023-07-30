@@ -10,21 +10,19 @@ const razorpay = new Razorpay({
     key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 
-//firebase admin setup
 let serviceAccount = require("./YOUR FIREBASE CREDENTAIL FILE");
+
 const { randomInt } = require('crypto');
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
 let staticPath = path.join(__dirname, "");
-
 let db = admin.firestore();
 
-//intializing express.js
 const app = express();
 
-//middlewares
 app.use(express.static(staticPath));
 app.use(express.json());
 
@@ -32,13 +30,11 @@ app.listen(3000, () => {
     console.log('listening on port 3000.......');
 })
 
-//routes
-//home route
+
 app.get("/", (req, res) => {
     res.sendFile(path.join(staticPath, "index.html"));
 })
 
-//signup route
 app.get('/signup', (req, res) => {
     res.sendFile(path.join(staticPath, "signup.html"));
 })
@@ -46,7 +42,6 @@ app.get('/signup', (req, res) => {
 app.post('/signup', (req, res) => {
     let { name, email, password, number, tac, notification } = req.body;
 
-    // form validations
     if(name.length < 3){
         return res.json({'alert': 'Name Must be 3 Letters Long'});
     } else if(!email.length){
@@ -65,7 +60,6 @@ app.post('/signup', (req, res) => {
     if(user.exists){
         return res.json({'alert': 'E- Mail Already Exists'});
     } else{
-        // encrypt the password before storing it.
         bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(password, salt, (err, hash) => {
                 req.body.password = hash;
@@ -83,7 +77,6 @@ app.post('/signup', (req, res) => {
 })
 })
 
-// login route
 app.get('/login', (req, res) => {
     res.sendFile(path.join(staticPath, "login.html"));
 })
@@ -99,7 +92,6 @@ app.get('/contact', (req, res) => {
 app.post('/login', (req, res) => {
     let { email, password } = req.body;
     
-    // form validations
     if(!email.length || !password.length){
         return res.json({'alert': 'Fill All the Inputs'});
     }
@@ -124,13 +116,13 @@ app.post('/login', (req, res) => {
     })
 })
 
-//seller route
 app.get('/seller', (req, res) => {
     res.sendFile(path.join(staticPath, "seller.html"));
 })
 
 app.post('/seller', (req, res) => {
     let { name, about, address, number, tac, email } = req.body;
+    
     if(!name.length || !about.length || !address.length || !number.length == 10||
         !Number(number)){
         return res.json({'alert':'Some Information(s) is/are Invalid'});
@@ -182,7 +174,6 @@ app.get('/add-product/:id', (req, res) => {
     res.sendFile(path.join(staticPath, "addproduct.html"));
 })
 
-//get products
 app.post('/get-products', (req, res) => {
     const {email, id, cate} = req.body;
 
@@ -199,6 +190,7 @@ app.post('/get-products', (req, res) => {
         }
 
         let prArr = [];
+        
         if(id){
             return res.json(products.data());
         } else{
@@ -271,7 +263,6 @@ app.post('/get-search-result', (req, res) => {
     let docref3 = db.collection('products').where('name', '==' ,key);
 
     docref.get().then(products => {
-        
         products.forEach(items => {
             let data = items.data();
             data.id = items.id;
@@ -292,7 +283,6 @@ app.post('/get-search-result', (req, res) => {
         })
     }).then(() => {
         docref3.get().then(products => {
-        
             products.forEach(items => {
                 let data = items.data();
                 data.id = items.id;
@@ -310,7 +300,6 @@ app.post('/get-search-result', (req, res) => {
     })
 })
 
-//delete product
 app.post('/delete-product', (req, res) => {
     const {id} = req.body;
 
@@ -322,7 +311,6 @@ app.post('/delete-product', (req, res) => {
     })
 })
 
-// online payment
 app.post('/order-online', (req, res)=>{ 
     const {amount, currency, receipt, notes}  = req.body;
 
@@ -336,7 +324,6 @@ app.post('/order-online', (req, res)=>{
     )
 });
 
-// display products
 app.post('/disEna-product', (req, res) => {
     const {data} = req.body;
 
@@ -367,7 +354,6 @@ app.post('/get-date', (req, res) => {
     let prArr = [];
 
     docref.get().then(products => {
-        
         products.forEach(items => {
             let data = items.data();
             data.id = items.id;
@@ -459,7 +445,6 @@ app.post('/fetch-orders', (req, res) => {
     let prArr = [];
 
     docref.get().then(orders => {
-
         orders.forEach(items => {
             let data = items.data();
             data.id = items.id;
@@ -494,17 +479,14 @@ app.post('/get-orders', (req, res) => {
     })
 })
 
-// product page
 app.get('/product/:id', (req, res) => {
     res.sendFile(path.join(staticPath, "product.html"));
 })
 
-// cart page
 app.get('cart', (req, res) => {
     res.sendFile(path.join(staticPath, "cart.html"));
 })
 
-//search route
 app.get('/search', (req, res) => {
     res.sendFile(path.join(staticPath, "search.html"));
 })
@@ -513,12 +495,10 @@ app.get('/search/:key', (req, res) => {
     res.sendFile(path.join(staticPath, "search.html"));
 })
 
-// checkout route
 app.get('/checkout', (req, res) => {
     res.sendFile(path.join(staticPath, "checkout.html"));
 })
 
-// continue it
 app.post('/order', (req, res) => {
     const { email, order, address, mode, status} = req.body;
     let docName = email + '-' + randomInt(10000, 99999);
@@ -538,7 +518,9 @@ app.post('/order', (req, res) => {
         html: `
             <!DOCTYPE html>
             <html lang="en">
+            
                 <head>
+                
                     <meta charset="UTF-8">
                     <meta http-equiv="X-UA-Compatible" content="IE-edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -546,6 +528,7 @@ app.post('/order', (req, res) => {
                     <title>Medicomm</title>
 
                     <style>
+                    
                         body{
                             background-color: #f2f2f2;
                             min-height: 90vh;
@@ -580,21 +563,29 @@ app.post('/order', (req, res) => {
                             font-size: 20px;
                             cursor: pointer;
                         }
+                        
                     </style>
+                    
                 </head>
 
                 <body>
 
                     <div class="mail">
+                    
                         <h1 class="heading">Thank You For Shopping With Us</h1>
+                        
                         <p class="span">Your Order Has Been Placed Successfully. We Will Contact You Soon.</p>
+                        
                         <p class="span">Regards, Medicomm</p>
+                        
                         <button class="btn">Check Status</button>
+                        
                     </div>
 
                     <script>
 
                     </script>
+                    
                 </body>
 
             </html>
@@ -616,14 +607,12 @@ app.post('/order', (req, res) => {
     })
 })
 
-// update product stocks
 app.post('/update-stock', (req, res) => {
     const {id , stock} = req.body;
 
     db.collection("products").doc(id).update({stock: stock});
 })
 
-// 404 route
 app.get('/404', (req, res) => {
     res.sendFile(path.join(staticPath, "404.html"));
 })
