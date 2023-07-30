@@ -23,9 +23,6 @@ const compareToken = (token, key) => {
     return false;
 }
 
-//commom functions
-
-// alert function
 const showAlert = (msg) => {
     let alertBox = document.querySelector('.alert-box');
     let alertMsg = document.querySelector('.alert-msg');
@@ -59,7 +56,6 @@ const showAlert1 = (msg, type) => {
     }, 3000);
 }
 
-// send data function
 const sendData = (path, data) => {
     fetch(path, {
         method: 'post',
