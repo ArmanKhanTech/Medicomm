@@ -19,18 +19,15 @@ body{
     width: 10px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 5px;
   }
    
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #1fa4cc; 
     border-radius: 10px;
   }
   
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #1fa4cc; 
   }
@@ -243,7 +240,6 @@ body{
     border-radius: 5px 5px 0px 0px;
 }
 
-/* alert */
 .alert-box{
     width: 310px;
     min-height: 310px;
