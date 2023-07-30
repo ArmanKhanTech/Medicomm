@@ -1,6 +1,5 @@
 const loader = document.querySelector('.loader');
 
-// select inputs 
 const submitBtn = document.querySelector('.submit-btn');
 const name = document.querySelector('#name') || null;
 const email = document.querySelector('#email');
@@ -37,7 +36,6 @@ submitBtn.addEventListener('click', () => {
             })
         }
     }else{
-        //login page
         if(!email.value.length || !password.value.length){
             showAlert('Fill All the Inputs');
         } else{
@@ -50,7 +48,6 @@ submitBtn.addEventListener('click', () => {
     }
 })
 
-//redirect to homepage is user is already logged in
 window.onload = () => {
     if(sessionStorage.user){
         user = JSON.parse(sessionStorage.user)
