@@ -154,28 +154,28 @@ npm init
 
 <ol>
   <li>
-    Purchase medicines & medical products.
+    Purchase or Sell medicines & other medical products.
   </li>
   <li>
-    Seller's dashboard with order tracking & sale history.
+    Seller's Dashboard with order tracking & sales history.
   </li>
   <li>
-    Add to cart & wishlist.
+    Add to Cart & Wishlist.
   </li>
   <li>
-    Order Tracking and History along with its Cancelling.
+    Order Tracking & History along with its Cancelling.
   </li>
   <li>
     Online payment with Razorpay.
   </li>
   <li>
-    Check availiblity using pincode.
+    Check availiblity using Pincode.
   </li>
   <li>
-    Search(by name, type, category or use).
+    Search (by name, type, category or use).
   </li>
   <li>
-    Submit grieviances.
+    Submit Grieviances.
   </li>
   <li>
     Sign Up and Log In
