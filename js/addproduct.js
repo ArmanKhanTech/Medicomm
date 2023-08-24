@@ -5,7 +5,6 @@ if(!user){
     location.replace('/login.html');
 }
 
-// price calc
 const actualPrice = document.querySelector('#actual-price');
 const discountPercentage = document.querySelector('#discount');
 const sellingPrice = document.querySelector('#sell-price');
@@ -32,7 +31,6 @@ sellingPrice.addEventListener('input', () => {
     discountPercentage.value = discount;
 })
 
-//upload images
 const uploadimgbtn = document.querySelector('#img-upload-btn');
 const link1 = document.querySelector('#link-img-1');
 const link2 = document.querySelector('#link-img-2');
@@ -52,32 +50,24 @@ var link4s = "";
 uploadimgbtn.addEventListener('click', () => {
     var url = "http://drive.google.com/uc?export=view&id=";
 
-    //img 1
     link1s = link1.value;
     link1s = link1s.substring(link1s.lastIndexOf("/"), 32);
     link1s = url + link1s;
-    //console.log(link1s);
     pic1.src = link1s;
 
-    //img 2
     link2s = link2.value;
     link2s = link2s.substring(link2s.lastIndexOf("/"), 32);
     link2s = url + link2s;
-    //console.log(link1s);
     pic2.src = link2s;
 
-    //img 3
     link3s = link3.value;
     link3s = link3s.substring(link3s.lastIndexOf("/"), 32);
     link3s = url + link3s;
-    //console.log(link1s);
     pic3.src = link3s;
 
-    // img 4
     link4s = link4.value;
     link4s = link4s.substring(link4s.lastIndexOf("/"), 32);
     link4s = url + link4s;
-    //console.log(link1s);
     pic4.src = link4s;
 });
 
@@ -92,8 +82,6 @@ const showImg = () => {
     pic4.src = link4s;
 }
 
-// form submission
-
 const productName = document.querySelector('#product-name');
 const shortLine = document.querySelector('#short-des');
 const des = document.querySelector('#descirption');
@@ -103,7 +91,6 @@ const use = document.querySelector('#use');
 const cate = document.querySelector('#cate');
 const tac = document.querySelector('#tac');
 
-// buttons
 const addProductBtn = document.querySelector('#add-btn');
 
 const validateForm = () => {
@@ -143,7 +130,6 @@ const validateForm = () => {
 let addDate = new Date();
 let modifyDate = new Date();
 let todayDate = new Date();
-
 
 const productData = () => {
     todayDate = todayDate.toDateString();
@@ -237,7 +223,6 @@ const setFormsData = (data) => {
     use.value = data.use;
     cate.value = data.cate;
 
-    // fix it
     actualPrice.value = data.actualPrice;
     sellingPrice.value = data.sellPrice;
     discountPercentage.value = data.discount;

@@ -1,6 +1,7 @@
 let openEditor;
 
 const radio = document.querySelector('.tabs');
+
 radio.addEventListener('change', () => {
     const radioVal = document.querySelector('input[name="tabs"]:checked').value;
     if(radioVal == 'products'){
@@ -28,7 +29,6 @@ radio.addEventListener('change', () => {
     
 })
 
-// fix this
 const setUpColor = (data) => {
     const proStatus = document.querySelectorAll('#product-status');
 
@@ -40,7 +40,6 @@ const setUpColor = (data) => {
 }
 
 const createProduct = (data) => {
-
     openEditor = (id) => {
         sessionStorage.tempProduct = JSON.stringify(data);
         location.href = `/add-product/${id}`;
@@ -116,7 +115,6 @@ const createProduct = (data) => {
 }
 
 const createOrders = (data, seller) => {
-
     let count = parseInt(1);
     let orderArr = [];
 

@@ -16,7 +16,6 @@ showApplyFormBtn.addEventListener('click', () =>{
     applyForm.classList.remove('hide');
 })
 
-// formm submission
 const applyBtn = document.querySelector('#apply-form-btn');
 const businessName = document.querySelector('#business-name');
 const businessAdd = document.querySelector('#business-add');

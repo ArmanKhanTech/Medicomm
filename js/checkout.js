@@ -206,6 +206,7 @@ const createSmallCart = (data) => {
 
 let totalBill = parseInt(0);
 let billPrice = document.querySelector('.bill');
+
 const checkoutSection = document.querySelector('.checkout-section');
 
 const setProducts = (name) => {
@@ -224,14 +225,12 @@ const setProducts = (name) => {
     setupEvents3(name);
 }
 
-// fix it
 const setupEvents3 = (name) => {
     const counts = document.querySelectorAll('#item-count');
     const deleteBtn = document.querySelectorAll('#sm-delete-btn');
 
     let product = JSON.parse(localStorage.getItem(name));
 
-    // loop executing twice fix it
     if(name == 'cart'){
         counts.forEach((item, i) => {
             deleteBtn.forEach((item, i) => {

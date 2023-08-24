@@ -74,7 +74,6 @@ const createNav = () => {
 
 createNav();
 
-//nav popup
 const userImageButton = document.querySelector('#user-img');
 const userPopup = document.querySelector('.login-logout-popup');
 const popupText = document.querySelector('.account-info1');

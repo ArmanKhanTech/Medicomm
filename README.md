@@ -64,7 +64,7 @@
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
-**Ideal to view only on 1920x1080p display since this rpoject does not yet feature bootstrap yet.**
+**Ideal to view only on 1920x1080p display since this project does not feature bootstrap.**
 
 ### Built With
 
@@ -108,7 +108,7 @@ npm init
    <br>
 2. Make the following changes : <br>
     <br>**a. in /server.js :**<br><br>
-    _Line 7 : Enter your Razorpay ID & SECRET ID here(nessecary for online payment) :_
+    Line 7 : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
     ```javascript
     const Razorpay = require('razorpay')
     const razorpay = new Razorpay({
@@ -116,11 +116,11 @@ npm init
         key_secret: 'YOUR RAZORPAY SECRET KEY'
     })
     ```
-    <br>_Line 13 : Enter the name of your firebase credential file here(the one you will download from your firebase console) :_
+    <br>Line 13 : Enter the name of your firebase credential file here (the one you will download from your firebase console) :
     ```javascript
     let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
     ```
-    <br>_Line 577 : Enter the e-mail ID & password here(it will be used to send notification to customers after placing order) :_
+    <br>Line 577 : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order) :
     ```javascript
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
@@ -132,13 +132,13 @@ npm init
     ```
     
     <br>**b. in /js/product.js :**<br><br>
-    _Line 57 : Enter your distancematrix.ai token here(or you can use Google Distance Matrix API too) :_
+    Line 57 : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too) :
     ```javascript
     let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
     ```
     
     <br>**c. in /js/checkout.js :**<br><br>
-    _Line 63 : Enter your Razorpay ID here :<br>_
+    Line 63 : Enter your Razorpay ID here :<br>
     ```javascript
     const onlineCheckout = () => {
     var options = {
@@ -154,28 +154,28 @@ npm init
 
 <ol>
   <li>
-    Purchase medicines & medical products.
+    Purchase or Sell medicines & other medical products.
   </li>
   <li>
-    Seller's dashboard with order tracking & sale history.
+    Seller's Dashboard with order tracking & sales history.
   </li>
   <li>
-    Add to cart & wishlist.
+    Add to Cart & Wishlist.
   </li>
   <li>
-    Order Tracking and History along with its Cancelling.
+    Order Tracking & History along with its Cancelling.
   </li>
   <li>
     Online payment with Razorpay.
   </li>
   <li>
-    Check availiblity using pincode.
+    Check availiblity using Pincode.
   </li>
   <li>
-    Search(by name, type, category or use).
+    Search (by name, type, category or use).
   </li>
   <li>
-    Submit grieviances.
+    Submit Grieviances.
   </li>
   <li>
     Sign Up and Log In
@@ -189,7 +189,7 @@ npm init
 
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/d0f46583-2c26-4743-a6ca-48ee248967c4">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/cb2b2ad0-76f9-4cd7-aeec-922688e2db40">
   </kbd>
 </div>
 <br>
@@ -201,19 +201,19 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/a6f16965-cb30-4817-a88e-d6389f976a1a">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/a671ada7-bd0d-4e8a-8e40-001310b26b95">
   </kbd>
 </div>
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/5283c517-3b05-4648-85ed-63b6d9212cda">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/e0289443-9699-4d77-86a8-e3e000e672ec">
   </kbd>
 </div>
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/299b7fe3-aa3a-4cbf-8917-f81457688e79">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/f462cc7b-167a-40a1-aad2-9a70c7644030">
   </kbd>
 </div>
 <br>
@@ -225,13 +225,13 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/62364801-ca82-4596-9464-7b18c7bf1965">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/6cd44fda-4b68-46e1-93b3-212dc396e524">
   </kbd>
 </div>
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/b888eb26-87ed-46c9-b1fb-e06951243f97">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/c96962a6-ef54-4612-9428-e616986b73f1">
   </kbd>
 </div>
 <br>
@@ -243,7 +243,7 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/3c8decee-caa5-45d9-a307-869976240a99">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/378f7b13-0bbd-4ffc-a7a1-bf355cf21850">
   </kbd>
 </div>
 
@@ -253,15 +253,15 @@ npm init
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Sign up & Log in
-- [x] Add Home paage
-- [x] Add Prodcut landing page
-- [x] Add Search page
-- [x] Add Cart & wishlist
-- [x] Add Seller's dashboard
+- [x] Add Sign-Up & Log-In
+- [x] Add Home Page
+- [x] Add Prodcut Landing Page
+- [x] Add Search Page
+- [x] Add Cart & Wishlist
+- [x] Add Seller's Dashboard
 - [x] Add Checkout
-- [x] Add Order tracking, history & cancelletion
-- [x] Add Online payment
+- [x] Add Order Tracking, History & Cancelletion
+- [x] Add Online Payment
 - [x] Add Grievances
 
 See the [open issues](https://github.com/ArmanKhanTech/Medicomm/issues) for a full list of proposed features (and known issues).
@@ -318,7 +318,7 @@ Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/Ar
 [JS-url]: https://www.w3schools.com/js/
 [Nodejs]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [Nodejs-url]: https://nodejs.org/
-[Expressjs]: https://img.shields.io/badge/Express.js-404D59?style=for-the-badge
+[Expressjs]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [Expressjs-url]: https://expressjs.com/
 [Firebase]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white
 [Firebase-url]: https://firebase.google.com/
