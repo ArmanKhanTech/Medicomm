@@ -120,7 +120,7 @@ npm init
     ```javascript
     let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
     ```
-    <br>Line 577 : Enter the e-mail ID & password here (it will be used to send notification to customers after placing order) :
+    <br>Line 577 : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order) :
     ```javascript
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
