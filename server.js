@@ -11,7 +11,7 @@ const razorpay = new Razorpay({
 })
 
 //firebase admin setup
-let serviceAccount = require("./YOUR FIREBASE CREDENTAIL FILE");
+let serviceAccount = require("./YOUR FIREBASE CREDENTAIL FILE")
 const { randomInt } = require('crypto');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
