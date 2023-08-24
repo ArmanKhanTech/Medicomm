@@ -231,7 +231,7 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/b888eb26-87ed-46c9-b1fb-e06951243f97">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/c96962a6-ef54-4612-9428-e616986b73f1">
   </kbd>
 </div>
 <br>
@@ -243,7 +243,7 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/3c8decee-caa5-45d9-a307-869976240a99">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/378f7b13-0bbd-4ffc-a7a1-bf355cf21850">
   </kbd>
 </div>
 
