@@ -80,8 +80,6 @@ textarea{
     margin: 30px 0;
 }
 
-/* checkbox styles */
-
 .checkbox{
     width: 15px;
     height: 15px;
@@ -133,7 +131,6 @@ label a{
     display: block;
 }
 
-/* alert */
 .alert-box{
     width: 310px;
     min-height: 310px;

@@ -203,7 +203,7 @@ if(proId == decodeURI("addproduct.html")){
 }
 
 addProductBtn.addEventListener('click', () => {
-    if(validateForm()){ // validateForm return true or false while doing validation
+    if(validateForm()){ 
         loader.style.display = 'block';
         let data = productData();
         sendData('/add-product', data);

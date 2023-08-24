@@ -12,18 +12,18 @@ body{
     width: 10px;
   }
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     border-radius: 5px;
-  }
-   
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: #1fa4cc; 
     border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #1fa4cc; 
-  }
+}
 
 .form-checkout{
     width: 95%;

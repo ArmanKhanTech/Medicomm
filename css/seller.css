@@ -15,20 +15,20 @@ body{
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     border-radius: 5px;
-  }
-   
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: #1fa4cc; 
     border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #1fa4cc; 
-  }
+}
 
 .alert-box{
     width: 310px;
@@ -234,8 +234,6 @@ body{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
     font-family: 'roboto', sans-serif;
 }
-
-/* checkbox styles */
 
 .checkbox{
     appearance: none;
