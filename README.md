@@ -157,7 +157,7 @@ npm init
     Purchase or Sell medicines & other medical products.
   </li>
   <li>
-    Seller's Dashboard with order tracking & sales history.
+    Seller's Dashboard with Order Tracking & Sales History.
   </li>
   <li>
     Add to Cart & Wishlist.
@@ -166,10 +166,10 @@ npm init
     Order Tracking & History along with its Cancelling.
   </li>
   <li>
-    Online payment with Razorpay.
+    Online Payment with Razorpay.
   </li>
   <li>
-    Check availiblity using Pincode.
+    Check Availiblity using Pincode.
   </li>
   <li>
     Search (by name, type, category or use).
