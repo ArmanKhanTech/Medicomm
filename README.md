@@ -118,7 +118,7 @@ npm init
     ```
     <br>Line 13 : Enter the name of your firebase credential file here (the one you will download from your firebase console) :
     ```javascript
-    let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
+    let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
     ```
     <br>Line 577 : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order) :
     ```javascript
