@@ -157,7 +157,7 @@ npm init
     Purchase or Sell medicines & other medical products.
   </li>
   <li>
-    Seller's Dashboard with order tracking & sales history.
+    Seller's Dashboard with Order Tracking & Sales History.
   </li>
   <li>
     Add to Cart & Wishlist.
@@ -166,10 +166,10 @@ npm init
     Order Tracking & History along with its Cancelling.
   </li>
   <li>
-    Online payment with Razorpay.
+    Online Payment with Razorpay.
   </li>
   <li>
-    Check availiblity using Pincode.
+    Check Availiblity using Pincode.
   </li>
   <li>
     Search (by name, type, category or use).
@@ -189,19 +189,19 @@ npm init
 
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/cb2b2ad0-76f9-4cd7-aeec-922688e2db40">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/be677845-97d5-43d7-8e03-663747e5a399">
   </kbd>
 </div>
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/19cdc4f7-6a80-43ac-96ed-cfd9653bf01f">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/8bdee089-1bfb-4c0e-8565-1bf828843466">
   </kbd>
 </div>
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/a671ada7-bd0d-4e8a-8e40-001310b26b95">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/e5e4d02a-5b1a-483e-b1ab-e3ebec1d6e3b">
   </kbd>
 </div>
 <br>
@@ -225,7 +225,7 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/6cd44fda-4b68-46e1-93b3-212dc396e524">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/ba2b930b-0d1c-4925-9c0b-b447cf3f62bc">
   </kbd>
 </div>
 <br>
@@ -243,7 +243,7 @@ npm init
 <br>
 <div>
   <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/378f7b13-0bbd-4ffc-a7a1-bf355cf21850">
+    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/7af9cadf-f51c-4fd6-9589-0b9c7a928152">
   </kbd>
 </div>
 
