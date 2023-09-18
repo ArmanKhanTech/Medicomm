@@ -10,7 +10,7 @@ const razorpay = new Razorpay({
     key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 
-let serviceAccount = require("./YOUR FIREBASE CREDENTAIL FILE")
+let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json")
 const { randomInt } = require('crypto');
 
 admin.initializeApp({
@@ -26,19 +26,19 @@ app.use(express.static(staticPath));
 app.use(express.json());
 
 app.listen(3000, () => {
-    console.log('listening on port 3000.......');
+    console.log('Listening on port 3000.......');
 })
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
+    res.sendFile(path.join(staticPath, "html/index.html"));
 })
 
 app.get('/signup', (req, res) => {
-    res.sendFile(path.join(staticPath, "signup.html"));
+    res.sendFile(path.join(staticPath, "html/signup.html"));
 })
 
 app.post('/signup', (req, res) => {
-    let { name, email, password, number, tac, notification } = req.body;
+    let { name, email, password, number, tac } = req.body;
 
     if(name.length < 3){
         return res.json({'alert': 'Name Must be 3 Letters Long'});
@@ -76,15 +76,15 @@ app.post('/signup', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(staticPath, "login.html"));
+    res.sendFile(path.join(staticPath, "html/login.html"));
 })
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(staticPath, "about.html"));
+    res.sendFile(path.join(staticPath, "html/about.html"));
 })
 
 app.get('/contact', (req, res) => {
-    res.sendFile(path.join(staticPath, "contact.html"));
+    res.sendFile(path.join(staticPath, "html/contact.html"));
 })
 
 app.post('/login', (req, res) => {
@@ -115,7 +115,7 @@ app.post('/login', (req, res) => {
 })
 
 app.get('/seller', (req, res) => {
-    res.sendFile(path.join(staticPath, "seller.html"));
+    res.sendFile(path.join(staticPath, "html/seller.html"));
 })
 
 app.post('/seller', (req, res) => {
@@ -168,8 +168,12 @@ app.post('/add-product', (req, res) => {
     })
 })
 
+app.get('/add-product', (req, res) => {
+    res.sendFile(path.join(staticPath, "html/addproduct.html"));
+})
+
 app.get('/add-product/:id', (req, res) => {
-    res.sendFile(path.join(staticPath, "addproduct.html"));
+    res.sendFile(path.join(staticPath, "html/addproduct.html"));
 })
 
 app.post('/get-products', (req, res) => {
@@ -203,7 +207,7 @@ app.post('/get-products', (req, res) => {
 })
 
 app.get('/product/:id', (req, res) => {
-    res.sendFile(path.join(staticPath, "product.html"));
+    res.sendFile(path.join(staticPath, "html/product.html"));
 })
 
 app.post('/get-product', (req, res) => {
@@ -478,23 +482,23 @@ app.post('/get-orders', (req, res) => {
 })
 
 app.get('/product/:id', (req, res) => {
-    res.sendFile(path.join(staticPath, "product.html"));
+    res.sendFile(path.join(staticPath, "html/product.html"));
 })
 
 app.get('cart', (req, res) => {
-    res.sendFile(path.join(staticPath, "cart.html"));
+    res.sendFile(path.join(staticPath, "html/cart.html"));
 })
 
 app.get('/search', (req, res) => {
-    res.sendFile(path.join(staticPath, "search.html"));
+    res.sendFile(path.join(staticPath, "html/search.html"));
 })
 
 app.get('/search/:key', (req, res) => {
-    res.sendFile(path.join(staticPath, "search.html"));
+    res.sendFile(path.join(staticPath, "html/search.html"));
 })
 
 app.get('/checkout', (req, res) => {
-    res.sendFile(path.join(staticPath, "checkout.html"));
+    res.sendFile(path.join(staticPath, "html/checkout.html"));
 })
 
 app.post('/order', (req, res) => {
@@ -612,7 +616,7 @@ app.post('/update-stock', (req, res) => {
 })
 
 app.get('/404', (req, res) => {
-    res.sendFile(path.join(staticPath, "404.html"));
+    res.sendFile(path.join(staticPath, "html/404.html"));
 })
 
 app.use((req, res) => {

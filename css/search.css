@@ -17,25 +17,11 @@
 }
 
 body{
-    overflow-x: hidden;
     overflow: overlay;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #1fa4cc; 
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #1fa4cc; 
+    display: none;
 }
 
 .product1{
@@ -55,7 +41,7 @@ body{
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 6px;
     grid-row-gap: 10px;
-    padding-left: 20px;
+    padding-left: 16px;
     height: auto;
     width: auto;
 }

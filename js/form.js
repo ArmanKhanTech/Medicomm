@@ -22,8 +22,7 @@ submitBtn.addEventListener('click', () => {
             showAlert('Invalid Number');
         } else if(!tac.checked){
             showAlert('You Must Agree All Terms and Conditions');
-        }else{
-            // submit form
+        } else{
             loader.style.display = 'block';
             sendData('/signup', {
                 name: name.value,
@@ -35,7 +34,7 @@ submitBtn.addEventListener('click', () => {
                 seller: false
             })
         }
-    }else{
+    } else{
         if(!email.value.length || !password.value.length){
             showAlert('Fill All the Inputs');
         } else{

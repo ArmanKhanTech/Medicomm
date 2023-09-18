@@ -1,27 +1,10 @@
 body{
     padding-bottom: 75px;
-}
-
-body{
-    overflow-x: hidden;
     overflow: overlay;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #1fa4cc; 
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #1fa4cc; 
+    display: none;
 }
 
 .product-details{
@@ -221,7 +204,7 @@ body{
 }
 
 .product-container3{
-    padding-left: 3.6vw;
+    padding-left: 2.8vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow-x: auto;
@@ -347,7 +330,7 @@ body{
 
 .per-ans{
     font-weight: 300;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     background: rgb(255, 89, 0);
     color: #fff;
@@ -369,7 +352,7 @@ body{
 
 .stock-ans{
     font-weight: 300;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     background: darkgreen;
     color: #fff;
@@ -387,7 +370,7 @@ body{
     padding: 20px;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 55px;
+    margin-left: 40px;
     margin-top: 60px;
     color: #8a30f7;
     border: 1px solid #8a30f7;

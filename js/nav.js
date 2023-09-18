@@ -52,22 +52,22 @@ const createNav = () => {
             <button class="search-btn">search</button>
         </div>
         <a>
-            <img src="../images\\user.png" id="user-img" alt="">
+            <img src="../images/user.png" id="user-img" alt="">
             <div class="login-logout-popup hide">
                 <p class="account-info1">Logged-in as, Name</p>
                 <button class="btn1" id="user-btn">Log Out</button>
             </div>
         </a>         
-        <a href="/cart.html"><img src="../images\\cart.png" id="cart-img" alt=""></a>
+        <a href="/cart.html"><img src="../images/cart.png" id="cart-img" alt=""></a>
     </div>
     </div>
     <ul class="links-container">
-        <li class="link-item"><a href="/index.html" class="link">home</a></li>
-        <li class="link-item"><a href="/search.html" class="link">buy</a></li>
-        <li class="link-item"><a href="/seller.html" class="link">sell</a></li>
-        <li class="link-item"><a href="/order.html" class="link">Orders</a></li>
-        <li class="link-item"><a href="/about.html" class="link">about</a></li>
-        <li class="link-item"><a href="/contact.html" class="link">contact</a></li>
+        <li class="link-item"><a href="/html/index.html" class="link">home</a></li>
+        <li class="link-item"><a href="/html/search.html" class="link">buy</a></li>
+        <li class="link-item"><a href="/html/seller.html" class="link">sell</a></li>
+        <li class="link-item"><a href="/html/order.html" class="link">Orders</a></li>
+        <li class="link-item"><a href="/html/about.html" class="link">about</a></li>
+        <li class="link-item"><a href="/html/contact.html" class="link">contact</a></li>
     </ul>
     `;
 }
@@ -86,7 +86,6 @@ userImageButton.addEventListener('click', () => {
 window.onload = () => {
     let user = JSON.parse(sessionStorage.user || null);
     if(user != null){
-        // means user is logged in
         popupText.innerHTML = `Logged-in as, ${user.name}`;
         actionBtn.innerHTML = 'Log-Out';
         actionBtn.addEventListener('click', () => {
@@ -94,7 +93,6 @@ window.onload = () => {
             location.reload();
         })
     } else{
-        // he is not
         popupText.innerHTML = 'Log-In to Place Order';
         actionBtn.innerHTML = 'Log-In';
         actionBtn.addEventListener('click', () => {

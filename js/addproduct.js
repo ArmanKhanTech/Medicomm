@@ -2,7 +2,7 @@ let user = JSON.parse(sessionStorage.user || null);
 let loader = document.querySelector('.loader');
 
 if(!user){
-    location.replace('/login.html');
+    location.replace('/login')
 }
 
 const actualPrice = document.querySelector('#actual-price');

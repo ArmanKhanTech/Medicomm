@@ -11,25 +11,11 @@
 }
 
 body{
-    overflow-x: hidden;
     overflow: overlay;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #1fa4cc; 
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #1fa4cc; 
+    display: none;
 }
 
 .product-list{

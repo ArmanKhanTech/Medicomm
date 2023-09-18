@@ -47,7 +47,7 @@ applyBtn.addEventListener('click', () =>{
 const addProduct = document.querySelector('.add-product-btn');
 
 addProduct.addEventListener('click', () =>{
-    location.replace('/addproduct.html');
+    location.replace('/add-product');
 })
 
 const setupProducts = () => {
