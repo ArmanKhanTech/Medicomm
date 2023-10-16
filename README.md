@@ -90,10 +90,10 @@ npm init
 
 <ol>
   <li>
-    <p>Nodejs</a>
+    <p>Node.js</a>
   </li>
   <li>
-    <p>Expressjs</a>
+    <p>Express.js</a>
   </li>
 </ol>
 
@@ -178,7 +178,7 @@ npm init
     Submit Grieviances.
   </li>
   <li>
-    Sign Up and Log In
+    SignUp and LogIn
   </li>
 </ol>
 
@@ -253,7 +253,7 @@ npm init
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Sign-Up & Log-In
+- [x] Add Signup & Login
 - [x] Add Home Page
 - [x] Add Prodcut Landing Page
 - [x] Add Search Page
