@@ -10,7 +10,7 @@ const razorpay = new Razorpay({
     key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 
-let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json")
+let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json")
 const { randomInt } = require('crypto');
 
 admin.initializeApp({
