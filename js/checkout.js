@@ -20,7 +20,7 @@ placeorder.addEventListener('click', () => {
                 })
             }).then(res => res.json())
             .then(data => {
-                if(data.alert == 'Your Order Was Placed Successfully.'){
+                if(data.alert == 'Your Order was Placed Successfully.'){
                     updateProStock(finalOrder);
                     document.querySelector('.loader').style.display = 'none';
                     localStorage.removeItem('cart');
@@ -60,7 +60,7 @@ placeorder.addEventListener('click', () => {
 
 const onlineCheckout = () => {
     var options = {
-        "key": "YOUR RAZORPAY KEY", 
+        "key": "rzp_test_4MDddU5XeHiOBW", 
         "amount": totalBill, 
         "currency": "INR",
         "name": "Medicomm",
@@ -168,7 +168,7 @@ const getAddress = () => {
 
     if(!address.length || !street.length || !city.length || 
         !state.length || !pincode.length || !landmark.length){
-            showAlert('Please Fill All The Fields.');
+            showAlert('Please fill all the Fields.');
         } else{
             return {address, street, city, state, pincode, landmark};
         }

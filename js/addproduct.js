@@ -95,27 +95,27 @@ const addProductBtn = document.querySelector('#add-btn');
 
 const validateForm = () => {
     if(!productName.value.length){
-        return showAlert('Enter Product Name');
+        return showAlert('Please enter Product\'s Name');
     } else if(shortLine.value.length > 100 || shortLine.value.length < 10){
-        return showAlert('Short Description Must be Between 10 to 100 Letters Long');
+        return showAlert('Short Description must be between 10 to 100 letters long');
     } else if(!des.value.length){
-        return showAlert('Enter Detailed Description About the Product');
+        return showAlert('Please enter Detailed Description about the Product');
     } else if(!actualPrice.value.length || !discountPercentage.value.length || !sellingPrice.value.length){
-        return showAlert('You Must Add Pricings');
+        return showAlert('You must add Pricings');
     } else if(stock.value < 20){
-        return showAlert('You Should Have at Least 20 Items in Stock');
+        return showAlert('You should have atleast 20 Items in Stock');
     } else if(!use.value.length){
-        return showAlert('Enter Use of the Products');
+        return showAlert('Please enter use of the Product');
     } else if(!cate.value.length){
-        return showAlert('Enter Category of the Product');
+        return showAlert('Please enter Category of the Product');
     } else if(!tac.checked){
-        return showAlert('You Must Agree Our Terms and Conditions');
+        return showAlert('You must agree our Terms and Conditions');
     } else if(!manDate.value.length){
-        return showAlert('Enter Manufacturing Date of the Product');
+        return showAlert('Please enter Manufacturing Date of the Product');
     } else if(!exDate.value.length){
-        return showAlert('Enter Expiry Date of the Product');
+        return showAlert('Please enter Expiry Date of the Product');
     } else if(!perscription.value.length){
-        return showAlert('Enter Perscription Detail of the Product');
+        return showAlert('Please enter Perscription Detail of the Product');
     }
 
     d = discount.value;

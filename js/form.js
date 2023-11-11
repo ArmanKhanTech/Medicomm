@@ -11,17 +11,17 @@ const notification = document.querySelector('#notification') || null;
 submitBtn.addEventListener('click', () => {
     if(name!=null){  //signup page
         if(name.value.length < 3){
-            showAlert('Name Must be 3 Letters Long');
+            showAlert('Name must be atleast three letters long');
         } else if(!email.value.length){
-            showAlert('Enter Your E - Mail');
+            showAlert('Please enter Your e-mail');
         } else if(password.value.length < 8){
-            showAlert('Password Should be 8 Letters Long');
+            showAlert('Password must be atleast eight characters long');
         } else if(!number.value.length){
-            showAlert('Enter Your Phone Number');
+            showAlert('Please enter your Phone Number');
         } else if(!Number(number.value) || number.value.length < 10){
             showAlert('Invalid Number');
         } else if(!tac.checked){
-            showAlert('You Must Agree All Terms and Conditions');
+            showAlert('You must agree all Terms and Conditions');
         } else{
             loader.style.display = 'block';
             sendData('/signup', {
@@ -36,7 +36,7 @@ submitBtn.addEventListener('click', () => {
         }
     } else{
         if(!email.value.length || !password.value.length){
-            showAlert('Fill All the Inputs');
+            showAlert('Kindly fill all the Inputs');
         } else{
             loader.style.display = 'block';
             sendData('/login', {
