@@ -6,8 +6,8 @@ const bcrypt = require('bcrypt');
 
 const Razorpay = require('razorpay')
 const razorpay = new Razorpay({
-    key_id: 'rzp_test_4MDddU5XeHiOBW',
-    key_secret: 'lLpBVr345JYTLmw8wKmXj0dr'
+    key_id: 'YOUR RAZORPAY ID',
+    key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 
 let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk-qn6i0-7b89ea4ed1.json")
