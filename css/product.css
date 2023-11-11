@@ -52,7 +52,6 @@ body{
     font-size: 20px;
     color: #1fa4cc;
     background: white;
-    text-transform: capitalize;
     border-radius: 5px 0px 0px 5px;
     border: 1px solid #1fa4cc;
     width: fit-content;
@@ -67,7 +66,7 @@ body{
     text-transform: capitalize;
     font-weight: bold;
     background: #1fa4cc;
-    line-height: 40px;
+    line-height: 35px;
     padding: 5px;
 }
 
@@ -122,7 +121,6 @@ body{
 .seller{
     font-size: 20px;
     font-weight: 300;
-    text-transform: capitalize;
     border-radius: 5px 0px 0px 5px;
     border: 1px solid black;
     padding: 5px;
@@ -130,16 +128,14 @@ body{
 }
 
 .sold-by{
-    font-weight: 300;
-    font-size: 22px;
+    font-size: 21px;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+    text-transform: capitalize;
     font-weight: bold;
     background: #000000;
-    color: #fff;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2.5px;
-    border-radius: 0px 5px 5px 0px;
+    line-height: 35px;
+    padding: 5px;
 }
 
 .product-sub-heading{
@@ -204,7 +200,7 @@ body{
 }
 
 .product-container3{
-    padding-left: 2.8vw;
+    padding-left: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow-x: auto;
@@ -284,13 +280,14 @@ body{
 
 .expiry-date{
     font-weight: 300;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: bold;
     background: red;
     color: #fff;
-    padding: 6px;
+    padding: 5px;
     border-radius: 0px 5px 5px 0px;
     margin-top: 30px;
+    line-height: 35px;
     width: fit-content;
 }
 
@@ -308,11 +305,12 @@ body{
 
 .man-date{
     font-weight: 300;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: bold;
     background: purple;
     color: #fff;
-    padding: 6px;
+    padding: 5px;
+    line-height: 35px8ui9oo;
     border-radius: 0px 5px 5px 0px;
 }
 
@@ -458,7 +456,7 @@ body{
 .seller-address-popup{
     position: absolute;
     left: 60%;
-    top : 87%;
+    top : 92%;
     transform: translate(-50%);
     padding: 10px;
     background: #fff;

@@ -104,7 +104,7 @@ const paymentSuccess = () => {
             })
         }).then(res => res.json())
         .then(data => {
-            if(data.alert == 'Your Order Was Placed Successfully.'){
+            if(data.alert == 'Your Order was Placed Successfully.'){
                 document.querySelector('.loader').style.display = 'none';
                 updateProStock(finalOrder);
                 localStorage.removeItem('cart');
