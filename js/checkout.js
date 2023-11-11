@@ -60,7 +60,7 @@ placeorder.addEventListener('click', () => {
 
 const onlineCheckout = () => {
     var options = {
-        "key": "rzp_test_4MDddU5XeHiOBW", 
+        "key": "YOUR RAZORPAY ID", 
         "amount": totalBill, 
         "currency": "INR",
         "name": "Medicomm",
