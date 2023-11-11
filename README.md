@@ -64,7 +64,7 @@
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
-**Ideal to view only on 1920x1080p display since this project does not feature bootstrap.**
+**Ideal to view only on 1920x1080p display since this websits isn't responsive.**
 
 ### Built With
 
@@ -90,10 +90,10 @@ npm init
 
 <ol>
   <li>
-    <p>Nodejs</a>
+    <p>Node.js</a>
   </li>
   <li>
-    <p>Expressjs</a>
+    <p>Express.js</a>
   </li>
 </ol>
 
@@ -118,7 +118,7 @@ npm init
     ```
     <br>Line 13 : Enter the name of your firebase credential file here (the one you will download from your firebase console) :
     ```javascript
-    let serviceAccount = require("./YOUR FIREBASE CREDENTIAL FILE");
+    let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
     ```
     <br>Line 577 : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order) :
     ```javascript
@@ -178,7 +178,7 @@ npm init
     Submit Grieviances.
   </li>
   <li>
-    Sign Up and Log In
+    SignUp and LogIn
   </li>
 </ol>
 
@@ -253,7 +253,7 @@ npm init
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Sign-Up & Log-In
+- [x] Add Signup & Login
 - [x] Add Home Page
 - [x] Add Prodcut Landing Page
 - [x] Add Search Page
