@@ -64,7 +64,7 @@
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
-**Ideal to view only on 1920x1080p display since this websits isn't responsive.**
+**Ideal to view only on 1920x1080p display since this website isn't responsive.**
 
 ### Built With
 
@@ -147,6 +147,11 @@ npm init
     <br>
 3. Run the project by typing localhost:3000/index.html in your browser.<br>
 
+**OR**
+
+Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b></a>
+
+
 
 
 <!-- FEATURES -->
@@ -154,7 +159,7 @@ npm init
 
 <ol>
   <li>
-    Purchase or Sell medicines & other medical products.
+    Purchase or Sell Medicines & other Medical Products.
   </li>
   <li>
     Seller's Dashboard with Order Tracking & Sales History.
@@ -169,16 +174,16 @@ npm init
     Online Payment with Razorpay.
   </li>
   <li>
-    Check Availiblity using Pincode.
+    Check Availability using Pincode.
   </li>
   <li>
     Search (by name, type, category or use).
   </li>
   <li>
-    Submit Grieviances.
+    Submit Grievances.
   </li>
   <li>
-    SignUp and LogIn
+    Signup and Login
   </li>
 </ol>
 
@@ -260,7 +265,7 @@ npm init
 - [x] Add Cart & Wishlist
 - [x] Add Seller's Dashboard
 - [x] Add Checkout
-- [x] Add Order Tracking, History & Cancelletion
+- [x] Add Order Tracking, History & Cancellation
 - [x] Add Online Payment
 - [x] Add Grievances
 
@@ -293,7 +298,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Arman Khan - ak2341776@gmail.com
 
-Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/ArmanKhanTech/Medicomm) 
+Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/ArmanKhanTech/Medicomm)
+
+DockerHub Link - https://hub.docker.com/r/armankhan792/medicomm
 
 
 
