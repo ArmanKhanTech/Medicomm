@@ -520,7 +520,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
     width: 100%;
     height: 100px;
     border: 2px solid red;
@@ -529,7 +529,7 @@ body{
 .feature1img{
     width: 180px;
     height: 100px;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-right: 10px;
 }
 
@@ -543,7 +543,7 @@ body{
     grid-gap: 0px;
     margin-top: 20px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 .feature2img{
@@ -563,7 +563,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     margin-top: 10px;
     padding: 10px;
-    border-radius: 620px;
+    border-radius: 50px;
 }
 
 .feature3img{
