@@ -84,7 +84,7 @@ This e-pharmacy is a business model that deals with the preparation and sale of 
 
 Make sure you have installed node.js on your system, delete the previous /node_module folder & run the following command in your project directory's terminal :
 ```javascript
-npm init 
+npm install
 ```
 
 
