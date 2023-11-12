@@ -24,7 +24,7 @@
     <br />
     <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Report a Bug</a>
     ·
-    <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Request new Feature</a>
+    <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Request new Features</a>
   </p>
 </div>
 
