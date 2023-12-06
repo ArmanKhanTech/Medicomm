@@ -1,0 +1,28 @@
+body{
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.about-section{
+    margin: 30px;
+    background: #dbf3ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-heading{
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about{
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+}
