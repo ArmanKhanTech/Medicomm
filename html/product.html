@@ -1,206 +1,120 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>Medicomm : Buy</title>
-
         <link rel="stylesheet" href="/css/home.css">
         <link rel="stylesheet" href="/css/product.css">
         <link rel="stylesheet" href="/css/footer.css">
-
-        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-        
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">    
     </head>
-
     <body>
-
         <nav class="navbar"></nav>
-
         <img src="/images/loader.gif" class="loader" alt="">
-
         <section class="product-data hide">
-
             <section class="product-details">
-
-                <div class="product-images">
-                    
-                    <img src="" class="image" alt="">
-                    
+                <div class="product-images">              
+                    <img src="" class="image" alt="">              
                 </div>
-                <div class="details">
-                    
-                    <h3 class="product-brand"></h3>
-                    
+                <div class="details">              
+                    <h3 class="product-brand"></h3>               
                     <p class="product-short-des"></p>
-
-                    <div class="div1">
-                        
+                    <div class="div1">                   
                         <span class="product-price"></span>
                         <span class="product-actual-price"></span>
                         <span class="product-discount"></span>
-                        
                     </div>
-
                     <div class="div2">
-                        
                         <span class="usage">Treatment for </span>
                         <span class="use"></span>
-                        
                     </div>
-
-                    <div class="div3">
-                        
+                    <div class="div3"> 
                         <span class="seller">Sold by </span>
-                        
                         <span class="sold-by">Seller</button>
-                        
                     </div>
-
-                    <div class="seller-address-popup hide">
-                        
+                    <div class="seller-address-popup hide"> 
                         <p class="address">Address : <span class="address-ans"></span></p>
-                        
                         <hr style="height:0.5px;
                             border-width:0;
                             color:black;
                             background-color:black">
-                        
                         <p class="address">Pincode : <span class="pincode"></span></p>
-                        
                         <hr style="height:0.5px;
                             border-width:0;
                             color:black;
                             background-color:black">
-                        
                         <p class="address">Number : <span class="number"></span></p>
-                        
                     </div>
-            
                     <p class="product-sub-heading">Enter quantity : </p>
-                    
                     <input type="number" class="quantity" id ="quantity" name="quantity" value="1" min="1">
-            
                     <button class="btn cart-btn">add to cart</button>
                     <button class="btn wish-btn">add to wishlist</button>
-                    
                 </div>
-                
             </section>
-
             <section class="product-spec">
-                
                 <div>
-                    
                     <h2 class="heading">Specifications :</h2>
-                    
                     <p class="spec"></p>
-                    
                     <div class="ex-details">
-                        <div>
-                            
+                        <div>     
                             <span class="man">Manufacture Date </span>
                             <span class="man-date">Thu 12 Dec 22</span>
-                            
                         </div>
-
                         <br>
                         <br>
-
                         <div>
-                            
                             <span class="expiry">Expiry Date </span>
                             <span class="expiry-date">Thu 12 Dec 22</span><br>
-                            
                         </div>
-
                         <br>
                         <br>
-
                         <div>
-                            
                             <span class="per">Perscription Required </span>
-                            <span class="per-ans">No</span><br>
-                            
+                            <span class="per-ans">No</span><br> 
                         </div>
-
                         <br>
                         <br>
-
-                        <div>
-                            
+                        <div>    
                             <span class="stock">Stock </span>
-                            <span class="stock-ans">10</span><br>
-                            
+                            <span class="stock-ans">10</span><br>  
                         </div>
                     </div>
                 </div>
-
                 <div class="pin-check">
-                    
                     <h2 class="heading">Check Delivery :</h2>
-                    
                     <div class="pin-field">
-                        
                         <input type="number" class="check-box" placeholder="Enter Your Pincode" min="1">
-                        
                         <button class="check-btn">Check</button>
-                        
                     </div>
                     <div class="pin-ans">
-                        
                         <span class="pin-ans1"> Enter Your Pincode to Check the Availiblity of Your Product.</span><br>
-                        
                     </div>
                 </div>
-
             </section>
-
             <section class="detail-des">
-                
                 <h2 class="heading">description :</h2><br>
-                
                 <p class="des"></p>
-                
             </section>
-
             <section class="pro-imgs">
-                
                 <div class="pro-img1">
-                    
-                    <img src="" id="img1">
-                    
+                    <img src="" id="img1">      
                 </div>
-                <div class="pro-img1">
-                    
-                    <img src="" id="img2">
-                    
+                <div class="pro-img1">       
+                    <img src="" id="img2">      
                 </div>
-                <div class="pro-img1">
-                    
-                    <img src="" id="img3">
-                    
-                </div>
-                
+                <div class="pro-img1">        
+                    <img src="" id="img3">          
+                </div>       
             </section>
-
             <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
             <h2 class="product-category3">Similar Products</h2>
-
             <section class="product"></section>
-
         </section>
-
         <script src="/js/nav.js"></script>
         <script src="/js/product.js" type="module"></script>
         <script src="/js/wishcart.js"></script>
         <script src="/js/token.js"></script>
-
     </body>
-    
 </html>
