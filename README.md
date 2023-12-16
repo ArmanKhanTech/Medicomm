@@ -7,7 +7,6 @@
 
 
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/ArmanKhanTech/Medicomm/">
@@ -30,7 +29,6 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -59,7 +57,6 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
@@ -79,7 +76,6 @@ This e-pharmacy is a business model that deals with the preparation and sale of 
 
 
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
 Make sure you have installed node.js on your system, delete the previous /node_module folder & run the following command in your project directory's terminal :
@@ -96,6 +92,9 @@ npm install
   </li>
   <li>
     <p>Express.js</a>
+  </li>
+  <li>
+    <p>Firebase Account</a>
   </li>
 </ol>
 
@@ -156,7 +155,6 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b
 
 
 
-<!-- FEATURES -->
 ## Features 
 
 <ol>
@@ -191,7 +189,6 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b
 
 
 
-<!-- IMAGES -->
 ## Images
 
 <div>
@@ -256,8 +253,6 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b
 
 
 
-
-<!-- ROADMAP -->
 ## Roadmap
 
 - [x] Add Signup & Login
@@ -275,7 +270,6 @@ See the [open issues](https://github.com/ArmanKhanTech/Medicomm/issues) for a fu
 
 
 
-<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -288,14 +282,12 @@ Thanks again!
 
 
 
-<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT -->
 ## Contact
 
 Arman Khan - ak2341776@gmail.com
@@ -306,7 +298,7 @@ DockerHub Link - https://hub.docker.com/r/armankhan792/medicomm
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/ArmanKhanTech/Medicomm.svg?style=for-the-badge
 [contributors-url]: https://github.com/ArmanKhanTech/Medicomm/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/ArmanKhanTech/Medicomm.svg?style=for-the-badge
