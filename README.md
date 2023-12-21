@@ -103,7 +103,6 @@ npm install
     ```sh
     git clone https://github.com/ArmanKhanTech/Medicomm.git
     ```
-   <br>
 2. Make the following changes : <br>
     <br>**a. in /server.js :**<br><br>
     Line 7 : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
@@ -114,7 +113,7 @@ npm install
         key_secret: 'YOUR RAZORPAY SECRET KEY'
     })
     ```
-    <br>Line 13 : Enter the name of your firebase credential file here (the one you will download from your firebase console) :
+    Line 13 : Enter the name of your firebase credential file here (the one you will download from your firebase console) :
     ```javascript
     let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
     ```
