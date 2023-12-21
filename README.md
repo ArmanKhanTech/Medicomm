@@ -105,7 +105,7 @@ npm install
     ```
 2. Make the following changes : <br>
     <br>**a. in /server.js :**<br><br>
-    Line 7 : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
+    Line 8 : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
     ```javascript
     const Razorpay = require('razorpay')
     const razorpay = new Razorpay({
