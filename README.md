@@ -35,7 +35,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Built with</a></li>
       </ul>
     </li>
     <li>
@@ -88,10 +88,7 @@ npm install
 
 <ol>
   <li>
-    <p>Node.js</a>
-  </li>
-  <li>
-    <p>Express.js</a>
+    <p>NPM</a>
   </li>
   <li>
     <p>Firebase Account</a>
