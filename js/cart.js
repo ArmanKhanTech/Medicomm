@@ -44,7 +44,7 @@ const setProducts = (name) => {
         element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
         checkoutSection.style.display = 'none';
     } else {
-        for(let i = 0; i < data.length; i++){
+        for(let i = 0; i < data.length; i++) {
             element.innerHTML += createSmallCart(data[i]);
             temp = data[i].name;
             totalBill = parseInt(totalBill + (data[i].actualPrice  * data[i].quantity)); 
@@ -146,11 +146,11 @@ const setupEvents2 = (name) => {
             item.addEventListener('click', () => {
                 res = from_wish_to_cart('cart', data[i], 1, data[i].soldby);
 
-                if(res=='Added'){
+                if(res=='Added') {
                     product = product.filter((data, index) => index != i);
                     localStorage.setItem(name, JSON.stringify(product));
                     location.reload();
-                } else if(res=='Already Added'){
+                } else if(res=='Already Added') {
                     showAlert('Item Already Exists in Cart');
                 }   
             });
