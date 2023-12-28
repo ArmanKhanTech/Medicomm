@@ -17,7 +17,7 @@ submit.addEventListener('click', (e) => {
         })
     }).then((res) => res.json())
     .then(data => {
-        if(data == 'success'){
+        if(data == 'success') {
             showAlert1('Query Submitted Successfully', 'success');
             setTimeout(() => {
                 location.replace('/');

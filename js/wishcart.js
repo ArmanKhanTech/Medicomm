@@ -1,10 +1,10 @@
 const add_product_to_cart_or_wishlist = (type, product, quan, seller) => {
     let data = JSON.parse(localStorage.getItem(type));
-    if(data == null){
+    if(data == null) {
         data = [];
     } 
 
-    if(quan == null){
+    if(quan == null) {
         quan = 1;
     }
 
@@ -38,11 +38,11 @@ const add_product_to_cart_or_wishlist = (type, product, quan, seller) => {
 
 const from_wish_to_cart = (type, product, quan, seller) => {
     let data = JSON.parse(localStorage.getItem(type));
-    if(data == null){
+    if(data == null) {
         data = [];
     } 
 
-    if(quan == null){
+    if(quan == null) {
         quan = 1;
     }
 
@@ -51,7 +51,7 @@ const from_wish_to_cart = (type, product, quan, seller) => {
 
     var quanInNum = parseInt(quan);
     
-    for(let i = 0; i < data.length; i++){
+    for(let i = 0; i < data.length; i++) {
         if(data[i].id == product.id){
             return 'Already Added';
         }

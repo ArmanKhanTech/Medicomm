@@ -61,14 +61,14 @@ const comparePincode = (sellerPin, userPin) => {
     .then(data => {
         let distance = data.rows[0].elements[0].distance.text;
         let time = data.rows[0].elements[0].duration.text;
-        if(sellerPin != userPin){
+        if(sellerPin != userPin) {
             let tempDis = parseInt(distance.split(' '));
-            if(tempDis < 1000){
+            if(tempDis < 1000) {
                 pinAns.textContent = `Delivery Time : ${time}, Distance : ${distance}`;
             } else {
                 pinAns.textContent = `Delivery Not Available`;
             }
-        } else if(sellerPin == userPin){
+        } else if(sellerPin == userPin) {
             pinAns.textContent = 'Delivery Within an Hour';
         }
     }) 
@@ -108,7 +108,7 @@ const setFromsData = (data) => {
     const addWishlistBtn = document.querySelector('.wish-btn');
 
     addCartBtn.addEventListener('click', () => {
-        if(parseInt(data.stock) > parseInt(quanValue.value)){
+        if(parseInt(data.stock) > parseInt(quanValue.value)) {
             addCartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data, quanValue.value, sell);
         }
         else {
@@ -155,7 +155,7 @@ const showImg = () => {
     img4.src = link4s;
 }
 
-if(location.pathname != '/product'){
+if(location.pathname != '/product') {
     proId = decodeURI(location.pathname.split('/').pop());
     fetchProductData();
 }
@@ -181,26 +181,25 @@ const createProductCards = (data, parent) => {
     let middle = '';
     let end = '</div>';
 
-    for(let i = 0; i < data.length; i++)
-    {
-        if(data[i].status == 'Active'){
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].status == 'Active') {
             middle += `
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">${data[i].discount}</span>
-                    <img src="${data[i].image1}" class="product-thumb" alt="">
-                    <button class="card-btn">add to wishlist</button>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">${data[i].discount}</span>
+                        <img src="${data[i].image1}" class="product-thumb" alt="">
+                        <button class="card-btn">add to wishlist</button>
+                    </div>
+                    <div class="product-info">
+                        <a href="/product/${data[i].id}" class="product-brand">${data[i].name}</a>
+                        <p class="product-short-des">${data[i].shortDes}</p>
+                        <p class="Usage">${data[i].use}</p>
+                        <span class="price">${data[i].sellPrice}</span>
+                        <span class="actual-price">${data[i].actualPrice}</span>
+                    </div>
                 </div>
-                <div class="product-info">
-                    <a href="/product/${data[i].id}" class="product-brand">${data[i].name}</a>
-                    <p class="product-short-des">${data[i].shortDes}</p>
-                    <p class="Usage">${data[i].use}</p>
-                    <span class="price">${data[i].sellPrice}</span>
-                    <span class="actual-price">${data[i].actualPrice}</span>
-                </div>
-            </div>`;
+            `;
         }
     }
-
     p.innerHTML = start + middle + end;
 }

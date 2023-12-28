@@ -12,12 +12,12 @@ const generateToken = (key) => {
 
 const compareToken = (token, key) => {
     let string = '';
-    for(let i = 0; i < token.length; i++){
+    for(let i = 0; i < token.length; i++) {
         let index1 = char.indexOf(token[i]);
         let index2 = char.indexOf(token[i+1]);
         string += char[index1 + index2];
     }
-    if(string === key){
+    if(string === key) {
         return true;
     }
     return false;
@@ -42,10 +42,10 @@ const showAlert1 = (msg, type) => {
 
     alertMsg.innerHTML = msg;
 
-    if(type = 'success'){
+    if(type = 'success') {
         alertImg.src = '/images/success.png';
         alertMsg.style.color = '#00ff00';
-    } else{
+    } else {
         alertImg.src = '/images/error.png';
         alertMsg.style.color = null;
     }
@@ -69,18 +69,18 @@ const sendData = (path, data) => {
 
 const processData = (data) => {
     loader.style.display = null;
-    if(data.alert){
+    if(data.alert) {
         showAlert(data.alert);
-    } else if(data.name){
+    } else if(data.name) {
         data.authToken = generateToken(data.email);
         sessionStorage.user = JSON.stringify(data);
         location.replace('/');
-    } else if(data == true){
+    } else if(data == true) {
         let user = JSON.parse(sessionStorage.user);
         user.seller = true;
         sessionStorage.user = JSON.stringify(user);
         location.reload();
-    } else if(data.product){
+    } else if(data.product) {
         location.href = '/seller';
     }
 }

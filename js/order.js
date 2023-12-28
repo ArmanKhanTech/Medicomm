@@ -4,22 +4,23 @@ const createOrders = (data) => {
     var totalOrders = parseInt(0);
     let orderArr = [];
 
-    for(let i = 0; i < data.length; i++){
+    for(let i = 0; i < data.length; i++) {
         for(let j = 0; j < data[i].order.length; j++){
-            if(data[i].order[j].status != 'Delivered' && data[i].order[j].status != 'Failed' && data[i].order[j].status != 'Cancelled'){
-                orderContainer.innerHTML += `<div class="sm-product">
-                    <img src="${data[i].order[j].image}" class="sm-product-img" alt="">
-                    <div class="sm-text">
-                        <p class="sm-product-name">${data[i].order[j].name}</p>
-                        <p class="status">Status: <span class="status-ans">${data[i].order[j].status}</span></p>
+            if(data[i].order[j].status != 'Delivered' && data[i].order[j].status != 'Failed' && data[i].order[j].status != 'Cancelled') {
+                orderContainer.innerHTML += `
+                    <div class="sm-product">
+                        <img src="${data[i].order[j].image}" class="sm-product-img" alt="">
+                        <div class="sm-text">
+                            <p class="sm-product-name">${data[i].order[j].name}</p>
+                            <p class="status">Status: <span class="status-ans">${data[i].order[j].status}</span></p>
+                        </div>
+                        <div class="item-counter">
+                            <p class="quantity" id="quantity">Quantity:</p>
+                            <p class="item-count" id="item-count">${data[i].order[j].quantity}</p>
+                        </div>
+                        <p class="sm-price" id="sm-price">${data[i].order[j].price}</p>
+                        <button class="sm-delete-btn" id="sm-delete-btn"><img src="../images/close.png"></button>
                     </div>
-                    <div class="item-counter">
-                        <p class="quantity" id="quantity">Quantity:</p>
-                        <p class="item-count" id="item-count">${data[i].order[j].quantity}</p>
-                    </div>
-                    <p class="sm-price" id="sm-price">${data[i].order[j].price}</p>
-                    <button class="sm-delete-btn" id="sm-delete-btn"><img src="../images/close.png"></button>
-                </div>
                 `;
                 totalOrders++;
                 orderArr.push(data[i].order[j]);
@@ -34,7 +35,7 @@ const createOrders = (data) => {
     orderCount.innerHTML = totalOrders;
     setupEvents(orderArr);
 
-    if(totalOrders == 0){
+    if(totalOrders == 0) {
         document.querySelector('.no-orders-img1').classList.remove('hide');
     } 
 }
@@ -70,22 +71,22 @@ const createHistory = (data) => {
     const hisCount = document.querySelector('.history-count');
     var totalOrders = parseInt(0);
 
-    for(let i = 0; i < data.length; i++){
+    for(let i = 0; i < data.length; i++) {
         for(let j = 0; j < data[i].order.length; j++){
-            if(data[i].order[j].status == 'Delivered' || data[i].order[j].status == 'Failed' || data[i].order[j].status == 'Cancelled'){
-                hisContainer.innerHTML += 
-                `<div class="sm-product">
-                    <img src="${data[i].order[j].image}" class="sm-product-img" alt="">
-                    <div class="sm-text">
-                        <p class="sm-product-name">${data[i].order[j].name}</p>
-                        <p class="status">Status: <span class="status-ans">${data[i].order[j].status}</span></p>
+            if(data[i].order[j].status == 'Delivered' || data[i].order[j].status == 'Failed' || data[i].order[j].status == 'Cancelled') {
+                hisContainer.innerHTML += `
+                    <div class="sm-product">
+                        <img src="${data[i].order[j].image}" class="sm-product-img" alt="">
+                        <div class="sm-text">
+                            <p class="sm-product-name">${data[i].order[j].name}</p>
+                            <p class="status">Status: <span class="status-ans">${data[i].order[j].status}</span></p>
+                        </div>
+                        <div class="item-counter">
+                            <p class="quantity" id="quantity">Quantity:</p>
+                            <p class="item-count" id="item-count">${data[i].order[j].quantity}</p>
+                        </div>
+                        <p class="sm-price" id="sm-price">${data[i].order[j].price}</p>
                     </div>
-                    <div class="item-counter">
-                        <p class="quantity" id="quantity">Quantity:</p>
-                        <p class="item-count" id="item-count">${data[i].order[j].quantity}</p>
-                    </div>
-                    <p class="sm-price" id="sm-price">${data[i].order[j].price}</p>
-                </div>
                 `;
                 totalOrders++; 
             }
@@ -94,7 +95,7 @@ const createHistory = (data) => {
         
     hisCount.innerHTML = totalOrders;
 
-    if(totalOrders == 0){
+    if(totalOrders == 0) {
         document.querySelector('.no-orders-img2').classList.remove('hide');
     } 
 }
@@ -118,7 +119,7 @@ const setupEvents = (order) => {
     const deleteBtn = document.querySelectorAll('#sm-delete-btn');
 
      for(let i = 0; i < order.length; i++){
-        if(deleteBtn[i]){
+        if(deleteBtn[i]) {
             deleteBtn[i].addEventListener('click', () => {
                 openDelPopup(order[i]);
             });
@@ -129,8 +130,8 @@ const setupEvents = (order) => {
 let user = sessionStorage.getItem('user');
 user = JSON.parse(user);
 
-if(sessionStorage.getItem('user') != null){
+if(sessionStorage.getItem('user') != null) {
     getOrders(user.email);
-} else{
+} else {
     location.href = 'login.html';
 }

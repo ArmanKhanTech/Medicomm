@@ -26,9 +26,9 @@ const tac = document.querySelector('#terms-and-cond');
 
 applyBtn.addEventListener('click', () =>{
     if(!businessName.value.length || !businessAdd.value.length || 
-        !about.value.length || !number.value.length ){
+        !about.value.length || !number.value.length ) { 
             showAlert('Fill All the Inputs');
-    } else if(!tac.checked){
+    } else if(!tac.checked) {
         showAlert('You Must Agree All Terms and Conditions');
     } else {
         loader.style.display = 'block';
@@ -94,8 +94,8 @@ const findSeller = () => {
     })
 }
 
-if(user){
-    if(!user.seller){
+if(user) {
+    if(!user.seller) {
         loader.style.display = 'none';
         becomeSeller.classList.remove('hide');
     } else {
@@ -103,6 +103,6 @@ if(user){
         setupProducts();
         findSeller();
     }
-} else{
+} else {
     location.replace('/login')
 }

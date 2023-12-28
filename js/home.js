@@ -21,24 +21,24 @@ const createProductCards = (data, parent) => {
     let middle = '';
     let end = '</div>';
 
-    for(let i = 0; i < data.length; i++)
-    {
-        if(data[i].status == 'Active'){
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].status == 'Active') {
             middle += `
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">${data[i].discount}</span>
-                    <img src="${data[i].image1}" class="product-thumb" alt="">
-                    <button class="card-btn" id="card-btn">add to wishlist</button>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag">${data[i].discount}</span>
+                        <img src="${data[i].image1}" class="product-thumb" alt="">
+                        <button class="card-btn" id="card-btn">add to wishlist</button>
+                    </div>
+                    <div class="product-info">
+                        <a href="/product/${data[i].id}" class="product-brand">${data[i].name}</a>
+                        <p class="product-short-des">${data[i].shortDes}</p>
+                        <p class="Usage">${data[i].use}</p>
+                        <span class="price">${data[i].sellPrice}</span>
+                        <span class="actual-price">${data[i].actualPrice}</span>
+                    </div>
                 </div>
-                <div class="product-info">
-                    <a href="/product/${data[i].id}" class="product-brand">${data[i].name}</a>
-                    <p class="product-short-des">${data[i].shortDes}</p>
-                    <p class="Usage">${data[i].use}</p>
-                    <span class="price">${data[i].sellPrice}</span>
-                    <span class="actual-price">${data[i].actualPrice}</span>
-                </div>
-            </div>`;
+            `;
         }
     }
 
@@ -49,8 +49,8 @@ const createProductCards = (data, parent) => {
 const setupEvents = (data) => {
     const wishlistBtn = document.querySelectorAll('#card-btn');
 
-    for(let i = 0; i < data.length; i++){
-        if(wishlistBtn[i]){
+    for(let i = 0; i < data.length; i++) {
+        if(wishlistBtn[i]) {
             wishlistBtn[i].addEventListener('click', () => {
                 add_to_wishlist(data[i]);
             });

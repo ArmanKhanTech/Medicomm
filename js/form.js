@@ -9,18 +9,18 @@ const tac = document.querySelector('#terms-and-cond') || null;
 const notification = document.querySelector('#notification') || null;
 
 submitBtn.addEventListener('click', () => {
-    if(name!=null){  //signup page
+    if(name!=null) { 
         if(name.value.length < 3){
             showAlert('Name must be atleast three letters long');
-        } else if(!email.value.length){
+        } else if(!email.value.length) {
             showAlert('Please enter Your e-mail');
-        } else if(password.value.length < 8){
+        } else if(password.value.length < 8) {
             showAlert('Password must be atleast eight characters long');
-        } else if(!number.value.length){
+        } else if(!number.value.length) {
             showAlert('Please enter your Phone Number');
-        } else if(!Number(number.value) || number.value.length < 10){
+        } else if(!Number(number.value) || number.value.length < 10) {
             showAlert('Invalid Number');
-        } else if(!tac.checked){
+        } else if(!tac.checked) {
             showAlert('You must agree all Terms and Conditions');
         } else{
             loader.style.display = 'block';
@@ -34,10 +34,10 @@ submitBtn.addEventListener('click', () => {
                 seller: false
             })
         }
-    } else{
-        if(!email.value.length || !password.value.length){
+    } else {
+        if(!email.value.length || !password.value.length) {
             showAlert('Kindly fill all the Inputs');
-        } else{
+        } else {
             loader.style.display = 'block';
             sendData('/login', {
                 email: email.value,
@@ -48,9 +48,9 @@ submitBtn.addEventListener('click', () => {
 })
 
 window.onload = () => {
-    if(sessionStorage.user){
+    if(sessionStorage.user) {
         user = JSON.parse(sessionStorage.user)
-        if(compareToken(user.authToken, user.email)){
+        if(compareToken(user.authToken, user.email)) {
             location.replace('/');
         }
     }

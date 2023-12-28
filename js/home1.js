@@ -21,24 +21,24 @@ const createProductCards1 = (data, parent) => {
     let middle = '';
     let end = '</div>';
 
-    for(let i = 0; i < data.length; i++)
-    {
-        if(data[i].status == 'Active'){
-            middle += `
-            <div class="product-card1">
-                <div class="product-image1">
-                    <span class="discount-tag1">${data[i].discount}</span>
-                    <img src="${data[i].image1}" class="product-thumb1" alt="">
-                    <button class="card-btn1" id="card-btn1">add to wishlist</button>
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].status == 'Active') {
+                middle += `
+                <div class="product-card1">
+                    <div class="product-image1">
+                        <span class="discount-tag1">${data[i].discount}</span>
+                        <img src="${data[i].image1}" class="product-thumb1" alt="">
+                        <button class="card-btn1" id="card-btn1">add to wishlist</button>
+                    </div>
+                    <div class="product-info1">
+                        <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
+                        <p class="product-short-des1">${data[i].shortDes}</p>
+                        <p class="usage1">${data[i].use}</p>
+                        <span class="price1">${data[i].sellPrice}</span>
+                        <span class="actual-price1">${data[i].actualPrice}</span>
+                    </div>
                 </div>
-                <div class="product-info1">
-                    <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
-                    <p class="product-short-des1">${data[i].shortDes}</p>
-                    <p class="usage1">${data[i].use}</p>
-                    <span class="price1">${data[i].sellPrice}</span>
-                    <span class="actual-price1">${data[i].actualPrice}</span>
-                </div>
-            </div>`;
+            `;
         }
     }
 
@@ -49,8 +49,8 @@ const createProductCards1 = (data, parent) => {
 const setupEvents1 = (data) => {
     const wishlistBtn = document.querySelectorAll('#card-btn1');
 
-    for(let i = 0; i < data.length; i++){
-        if(wishlistBtn[i]){
+    for(let i = 0; i < data.length; i++) {
+        if(wishlistBtn[i]) {
             wishlistBtn[i].addEventListener('click', () => {
                 add_to_wishlist(data[i]);
             });

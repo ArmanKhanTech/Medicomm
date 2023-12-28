@@ -29,31 +29,31 @@ const createProductCards = (data, parent) => {
     const ids = data.map(o => o.id)
     data = data.filter(({id}, index) => !ids.includes(id, index + 1));
 
-    for(let i = 0; i < data.length; i++)
-    {
-        if(data[i].status == 'Active'){
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].status == 'Active') {
             middle += `
-            <div class="product-card1">
-                <div class="product-image1">
-                    <span class="discount-tag1" id="discount-tag1">${data[i].discount}</span>
-                    <img src="${data[i].image1}" class="product-thumb1" alt="">
-                    <button class="card-btn1" id="card-btn1">add to wishlist</button>
+                <div class="product-card1">
+                    <div class="product-image1">
+                        <span class="discount-tag1" id="discount-tag1">${data[i].discount}</span>
+                        <img src="${data[i].image1}" class="product-thumb1" alt="">
+                        <button class="card-btn1" id="card-btn1">add to wishlist</button>
+                    </div>
+                    <div class="product-info1">
+                        <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
+                        <p class="product-short-des1">${data[i].shortDes}</p>
+                        <p class="product-usage1" id="product-usage1">${data[i].use}</p>
+                        <span class="price1">${data[i].sellPrice}</span>
+                        <span class="actual-price1">${data[i].actualPrice}</span>
+                    </div>
                 </div>
-                <div class="product-info1">
-                    <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
-                    <p class="product-short-des1">${data[i].shortDes}</p>
-                    <p class="product-usage1" id="product-usage1">${data[i].use}</p>
-                    <span class="price1">${data[i].sellPrice}</span>
-                    <span class="actual-price1">${data[i].actualPrice}</span>
-                </div>
-            </div>`;
+            `;
         }
     }
 
-    if(data.length > 16){
+    if(data.length > 16) {
         btnContainer.classList.remove('hide');
         bottomPadding.style.paddingBottom = '100px';
-    } else{
+    } else {
         bottomPadding.style.paddingBottom = '60px';
     }
 
@@ -68,8 +68,8 @@ const createProductCards = (data, parent) => {
 const setupEvents = (data) => {
     const wishlistBtn = document.querySelectorAll('#card-btn1');
 
-    for(let i = 0; i < data.length; i++){
-        if(wishlistBtn[i]){
+    for(let i = 0; i < data.length; i++) {
+        if(wishlistBtn[i]) {
             wishlistBtn[i].addEventListener('click', () => {
                 add_to_wishlist(data[i]);
             });
@@ -82,8 +82,8 @@ const setbgcolor = (data) => {
     const discountTagBg = document.querySelectorAll('.discount-tag1');
     const usageBg = document.querySelectorAll('.product-usage1');
 
-    for(let i = 0; i < data.length; i++){
-        if(wishlistBtnBg[i] && discountTagBg[i] && usageBg[i]){
+    for(let i = 0; i < data.length; i++) {
+        if(wishlistBtnBg[i] && discountTagBg[i] && usageBg[i]) {
             var randomColor = randDarkColor();
             wishlistBtnBg[i].style.background = randomColor;
             discountTagBg[i].style.background = randomColor;
@@ -129,10 +129,10 @@ const getProducts = (searchKey) => {
     })
 }
 
-if(searchKey == null || searchKey == "search.html"){
+if(searchKey == null || searchKey == "search.html") {
     heading.style.display = 'none';
     getAllProducts(tac);
-} else{
+} else {
     searchSpanElement.innerHTML = searchKey;
     getProducts(searchKey);
 }

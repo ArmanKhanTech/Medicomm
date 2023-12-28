@@ -1,7 +1,7 @@
 let user = JSON.parse(sessionStorage.user || null);
 let loader = document.querySelector('.loader');
 
-if(!user){
+if(!user) {
     location.replace('/login')
 }
 
@@ -18,9 +18,9 @@ var s = "";
 var d = "";
 
 discountPercentage.addEventListener('input', () => {
-    if(discountPercentage.value > 100){
+    if(discountPercentage.value > 100) {
         discountPercentage.value = 90;
-    } else{
+    } else {
         let discount = actualPrice.value * discountPercentage.value / 100;
         sellingPrice.value = actualPrice.value - discount;
     }
@@ -94,27 +94,27 @@ const tac = document.querySelector('#tac');
 const addProductBtn = document.querySelector('#add-btn');
 
 const validateForm = () => {
-    if(!productName.value.length){
+    if(!productName.value.length) {
         return showAlert('Please enter Product\'s Name');
-    } else if(shortLine.value.length > 100 || shortLine.value.length < 10){
+    } else if(shortLine.value.length > 100 || shortLine.value.length < 10) {
         return showAlert('Short Description must be between 10 to 100 letters long');
-    } else if(!des.value.length){
+    } else if(!des.value.length) {
         return showAlert('Please enter Detailed Description about the Product');
-    } else if(!actualPrice.value.length || !discountPercentage.value.length || !sellingPrice.value.length){
+    } else if(!actualPrice.value.length || !discountPercentage.value.length || !sellingPrice.value.length) {
         return showAlert('You must add Pricings');
-    } else if(stock.value < 20){
+    } else if(stock.value < 20) {
         return showAlert('You should have atleast 20 Items in Stock');
-    } else if(!use.value.length){
+    } else if(!use.value.length) {
         return showAlert('Please enter use of the Product');
-    } else if(!cate.value.length){
+    } else if(!cate.value.length) {
         return showAlert('Please enter Category of the Product');
-    } else if(!tac.checked){
+    } else if(!tac.checked) {
         return showAlert('You must agree our Terms and Conditions');
-    } else if(!manDate.value.length){
+    } else if(!manDate.value.length) {
         return showAlert('Please enter Manufacturing Date of the Product');
-    } else if(!exDate.value.length){
+    } else if(!exDate.value.length) {
         return showAlert('Please enter Expiry Date of the Product');
-    } else if(!perscription.value.length){
+    } else if(!perscription.value.length) {
         return showAlert('Please enter Perscription Detail of the Product');
     }
 
@@ -134,15 +134,15 @@ let todayDate = new Date();
 const productData = () => {
     todayDate = todayDate.toDateString();
     
-    if(proId == null){
+    if(proId == null) {
         proId = `${productName.value.toLowerCase()}-${Math.floor(Math.random() * 5000)}`;
         addDate = addDate.toDateString();
         modifyDate = null;
-    } else{
+    } else {
         modifyDate = modifyDate.toDateString();
     }
 
-    if(addDate == todayDate){
+    if(addDate == todayDate) {
         return data = {
             name: productName.value,
             shortDes: shortLine.value,
@@ -167,7 +167,7 @@ const productData = () => {
             perscription: perscription.value,
             status: "Active"
         }
-    } else{
+    } else {
         return data = {
             name: productName.value,
             shortDes: shortLine.value,
@@ -218,7 +218,9 @@ const setFormsData = (data) => {
     link2.value = data.image2;
     link3.value = data.image3;
     link4.value = data.image4;
+
     showImg();
+
     stock.value = data.stock;
     use.value = data.use;
     cate.value = data.cate;
@@ -250,8 +252,8 @@ const fetchProductData = () => {
 
 let proDetail = JSON.parse(sessionStorage.tempProduct || null);
     
-if(proId != null){
-    if(proDetail != null){
+if(proId != null) {
+    if(proDetail != null) {
         fetchProductData();
     }
 }

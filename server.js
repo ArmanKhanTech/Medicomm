@@ -40,17 +40,17 @@ app.get('/signup', (req, res) => {
 app.post('/signup', (req, res) => {
     let { name, email, password, number, tac } = req.body;
 
-    if(name.length < 3){
+    if(name.length < 3) {
         return res.json({'alert': 'Name must be atleast three letters long'});
-    } else if(!email.length){
+    } else if(!email.length) {
         return res.json({'alert': 'Please enter your E-mail'});
-    } else if(password.length < 8){
+    } else if(password.length < 8) {
         return res.json({'alert': 'Password should be atleast eight characters long'});
-    } else if(!number.length){
+    } else if(!number.length) {
         return res.json({'alert': 'Please enter your Phone Number'});
     } else if(!Number(number) || number.length < 10){
         return res.json({'alert': 'Invalid Number'});
-    } else if(!tac){
+    } else if(!tac) {
         return res.json({'alert': 'You must agree all Terms and Conditions'});
     }   
 
@@ -95,18 +95,18 @@ app.post('/login', (req, res) => {
     }
 
     db.collection('users').doc(email).get().then(user => {
-        if(!user.exists){
+        if(!user.exists) {
             return res.json({'alert': 'E-mail does not Exists'});
-        } else{
+        } else {
             bcrypt.compare(password, user.data().password, (err, result) =>{
-                if(result){
+                if(result) {
                     let data=user.data();
                     return res.json({
                         name: data.name,
                         email: data.email,
                         seller: data.seller,
                     })
-                } else{
+                } else {
                     return res.json({'alert' : 'Incorrect Password'})
                 }
             })
@@ -122,9 +122,9 @@ app.post('/seller', (req, res) => {
     let { name, about, address, number, tac, email } = req.body;
     
     if(!name.length || !about.length || !address.length || !number.length == 10||
-        !Number(number)){
+        !Number(number)) {
         return res.json({'alert':'Some Information(s) is/are Invalid'});
-    } else if(!tac){
+    } else if(!tac) {
         return res.json({'alert':'You must agree all Terms and Conditions'});
     } else {
         db.collection('sellers').doc(email).set(req.body).then(data => {
@@ -141,21 +141,21 @@ app.post('/seller', (req, res) => {
 app.post('/add-product', (req, res) => {
     let { name, shortDes, des, actualPrice, discount, sellPrice, stock, use, cate, tac, id} = req.body;
 
-    if(!name.length){
+    if(!name.length) {
         return res.json({'alert': 'Please enter Product\'s Name'});
-    } else if(shortDes.length > 100 || shortDes.length < 10){
+    } else if(shortDes.length > 100 || shortDes.length < 10) {
         return res.json({'alert': 'Short Description must be between 10 to 100 letters long'});
-    } else if(!des.length){
+    } else if(!des.length) {
         return res.json({'alert': 'Please enter Detailed Description about the Product'});
-    } else if(!actualPrice.length || !discount.length || !sellPrice.length){
+    } else if(!actualPrice.length || !discount.length || !sellPrice.length) {
         return res.json({'alert': 'You must add Pricings'});
-    } else if(stock < 20){
+    } else if(stock < 20) {
         return res.json({'alert': 'You should have atleast 20 Items in Stock'});
-    } else if(!use.length){ 
+    } else if(!use.length) { 
         return res.json({'alert': 'Please enter use of the Products'});
-    } else if(!cate.length){
+    } else if(!cate.length) {
         return res.json({'alert': 'Please enter category of the Product'});
-    } else if(!tac){
+    } else if(!tac) {
         return res.json({'alert': 'You must agree our Terms and Conditions'});
     }
 
@@ -179,23 +179,23 @@ app.get('/add-product/:id', (req, res) => {
 app.post('/get-products', (req, res) => {
     const {email, id, cate} = req.body;
 
-    if(id){
+    if(id) {
         docref = db.collection('products').doc(id);
-    } else if(cate){
+    } else if(cate) {
         docref = db.collection('products').where('cate', '==' ,cate);
-    } else if(email){
+    } else if(email) {
         docref = db.collection('products').where('email', '==' ,email);
     }
     docref.get().then(products => {
-        if(products.empty){
+        if(products.empty) {
             return res.json('no-products');
         }
 
         let prArr = [];
         
-        if(id){
+        if(id) {
             return res.json(products.data());
-        } else{
+        } else {
             products.forEach(items => {
                 let data = items.data();
                 data.id = items.id;
@@ -216,9 +216,9 @@ app.post('/get-product', (req, res) => {
     let docref = db.collection('products').doc(id);
     
     docref.get().then(product => {
-        if(product.empty){
+        if(product.empty) {
             return res.json('not-available');
-        } else{
+        } else {
             res.json(product.data());
         }
     })
@@ -240,7 +240,7 @@ app.post('/get-all-products', (req, res) => {
     let docref = db.collection('products').where('tac', '==' ,tac);
 
     docref.get().then(products => {
-        if(products.empty){
+        if(products.empty) {
             return res.json('no-products');
         }
 
@@ -268,7 +268,7 @@ app.post('/get-search-result', (req, res) => {
         products.forEach(items => {
             let data = items.data();
             data.id = items.id;
-            if(data.length != 0){
+            if(data.length != 0) {
                 prArr.push(data);
             }
         });
@@ -278,7 +278,7 @@ app.post('/get-search-result', (req, res) => {
             products.forEach(items => {
                 let data = items.data();
                 data.id = items.id;
-                if(data.length != 0){
+                if(data.length != 0) {
                     prArr.push(data);
                 }
             });
@@ -293,9 +293,9 @@ app.post('/get-search-result', (req, res) => {
                 }
             });
         }).then(() => {
-            if(prArr.length != 0){
+            if(prArr.length != 0) {
                 res.json(prArr);
-            } else{
+            } else {
                 res.json('no-products');
             }
         })
@@ -317,7 +317,7 @@ app.post('/order-online', (req, res)=>{
     const {amount, currency, receipt, notes}  = req.body;
 
     razorpay.orders.create({amount, currency, receipt, notes}, 
-        (err, order)=>{
+        (err, order) => {
           if(!err)
             res.json(order)
           else
@@ -359,7 +359,7 @@ app.post('/get-date', (req, res) => {
         products.forEach(items => {
             let data = items.data();
             data.id = items.id;
-            if(data.length != 0){
+            if(data.length != 0) {
                 prArr.push(data);
             }
         });
@@ -379,7 +379,7 @@ app.post('/cancel-order', (req, res) => {
         orders.forEach(items => {
             let data = items.data();
             for(let i=0; i<data.order.length; i++){
-                if(data.order[i].id == order.id){
+                if(data.order[i].id == order.id) {
                     data.order[i].status = 'Cancelled';
                     db.collection("orders").doc(items.id).update({
                         order: data.order
@@ -404,8 +404,8 @@ app.post('/update-status', (req, res) => {
         docref.get().then(orders => {
             orders.forEach(items => {
                 let data = items.data();
-                for(let i=0; i<data.order.length; i++){
-                    if(data.order[i].id == order.id){
+                for(let i=0; i<data.order.length; i++) {
+                    if(data.order[i].id == order.id) {
                         data.order[i].status = 'Out for Delivery';
                         db.collection("orders").doc(items.id).update({
                             order: data.order
@@ -424,8 +424,8 @@ app.post('/update-status', (req, res) => {
         docref.get().then(orders => {
             orders.forEach(items => {
                 let data = items.data();
-                for(let i=0; i<data.order.length; i++){
-                    if(data.order[i].id == order.id){
+                for(let i=0; i<data.order.length; i++) {
+                    if(data.order[i].id == order.id) {
                         data.order[i].status = 'Delivered';
                         db.collection("orders").doc(items.id).update({
                             order: data.order
@@ -450,9 +450,9 @@ app.post('/fetch-orders', (req, res) => {
         orders.forEach(items => {
             let data = items.data();
             data.id = items.id;
-            if(data.length != 0){
+            if(data.length != 0) {
                 prArr.push(data);
-            } else{
+            } else {
                 res.json('no-orders');
             }
         });
@@ -470,9 +470,9 @@ app.post('/get-orders', (req, res) => {
         orders.forEach(items => {
             let data = items.data();
             data.id = items.id;
-            if(data.length != 0){
+            if(data.length != 0) {
                 prArr.push(data);
-            } else{
+            } else {
                 res.json('no-orders');
             }
         });
@@ -520,17 +520,12 @@ app.post('/order', (req, res) => {
         html: `
             <!DOCTYPE html>
             <html lang="en">
-            
                 <head>
-                
                     <meta charset="UTF-8">
                     <meta http-equiv="X-UA-Compatible" content="IE-edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
                     <title>Medicomm</title>
-
                     <style>
-                    
                         body{
                             background-color: #f2f2f2;
                             min-height: 90vh;
@@ -565,31 +560,18 @@ app.post('/order', (req, res) => {
                             font-size: 20px;
                             cursor: pointer;
                         }
-                        
-                    </style>
-                    
+                    </style> 
                 </head>
-
                 <body>
-
                     <div class="mail">
-                    
                         <h1 class="heading">Thank You for Shopping with us.</h1>
-                        
                         <p class="span">Your Order has been Placed Successfully. We will Contact you soon.</p>
-                        
                         <p class="span">Regards, Medicomm</p>
-                        
                         <button class="btn">Check Status</button>
-                        
                     </div>
-
                     <script>
-
                     </script>
-                    
                 </body>
-
             </html>
         `
     }
@@ -597,10 +579,10 @@ app.post('/order', (req, res) => {
     db.collection('orders').doc(docName).set(req.body)
     .then(data => {
         transporter.sendMail(mailOptions, (err, info) => {
-            if(err){
+            if(err) {
                 console.log(err);
                res.json({'alert': 'Opps! It seems like there is some problem with our server. Please try again later.'});
-            } else{
+            } else {
                 res.json({'alert': 'Your Order was Placed Successfully.'});
             }
         })

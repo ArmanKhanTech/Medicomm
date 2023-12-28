@@ -7,7 +7,7 @@ placeorder.addEventListener('click', () => {
         let address = getAddress();
         let finalOrder = JSON.parse(localStorage.getItem('order'));
 
-        if(address){
+        if(address) {
             document.querySelector('.loader').style.display = 'block';
             fetch('/order', {
                 method: 'POST',
@@ -20,7 +20,7 @@ placeorder.addEventListener('click', () => {
                 })
             }).then(res => res.json())
             .then(data => {
-                if(data.alert == 'Your Order was Placed Successfully.'){
+                if(data.alert == 'Your Order was Placed Successfully.') {
                     updateProStock(finalOrder);
                     document.querySelector('.loader').style.display = 'none';
                     localStorage.removeItem('cart');
@@ -30,12 +30,12 @@ placeorder.addEventListener('click', () => {
                     setTimeout(() => {
                         location.replace('/');
                     }, 2000);
-                } else{
+                } else {
                     showAlert1(data.alert);
                 }
             })
         }
-    } else if(document.getElementById('online').checked){
+    } else if(document.getElementById('online').checked) {
         let receipt = Math.floor(Math.random() * 100000) + 1;
         totalBill = parseInt(localStorage.getItem('totalBill')) * 100;
 
@@ -82,7 +82,6 @@ const onlineCheckout = () => {
     var razorpayObject = new Razorpay(options);
 
     razorpayObject.open();
-    
     razorpayObject.on('payment.failed', function (response){
             alert("This step of Payment Failed");
     });
@@ -92,7 +91,7 @@ const paymentSuccess = () => {
     let address = getAddress();
     let finalOrder = JSON.parse(localStorage.getItem('order'));
 
-    if(address){
+    if(address) {
         fetch('/order', {
             method: 'POST',
             headers: new Headers({'Content-Type': 'application/json'}),
@@ -104,7 +103,7 @@ const paymentSuccess = () => {
             })
         }).then(res => res.json())
         .then(data => {
-            if(data.alert == 'Your Order was Placed Successfully.'){
+            if(data.alert == 'Your Order was Placed Successfully.') {
                 document.querySelector('.loader').style.display = 'none';
                 updateProStock(finalOrder);
                 localStorage.removeItem('cart');
@@ -114,7 +113,7 @@ const paymentSuccess = () => {
                 setTimeout(() => {
                     location.replace('/');
                 }, 2000);
-            } else{
+            } else {
                 showAlert1(data.alert);
             }
         })
@@ -154,7 +153,6 @@ const updateStock = (id, diff) => {
 const finalOrder = () => {
     let orderArray = localStorage.getItem('order');
     orderArray = JSON.parse(orderArray);
-
     return orderArray;
 }
 
@@ -167,11 +165,11 @@ const getAddress = () => {
     let landmark = document.querySelector('#landmark').value;
 
     if(!address.length || !street.length || !city.length || 
-        !state.length || !pincode.length || !landmark.length){
-            showAlert('Please fill all the Fields.');
-        } else{
-            return {address, street, city, state, pincode, landmark};
-        }
+        !state.length || !pincode.length || !landmark.length) {
+        showAlert('Please fill all the Fields.');
+    } else {
+        return {address, street, city, state, pincode, landmark};
+    }
 }
 
 const createSmallCart = (data) => {
@@ -189,18 +187,18 @@ const createSmallCart = (data) => {
     });
 
     return `
-    <div class="sm-product">
-        <img src="${data.image}" class="sm-product-img" alt="">
-        <div class="sm-text">
-            <p class="sm-product-name">${data.name}</p>
-            <p class="sm-des">${data.shortDes}</p>
+        <div class="sm-product">
+            <img src="${data.image}" class="sm-product-img" alt="">
+            <div class="sm-text">
+                <p class="sm-product-name">${data.name}</p>
+                <p class="sm-des">${data.shortDes}</p>
+            </div>
+            <div class="item-counter">
+                <p class="quantity" id="quantity">Quantity:</p>
+                <p class="item-count" id="item-count">${quantity}</p>
+            </div>
+            <p class="sm-price" data-price="${data.actualPrice}" id="sm-price">${price}</p>
         </div>
-        <div class="item-counter">
-            <p class="quantity" id="quantity">Quantity:</p>
-            <p class="item-count" id="item-count">${quantity}</p>
-        </div>
-        <p class="sm-price" data-price="${data.actualPrice}" id="sm-price">${price}</p>
-    </div>
     `;
 }
 
@@ -212,7 +210,7 @@ const checkoutSection = document.querySelector('.checkout-section');
 const setProducts = (name) => {
     const element = document.querySelector(`.${name}`);
     let data = JSON.parse(localStorage.getItem(name));
-    if(data.length == 0 || data == null && name == 'cart'){
+    if(data.length == 0 || data == null && name == 'cart') {
         element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
         checkoutSection.style.display = 'none';
     } else {
@@ -231,7 +229,7 @@ const setupEvents3 = (name) => {
 
     let product = JSON.parse(localStorage.getItem(name));
 
-    if(name == 'cart'){
+    if(name == 'cart') {
         counts.forEach((item, i) => {
             deleteBtn.forEach((item, i) => {
                 item.addEventListener('click', () => {
@@ -244,8 +242,8 @@ const setupEvents3 = (name) => {
     } 
 }
 
-if(!sessionStorage.user){
+if(!sessionStorage.user) {
     location.replace("login.html");
-} else{
+} else {
     setProducts('cart');
 }
