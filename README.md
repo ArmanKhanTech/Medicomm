@@ -146,7 +146,7 @@ npm install
 
 **OR**
 
-Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b></a>
+Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHub<b></a>
 
 
 
