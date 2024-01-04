@@ -46,7 +46,6 @@
       </ul>
     </li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#images">Images</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -182,70 +181,6 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
     Signup and Login
   </li>
 </ol>
-
-
-
-## Images
-
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/be677845-97d5-43d7-8e03-663747e5a399">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/8bdee089-1bfb-4c0e-8565-1bf828843466">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/e5e4d02a-5b1a-483e-b1ab-e3ebec1d6e3b">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/e0289443-9699-4d77-86a8-e3e000e672ec">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/f462cc7b-167a-40a1-aad2-9a70c7644030">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/9ac3a95f-247f-49f3-92af-1b438c9ec531">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/ba2b930b-0d1c-4925-9c0b-b447cf3f62bc">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/c96962a6-ef54-4612-9428-e616986b73f1">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/7c04ece5-7ab2-444e-89a9-515b18cfa882">
-  </kbd>
-</div>
-<br>
-<div>
-  <kbd>
-    <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/7af9cadf-f51c-4fd6-9589-0b9c7a928152">
-  </kbd>
-</div>
 
 
 
