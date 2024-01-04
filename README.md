@@ -149,7 +149,6 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
 
 
 
-
 ## Features 
 
 <ol>
@@ -226,7 +225,6 @@ Arman Khan - ak2341776@gmail.com
 Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/ArmanKhanTech/Medicomm)
 
 DockerHub Link - https://hub.docker.com/r/armankhan792/medicomm
-
 
 
 
