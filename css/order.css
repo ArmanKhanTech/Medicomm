@@ -3,7 +3,7 @@
     padding: 20px 4vw;
     background: #dbf3ff;
     display: flex;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 50px;
     margin-right: 50px;
     padding-bottom: 40px;
@@ -14,8 +14,8 @@
     font-size: 30px;
     margin: 20px 0;
     border: #1fa4cc 1px solid;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 25px;
     width: fit-content;
 }
 
@@ -24,7 +24,7 @@
     height: 400px;
     margin-top: 20px;
     border: 1px solid #1fa4cc;
-    border-radius: 10px;
+    border-radius: 30px;
     display: block;
     padding: 20px;
 }
@@ -34,7 +34,7 @@
     height: 400px;
     margin-top: 20px;
     border: 1px solid #1fa4cc;
-    border-radius: 10px;
+    border-radius: 30px;
     display: block;
     padding: 20px;
 }
@@ -56,7 +56,7 @@
 .order .history{
     width: 100%;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 20px;
 }
 
@@ -72,6 +72,7 @@
     border: 1px solid #1fa4cc;
     padding: 20px;
     padding-left: 0px;
+    border-radius: 25px;
 }
 
 .cart .sm-product:last-child{
@@ -146,7 +147,8 @@
     color: white;
     font-size: 15px;
     padding: 3px;
-    padding-top: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     padding-left: 5px;
     align-items: center;
     text-align: center;
@@ -172,7 +174,7 @@
     transform: translate(-50%, -50%);
     width: 350px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     border: 1px solid #1fa4cc;
 }
@@ -182,8 +184,8 @@
     margin: 20px;
     margin-left: 0px;
     border: #1fa4cc 1px solid;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 25px;
     width: fit-content;
 }
 
@@ -213,7 +215,7 @@
 .alert1{
     width: 350px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     position: fixed;
     padding: 15px;
@@ -258,7 +260,7 @@
     width: 310px;
     min-height: 310px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 60%;

@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     background: #dbf3ff;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 50px;
     margin-right: 50px;
     padding-bottom: 40px;
@@ -42,7 +42,7 @@ body{
 .cart .wishlist{
     width: 100%;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 60px;
 }
 
@@ -58,6 +58,7 @@ body{
     border: 1px solid #1fa4cc;
     padding: 20px;
     padding-left: 0px;
+    border-radius: 25px;
 }
 
 .cart .sm-product:last-child, .wishlist .sm-product:last-child{
@@ -181,7 +182,7 @@ body{
     width: 100%;
     display: block;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 30px;
     border: 1px solid #1fa4cc;
 }
 
@@ -230,7 +231,7 @@ body{
     width: 310px;
     min-height: 310px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 80%;

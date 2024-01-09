@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 50px;
     margin-left: 80px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -31,6 +31,7 @@ body{
     align-items: center;
     border: 1px solid black;
     box-shadow: 5px 5px #383838;
+    border-radius: 25px;
 }
 
 .image{
@@ -52,22 +53,22 @@ body{
     font-size: 20px;
     color: #1fa4cc;
     background: white;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 15px 0px 0px 15px;
     border: 1px solid #1fa4cc;
     width: fit-content;
     line-height: 40px;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
 }
 
 .use{
     font-size: 21px;
     color: #fff;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 15px 15px 0px;
     text-transform: capitalize;
     font-weight: bold;
     background: #1fa4cc;
     line-height: 35px;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
 }
 
 
@@ -103,7 +104,7 @@ body{
 .product-discount{
     color: rgb(255, 40, 40);
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 23px;
     margin-left: 10px;
     line-height: 30px;
@@ -121,21 +122,21 @@ body{
 .seller{
     font-size: 20px;
     font-weight: 300;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 15px 0px 0px 15px;
     border: 1px solid black;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
     width: fit-content;
 }
 
 .sold-by{
     font-size: 21px;
     color: #fff;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 15px 15px 0px;
     text-transform: capitalize;
     font-weight: bold;
     background: #000000;
     line-height: 35px;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
 }
 
 .product-sub-heading{
@@ -147,8 +148,8 @@ body{
 .quantity{
     width: 70%;
     height: 50px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 5px 15px 5px 15px; 
+    border-radius: 15px;
     border: 0.1px solid #1fa4cc;
     background: none;
     color: #000000;
@@ -160,7 +161,7 @@ body{
 .btn{
     width: 48%;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     background: none;
     box-shadow: 5px 5px #383838;
     border: 2px solid #1fa4cc;
@@ -182,7 +183,7 @@ body{
     padding: 40px 8vw;
     padding-left: 4vw;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 50px;
     margin-left: 80px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -217,7 +218,7 @@ body{
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 50px;
     margin-left: 80px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -232,11 +233,12 @@ body{
     align-items: center;
     justify-content: center;
     margin-left: 15px;
+    border-radius: 25px;
 }
 
 .pro-imgs img{
-    height: 398px;
-    width: 398px;
+    height: 400px;
+    width: 400px;
     margin: auto;
     padding: auto;
 }
@@ -250,12 +252,12 @@ body{
 
 .product-spec{
     width: 90%;
-    padding: 40px 8vw;
+    padding: 40px 40px;
     padding-left: 4vw;
     padding-bottom: 3.5vw;
     display: flex;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 50px;
     margin-left: 80px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -270,9 +272,9 @@ body{
     font-size: 20px;
     font-weight: 300;
     text-transform: capitalize;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 15px 0px 0px 15px;
     border: 1px solid red;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
     width: fit-content;
     margin-top: 30px;
     color: red;
@@ -284,8 +286,8 @@ body{
     font-weight: bold;
     background: red;
     color: #fff;
-    padding: 5px;
-    border-radius: 0px 5px 5px 0px;
+    padding: 5px 15px 5px 15px; 
+    border-radius: 0px 15px 15px 0px;
     margin-top: 30px;
     line-height: 35px;
     width: fit-content;
@@ -295,10 +297,10 @@ body{
     font-size: 20px;
     font-weight: 300;
     text-transform: capitalize;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 15px 0px 0px 15px;
     border: 1px solid purple;
     color: purple;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
     width: fit-content;
     margin-top: 20px;
 }
@@ -309,19 +311,19 @@ body{
     font-weight: bold;
     background: purple;
     color: #fff;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
     line-height: 35px8ui9oo;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 15px 15px 0px;
 }
 
 .per{
     font-size: 20px;
     font-weight: 300;
     text-transform: capitalize;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 15px 0px 0px 15px;
     border: 1px solid rgb(255, 89, 0);
     color: rgb(255, 89, 0);
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
     width: fit-content;
     margin-top: 20px;
 }
@@ -332,18 +334,18 @@ body{
     font-weight: bold;
     background: rgb(255, 89, 0);
     color: #fff;
-    padding: 5px;
-    border-radius: 0px 5px 5px 0px;
+    padding: 5px 15px 5px 15px; 
+    border-radius: 0px 15px 15px 0px;
 }
 
 .stock{
     font-size: 20px;
     font-weight: 300;
     text-transform: capitalize;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 15px 0px 0px 15px;
     border: 1px solid darkgreen;
     color: darkgreen;
-    padding: 5px;
+    padding: 5px 15px 5px 15px; 
     width: fit-content;
     margin-top: 20px;
 }
@@ -354,8 +356,8 @@ body{
     font-weight: bold;
     background: darkgreen;
     color: #fff;
-    padding: 5px;
-    border-radius: 0px 5px 5px 0px;
+    padding: 5px 15px 5px 15px; 
+    border-radius: 0px 15px 15px 0px;
 }
 
 .pin-check{
@@ -373,7 +375,7 @@ body{
     color: #8a30f7;
     border: 1px solid #8a30f7;
     width: fit-content;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .pin-field{
@@ -389,8 +391,9 @@ body{
     height: 50px;
     padding: 10px;
     padding-top: 7px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    padding-left: 15px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     border: 1px solid rgb(255, 1, 166);
     background: none;
     color: rgb(255, 1, 166);
@@ -408,9 +411,9 @@ body{
     background: rgb(255, 1, 166);
     color: #fff;
     text-transform: capitalize;
-    font-size: 15px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    font-size: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .check-box::placeholder{
@@ -420,11 +423,12 @@ body{
 }
 
 .pin-ans{
-    margin-top: 23px;
+    margin-top: 25px;
     border: 1px solid darkgreen;
-    border-radius: 5px;
+    border-radius: 15px;
     align-items: center;
     justify-content: center;
+    border-radius: 25px;
     padding: 10px;
     padding-top: 12px;
     height: 50px;
@@ -434,6 +438,7 @@ body{
     color: darkgreen;
     font-size: 20px;
     margin-left: 5px;
+    border-radius: 25px;
 }
 
 .loader{
@@ -444,7 +449,7 @@ body{
     transform: translate(-50%, -50%);
     width: 350px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     border: 1px solid #1fa4cc;
 }
@@ -460,7 +465,7 @@ body{
     transform: translate(-50%);
     padding: 10px;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     width: fit-content;
     height: fit-content;
     transition: .5s;

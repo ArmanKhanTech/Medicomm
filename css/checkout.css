@@ -37,7 +37,7 @@ body{
     width: 310px;
     min-height: 210px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 60%;
@@ -84,7 +84,7 @@ body{
     padding: 20px;
     border-radius: 5px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     border: 1px solid #1fa4cc;
     outline: none;
     margin: 20px 0;
@@ -141,7 +141,7 @@ body{
     width: 100%;
     padding: 20px;
     padding-left: 0px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 60px;
 }
 
@@ -157,6 +157,7 @@ body{
     border: 1px solid #1fa4cc;
     padding: 20px;
     padding-left: 0px;
+    border-radius: 25px;
 }
 
 .cart .sm-product:last-child{
@@ -261,14 +262,14 @@ body{
     width: 100%;
     display: block;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 30px;
     border: 1px solid #1fa4cc;
 }
 
 .checkout-box{
     width: 100%;
     height: fit-content;
-    border-radius: 5px;
+    border-radius: 25px;
     border: 1px solid #1fa4cc;
     padding: 20px;
     margin: 10px;
@@ -289,7 +290,7 @@ body{
     color: white;
     font-size: 20px;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -334,6 +335,7 @@ input[type="radio"] {
     padding: 3px;
     padding-top: 6px;
     padding-left: 5px;
+    padding-bottom: 4px;
     align-items: center;
     text-align: center;
     border-radius: 3px 0px 0px 3px;
@@ -356,7 +358,7 @@ input[type="radio"] {
     transform: translate(-50%, -50%);
     width: 350px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     border: 1px solid #1fa4cc;
     display: none;

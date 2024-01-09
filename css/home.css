@@ -49,7 +49,7 @@ body{
     color: #8a30f7;
     border: 1px solid #8a30f7;
     width: fit-content;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .product-category1{
@@ -61,7 +61,7 @@ body{
     color: #ee7c19;
     border: 1px solid #ee7c19;
     width: fit-content;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .product-category2{
@@ -73,7 +73,7 @@ body{
     color: deeppink;
     border: 1px solid deeppink;
     width: fit-content;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .product-container{
@@ -96,7 +96,7 @@ body{
 .product-card{
     flex: 0 0 auto;
     width: 300px;
-    height: 400px;
+    height: 425px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -107,7 +107,7 @@ body{
     margin-right: 84px;
     margin-bottom: 5px;
     border: 1px solid black;
-    border-radius: 5px;   
+    border-radius: 30px;   
     box-shadow: 5px 5px #383838;
 }
 
@@ -166,10 +166,11 @@ body{
     outline: none;
     font-weight: bold;
     background: deeppink;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
+    font-size: 15px;
 }
 
 .product-card:hover .card-btn2{
@@ -178,7 +179,7 @@ body{
 
 .Usage{
     width: auto;
-    height: 27px;
+    height: 30px;
     padding: 0px;
     background: #8a30f7;
     border-radius: 5px;
@@ -192,7 +193,7 @@ body{
 
 .usage2{
     width: auto;
-    height: 27px;
+    height: 30px;
     padding: 0px;
     background: deeppink;
     border-radius: 5px;
@@ -217,10 +218,11 @@ body{
     outline: none;
     font-weight: bold;
     background: #8a30f7;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
+    font-size: 15px;
 }
 
 .product-card:hover .card-btn{
@@ -290,7 +292,7 @@ body{
 .product-card1{
     flex: 0 0 auto;
     width: 300px;
-    height: 400px;
+    height: 425px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -300,7 +302,7 @@ body{
     margin-bottom: 5px;
     box-shadow: 5px 5px #383838;
     border: 1px solid black;
-    border-radius: 5px;  
+    border-radius: 25px;  
 }
 
 .product-image1{
@@ -318,7 +320,7 @@ body{
 
 .usage1{
     width: auto;
-    height: 27px;
+    height: 30px;
     padding: 0px;
     background: #ee7c19;
     border-radius: 5px;
@@ -355,10 +357,11 @@ body{
     outline: none;
     font-weight: bold;
     background: #ee7c19;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
+    font-size: 15px;
 }
 
 .product-card1:hover .card-btn1{
@@ -422,7 +425,7 @@ body{
     object-fit: cover;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .collection p{
@@ -452,13 +455,13 @@ body{
     object-fit: cover;
     align-items: center;
     justify-content: center;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 25px 0px 0px 25px;
     display: inline-block;
 }
 
 .promotextbg{
     background: deeppink;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 25px 25px 0px;
     border: none;
 }
 
@@ -594,7 +597,7 @@ body{
     object-fit: cover;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .collection1 p{
@@ -619,7 +622,7 @@ body{
 .feature-2{
     padding: 50px;
     padding-top: 45px;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
 }
 
@@ -633,13 +636,13 @@ body{
 .feature-2s img{
     width: 560px;
     height: 410px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 25px 0px 0px 25px;
 }
 
 .feature-2s-sub{
     padding: 50px;
     background: yellow;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 25px 25px 0px;
     width: 430px;
     border: 2px solid #ff7828;
 }
@@ -657,7 +660,7 @@ body{
     font-family: monospace;
     text-decoration: none;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
     background: #ff7828;
     border-radius: 5px;
     font-weight: bold;
@@ -681,13 +684,13 @@ body{
     object-fit: cover;
     align-items: center;
     justify-content: center;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 25px 25px 0px;
     display: inline-block;
 }
 
 .promotextbg2{
     background: #fffdd0;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 25px 0px 0px 25px;
     border: none;
 }
 

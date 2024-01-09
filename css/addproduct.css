@@ -14,7 +14,7 @@ body{
 }
 
 #product-name{
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 800px;
@@ -24,7 +24,7 @@ body{
 }
 
 #short-des{
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 800px;
@@ -33,7 +33,7 @@ body{
 }
 
 textarea{
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 300px;
     width: 800px;
@@ -74,7 +74,7 @@ textarea{
 
 .link-img1{
     display: inline;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     min-height: 40px;
     min-width: 500px;
@@ -84,7 +84,7 @@ textarea{
 
 .link-img2{
     display: inline;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 500px;
@@ -94,7 +94,7 @@ textarea{
 
 .link-img3{
     display: inline;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 500px;
@@ -104,7 +104,7 @@ textarea{
 
 .link-img4{
     display: inline;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 500px;
@@ -115,7 +115,7 @@ textarea{
 .product-pic1{
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 320px;
     height: 320px;
     background-color: #fff;
@@ -131,7 +131,7 @@ textarea{
 .product-pic2{
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 320px;
     height: 320px;
     background-color: #fff;
@@ -148,7 +148,7 @@ textarea{
 .product-pic3{
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 320px;
     height: 320px;
     background-color: #fff;
@@ -165,7 +165,7 @@ textarea{
 .product-pic4{
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 30px;
     width: 320px;
     height: 320px;
     background-color: #fff;
@@ -202,7 +202,7 @@ textarea{
 #sell-price{
     display: inline;
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 175px;
@@ -214,7 +214,7 @@ textarea{
 #discount{
     display: inline;
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 175px;
@@ -226,7 +226,7 @@ textarea{
 #actual-price{
     display: inline;
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 175px;
@@ -237,7 +237,7 @@ textarea{
 #stock{
     display: inline;
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 185px;
@@ -248,7 +248,7 @@ textarea{
 
 #use{
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 400px;
@@ -258,7 +258,7 @@ textarea{
 
 #cate{
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 400px;
@@ -269,7 +269,7 @@ textarea{
 
 #exDate{
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 400px;
@@ -280,7 +280,7 @@ textarea{
 
 #manDate{
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 400px;
@@ -290,7 +290,7 @@ textarea{
 
 #perscription{
     text-transform: capitalize;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     height: 40px;
     width: 500px;
@@ -348,7 +348,7 @@ label{
     transform: translate(-50%, -50%);
     width: 350px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     border: 1px solid #1fa4cc;
 }
@@ -370,7 +370,7 @@ label{
     width: 310px;
     min-height: 310px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: fixed;
     top: 10%;

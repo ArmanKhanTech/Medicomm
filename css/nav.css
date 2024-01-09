@@ -67,10 +67,6 @@
     border-bottom-right-radius: 10px;
 }
 
-.search-box::placeholder{
-    color: #1fa4cc;
-}
-
 .nav-items a{
     margin-left: 20px;
 }

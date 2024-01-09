@@ -53,7 +53,7 @@ body{
 .product-card1{
     flex: 0 0 auto;
     width: 300px;
-    height: 400px;
+    height: 425px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -62,7 +62,7 @@ body{
     margin-right: 30px;
     box-shadow: 5px 5px #383838;
     border: 1px solid black;
-    border-radius: 5px;  
+    border-radius: 30px;  
     background: #fff;
 }
 
@@ -81,7 +81,7 @@ body{
 
 .product-usage1{
     width: auto;
-    height: 27px;
+    height: 30px;
     padding: 0px;
     background: #1fa4cc;
     border-radius: 5px;
@@ -118,10 +118,11 @@ body{
     outline: none;
     font-weight: bold;
     background: #1fa4cc;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
+    font-size: 15px;
 }
 
 .product-card1:hover .card-btn1{
@@ -207,7 +208,7 @@ body{
     transform: translate(-50%, -50%);
     width: 350px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     border: 1px solid #1fa4cc;
 }

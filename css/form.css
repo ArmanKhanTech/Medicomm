@@ -21,7 +21,7 @@ body{
     transform: translate(-50%, -50%);
     width: 350px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 30px;
     border: 1px solid #1fa4cc;
     display: none;
     background: #fff;
@@ -50,7 +50,7 @@ textarea{
     padding: 20px;
     border-radius: 5px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     outline: none;
     margin: 20px 0;
@@ -72,7 +72,7 @@ textarea{
     font-weight: bold;
     line-height: 40px;
     background: #1fa4cc;
-    border-radius: 10px;
+    border-radius: 30px;
     color: #fff;
     text-transform: capitalize;
     border: none;
@@ -136,7 +136,7 @@ label a{
     width: 310px;
     min-height: 310px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 60%;

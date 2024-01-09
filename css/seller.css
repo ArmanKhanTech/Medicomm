@@ -16,7 +16,7 @@ body{
     width: 310px;
     min-height: 310px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 50%;
@@ -58,7 +58,7 @@ body{
     transform: translate(-50%, -50%);
     width: 350px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     border: 1px solid #1fa4cc;
 }
@@ -120,7 +120,7 @@ body{
     margin-top: 20px;
     margin-right: 20px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .hide{
@@ -139,7 +139,7 @@ body{
     padding: 20px;
     border-radius: 5px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     outline: none;
     margin-left: 20px;
@@ -156,7 +156,7 @@ body{
     padding: 20px;
     border-radius: 5px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     outline: none;
     margin-left: 20px;
@@ -173,7 +173,7 @@ body{
     padding: 20px;
     border-radius: 5px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     outline: none;
     margin-left: 20px;
@@ -190,7 +190,7 @@ body{
     padding: 20px;
     border-radius: 5px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     outline: none;
     margin-left: 20px;
@@ -207,7 +207,7 @@ body{
     padding: 20px;
     border-radius: 5px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     outline: none;
     margin-left: 20px;
@@ -258,7 +258,7 @@ body{
     margin-top: 20px;
     margin-right: 20px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .hide{
@@ -272,14 +272,14 @@ body{
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 35px;
 }
 
 .heading3{
     border: #1fa4cc 1px solid;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 25px;
     margin-left: 22px;
     margin-top: 5px;
 }
@@ -289,8 +289,8 @@ body{
     margin-left: 32px;
     border: 1px solid #1fa4cc;
     width: fit-content;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 25px;
 }
 
 .heading5{
@@ -315,11 +315,11 @@ body{
     width: 150px;
     outline: none;
     background-color: #1fa4cc;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 10px;
     color: white;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .product-container{
@@ -338,7 +338,7 @@ body{
 .product-card{
     flex: 0 0 auto;
     width: 300px;
-    height: 400px;
+    height: 425px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -348,7 +348,7 @@ body{
     margin-right: 30px;
     box-shadow: 5px 5px #383838;
     border: 1px solid black;
-    border-radius: 5px;  
+    border-radius: 25px;  
     background: #fff;
 }
 
@@ -396,7 +396,7 @@ body{
 
 .product-usage{
     width: auto;
-    height: 27px;
+    height: 30px;
     padding: 0px;
     background: #1fa4cc;
     border-radius: 5px;
@@ -494,7 +494,7 @@ body{
 .alert1{
     width: 350px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #fff;
     position: fixed;
     padding: 15px;
@@ -542,7 +542,7 @@ body{
     border-radius: 5px;
     font-size: 18px;
     color: red;
-    top: 90%;
+    top: 86%;
     text-transform: capitalize;
     text-align: center;
     font-weight: bold;
@@ -565,7 +565,7 @@ body{
     height: 400px;
     margin: auto;
     border: 1px solid #1fa4cc;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 20px;
     margin-left: 10px;
 }
@@ -577,7 +577,7 @@ body{
     margin-right: 20px;
     padding: 20px;
     padding-left: 0px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .order-list{
@@ -597,24 +597,24 @@ body{
 
 .change-status-btn{
     position: absolute;
-    top: 88%;
+    top: 86%;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px;
+    padding-top: 2px;
     width: 90%;
+    height: 35px;
     text-transform: capitalize;
     border: none;
     color: #fff;
     outline: none;
     font-weight: bold;
     background: #1fa4cc;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
-    font-size: 15px;
-    padding-top: 7px;
+    font-size: 18px;
 }
 
 .cancel-btn{
@@ -643,7 +643,7 @@ body{
 .product-card-order{
     flex: 0 0 auto;
     width: 300px;
-    height: 470px;
+    height: 500px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -653,7 +653,7 @@ body{
     margin-right: 30px;
     box-shadow: 5px 5px #383838;
     border: 1px solid black;
-    border-radius: 5px;  
+    border-radius: 25px;  
     background: #fff;
 }
 
@@ -720,7 +720,7 @@ body{
 
 .container{
     border: #1fa4cc 1px solid;
-    border-radius: 10px;
+    border-radius: 30px;
     width: fit-content;
 	position: relative;
 	align-items: center;
@@ -731,7 +731,7 @@ body{
 .tabs{
 	display: flex;
 	background-color: none;
-	border-radius: 10px; 
+	border-radius: 30px; 
 	z-index: 2;
 }
 
@@ -752,7 +752,7 @@ input[type="radio"]:checked + label {
 	height: 50px;
 	width: 150px;
 	font-size: 20px;
-	border-radius: 10px; 
+	border-radius: 30px; 
 	cursor: pointer;
     color: #1fa4cc;
 }

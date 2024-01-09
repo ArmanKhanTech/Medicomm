@@ -69,7 +69,7 @@ footer{
 
 .footer-ul-container{
     border: #1fa4cc 1px solid;
-    border-radius: 10px;
+    border-radius: 30px;
     height: fit-content;
     padding: 10px;
     width: fit-content;
@@ -113,7 +113,7 @@ footer{
 }
 
 .logo{
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .four-0-four-image{
