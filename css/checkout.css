@@ -91,13 +91,14 @@ body{
     margin-left: 0px;
     margin-top: 0px;
     color: #383838;
-    font-size: 14px;
+    font-size: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
     font-family: 'roboto', sans-serif;
 }
 
 ::placeholder{
     color: #383838;
+    font-size: 15px;
 }
 
 .three-input-container{
@@ -204,7 +205,7 @@ body{
     border: none;
     background: #f3f3f3;
     border: 1px solid #1fa4cc;
-    border-radius: 1px;
+    border-radius: 25px;
     cursor: pointer;
 }
 
@@ -322,7 +323,7 @@ input[type="radio"] {
     color: white;
     font-size: 20px;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -333,9 +334,9 @@ input[type="radio"] {
     color: white;
     font-size: 15px;
     padding: 3px;
-    padding-top: 6px;
-    padding-left: 5px;
+    padding-top: 4px;
     padding-bottom: 4px;
+    padding-left: 5px;
     align-items: center;
     text-align: center;
     border-radius: 3px 0px 0px 3px;

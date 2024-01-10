@@ -189,7 +189,7 @@ body{
 .checkout-box{
     width: 100%;
     height: fit-content;
-    border-radius: 5px;
+    border-radius: 25px;
     border: 1px solid #1fa4cc;
     padding: 20px;
     margin: 10px;
@@ -210,7 +210,7 @@ body{
     color: white;
     font-size: 20px;
     font-weight: 500;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 25px 25px;
     cursor: pointer;
     margin-bottom: 10px;
 }
@@ -224,7 +224,7 @@ body{
     width: 317px;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 25px 25px 0px 0px;
 }
 
 .alert-box{
