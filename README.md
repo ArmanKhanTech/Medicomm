@@ -101,12 +101,12 @@ npm install
 
 ### Installation
 
-1. Clone this repository : 
+1. Clone this repository 
     ```sh
     git clone https://github.com/ArmanKhanTech/Medicomm.git
     ```
-2. Make the following changes : <br>
-    <br>**a. in /server.js :**<br><br>
+2. Make the following changes<br>
+    <br>**a. in /server.js**<br><br>
     Line 8 : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
     ```javascript
     const Razorpay = require('razorpay')
@@ -115,11 +115,11 @@ npm install
         key_secret: 'YOUR RAZORPAY SECRET KEY'
     })
     ```
-    Line 13 : Enter the name of your firebase credential file here (the one you will download from your firebase console) :
+    Line 13 : Enter the name of your firebase credential file here (the one you will download from your firebase console) 
     ```javascript
     let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
     ```
-    <br>Line 511 : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order) :
+    <br>Line 511 : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order) 
     ```javascript
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
@@ -130,13 +130,13 @@ npm install
     })
     ```
     
-    <br>**b. in /js/product.js :**<br><br>
-    Line 57 : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too) :
+    <br>**b. in /js/product.js**<br><br>
+    Line 57 : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too) 
     ```javascript
     let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
     ```
     
-    <br>**c. in /js/checkout.js :**<br><br>
+    <br>**c. in /js/checkout.js**<br><br>
     Line 63 : Enter your Razorpay ID here :<br>
     ```javascript
     const onlineCheckout = () => {
