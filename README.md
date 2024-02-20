@@ -87,6 +87,9 @@ npm install
 
 <ol>
   <li>
+    <p>Node.js</a>
+  </li>
+  <li>
     <p>NPM</a>
   </li>
   <li>
@@ -98,7 +101,7 @@ npm install
 
 ### Installation
 
-1. Clone this repo : 
+1. Clone this repository : 
     ```sh
     git clone https://github.com/ArmanKhanTech/Medicomm.git
     ```
