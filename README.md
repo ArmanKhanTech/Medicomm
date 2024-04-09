@@ -7,7 +7,7 @@
 
 
 
-<br />
+<br>
 <div align="center">
   <a href="https://github.com/ArmanKhanTech/Medicomm/">
     <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/6e1b8187-48d7-40e9-8085-922471b1e1ca" alt="Logo" width="190" height="100">
@@ -16,11 +16,11 @@
   <h3 align="center">Medicomm</h3>
 
   <p align="center">
-    A pharmacy e-commerce website.
-    <br />
+    A pharmaceutical e-commerce website.
+    <br>
     <a href="https://github.com/ArmanKhanTech/Medicomm"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+    <br>
+    <br>
     <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Report a Bug</a>
     ·
     <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Request new Features</a>
