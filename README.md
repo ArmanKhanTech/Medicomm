@@ -60,7 +60,7 @@
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
-**Now available on <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b></a>**
+**Now also available on <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b></a>**
 
 **Ideal to view only on 1920x1080p display since this website isn't responsive.**
 
@@ -106,6 +106,7 @@ npm install
     ```sh
     git clone https://github.com/ArmanKhanTech/Medicomm.git
     ```
+    <br>
 2. Make the following changes<br>
     <br>**a. in /server.js**<br><br>
     Line 8 : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
