@@ -161,10 +161,10 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
     Purchase or Sell Medicines & other Medical Products.
   </li>
   <li>
-    Seller's Dashboard with Order Tracking & Sales History.
+    Seller's Dashboard with Inventory Management, Order Tracking & Sales History.
   </li>
   <li>
-    Add to Cart & Wishlist.
+    Add Items to Cart & Wishlist.
   </li>
   <li>
     Order Tracking & History along with its Cancelling.
@@ -196,7 +196,8 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
 - [x] Add Search Page
 - [x] Add Cart & Wishlist
 - [x] Add Seller's Dashboard
-- [x] Add Checkout
+- [x] Add Invertory Management 
+- [x] Add Checkout Page
 - [x] Add Order Tracking, History & Cancellation
 - [x] Add Online Payment
 - [x] Add Grievances
