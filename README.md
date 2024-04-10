@@ -164,7 +164,7 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
     Seller's Dashboard with Inventory Management.
   </li>
   <li>
-    Cart & Wishlist.
+    Order Cart & Wishlist.
   </li>
   <li>
     Order Tracking & History along with its Cancelling.
