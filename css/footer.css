@@ -4,7 +4,7 @@ footer{
     margin-top: auto;
     padding: 30px 10vw;
     padding-bottom: 80px;
-    background: #dbf3ff;
+    background: #1fa4cc4a;
 }
 
 .footer-content{
@@ -108,8 +108,8 @@ footer{
     bottom: 0;
     text-align: center;
     color: #1fa4cc;
-    background: #dbf3ff;
-    border-top: 2px solid #1fa4cc;
+    background: #1fa4cc4a;
+    border-top: 2px solid #1fa4cc4a;
 }
 
 .logo{

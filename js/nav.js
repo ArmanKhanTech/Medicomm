@@ -23,9 +23,7 @@ const disableProduct1 = (id, status) => {
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({data: data})
     }).then(res => res.json())
-    .then(data => {
-        //
-    })
+    .then(_data => {})
 }
 
 const discardProduct = (data) => {
@@ -45,23 +43,23 @@ const createNav = () => {
 
     nav.innerHTML = `
         <div class="nav">
-        <img src="../images/headerlogo.png" class="brand-logo" alt="">
-        <div class="nav-items">
-            <div class="search">
-                <input type="text" class="search-box" placeholder="Search Medicines, Categories, Diagnoses">
-                <button class="search-btn">search</button>
-            </div>
-            <a>
-                <img src="../images/user.png" id="user-img" alt="">
-                <div class="login-logout-popup hide">
-                    <p class="account-info1">Logged-in as, Name</p>
-                    <button class="btn1" id="user-btn">Log Out</button>
+            <img src="../images/headerlogo.png" class="brand-logo" alt="">
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" placeholder="Search Medicines, Categories, Diagnoses">
+                    <button class="search-btn">search</button>
                 </div>
-            </a>         
-            <a href="/html/cart.html">
-                <img src="../images/cart.png" id="cart-img" alt="">
-            </a>
-        </div>
+                <a>
+                    <img src="../images/user.png" id="user-img" alt="">
+                    <div class="login-logout-popup hide">
+                        <p class="account-info1">Logged-in as, Name</p>
+                        <button class="btn1" id="user-btn">Log Out</button>
+                    </div>
+                </a>         
+                <a href="/html/cart.html">
+                    <img src="../images/cart.png" id="cart-img" alt="">
+                </a>
+            </div>
         </div>
         <ul class="links-container">
             <li class="link-item"><a href="/html/index.html" class="link">home</a></li>

@@ -10,7 +10,7 @@ const razorpay = new Razorpay({
     key_secret: 'YOUR RAZORPAY SECRET KEY'
 })
 
-let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json")
+let serviceAccount = require("./medical-ecomm-website-firebase-adminsdk.json")
 const { randomInt } = require('crypto');
 
 admin.initializeApp({
@@ -29,11 +29,11 @@ app.listen(3000, () => {
     console.log('Listening on port 3000.......');
 })
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
     res.sendFile(path.join(staticPath, "html/index.html"));
 })
 
-app.get('/signup', (req, res) => {
+app.get('/signup', (_req, res) => {
     res.sendFile(path.join(staticPath, "html/signup.html"));
 })
 

@@ -65,7 +65,7 @@ body{
 
 .become-seller{
     border-radius: 20px;
-    background: #dbf3ff;
+    background: #1fa4cc4a;
     padding-top: 30px;
     padding-right: 30px;
     padding-left: 30px;
@@ -115,7 +115,7 @@ body{
 }
 
 .apply-form{
-    background: #dbf3ff;
+    background: #1fa4cc4a;
     margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
@@ -253,7 +253,7 @@ body{
 }
 
 .product-list{
-    background: #dbf3ff;
+    background: #1fa4cc4a;
     margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
@@ -572,7 +572,7 @@ body{
 
 .order-list,
 .order-histroy-list{
-    background: #dbf3ff;
+    background: #1fa4cc4a;
     margin-top: 20px;
     margin-right: 20px;
     padding: 20px;
