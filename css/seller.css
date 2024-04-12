@@ -681,7 +681,7 @@ body {
     pointer-events: all;
 }
 
-.price1 {
+.price-seller {
     font-size: 20px;
     border: 1px solid crimson;
     color: crimson;
@@ -691,7 +691,7 @@ body {
     border-radius: 5px;
 }
 
-.price1-ans {
+.price-seller-ans {
     border-radius: 0px 5px 5px 0px;
     font-size: 20px;
     padding-top: 1px;

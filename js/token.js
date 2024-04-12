@@ -7,6 +7,7 @@ const generateToken = (key) => {
         let randomIndex = Math.floor(Math.random() * index);
         token += char[randomIndex] + char[index - randomIndex];
     }
+
     return token;
 }
 
@@ -17,9 +18,11 @@ const compareToken = (token, key) => {
         let index2 = char.indexOf(token[i+1]);
         string += char[index1 + index2];
     }
+
     if(string === key) {
         return true;
     }
+
     return false;
 }
 
@@ -61,8 +64,7 @@ const sendData = (path, data) => {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(data)
-    }).then((res) => res.json())
-    .then(response => {
+    }).then((res) => res.json()).then(response => {
         processData(response);
     })
 }

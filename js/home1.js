@@ -24,18 +24,18 @@ const createProductCards1 = (data, parent) => {
     for(let i = 0; i < data.length; i++) {
         if(data[i].status == 'Active') {
                 middle += `
-                <div class="product-card1">
-                    <div class="product-image1">
-                        <span class="discount-tag1">${data[i].discount}</span>
-                        <img src="${data[i].image1}" class="product-thumb1" alt="">
-                        <button class="card-btn1" id="card-btn1">add to wishlist</button>
+                <div class="product-card-home">
+                    <div class="product-image-home">
+                        <span class="discount-tag-home">${data[i].discount}</span>
+                        <img src="${data[i].image1}" class="product-thumb-home" alt="">
+                        <button class="card-btn-home" id="card-btn-home">add to wishlist</button>
                     </div>
-                    <div class="product-info1">
-                        <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
-                        <p class="product-short-desc1">${data[i].shortDes}</p>
+                    <div class="product-info-home">
+                        <a href="/product/${data[i].id}" class="product-brand-home">${data[i].name}</a>
+                        <p class="product-short-desc-home">${data[i].shortDes}</p>
                         <p class="usage1">${data[i].use}</p>
-                        <span class="price1">${data[i].sellPrice}</span>
-                        <span class="actual-price1">${data[i].actualPrice}</span>
+                        <span class="price-home">${data[i].sellPrice}</span>
+                        <span class="actual-price-home">${data[i].actualPrice}</span>
                     </div>
                 </div>
             `;
@@ -47,7 +47,7 @@ const createProductCards1 = (data, parent) => {
 }
 
 const setupEvents1 = (data) => {
-    const wishlistBtn = document.querySelectorAll('#card-btn1');
+    const wishlistBtn = document.querySelectorAll('#card-btn-home');
 
     for(let i = 0; i < data.length; i++) {
         if(wishlistBtn[i]) {

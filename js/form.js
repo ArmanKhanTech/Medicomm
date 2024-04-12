@@ -13,11 +13,11 @@ submitBtn.addEventListener('click', () => {
         if(name.value.length < 3){
             showAlert('Name must be atleast three letters long');
         } else if(!email.value.length) {
-            showAlert('Please enter Your e-mail');
+            showAlert('Please enter your e-mail');
         } else if(password.value.length < 8) {
             showAlert('Password must be atleast eight characters long');
         } else if(!number.value.length) {
-            showAlert('Please enter your Phone Number');
+            showAlert('Please enter your phone number');
         } else if(!Number(number.value) || number.value.length < 10) {
             showAlert('Invalid Number');
         } else if(!tac.checked) {
@@ -36,7 +36,7 @@ submitBtn.addEventListener('click', () => {
         }
     } else {
         if(!email.value.length || !password.value.length) {
-            showAlert('Kindly fill all the Inputs');
+            showAlert('Kindly fill all the inputs');
         } else {
             loader.style.display = 'block';
             sendData('/login', {

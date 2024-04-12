@@ -326,7 +326,7 @@ app.post('/order-online', (req, res)=>{
     )
 });
 
-app.post('/disEna-product', (req, res) => {
+app.post('/toogle-product', (req, res) => {
     const {data} = req.body;
 
     let id='';

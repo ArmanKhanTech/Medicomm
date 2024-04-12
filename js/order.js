@@ -1,9 +1,10 @@
 const createOrders = (data) => {
     const orderContainer = document.querySelector('.order');
     const orderCount = document.querySelector('.order-count');
-    var totalOrders = parseInt(0);
-    let orderArr = [];
 
+    var totalOrders = parseInt(0);
+
+    let orderArr = [];
     for(let i = 0; i < data.length; i++) {
         for(let j = 0; j < data[i].order.length; j++){
             if(data[i].order[j].status != 'Delivered' && data[i].order[j].status != 'Failed' && data[i].order[j].status != 'Cancelled') {
@@ -29,14 +30,17 @@ const createOrders = (data) => {
     }
     
     const orderSection = document.querySelector('.order-section');
+
     let loader = document.querySelector('.loader');
     loader.style.display = 'none';
+
     orderSection.classList.remove('hide');
     orderCount.innerHTML = totalOrders;
+
     setupEvents(orderArr);
 
     if(totalOrders == 0) {
-        document.querySelector('.no-orders-img1').classList.remove('hide');
+        document.querySelector('.no-orders-img-11').classList.remove('hide');
     } 
 }
 
@@ -51,8 +55,7 @@ const openDelPopup = (order) => {
                 order: order,
                 email: user.email
             })
-        }).then(res => res.json())
-        .then(data => {
+        }).then(res => res.json()).then(data => {
             if(data == 'success'){
                 location.reload();
             } else {
@@ -61,7 +64,7 @@ const openDelPopup = (order) => {
         })
     });
 
-    document.querySelector('.close-btn').addEventListener('click', () => {
+    document.querySelector('.close-btn-del').addEventListener('click', () => {
         document.querySelector('.delete-alert').style.display='none';
     });
 }
@@ -69,6 +72,7 @@ const openDelPopup = (order) => {
 const createHistory = (data) => {
     const hisContainer = document.querySelector('.history');
     const hisCount = document.querySelector('.history-count');
+
     var totalOrders = parseInt(0);
 
     for(let i = 0; i < data.length; i++) {
@@ -96,7 +100,7 @@ const createHistory = (data) => {
     hisCount.innerHTML = totalOrders;
 
     if(totalOrders == 0) {
-        document.querySelector('.no-orders-img2').classList.remove('hide');
+        document.querySelector('.no-orders-img-12').classList.remove('hide');
     } 
 }
 
@@ -108,8 +112,7 @@ const getOrders = (email) => {
             'Content-Type': 'application/json',
           },
         body: JSON.stringify({email: email})
-    }).then(res => res.json())
-    .then(data => {
+    }).then(res => res.json()).then(data => {
         createOrders(data);
         createHistory(data);
     })

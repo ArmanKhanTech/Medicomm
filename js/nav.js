@@ -1,4 +1,4 @@
-const getAllProducts1 = (tac) => {
+const getAllProducts = (tac) => {
     fetch('/get-all-products', {
         method: 'post',
         headers: {
@@ -12,13 +12,13 @@ const getAllProducts1 = (tac) => {
     })
 }
 
-const disableProduct1 = (id, status) => {
+const disableProduct = (id, status) => {
     let data = {
         id: id,
         status: status
     }
 
-    fetch('/disEna-product', {
+    fetch('/toogle-product', {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({data: data})
@@ -30,10 +30,11 @@ const discardProduct = (data) => {
     for(let i = 0; i < data.length; i++){
         var date = new Date(data[i].exDate);
         var currentDate = new Date();
+
         if(data[i].stock == 0) {
-            disableProduct1(data[i].id, 'Out of Stock');
+            disableProduct(data[i].id, 'Out of Stock');
         } else if(date < currentDate) {
-            disableProduct1(data[i].id, 'Expired');
+            disableProduct(data[i].id, 'Expired');
         }
     }
 }
@@ -100,7 +101,7 @@ window.onload = () => {
         })
     }
 
-    getAllProducts1(true);
+    getAllProducts(true);
 }
 
 const searchBtn = document.querySelector('.search-btn');

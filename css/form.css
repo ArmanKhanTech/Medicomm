@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body {
@@ -16,7 +19,7 @@ body {
 
 .loader {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
@@ -55,7 +58,7 @@ textarea {
     outline: none;
     margin: 20px 0;
     color: #383838;
-    font-size: 14px;
+    font-size: 18px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
     font-family: 'roboto', sans-serif;
 }
@@ -68,7 +71,7 @@ textarea {
     width: 300px;
     height: 40px;
     text-align: center;
-    font-size: large;
+    font-size: 18px;
     font-weight: bold;
     line-height: 40px;
     background: #1fa4cc;
@@ -114,7 +117,6 @@ textarea {
 }
 
 label {
-    text-transform: capitalize;
     display: inline-block;
     margin-bottom: 10px;
     font-size: 14px;
@@ -127,21 +129,20 @@ label a {
 
 .link {
     color: #383838;
-    text-transform: capitalize;
     text-align: center;
     display: block;
 }
 
 .alert-box {
     width: 310px;
-    min-height: 310px;
+    height: 310px;
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     padding: 20px;
     opacity: 0;
     pointer-events: none;

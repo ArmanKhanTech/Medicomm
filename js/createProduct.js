@@ -138,7 +138,7 @@ const createOrders = (data, seller) => {
                         </div>
                         <div class="product-info">
                             <p class="product-brand">${data[i].order[j].name}</p>
-                            <span class="price1">Total : <span class="price1-ans">${data[i].order[j].price}</span></span>
+                            <span class="price-seller">Total : <span class="price-seller-ans">${data[i].order[j].price}</span></span>
                             <span class="quan">Quantity : <span class="quan-ans">${data[i].order[j].quantity}</span></span>
                             <div class="address-order">
                                 <span class="address1 add-text-title">Address : <span class="add-text">${data[i].address.address}</span></span><br>
@@ -207,7 +207,7 @@ const setUpHistory = (data, seller) => {
                         </div>
                         <div class="product-info">
                             <p class="product-brand">${data[i].order[j].name}</p>
-                            <span class="price1">Total : <span class="price1-ans">${data[i].order[j].price}</span></span>
+                            <span class="price-seller">Total : <span class="price-seller-ans">${data[i].order[j].price}</span></span>
                             <span class="quan">Quantity : <span class="quan-ans">${data[i].order[j].quantity}</span></span>
                             <div class="address-order">
                                 <span class="address1 add-text-title">Address : <span class="add-text">${data[i].address.address}</span></span><br>
