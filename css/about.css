@@ -1,19 +1,22 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
     overflow: overlay;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar  {
     display: none;
 }
 
-.about-section{
+.about-section {
     margin: 30px;
     background: #1fa4cc4a;
     padding: 20px;
     border-radius: 30px;
 }
 
-.about-heading{
+.about-heading {
     font-size: 30px;
     font-weight: 600;
     color: #000000;
@@ -21,7 +24,7 @@ body{
     margin-bottom: 20px;
 }
 
-.about{
+.about {
     display: flex;
     font-size: 20px;
 }

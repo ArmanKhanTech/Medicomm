@@ -1,12 +1,12 @@
-body{
+body {
     overflow: overlay;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar  {
     display: none;
 }
 
-.contact-section{
+.contact-section {
     margin: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #1fa4cc4a;
@@ -14,7 +14,7 @@ body{
     border-radius: 30px;
 }
 
-.heading{
+.heading {
     font-size: 30px;
     font-weight: 600;
     color: #000000;
@@ -22,7 +22,7 @@ body{
     margin-bottom: 20px;
 }
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,7 +30,7 @@ body{
     align-items: center;
 }
 
-.contact input{
+.contact input {
     border-radius: 30px;
     border: none;
     height: 40px;
@@ -40,7 +40,7 @@ body{
     font-size: 18px;
 }
 
-.contact textarea{
+.contact textarea {
     border-radius: 30px;
     border: none;
     height: 200px;
@@ -50,7 +50,7 @@ body{
     font-size: 18px;
 }
 
-.btn{
+.btn {
     background: #1fa4cc;
     color: #ffffff;
     border: none;
@@ -63,7 +63,7 @@ body{
     cursor: pointer;
 }
 
-.alert-box{
+.alert-box {
     width: 310px;
     min-height: 310px;
     background: #fff;
@@ -79,13 +79,13 @@ body{
     transition: 1s;
 }
 
-.alert-box.show{
+.alert-box.show {
     opacity: 1;
     pointer-events: all;
     top: 50%;
 }
 
-.alert-img{
+.alert-img {
     display: block;
     height: 60px;
     margin-top: 25%;
@@ -93,7 +93,7 @@ body{
     margin-bottom: 10%;
 }
 
-.alert-msg{
+.alert-msg {
     color: #e24c4b;
     font-size: 20px;
     text-align: center;

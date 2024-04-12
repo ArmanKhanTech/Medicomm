@@ -9,7 +9,7 @@ const actualPrice = document.querySelector('#actual-price');
 const discountPercentage = document.querySelector('#discount');
 const sellingPrice = document.querySelector('#sell-price');
 
-const manDate = document.querySelector('#manDate');
+const manuDate = document.querySelector('#manuDate');
 const exDate = document.querySelector('#exDate');
 const perscription = document.querySelector('#perscription');
 
@@ -37,10 +37,10 @@ const link2 = document.querySelector('#link-img-2');
 const link3 = document.querySelector('#link-img-3');
 const link4 = document.querySelector('#link-img-4');
 
-const pic1 = document.querySelector('.product-pic1s');
-const pic2 = document.querySelector('.product-pic2s');
-const pic3 = document.querySelector('.product-pic3s');
-const pic4 = document.querySelector('.product-pic4s');
+const pic1 = document.querySelector('.product-image-1');
+const pic2 = document.querySelector('.product-image-2');
+const pic3 = document.querySelector('.product-image-3');
+const pic4 = document.querySelector('.product-image-4');
 
 var link1s = "";
 var link2s = "";
@@ -83,7 +83,7 @@ const showImg = () => {
 }
 
 const productName = document.querySelector('#product-name');
-const shortLine = document.querySelector('#short-des');
+const shortLine = document.querySelector('#short-desc');
 const des = document.querySelector('#descirption');
 
 const stock = document.querySelector('#stock');
@@ -110,7 +110,7 @@ const validateForm = () => {
         return showAlert('Please enter Category of the Product');
     } else if(!tac.checked) {
         return showAlert('You must agree our Terms and Conditions');
-    } else if(!manDate.value.length) {
+    } else if(!manuDate.value.length) {
         return showAlert('Please enter Manufacturing Date of the Product');
     } else if(!exDate.value.length) {
         return showAlert('Please enter Expiry Date of the Product');
@@ -162,7 +162,7 @@ const productData = () => {
             id: proId,
             addDate: addDate,
             modifyDate: modifyDate,
-            manDate: manDate.value,
+            manuDate: manuDate.value,
             exDate: exDate.value,
             perscription: perscription.value,
             status: "Active"
@@ -187,7 +187,7 @@ const productData = () => {
             id: proId,
             addDate: addDate,
             modifyDate: modifyDate,
-            manDate: manDate.value,
+            manuDate: manuDate.value,
             exDate: exDate.value,
             perscription: perscription.value,
             status: "Active"
@@ -231,7 +231,7 @@ const setFormsData = (data) => {
 
     addDate = data.addDate;
 
-    manDate.value = data.manDate;
+    manuDate.value = data.manuDate;
     exDate.value = data.exDate;
     perscription.value = data.perscription;
 }

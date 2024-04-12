@@ -1,38 +1,32 @@
-.add-product-form{
-    border-radius: 20px;
-    background: #1fa4cc4a;
-    padding: 30px;
-    margin: 30px;
-}
-
-body{
+body {
     overflow: overlay;
+    font-size: 20px;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-#product-name{
+#product-name {
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 800px;
     padding: 10px;
     margin-top: 20px;
     text-transform: capitalize;
 }
 
-#short-des{
+#short-desc {
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 800px;
     padding: 10px;
     margin-top: 20px;
 }
 
-textarea{
+textarea {
     border-radius: 30px;
     border: none;
     height: 300px;
@@ -41,13 +35,20 @@ textarea{
     margin-top: 20px;
 }
 
-.upload-pic{
+.add-product-form {
+    border-radius: 20px;
+    background: #1fa4cc4a;
+    padding: 30px;
+    margin: 30px;
+}
+
+.upload-pic {
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
-.img-upload-btn{
+.img-upload-btn {
     margin-top: 10px;
     margin-bottom: 5px;
     border: none;
@@ -62,7 +63,7 @@ textarea{
     font-size: 15px;
 }
 
-.product-images{
+.product-images {
     width: 100%;
     height: 320px;
     border: none;
@@ -72,47 +73,47 @@ textarea{
     column-gap: 20px;
 }
 
-.link-img1{
+.link-img-1 {
     display: inline;
     border-radius: 30px;
     border: none;
-    min-height: 40px;
+    min-height: 50px;
     min-width: 500px;
     padding: 10px;
     margin-top: 5px;
 }
 
-.link-img2{
+.link-img-2 {
     display: inline;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 500px;
     padding: 10px;
     margin-top: 20px;
 }
 
-.link-img3{
+.link-img-3 {
     display: inline;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 500px;
     padding: 10px;
     margin-top: 20px;
 }
 
-.link-img4{
+.link-img-4 {
     display: inline;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 500px;
     padding: 10px;
     margin-top: 20px;
 }
 
-.product-pic1{
+.product-image-div-1 {
     background-position: center;
     background-size: cover;
     border-radius: 30px;
@@ -124,11 +125,11 @@ textarea{
     justify-content:center;
 }
 
-.product-pic1 img{
+.product-image-div-1 img {
     margin: auto;
 }
 
-.product-pic2{
+.product-image-div-2 {
     background-position: center;
     background-size: cover;
     border-radius: 30px;
@@ -140,12 +141,12 @@ textarea{
     justify-content:center;
 }
 
-.product-pic2 img{
+.product-image-div-2 img {
     margin: auto;
 }
 
 
-.product-pic3{
+.product-image-div-3 {
     background-position: center;
     background-size: cover;
     border-radius: 30px;
@@ -157,12 +158,12 @@ textarea{
     justify-content:center;
 }
 
-.product-pic3 img{
+.product-image-div-3 img {
     margin: auto;
 }
 
 
-.product-pic4{
+.product-image-div-4 {
     background-position: center;
     background-size: cover;
     border-radius: 30px;
@@ -174,12 +175,11 @@ textarea{
     justify-content:center;
 }
 
-.product-pic4 img{
+.product-image-div-4 img {
     margin: auto;
 }
 
-
-.fileupload{
+.fileupload {
     border: none;
     width: 150px;
     outline: none;
@@ -191,114 +191,114 @@ textarea{
     color: transparent;
 }
 
-.label{
+.label {
     font-size: 18px;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-#sell-price{
+#sell-price {
     display: inline;
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 175px;
     padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
 
-#discount{
+#discount {
     display: inline;
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 175px;
     padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
 
-#actual-price{
+#actual-price {
     display: inline;
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 175px;
     padding: 10px;
     margin-top: 20px;
 }
 
-#stock{
+#stock {
     display: inline;
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 185px;
     padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 } 
 
-#use{
+#use {
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 400px;
     padding: 10px;
     margin-top: 20px;
 }
 
-#cate{
+#cate {
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
-    width: 400px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-#exDate{
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 40px;
+    height: 50px;
     width: 400px;
     padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
 
-#manDate{
+#exDate {
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
+    width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#manuDate {
+    text-transform: capitalize;
+    border-radius: 30px;
+    border: none;
+    height: 50px;
     width: 400px;
     padding: 10px;
     margin-top: 20px;
 }
 
-#perscription{
+#perscription {
     text-transform: capitalize;
     border-radius: 30px;
     border: none;
-    height: 40px;
+    height: 50px;
     width: 500px;
     padding: 10px;
     margin-top: 20px;
 }
 
-.checkbox{
+.checkbox {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
@@ -309,11 +309,11 @@ textarea{
     cursor: pointer;
 }
 
-.checkbox:checked{
+.checkbox:checked {
     background: #1fa4cc;
 }
 
-.checkbox::after{
+.checkbox::after {
     content: '';
     top: 60%;
     left: 50%;
@@ -328,11 +328,11 @@ textarea{
     display: none;
 }
 
-.checkbox:checked::after{
+.checkbox:checked::after {
     display: block;
 }
 
-label{
+label {
     display: inline-block;
     font-weight: bold;
     margin-bottom: 10px;
@@ -340,7 +340,7 @@ label{
     color: #383838;
 }
 
-.loader{
+.loader {
     position: fixed;
     display: none;
     top: 60%;
@@ -353,7 +353,7 @@ label{
     border: 1px solid #1fa4cc;
 }
 
-.confirm-btn{
+.confirm-btn {
     margin-top: 10px;
     border: none;
     width: 150px;
@@ -366,7 +366,7 @@ label{
     font-size: 15px;
 }
 
-.alert-box{
+.alert-box {
     width: 310px;
     min-height: 310px;
     background: #fff;
@@ -382,13 +382,13 @@ label{
     transition: 1s;
 }
 
-.alert-box.show{
+.alert-box.show {
     opacity: 1;
     pointer-events: all;
     top: 50%;
 }
 
-.alert-img{
+.alert-img {
     display: block;
     height: 60px;
     margin-top: 28%;
@@ -396,7 +396,7 @@ label{
     margin-bottom: 10%;
 }
 
-.alert-msg{
+.alert-msg {
     color: #e24c4b;
     font-size: 20px;
     text-align: center;

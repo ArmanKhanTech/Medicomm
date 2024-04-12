@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     display: flex;
@@ -14,7 +14,7 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
-.loader{
+.loader {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,11 +28,11 @@ body{
 }
 
 
-.container{
+.container {
     align-items: center;
 }
 
-.logo{
+.logo {
     height: 110px;
     display: block;
     margin-top: 100px;
@@ -43,7 +43,7 @@ body{
 input[type="text"],
 input[type="password"],
 input[type="email"],
-textarea{
+textarea {
     display: block;
     width: 300px;
     height: 40px;
@@ -60,11 +60,11 @@ textarea{
     font-family: 'roboto', sans-serif;
 }
 
-::placeholder{
+::placeholder {
     color: #383838;
 }
 
-.submit-btn{
+.submit-btn {
     width: 300px;
     height: 40px;
     text-align: center;
@@ -81,7 +81,7 @@ textarea{
     margin: 30px 0;
 }
 
-.checkbox{
+.checkbox {
     width: 15px;
     height: 15px;
     border-radius: 2px;
@@ -90,11 +90,11 @@ textarea{
     cursor: pointer;
 }
 
-.checkbox:checked{
+.checkbox:checked {
     background: #1fa4cc;
 }
 
-.checkbox::after{
+.checkbox::after {
     content: '';
     top: 60%;
     left: 50%;
@@ -109,11 +109,11 @@ textarea{
     display: none;
 }
 
-.checkbox:checked::after{
+.checkbox:checked::after {
     display: block;
 }
 
-label{
+label {
     text-transform: capitalize;
     display: inline-block;
     margin-bottom: 10px;
@@ -121,18 +121,18 @@ label{
     color: #383838;
 }
 
-label a{
+label a {
     color: #383838;
 }
 
-.link{
+.link {
     color: #383838;
     text-transform: capitalize;
     text-align: center;
     display: block;
 }
 
-.alert-box{
+.alert-box {
     width: 310px;
     min-height: 310px;
     background: #fff;
@@ -148,13 +148,13 @@ label a{
     transition: 1s;
 }
 
-.alert-box.show{
+.alert-box.show {
     opacity: 1;
     pointer-events: all;
     top: 52%;
 }
 
-.alert-img{
+.alert-img {
     display: block;
     height: 60px;
     margin-top: 25%;
@@ -162,7 +162,7 @@ label a{
     margin-bottom: 10%;
 }
 
-.alert-msg{
+.alert-msg {
     color: #e24c4b;
     font-size: 20px;
     text-align: center;

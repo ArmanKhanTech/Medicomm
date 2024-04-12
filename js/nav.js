@@ -52,8 +52,8 @@ const createNav = () => {
                 <a>
                     <img src="../images/user.png" id="user-img" alt="">
                     <div class="login-logout-popup hide">
-                        <p class="account-info1">Logged-in as, Name</p>
-                        <button class="btn1" id="user-btn">Log Out</button>
+                        <p class="account-info">Logged-in as, Name</p>
+                        <button class="btn" id="user-btn">Log Out</button>
                     </div>
                 </a>         
                 <a href="/html/cart.html">
@@ -76,7 +76,7 @@ createNav();
 
 const userImageButton = document.querySelector('#user-img');
 const userPopup = document.querySelector('.login-logout-popup');
-const popupText = document.querySelector('.account-info1');
+const popupText = document.querySelector('.account-info');
 const actionBtn = document.querySelector('#user-btn');
 
 userImageButton.addEventListener('click', () => {

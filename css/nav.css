@@ -1,11 +1,13 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-.navbar{
+.navbar {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -19,40 +21,42 @@
     z-index: 9;
 }
 
-.nav{
+.nav {
     padding: 10px 10vw;
     display: flex;
     justify-content: space-between;
 }
 
-.brand-logo{
+.brand-logo {
     height: 110px;
 }
 
-.nav-items{
+.nav-items {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.search{
+.search {
     width: 500px;
     display: flex;
 }
 
-.search-box{
+.search-box {
     width: 80%;
     height: 40px;
     padding: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: 0.1px solid #1fa4cc;
+    border: 2px solid #1fa4cc;
     background: none;
     color: #000000;
     outline: none;
+    font-size: 15px;
     text-transform: capitalize;
 }
 
-.search-btn{
+.search-btn {
     width: 20%;
     height: 40px;
     padding: 10px 20px;
@@ -67,16 +71,17 @@
     border-bottom-right-radius: 10px;
 }
 
-.nav-items a{
+.nav-items a {
     margin-left: 20px;
 }
 
-.nav-items a img{
+.nav-items a img {
     width: 30px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
-.links-container{
+.links-container {
     width: 100%;
     display: flex;
     padding: 10px 10vw;
@@ -87,7 +92,7 @@
     align-items: center;
 }
 
-.link{
+.link {
     text-transform: capitalize;
     padding: 20px;
     text-decoration: none;
@@ -99,12 +104,12 @@
     
 }
 
-.link:hover{
+.link:hover {
     opacity: 1;
     font-size: small;
 }
 
-.login-logout-popup{
+.login-logout-popup {
     position: absolute;
     left: 84%;
     top : 17%;
@@ -117,7 +122,7 @@
     border: 2px solid #1fa4cc;
 }
 
-.login-logout-popup::after{
+.login-logout-popup::after {
     content: '';
     position: absolute;
     left: 48%;
@@ -130,11 +135,11 @@
     border-left: 2px solid #1fa4cc;
 }
 
-.account-info1{
+.account-info {
     font-size: 15px;
 }
 
-.btn1{
+.btn {
     padding: 5px;
     background-color: #1fa4cc;
     border-radius: 5px;
@@ -145,7 +150,7 @@
     border: 1px solid #1fa4cc;
 }
 
-.hide{
+.hide {
     opacity: 0;
     pointer-events: none;
 }

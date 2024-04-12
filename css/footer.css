@@ -1,4 +1,4 @@
-footer{
+footer {
     position: absolute;
     width: 100%;
     margin-top: auto;
@@ -7,17 +7,17 @@ footer{
     background: #1fa4cc4a;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.footer-content .logo{
+.footer-content .logo {
     height: 160px;
 }
 
-.company{
+.company {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,7 +25,7 @@ footer{
     width: fit-content;
 }
 
-.company-name{
+.company-name {
     font-size: 25px;
     color: #1fa4cc;
     font-weight: bold;
@@ -35,7 +35,7 @@ footer{
     margin-left: 0px;
 }
 
-.company-address{
+.company-address {
     font-size: 18px;
     color: #1fa4cc;
     text-transform: capitalize;
@@ -44,7 +44,7 @@ footer{
     margin-left: 0px;
 }
 
-.socials{
+.socials {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,21 +53,21 @@ footer{
     margin-top: 10px;
 }
 
-.social-link{
+.social-link {
     margin: 5px;
 }
 
-.social-link1{
+.social-link1 {
     margin: 5px;
     margin-left: 0;
 }
 
-.social-icon{
+.social-icon {
     width: 40px;
     height: 40px;
 }
 
-.footer-ul-container{
+.footer-ul-container {
     border: #1fa4cc 1px solid;
     border-radius: 30px;
     height: fit-content;
@@ -76,14 +76,14 @@ footer{
     margin-top: 20px;
 }
 
-.footer-ul{
+.footer-ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 100%;
 }
 
-.footer-ul li{
+.footer-ul li {
     list-style: none;
     font-size: 18px;
     color: #1fa4cc;
@@ -95,28 +95,26 @@ footer{
     text-decoration: none;
 }
 
-.footer-link{
+.footer-link {
     text-decoration: none;
     color: #1fa4cc;
 }
 
-.footer-credit{
+.footer-credit {
     width: 100%;
     padding: 10px;
     position: absolute;
     left: 0;
     bottom: 0;
     text-align: center;
-    color: #1fa4cc;
-    background: #1fa4cc4a;
-    border-top: 2px solid #1fa4cc4a;
+    border-top: 3px solid #1fa4cc;
 }
 
-.logo{
+.logo {
     border-radius: 30px;
 }
 
-.four-0-four-image{
+.four-0-four-image {
     width: 600px;
     height: 300px;
     justify-content: center;
@@ -126,7 +124,7 @@ footer{
     top: 35%;
 }
 
-.four-0-four-msg{
+.four-0-four-msg {
     width: 100%;
     height: 100px;
     justify-content: center;

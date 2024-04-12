@@ -1,4 +1,4 @@
-.order-section{
+.order-section {
     width: 93.5%;
     padding: 20px 4vw;
     background: #1fa4cc4a;
@@ -10,7 +10,7 @@
     justify-content: space-between;
 }
 
-.order-heading{
+.order-heading {
     font-size: 30px;
     margin: 20px 0;
     border: #1fa4cc 1px solid;
@@ -19,7 +19,7 @@
     width: fit-content;
 }
 
-.no-orders-img1{
+.no-orders-img1 {
     width: 400px;
     height: 400px;
     margin-top: 20px;
@@ -29,7 +29,7 @@
     padding: 20px;
 }
 
-.no-orders-img2{
+.no-orders-img2 {
     width: 400px;
     height: 400px;
     margin-top: 20px;
@@ -39,28 +39,28 @@
     padding: 20px;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.product-list{
+.product-list {
     width: 40%;
     margin-left: 20px;
 }
 
-.history-list{
+.history-list {
     width: 40%;
     margin-right: 20px;
 }
 
-.order .history{
+.order .history {
     width: 100%;
     padding: 20px;
     border-radius: 30px;
     margin-bottom: 20px;
 }
 
-.sm-product{
+.sm-product {
     width: 100%;
     height: 100px;
     display: flex;
@@ -75,52 +75,52 @@
     border-radius: 25px;
 }
 
-.cart .sm-product:last-child{
+.cart .sm-product:last-child {
     margin-bottom: 0px;
 }
 
-.sm-product-img{
+.sm-product-img {
     height: 100px;
     width: 100px;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.sm-text{
+.sm-text {
     width: 50%;
     margin-left: 20px;
 }
 
-.sm-product-name{
+.sm-product-name {
     font-size: 25px;
     font-weight: 700;
     text-transform: capitalize;
 }
 
-.status{
+.status {
     font-size: 18px;
     text-transform: capitalize;
     margin-top: 5px;
 }
 
-.status-ans{
+.status-ans {
     font-weight: bold;
 }
 
-.item-counter{
+.item-counter {
     width: 90px;
     height: 30px;
     display: flex;
     margin-right: 20px;
 }
 
-.sm-price{
+.sm-price {
     font-size: 30px;
     font-weight: 500;
     color: black;
 }
 
-.sm-delete-btn{
+.sm-delete-btn {
     position: absolute;
     top: 5%;
     left: 5px;
@@ -137,12 +137,12 @@
     cursor: pointer;
 }
 
-.sm-delete-btn img{
+.sm-delete-btn img {
     width: 20px;
     height: 20px;
 }
 
-.quantity{
+.quantity {
     background: #1fa4cc;
     color: white;
     font-size: 15px;
@@ -155,7 +155,7 @@
     border-radius: 3px 0px 0px 3px;
 }
 
-.item-count{
+.item-count {
     border-radius: 0px 3px 3px 0px;
     text-align: center;
     line-height: 30px;
@@ -166,7 +166,7 @@
     padding-left: 2px;
 }
 
-.loader{
+.loader {
     position: fixed;
     display: absolute;
     top: 60%;
@@ -179,7 +179,7 @@
     border: 1px solid #1fa4cc;
 }
 
-.order-heading2{
+.order-heading2 {
     font-size: 30px;
     margin: 20px;
     margin-left: 0px;
@@ -189,7 +189,7 @@
     width: fit-content;
 }
 
-.delete-alert{
+.delete-alert {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -202,17 +202,17 @@
     align-items: center;
 }
 
-.close-img1{
+.close-img1 {
     height: 20px;
     width: 20px;
     border: none;
 }
 
-.delete-alert{
+.delete-alert {
     display: none;
 }
 
-.alert1{
+.alert1 {
     width: 350px;
     height: auto;
     border-radius: 30px;
@@ -221,7 +221,7 @@
     padding: 15px;
 }
 
-.close-btn{
+.close-btn {
     position: absolute;
     border: none;
     top: 15px;
@@ -230,21 +230,21 @@
     cursor: pointer;
 }
 
-.del-warn-img{
+.del-warn-img {
     height: 200px;
     width: 200px;
     margin-left: 70px;
     margin-top: 20px;
 }
 
-.del-warn-text{
+.del-warn-text {
     margin: 10px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
 
-.del1-btn{
+.del1-btn {
     cursor: pointer;
     padding: 10px;
     margin-top: 10px;
@@ -256,7 +256,7 @@
     margin-left: 125px;
 }
 
-.alert-box{
+.alert-box {
     width: 310px;
     min-height: 310px;
     background: #fff;
@@ -272,13 +272,13 @@
     transition: 1s;
 }
 
-.alert-box.show{
+.alert-box.show {
     opacity: 1;
     pointer-events: all;
     top: 50%;
 }
 
-.alert-img{
+.alert-img {
     display: block;
     height: 60px;
     margin-top: 25%;
@@ -286,7 +286,7 @@
     margin-bottom: 10%;
 }
 
-.alert-msg{
+.alert-msg {
     color: #e24c4b;
     font-size: 20px;
     text-align: center;

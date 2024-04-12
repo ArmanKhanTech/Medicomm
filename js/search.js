@@ -40,7 +40,7 @@ const createProductCards = (data, parent) => {
                     </div>
                     <div class="product-info1">
                         <a href="/product/${data[i].id}" class="product-brand1">${data[i].name}</a>
-                        <p class="product-short-des1">${data[i].shortDes}</p>
+                        <p class="product-short-desc1">${data[i].shortDes}</p>
                         <p class="product-usage1" id="product-usage1">${data[i].use}</p>
                         <span class="price1">${data[i].sellPrice}</span>
                         <span class="actual-price1">${data[i].actualPrice}</span>

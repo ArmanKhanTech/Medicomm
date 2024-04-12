@@ -2,7 +2,7 @@ let proId = null;
 let loader = document.querySelector('.loader');
 
 const productName = document.querySelector('.product-brand');
-const shortLine = document.querySelector('.product-short-des');
+const shortLine = document.querySelector('.product-short-desc');
 const des = document.querySelector('.des');
 
 const seller = document.querySelector('.sold-by');
@@ -13,7 +13,7 @@ const discountPercentage = document.querySelector('.product-discount');
 const sellingPrice = document.querySelector('.product-price');
 
 const exDate = document.querySelector('.expiry-date');
-const manDate = document.querySelector('.man-date');
+const manuDate = document.querySelector('.man-date');
 const perscription = document.querySelector('.per-ans');
 const stock = document.querySelector('.stock-ans');
 
@@ -97,7 +97,7 @@ const setFromsData = (data) => {
     discountPercentage.textContent = data.discount;
 
     exDate.textContent = data.exDate;
-    manDate.textContent = data.manDate;
+    manuDate.textContent = data.manuDate;
     perscription.textContent = data.perscription;
 
     stock.textContent = data.stock;
@@ -192,7 +192,7 @@ const createProductCards = (data, parent) => {
                     </div>
                     <div class="product-info">
                         <a href="/product/${data[i].id}" class="product-brand">${data[i].name}</a>
-                        <p class="product-short-des">${data[i].shortDes}</p>
+                        <p class="product-short-desc">${data[i].shortDes}</p>
                         <p class="Usage">${data[i].use}</p>
                         <span class="price">${data[i].sellPrice}</span>
                         <span class="actual-price">${data[i].actualPrice}</span>

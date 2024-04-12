@@ -1,4 +1,4 @@
-body{
+body {
     width: 100%;
     height: 100%;
     min-height: 100vh;
@@ -8,11 +8,11 @@ body{
     overflow: overlay;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar  {
     display: none;
 }
 
-.alert-box{
+.alert-box {
     width: 310px;
     min-height: 310px;
     background: #fff;
@@ -28,13 +28,13 @@ body{
     transition: 1s;
 }
 
-.alert-box.show{
+.alert-box.show {
     opacity: 1;
     pointer-events: all;
     top: 50%;
 }
 
-.alert-img{
+.alert-img {
     display: block;
     height: 60px;
     margin-top: 28%;
@@ -42,7 +42,7 @@ body{
     margin-bottom: 10%;
 }
 
-.alert-msg{
+.alert-msg {
     color: #e24c4b;
     font-size: 20px;
     text-align: center;
@@ -50,7 +50,7 @@ body{
     font-weight: 500;
 }
 
-.loader{
+.loader {
     position: fixed;
     display: flex;
     top: 60%;
@@ -63,7 +63,7 @@ body{
     border: 1px solid #1fa4cc;
 }
 
-.become-seller{
+.become-seller {
     border-radius: 20px;
     background: #1fa4cc4a;
     padding-top: 30px;
@@ -73,24 +73,24 @@ body{
     padding-bottom: 50px;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.heading{
+.heading {
     text-transform: capitalize;
     font-weight: 700;
     font-size: 30px;
 }
 
-.des{
+.des {
     margin-top: 20px;
     margin-bottom: 20px;
     text-transform: none;
     line-height: 25px;
 }
 
-.btnseller{
+.btnseller {
     border: none;
     outline: none;
     background-color: #1fa4cc;
@@ -101,7 +101,7 @@ body{
     font-size: 15px;
 }
 
-.sub-btn{
+.sub-btn {
     margin: 20px;
     border: none;
     width: 100px;
@@ -114,7 +114,7 @@ body{
     font-size: 15px;
 }
 
-.apply-form{
+.apply-form {
     background: #1fa4cc4a;
     margin-left: 20px;
     margin-top: 20px;
@@ -123,16 +123,16 @@ body{
     border-radius: 30px;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.heading2{
+.heading2 {
     margin: 20px;
     font-weight: 0;
 }
 
-.business-name{
+.business-name {
     display: block;
     width: 300px;
     height: 40px;
@@ -149,7 +149,7 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
-.business-add{
+.business-add {
     display: block;
     width: 50%;
     height: 100px;
@@ -166,7 +166,7 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
-.about{
+.about {
     display: block;
     width: 50%;
     height: 130px;
@@ -183,7 +183,7 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
-.number{
+.number {
     display: block;
     width: 300px;
     height: 40px;
@@ -200,7 +200,7 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
-.pincode{
+.pincode {
     display: block;
     width: 300px;
     height: 40px;
@@ -217,7 +217,7 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
-.checkbox{
+.checkbox {
     appearance: none;
     margin-left: 20px;
     position: relative;
@@ -229,11 +229,11 @@ body{
     cursor: pointer;
 }
 
-.checkbox:checked{
+.checkbox:checked {
     background: #1fa4cc;
 }
 
-.checkbox::after{
+.checkbox::after {
     content: '';
     position: relative;
     top: 60%;
@@ -248,11 +248,11 @@ body{
     display: none;
 }
 
-.checkbox:checked::after{
+.checkbox:checked::after {
     display: block;
 }
 
-.product-list{
+.product-list {
     background: #1fa4cc4a;
     margin-left: 20px;
     margin-top: 20px;
@@ -261,11 +261,11 @@ body{
     border-radius: 30px;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.add-product{
+.add-product {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -276,7 +276,7 @@ body{
     margin-bottom: 35px;
 }
 
-.heading3{
+.heading3 {
     border: #1fa4cc 1px solid;
     padding: 15px;
     border-radius: 25px;
@@ -284,7 +284,7 @@ body{
     margin-top: 5px;
 }
 
-.heading4{
+.heading4 {
     margin-top: 35px;
     margin-left: 32px;
     border: 1px solid #1fa4cc;
@@ -293,7 +293,7 @@ body{
     border-radius: 25px;
 }
 
-.heading5{
+.heading5 {
     margin-top: 35px;
     margin-bottom: 35px;
     margin-left: 32px;
@@ -303,12 +303,12 @@ body{
     border-radius: 5px;
 }
 
-.no-product-pic{
+.no-product-pic {
     margin-left: 35%;
     display: flex;
 }
 
-.add-product-btn{
+.add-product-btn {
     margin-top: 5px;
     margin-bottom: 5px;
     border: none;
@@ -322,7 +322,7 @@ body{
     font-size: 20px;
 }
 
-.product-container{
+.product-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 60px;
@@ -331,11 +331,11 @@ body{
     padding-bottom: 40px;
 }
 
-.product-container::-webkit-scrollbar{
+.product-container::-webkit-scrollbar {
     display: none;
 }
 
-.product-card{
+.product-card {
     flex: 0 0 auto;
     width: 300px;
     height: 425px;
@@ -352,7 +352,7 @@ body{
     background: #fff;
 }
 
-.product-image{
+.product-image {
     position: relative;
     width: 100%;
     height: 250px;
@@ -361,25 +361,25 @@ body{
     justify-content: center;
 }
 
-.product-image img{
+.product-image img {
     display: block;
     margin: auto;
 }
 
-.product-thumb{
+.product-thumb {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-.product-info{
+.product-info {
     width: 100%;
     height: 75px;
     padding-top: 10px;
     padding: 0px;
 }
 
-.product-brand{
+.product-brand {
     text-transform: none;
     font-size: 20px;
     font-weight: bold;
@@ -387,14 +387,14 @@ body{
     margin-bottom: 4px;
 }
 
-.product-shortdes{
+.product-shortdes {
     text-transform: none;
     font-size: 15px;
     padding: 0px;
     margin-bottom: 2px;
 }
 
-.product-usage{
+.product-usage {
     width: auto;
     height: 30px;
     padding: 0px;
@@ -408,7 +408,7 @@ body{
     margin-bottom: 15px;
 }
 
-.discount-tag{
+.discount-tag {
     position: absolute;
     background: #f73030;
     padding: 5px;
@@ -419,19 +419,19 @@ body{
     text-transform: capitalize;
 }
 
-.price{
+.price {
     font-weight: bold;
     font-size: 20px;
 }
 
-.actual-price{
+.actual-price {
     margin-left: 10px;
     opacity: 0.5;
     font-size: 20px;
     text-decoration: line-through;
 }
 
-.action-btn{
+.action-btn {
     opacity: 0;
     position: absolute;
     left: 75%;
@@ -449,25 +449,25 @@ body{
     color: white;
 }
 
-.edit-btn{
+.edit-btn {
     top: 20px;
 }
 
-.open-btn{
+.open-btn {
     top: 60px;
 }
 
-.delete-btn{
+.delete-btn {
     top: 100px;
     background-color: red;
 }
 
-.disable-btn{
+.disable-btn {
     top: 140px;
     background-color: grey;
 }
 
-.delete-alert{
+.delete-alert {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -480,18 +480,18 @@ body{
     align-items: center;
 }
 
-.close-img{
+.close-img {
     height: 20px;
     width: 20px;
     border: none;
 
 }
 
-.delete-alert{
+.delete-alert {
     display: none;
 }
 
-.alert1{
+.alert1 {
     width: 350px;
     height: auto;
     border-radius: 30px;
@@ -500,7 +500,7 @@ body{
     padding: 15px;
 }
 
-.close-btn{
+.close-btn {
     position: absolute;
     border: none;
     top: 15px;
@@ -509,21 +509,21 @@ body{
     cursor: pointer;
 }
 
-.del-warn-img{
+.del-warn-img {
     height: 200px;
     width: 200px;
     margin-left: 70px;
     margin-top: 20px;
 }
 
-.del-warn-text{
+.del-warn-text {
     margin: 10px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
 
-.del1-btn{
+.del1-btn {
     cursor: pointer;
     padding: 10px;
     margin-top: 10px;
@@ -535,7 +535,7 @@ body{
     margin-left: 125px;
 }
 
-.product-status{
+.product-status {
     width: 100%;
     position: absolute;
     padding: 5px;
@@ -549,18 +549,18 @@ body{
     opacity: 2;
 }
 
-.product-card:hover .action-btn{
+.product-card:hover .action-btn {
     opacity: 5;
     pointer-events: all;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
 .no-products-img,
 .no-orders-img,
-.no-history-img{
+.no-history-img {
     width: 400px;
     height: 400px;
     margin: auto;
@@ -571,7 +571,7 @@ body{
 }
 
 .order-list,
-.order-histroy-list{
+.order-histroy-list {
     background: #1fa4cc4a;
     margin-top: 20px;
     margin-right: 20px;
@@ -580,13 +580,13 @@ body{
     border-radius: 30px;
 }
 
-.order-list{
+.order-list {
     margin-top : 15px;
     padding-bottom: 0px;
 }
 
 .order-container,
-.order-history-container{
+.order-history-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 60px;
@@ -595,7 +595,7 @@ body{
     padding-bottom: 40px;
 }
 
-.change-status-btn{
+.change-status-btn {
     position: absolute;
     top: 86%;
     bottom: 10px;
@@ -617,17 +617,17 @@ body{
     font-size: 18px;
 }
 
-.cancel-btn{
+.cancel-btn {
     top: 70px;
     background-color: grey;
 }
 
-.delete-btn1{
+.delete-btn1 {
     top: 110px;
     background-color: red;
 }
 
-.num{
+.num {
     position: absolute;
     background: #1fa4cc;
     padding: 5px;
@@ -640,7 +640,7 @@ body{
     text-transform: capitalize;
 }
 
-.product-card-order{
+.product-card-order {
     flex: 0 0 auto;
     width: 300px;
     height: 500px;
@@ -657,31 +657,31 @@ body{
     background: #fff;
 }
 
-.address-order{
+.address-order {
     border: 1px solid #1fa4cc;
     border-radius: 5px;
     margin-top: 10px;
     padding: 10px;
 }
 
-.add-text-title{
+.add-text-title {
     color: #1fa4cc;
     font-weight: bold;
     text-transform: capitalize;
 }
 
-.add-text{
+.add-text {
     color: black;
     font-weight: bold;
     margin-top: 10px;
 }
 
-.product-card-order:hover .action-btn{
+.product-card-order:hover .action-btn {
     opacity: 5;
     pointer-events: all;
 }
 
-.price1{
+.price1 {
     font-size: 20px;
     border: 1px solid crimson;
     color: crimson;
@@ -691,7 +691,7 @@ body{
     border-radius: 5px;
 }
 
-.price1-ans{
+.price1-ans {
     border-radius: 0px 5px 5px 0px;
     font-size: 20px;
     padding-top: 1px;
@@ -699,7 +699,7 @@ body{
     font-weight: bold;
 }
 
-.quan{
+.quan {
     margin-left: 10px;
     font-size: 20px;
     border: 1px solid deeppink;
@@ -710,7 +710,7 @@ body{
     border-radius: 5px;
 }
 
-.quan-ans{
+.quan-ans {
     border-radius: 0px 5px 5px 0px;
     font-size: 20px;
     font-weight: bold;
@@ -718,7 +718,7 @@ body{
     padding-right: 3px;
 }
 
-.container{
+.container {
     border: #1fa4cc 1px solid;
     border-radius: 30px;
     width: fit-content;
@@ -728,24 +728,24 @@ body{
     margin-bottom: 30px;
 }
 
-.tabs{
+.tabs {
 	display: flex;
 	background-color: none;
 	border-radius: 30px; 
 	z-index: 2;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     color: #1fa4cc;
 	display: none;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked + label  {
     background-color: #1fa4cc;
     color: #fff;
 }
 
-.tab{
+.tab {
 	display: flex;
 	align-items: center;
 	justify-content: center;
