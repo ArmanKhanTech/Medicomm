@@ -29,7 +29,7 @@ applyBtn.addEventListener('click', () =>{
         !about.value.length || !number.value.length ) { 
             showAlert('Fill All the Inputs');
     } else if(!tac.checked) {
-        showAlert('You Must Agree All Terms and Conditions');
+        showAlert('You must agree all the Terms and Conditions');
     } else {
         loader.style.display = 'block';
         sendData('/seller' , {
@@ -61,9 +61,10 @@ const setupProducts = () => {
     }).then(res => res.json()).then(data => {
         loader.style.display = 'none';
         productList.classList.remove('hide');
+
         if(data != 'no-products'){
             data.forEach(product => createProduct(product));
-            setCount(data.length);
+            setProductCount(data.length);
         } else{
             noProduct.style.display = 'block';
         }
@@ -100,6 +101,7 @@ if(user) {
         becomeSeller.classList.remove('hide');
     } else {
         loader.style.display = 'block';
+        
         setupProducts();
         findSeller();
     }

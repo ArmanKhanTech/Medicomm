@@ -7,21 +7,21 @@ radio.addEventListener('change', () => {
     if(radioVal == 'products') {
         document.querySelector('.add-product').classList.remove('hide');
         document.querySelector('.product-container').classList.remove('hide');
-        document.querySelector('.heading4').classList.add('hide');
+        document.querySelector('.heading-4').classList.add('hide');
         document.querySelector('.order-list').classList.add('hide');
-        document.querySelector('.heading5').classList.add('hide');
+        document.querySelector('.heading-5').classList.add('hide');
         document.querySelector('.order-history-list').classList.add('hide');
     } else if(radioVal == 'orders') {
-        document.querySelector('.heading4').classList.remove('hide');
+        document.querySelector('.heading-4').classList.remove('hide');
         document.querySelector('.order-list').classList.remove('hide');
         document.querySelector('.add-product').classList.add('hide');
         document.querySelector('.product-container').classList.add('hide');
-        document.querySelector('.heading5').classList.add('hide');
+        document.querySelector('.heading-5').classList.add('hide');
         document.querySelector('.order-history-list').classList.add('hide');
     } else if(radioVal == 'history') {
-        document.querySelector('.heading5').classList.remove('hide');
+        document.querySelector('.heading-5').classList.remove('hide');
         document.querySelector('.order-history-list').classList.remove('hide');
-        document.querySelector('.heading4').classList.add('hide');
+        document.querySelector('.heading-4').classList.add('hide');
         document.querySelector('.order-list').classList.add('hide');
         document.querySelector('.add-product').classList.add('hide');
         document.querySelector('.product-container').classList.add('hide');
@@ -31,7 +31,6 @@ radio.addEventListener('change', () => {
 
 const setUpColor = (data) => {
     const proStatus = document.querySelectorAll('#product-status');
-
     for(let i = 0; i < data.length; i++) {
         if(data[i].status == 'Active') {
             proStatus[i].style.color = '#1fa4cc';
@@ -71,7 +70,7 @@ const createProduct = (data) => {
                     <button class="action-btn delete-btn" onClick="openDelPopup('${data.id}')">
                         Delete
                     </button>
-                    <button class="action-btn disable-btn" onClick="disableProduct('${data.id}', '${disabled}')">
+                    <button class="action-btn disable-btn" onClick="disableProductSeller('${data.id}', '${disabled}')">
                         Disable
                     </button>
                 </div>
@@ -100,7 +99,7 @@ const createProduct = (data) => {
                     <button class="action-btn delete-btn" onClick="openDelPopup('${data.id}')">
                         Delete
                     </button>
-                    <button class="action-btn disable-btn" onClick="disableProduct('${data.id}', '${active}')">
+                    <button class="action-btn disable-btn" onClick="disableProductSeller('${data.id}', '${active}')">
                         Enable
                     </button>
                 </div>
@@ -139,14 +138,14 @@ const createOrders = (data, seller) => {
                         <div class="product-info">
                             <p class="product-brand">${data[i].order[j].name}</p>
                             <span class="price-seller">Total : <span class="price-seller-ans">${data[i].order[j].price}</span></span>
-                            <span class="quan">Quantity : <span class="quan-ans">${data[i].order[j].quantity}</span></span>
+                            <span class="quan">Quantity: <span class="quan-ans">${data[i].order[j].quantity}</span></span>
                             <div class="address-order">
-                                <span class="address1 add-text-title">Address : <span class="add-text">${data[i].address.address}</span></span><br>
-                                <span class="street1 add-text-title">Street : <span class="add-text">${data[i].address.street}</span></span><br>
-                                <span class="landmark1 add-text-title">Landmark : <span class="add-text">${data[i].address.landmark}</span></span><br>
-                                <span class="city1 add-text-title">City : <span class="add-text">${data[i].address.city}</span></span><br>
-                                <span class="state1 add-text-title">State : <span class="add-text">${data[i].address.state}</span></span><br>
-                                <span class="pin1 add-text-title">Pincode : <span class="add-text">${data[i].address.pincode}</span></span><br>
+                                <span class="address1 add-text-title">Address: <span class="add-text">${data[i].address.address}</span></span><br>
+                                <span class="street1 add-text-title">Street: <span class="add-text">${data[i].address.street}</span></span><br>
+                                <span class="landmark1 add-text-title">Landmark: <span class="add-text">${data[i].address.landmark}</span></span><br>
+                                <span class="city1 add-text-title">City: <span class="add-text">${data[i].address.city}</span></span><br>
+                                <span class="state1 add-text-title">State: <span class="add-text">${data[i].address.state}</span></span><br>
+                                <span class="pin1 add-text-title">Pincode: <span class="add-text">${data[i].address.pincode}</span></span><br>
                             </div>
                         </div>
                     </div> 
@@ -158,7 +157,7 @@ const createOrders = (data, seller) => {
     }
   
     setUpHistory(data, seller);
-    setCount1(count);
+    setOrderCount(count);
     setUpEventsForOrderStatUpdate(orderArr);
 }
 
@@ -208,14 +207,14 @@ const setUpHistory = (data, seller) => {
                         <div class="product-info">
                             <p class="product-brand">${data[i].order[j].name}</p>
                             <span class="price-seller">Total : <span class="price-seller-ans">${data[i].order[j].price}</span></span>
-                            <span class="quan">Quantity : <span class="quan-ans">${data[i].order[j].quantity}</span></span>
+                            <span class="quan">Quantity: <span class="quan-ans">${data[i].order[j].quantity}</span></span>
                             <div class="address-order">
-                                <span class="address1 add-text-title">Address : <span class="add-text">${data[i].address.address}</span></span><br>
-                                <span class="street1 add-text-title">Street : <span class="add-text">${data[i].address.street}</span></span><br>
-                                <span class="landmark1 add-text-title">Landmark : <span class="add-text">${data[i].address.landmark}</span></span><br>
-                                <span class="city1 add-text-title">City : <span class="add-text">${data[i].address.city}</span></span><br>
-                                <span class="state1 add-text-title">State : <span class="add-text">${data[i].address.state}</span></span><br>
-                                <span class="pin1 add-text-title">Pincode : <span class="add-text">${data[i].address.pincode}</span></span><br>
+                                <span class="address1 add-text-title">Address: <span class="add-text">${data[i].address.address}</span></span><br>
+                                <span class="street1 add-text-title">Street: <span class="add-text">${data[i].address.street}</span></span><br>
+                                <span class="landmark1 add-text-title">Landmark: <span class="add-text">${data[i].address.landmark}</span></span><br>
+                                <span class="city1 add-text-title">City: <span class="add-text">${data[i].address.city}</span></span><br>
+                                <span class="state1 add-text-title">State: <span class="add-text">${data[i].address.state}</span></span><br>
+                                <span class="pin1 add-text-title">Pincode: <span class="add-text">${data[i].address.pincode}</span></span><br>
                             </div>
                         </div>
                     </div> 
@@ -224,7 +223,8 @@ const setUpHistory = (data, seller) => {
             }
         }
     }
-    setCount2(count);
+    
+    setHistoryCount(count);
 }
 
 const openDelPopup = (id) => {
@@ -234,22 +234,21 @@ const openDelPopup = (id) => {
     let closeBtn = document.querySelector('.close-btn');
     closeBtn.addEventListener('click', () =>  deleteAlert.style.display = 'none');
 
-    let delBtn = document.querySelector('.del1-btn');
+    let delBtn = document.querySelector('.del-btn');
     delBtn.addEventListener('click', () =>  delProduct(id));
 }
 
-const disableProduct = (id, status) => {
+const disableProductSeller = (id, status) => {
     let data = {
         id: id,
         status: status
     }
 
-    fetch('/disEna-product', {
+    fetch('/toggle-product', {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({data: data})
-    }).then(res => res.json())
-    .then(data => {
+    }).then(res => res.json()).then(data => {
         if(data == 'success') {
             location.reload();
         } else {
@@ -263,8 +262,7 @@ const delProduct = (id) => {
         method: 'post',
         headers: new Headers({'Content-Type' : 'application/json'}),
         body: JSON.stringify({id: id})
-    }).then(res => res.json())
-    .then(data => {
+    }).then(res => res.json()).then(data => {
         if(data == 'success') {
             location.reload();
         } else {
@@ -273,7 +271,7 @@ const delProduct = (id) => {
     })
 }
 
-const setCount = (pro) => {
+const setProductCount = (pro) => {
     const proCount = document.querySelector('.pro-count');
     proCount.innerHTML = pro;
 
@@ -282,7 +280,7 @@ const setCount = (pro) => {
     }
 }
 
-const setCount1 = (order) => {
+const setOrderCount = (order) => {
     const orderCount = document.querySelector('.order-count');
     orderCount.innerHTML = order - 1;
 
@@ -292,7 +290,7 @@ const setCount1 = (order) => {
     }
 }
 
-const setCount2 = (order) => {
+const setHistoryCount = (order) => {
     const orderCount = document.querySelector('.order-history-count');
     orderCount.innerHTML = order - 1;
 

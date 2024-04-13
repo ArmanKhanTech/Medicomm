@@ -18,7 +18,7 @@ const disableProduct = (id, status) => {
         status: status
     }
 
-    fetch('/toogle-product', {
+    fetch('/toggle-product', {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({data: data})

@@ -7,6 +7,16 @@ body {
     display: none;
 }
 
+input[type="text"],
+input[type="password"],
+input[type="email"], 
+input[type="url"], 
+input[type="number"], 
+textarea {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
 #product-name {
     border-radius: 30px;
     border: none;
@@ -36,10 +46,10 @@ textarea {
 }
 
 .add-product-form {
-    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     background: #1fa4cc4a;
-    padding: 30px;
-    margin: 30px;
+    padding: 20px 20px 20px 50px;
 }
 
 .upload-pic {
@@ -52,15 +62,15 @@ textarea {
     margin-top: 10px;
     margin-bottom: 5px;
     border: none;
-    height: 35px;
+    height: 45px;
     width: 100px;
     margin-left: 20px;
     outline: none;
     background-color: #1fa4cc;
-    border-radius: 5px;
+    border-radius: 20px;
     color: white;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .product-images {

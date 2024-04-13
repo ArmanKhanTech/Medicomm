@@ -47,7 +47,7 @@ const createOrders = (data) => {
 const openDelPopup = (order) => {
     document.querySelector('.delete-alert').style.display='flex';
 
-    document.querySelector('.del1-btn').addEventListener('click', () => {
+    document.querySelector('.del-btn').addEventListener('click', () => {
         fetch('/cancel-order', {
             method: 'post',
             headers: new Headers({'Content-Type': 'application/json'}),
