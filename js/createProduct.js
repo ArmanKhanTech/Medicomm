@@ -76,7 +76,7 @@ const createProduct = (data) => {
                 </div>
                 <div class="product-info">
                     <p class="product-brand">${data.name}</p>
-                    <p class="product-shortdes">${data.shortDes}</p>
+                    <p class="product-shortdesc">${data.shortDesc}</p>
                     <p class="product-usage">${data.use}</p>
                     <span class="price">${data.sellPrice}</span>
                     <span class="actual-price">${data.actualPrice}</span>
@@ -105,7 +105,7 @@ const createProduct = (data) => {
                 </div>
                 <div class="product-info">
                     <p class="product-brand">${data.name}</p>
-                    <p class="product-shortdes">${data.shortDes}</p>
+                    <p class="product-shortdesc">${data.shortDesc}</p>
                     <p class="product-usage">${data.use}</p>
                     <span class="price">${data.sellPrice}</span>
                     <span class="actual-price">${data.actualPrice}</span>
@@ -252,7 +252,7 @@ const disableProductSeller = (id, status) => {
         if(data == 'success') {
             location.reload();
         } else {
-            showAlert('Some Problem Occured. Please Try Again :)')
+            showAlert('Some problem occured. Please try again :)')
         }
     })
 }
@@ -266,7 +266,7 @@ const delProduct = (id) => {
         if(data == 'success') {
             location.reload();
         } else {
-            showAlert('Some Problem Occured. Please Try Again :)')
+            showAlert('Some problem occured. Please try again :)')
         }
     })
 }
@@ -285,8 +285,7 @@ const setOrderCount = (order) => {
     orderCount.innerHTML = order - 1;
 
     if(order-1 == 0) {
-        console.log(order);
-        document.querySelector('.no-orders-img').classList.remove('hide');
+        document.querySelector('.no-orders-img').classList.remove('hide'); 
     }
 }
 
@@ -295,7 +294,6 @@ const setHistoryCount = (order) => {
     orderCount.innerHTML = order - 1;
 
     if(order-1 == 0) {
-        console.log(order);
         document.querySelector('.no-history-img').classList.remove('hide');
     }
 }

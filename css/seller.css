@@ -36,9 +36,9 @@ body {
 
 .alert-img {
     display: block;
-    height: 60px;
+    height: 50px;
     margin-top: 28%;
-    margin-left: 37%;
+    margin-left: 40%;
     margin-bottom: 10%;
 }
 
@@ -84,7 +84,7 @@ body {
     font-size: 30px;
 }
 
-.des {
+.desc {
     margin-top: 20px;
     margin-bottom: 20px;
     text-transform: none;
@@ -387,7 +387,7 @@ body {
     margin-bottom: 4px;
 }
 
-.product-shortdes {
+.product-shortdesc {
     text-transform: none;
     font-size: 15px;
     padding: 0px;
@@ -565,7 +565,6 @@ body {
     width: 400px;
     height: 400px;
     margin: auto;
-    border: 1px solid #1fa4cc;
     border-radius: 30px;
     padding: 20px;
     margin-left: 10px;

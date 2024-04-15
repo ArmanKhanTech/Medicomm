@@ -74,17 +74,20 @@ uploadimgbtn.addEventListener('click', () => {
 const showImg = () => {
     link1s = link1.value;
     pic1.src = link1s;
+
     link2s = link2.value;
     pic2.src = link2s;
+
     link3s = link3.value;
     pic3.src = link3s;
+
     link4s = link4.value;
     pic4.src = link4s;
 }
 
 const productName = document.querySelector('#product-name');
 const shortLine = document.querySelector('#short-desc');
-const des = document.querySelector('#descirption');
+const desc = document.querySelector('#descirption');
 
 const stock = document.querySelector('#stock');
 const use = document.querySelector('#use');
@@ -95,27 +98,27 @@ const addProductBtn = document.querySelector('#add-btn');
 
 const validateForm = () => {
     if(!productName.value.length) {
-        return showAlert('Please enter Product\'s Name');
+        return showAlert('Please enter product\'s name');
     } else if(shortLine.value.length > 100 || shortLine.value.length < 10) {
-        return showAlert('Short Description must be between 10 to 100 letters long');
-    } else if(!des.value.length) {
-        return showAlert('Please enter Detailed Description about the Product');
+        return showAlert('Short description must be between 10 to 100 letters long');
+    } else if(!desc.value.length) {
+        return showAlert('Please enter detailed description about the product');
     } else if(!actualPrice.value.length || !discountPercentage.value.length || !sellingPrice.value.length) {
         return showAlert('You must add Pricings');
     } else if(stock.value < 20) {
-        return showAlert('You should have atleast 20 Items in Stock');
+        return showAlert('You should have atleast 20 items in stock');
     } else if(!use.value.length) {
-        return showAlert('Please enter use of the Product');
+        return showAlert('Please enter use of the product');
     } else if(!cate.value.length) {
-        return showAlert('Please enter Category of the Product');
+        return showAlert('Please enter category of the product');
     } else if(!tac.checked) {
-        return showAlert('You must agree our Terms and Conditions');
+        return showAlert('You must agree our terms and conditions');
     } else if(!manuDate.value.length) {
-        return showAlert('Please enter Manufacturing Date of the Product');
+        return showAlert('Please enter manufacturing date of the product');
     } else if(!exDate.value.length) {
-        return showAlert('Please enter Expiry Date of the Product');
+        return showAlert('Please enter expiry date of the product');
     } else if(!perscription.value.length) {
-        return showAlert('Please enter Perscription Detail of the Product');
+        return showAlert('Please enter perscription detail of the product');
     }
 
     d = discount.value;
@@ -145,8 +148,8 @@ const productData = () => {
     if(addDate == todayDate) {
         return data = {
             name: productName.value,
-            shortDes: shortLine.value,
-            des: des.value,
+            shortDesc: shortLine.value,
+            desc: desc.value,
             image1: link1s,
             image2: link2s,
             image3: link3s,
@@ -170,8 +173,8 @@ const productData = () => {
     } else {
         return data = {
             name: productName.value,
-            shortDes: shortLine.value,
-            des: des.value,
+            shortDesc: shortLine.value,
+            desc: desc.value,
             image1: link1s,
             image2: link2s,
             image3: link3s,
@@ -204,7 +207,7 @@ if(proId == decodeURI("addproduct.html")){
 
 addProductBtn.addEventListener('click', () => {
     if(validateForm()){ 
-        loader.style.display = 'block';
+        loader.style.display = 'fixed';
         let data = productData();
         sendData('/add-product', data);
     }
@@ -212,8 +215,8 @@ addProductBtn.addEventListener('click', () => {
 
 const setFormsData = (data) => {
     productName.value = data.name;
-    shortLine.value = data.shortDes;
-    des.value = data.des;
+    shortLine.value = data.shortDesc;
+    desc.value = data.desc;
     link1.value = data.image1;
     link2.value = data.image2;
     link3.value = data.image3;
@@ -242,10 +245,9 @@ const fetchProductData = () => {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({id: proId})
-    }).then((res) => res.json())
-    .then(data => {
+    }).then((res) => res.json()).then(data => {
         setFormsData(data);
-    }).catch(err => {
+    }).catch(_err => {
         location.replace('/seller');
     })
 }

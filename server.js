@@ -51,7 +51,7 @@ app.post('/signup', (req, res) => {
     } else if(!Number(number) || number.length < 10){
         return res.json({'alert': 'Invalid Number'});
     } else if(!tac) {
-        return res.json({'alert': 'You must agree all Terms and Conditions'});
+        return res.json({'alert': 'You must agree all terms and conditions'});
     }   
 
     db.collection('users').doc(email).get().then(user => {
@@ -125,7 +125,7 @@ app.post('/seller', (req, res) => {
         !Number(number)) {
         return res.json({'alert':'Some Information(s) is/are Invalid'});
     } else if(!tac) {
-        return res.json({'alert':'You must agree all Terms and Conditions'});
+        return res.json({'alert':'You must agree all terms and conditions'});
     } else {
         db.collection('sellers').doc(email).set(req.body).then(data => {
             db.collection('users').doc(email).update({
@@ -139,13 +139,13 @@ app.post('/seller', (req, res) => {
 })
 
 app.post('/add-product', (req, res) => {
-    let { name, shortDes, des, actualPrice, discount, sellPrice, stock, use, cate, tac, id} = req.body;
+    let { name, shortDesc, desc, actualPrice, discount, sellPrice, stock, use, cate, tac, id} = req.body;
 
     if(!name.length) {
         return res.json({'alert': 'Please enter Product\'s Name'});
-    } else if(shortDes.length > 100 || shortDes.length < 10) {
+    } else if(shortDesc.length > 100 || shortDesc.length < 10) {
         return res.json({'alert': 'Short Description must be between 10 to 100 letters long'});
-    } else if(!des.length) {
+    } else if(!desc.length) {
         return res.json({'alert': 'Please enter Detailed Description about the Product'});
     } else if(!actualPrice.length || !discount.length || !sellPrice.length) {
         return res.json({'alert': 'You must add Pricings'});
@@ -156,7 +156,7 @@ app.post('/add-product', (req, res) => {
     } else if(!cate.length) {
         return res.json({'alert': 'Please enter category of the Product'});
     } else if(!tac) {
-        return res.json({'alert': 'You must agree our Terms and Conditions'});
+        return res.json({'alert': 'You must agree our terms and conditions'});
     }
 
     db.collection('products').doc(id).set(req.body)

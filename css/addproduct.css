@@ -1,6 +1,6 @@
 body {
     overflow: overlay;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 ::-webkit-scrollbar {
@@ -13,7 +13,7 @@ input[type="email"],
 input[type="url"], 
 input[type="number"], 
 textarea {
-    font-size: 20px;
+    font-size: 18px;
     padding-left: 20px;
 }
 
@@ -22,7 +22,6 @@ textarea {
     border: none;
     height: 50px;
     width: 800px;
-    padding: 10px;
     margin-top: 20px;
     text-transform: capitalize;
 }
@@ -32,7 +31,6 @@ textarea {
     border: none;
     height: 50px;
     width: 800px;
-    padding: 10px;
     margin-top: 20px;
 }
 
@@ -41,7 +39,7 @@ textarea {
     border: none;
     height: 300px;
     width: 800px;
-    padding: 10px;
+    padding-top: 10px;
     margin-top: 20px;
 }
 
@@ -53,7 +51,7 @@ textarea {
 }
 
 .upload-pic {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     margin-bottom: 5px;
 }
@@ -216,7 +214,6 @@ textarea {
     border: none;
     height: 50px;
     width: 175px;
-    padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -228,7 +225,6 @@ textarea {
     border: none;
     height: 50px;
     width: 175px;
-    padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -240,7 +236,6 @@ textarea {
     border: none;
     height: 50px;
     width: 175px;
-    padding: 10px;
     margin-top: 20px;
 }
 
@@ -251,7 +246,6 @@ textarea {
     border: none;
     height: 50px;
     width: 185px;
-    padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 } 
@@ -262,7 +256,6 @@ textarea {
     border: none;
     height: 50px;
     width: 400px;
-    padding: 10px;
     margin-top: 20px;
 }
 
@@ -272,7 +265,6 @@ textarea {
     border: none;
     height: 50px;
     width: 400px;
-    padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -283,7 +275,6 @@ textarea {
     border: none;
     height: 50px;
     width: 400px;
-    padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -294,7 +285,6 @@ textarea {
     border: none;
     height: 50px;
     width: 400px;
-    padding: 10px;
     margin-top: 20px;
 }
 
@@ -304,12 +294,10 @@ textarea {
     border: none;
     height: 50px;
     width: 500px;
-    padding: 10px;
     margin-top: 20px;
 }
 
 .checkbox {
-    -webkit-appearance: none;
     width: 15px;
     height: 15px;
     border-radius: 2px;
@@ -351,9 +339,9 @@ label {
 }
 
 .loader {
-    position: fixed;
+    position: absolute;
     display: none;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
@@ -369,11 +357,11 @@ label {
     width: 150px;
     outline: none;
     background-color: #1fa4cc;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px;
     color: white;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .alert-box {
@@ -400,9 +388,9 @@ label {
 
 .alert-img {
     display: block;
-    height: 60px;
+    height: 50px;
     margin-top: 28%;
-    margin-left: 37%;
+    margin-left: 40%;
     margin-bottom: 10%;
 }
 

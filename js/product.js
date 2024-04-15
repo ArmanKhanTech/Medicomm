@@ -3,7 +3,7 @@ let loader = document.querySelector('.loader');
 
 const productName = document.querySelector('.product-brand');
 const shortLine = document.querySelector('.product-short-desc');
-const des = document.querySelector('.des');
+const desc = document.querySelector('.desc');
 
 const seller = document.querySelector('.sold-by');
 const use = document.querySelector('.use');
@@ -54,7 +54,7 @@ const comparePincode = (sellerPin, userPin) => {
     sellerPin = parseInt(sellerPin);
     userPin = parseInt(userPin);
 
-    let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID`;
+    let url = `https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&desctinations=${userPin}&departure_time=now&key=YOUR TOKEN ID`;
     
     fetch(url)
     .then(response => response.json())
@@ -80,8 +80,8 @@ pinBtn.addEventListener('click', () => {
 
 const setFromsData = (data) => {
     productName.textContent = data.name;
-    shortLine.textContent = data.shortDes;
-    des.innerHTML = data.des;
+    shortLine.textContent = data.shortDesc;
+    desc.innerHTML = data.desc;
     link1s = data.image1;
     link2s = data.image2;
     link3s = data.image3;
@@ -192,7 +192,7 @@ const createProductCards = (data, parent) => {
                     </div>
                     <div class="product-info">
                         <a href="/product/${data[i].id}" class="product-brand">${data[i].name}</a>
-                        <p class="product-short-desc">${data[i].shortDes}</p>
+                        <p class="product-short-descc">${data[i].shortDesc}</p>
                         <p class="Usage">${data[i].use}</p>
                         <span class="price">${data[i].sellPrice}</span>
                         <span class="actual-price">${data[i].actualPrice}</span>

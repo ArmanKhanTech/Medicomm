@@ -4,7 +4,7 @@ const createSmallCart = (data) => {
             <img src="${data.image}" class="sm-product-img" alt="">
             <div class="sm-text">
                 <p class="sm-product-name">${data.name}</p>
-                <p class="sm-des">${data.shortDes}</p>
+                <p class="sm-desc">${data.shortDesc}</p>
             </div>
             <div class="item-counter">
                 <button class="counter-btn decrement" id="decrement">-</button>
@@ -23,7 +23,7 @@ const createWishlist = (data) => {
             <img src="${data.image}" class="sm-product-img" alt="">
             <div class="sm-text">
                 <p class="sm-product-name" id="sm-product-name">${data.name}</p>
-                <p class="sm-des">${data.shortDes}</p>
+                <p class="sm-desc">${data.shortDesc}</p>
             </div>
             <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
             <p class="sm-price" data-price="${data.actualPrice}" id="sm-price">₹${data.actualPrice}</p>

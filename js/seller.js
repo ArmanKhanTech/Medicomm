@@ -29,7 +29,7 @@ applyBtn.addEventListener('click', () =>{
         !about.value.length || !number.value.length ) { 
             showAlert('Fill All the Inputs');
     } else if(!tac.checked) {
-        showAlert('You must agree all the Terms and Conditions');
+        showAlert('You must agree all the terms and conditions');
     } else {
         loader.style.display = 'block';
         sendData('/seller' , {

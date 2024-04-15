@@ -12,7 +12,7 @@ const add_to_wishlist = (product) => {
         item: 1,
         name: product.name,
         actualPrice: priceInNum,
-        shortDes: product.shortDes,
+        shortDesc: product.shortDesc,
         image: product.image1,
         quantity: 0,
         id: product.id

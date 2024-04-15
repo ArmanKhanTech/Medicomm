@@ -191,7 +191,7 @@ const createSmallCart = (data) => {
             <img src="${data.image}" class="sm-product-img" alt="">
             <div class="sm-text">
                 <p class="sm-product-name">${data.name}</p>
-                <p class="sm-des">${data.shortDes}</p>
+                <p class="sm-desc">${data.shortDesc}</p>
             </div>
             <div class="item-counter">
                 <p class="quantity" id="quantity">Quantity:</p>

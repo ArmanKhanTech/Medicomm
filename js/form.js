@@ -21,7 +21,7 @@ submitBtn.addEventListener('click', () => {
         } else if(!Number(number.value) || number.value.length < 10) {
             showAlert('Invalid Number');
         } else if(!tac.checked) {
-            showAlert('You must agree all Terms and Conditions');
+            showAlert('You must agree all terms and conditions');
         } else{
             loader.style.display = 'block';
             sendData('/signup', {
