@@ -158,31 +158,31 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
 
 <ol>
   <li>
-    Purchase or Sell Medicines & other Medical Products.
+    Purchase or Sell Medicines & other Medical Products
   </li>
   <li>
-    Seller's Dashboard with Inventory Management.
+    Seller's Dashboard with Inventory Management
   </li>
   <li>
-    Order Cart & Wishlist.
+    Order Cart & Wishlist
   </li>
   <li>
-    Order Tracking & History along with its Cancelling.
+    Order Tracking & History along with its Cancelling
   </li>
   <li>
-    Online Payment with Razorpay.
+    Online Payment with Razorpay
   </li>
   <li>
-    Check Item Availability using Pincode.
+    Check Items Availability using Pincode
   </li>
   <li>
-    Search Item by Name, Type, Category or Usage.
+    Search Items by Name, Type, Category or Usage
   </li>
   <li>
-    Submit Grievances.
+    Submit Grievances
   </li>
   <li>
-    Signup and Login.
+    Signup and Login
   </li>
 </ol>
 
