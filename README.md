@@ -56,7 +56,7 @@
 
 
 
-## About The Project
+## About the Project
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
@@ -173,7 +173,7 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
     Online Payment with Razorpay
   </li>
   <li>
-    Check Items Availability using Pincode
+    Check Item's Availability using Pincode
   </li>
   <li>
     Search Items by Name, Type, Category or Usage
