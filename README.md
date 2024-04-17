@@ -64,7 +64,7 @@ This e-pharmacy is a business model that deals with the preparation and sale of 
 
 **Ideal to view only on 1920x1080p display since this website isn't responsive.**
 
-### Built With
+### Built with
 
 * [![HTML][HTML]][HTML-url]
 * [![CSS][CSS]][CSS-url]
