@@ -201,11 +201,8 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-
 Don't forget to give the project a star!
-
 Thanks again!
 
 ## License
@@ -215,9 +212,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Arman Khan - ak2341776@gmail.com
-
 Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/ArmanKhanTech/Medicomm)
-
 DockerHub Link - https://hub.docker.com/r/armankhan792/medicomm
 
 [contributors-shield]: https://img.shields.io/github/contributors/ArmanKhanTech/Medicomm.svg?style=for-the-badge
