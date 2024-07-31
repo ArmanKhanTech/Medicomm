@@ -12,18 +12,20 @@
   </a>
 
   <h3 align="center">Medicomm</h3>
+  <p align="center">Status: Completed</p>
+  <p align="center">A pharmaceutical e-commerce website.</p>
 
   <p align="center">
-    A pharmaceutical e-commerce website.
-    <br>
     <a href="https://github.com/ArmanKhanTech/Medicomm"><strong>Explore the docs »</strong></a>
-    <br>
-    <br>
+    <br />
     <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Report a Bug</a>
     ·
     <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Request new Features</a>
   </p>
 </div>
+<br />
+
+
 
 <details>
   <summary>Table of Contents</summary>
@@ -42,7 +44,6 @@
       </ul>
     </li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -54,7 +55,7 @@
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
-**Now also available on <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker<b></a>**
+**Now also available on <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker</b></a>**
 
 **Ideal to view only on 1920x1080p display since this website isn't responsive.**
 
@@ -70,10 +71,10 @@ This e-pharmacy is a business model that deals with the preparation and sale of 
 ## Getting Started
 
 Run the following command in your project directory's terminal
-
-```javascript
-npm install
-```
+  
+  ```javascript
+  npm install
+  ```
 
 ### Prerequisites
 
@@ -91,14 +92,19 @@ npm install
 
 ### Installation
 
-1. Clone this repository
+1. Clone this repository:
+   
    ```sh
    git clone https://github.com/ArmanKhanTech/Medicomm.git
    ```
-   <br>
-2. Make the following changes in<br>
-   <br>**a) `/server.js`**<br><br>
-   `Line 8` : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
+
+2. Make the following changes in:
+   <br/>
+   <br />
+   **a) `/server.js`**
+   <br />
+   <br />
+   `Line 8` : Enter your Razorpay ID & SECRET ID here (nessecary for online payment):
 
    ```javascript
    const Razorpay = require("razorpay");
@@ -108,13 +114,17 @@ npm install
    });
    ```
 
-   <br>`Line 13` : Enter the name of your firebase credential file here (the one you will download from your firebase console)
+   <br>
+   
+   `Line 13` : Enter the name of your firebase credential file here (the one you will download from your firebase console)
 
    ```javascript
    let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
    ```
 
-   <br>`Line 511` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order)
+   <br>
+   
+   `Line 511` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order)
 
    ```javascript
    let transporter = nodemailer.createTransport({
@@ -126,7 +136,11 @@ npm install
    });
    ```
 
-   <br>**b) `/js/product.js`**<br><br>
+   <br>
+   
+   **b) `/js/product.js`**
+   <br />
+   <br />
    `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too)
 
    ```javascript
@@ -134,7 +148,11 @@ npm install
      "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
    ```
 
-   <br>**c) `/js/checkout.js`**<br><br>
+   <br>
+   
+   **c) `/js/checkout.js`**
+   <br />
+   <br />
    `Line 63` : Enter your Razorpay ID here :<br>
 
    ```javascript
@@ -149,7 +167,7 @@ npm install
 
 **OR**
 
-Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHub<b></a>
+Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHub</b></a>
 
 ## Features
 
@@ -183,21 +201,7 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
   </li>
 </ol>
 
-## Roadmap
 
-- [x] Add Signup & Login
-- [x] Add Home Page
-- [x] Add Prodcut Landing Page
-- [x] Add Search Page
-- [x] Add Cart & Wishlist
-- [x] Add Seller's Dashboard
-- [x] Add Invertory Management
-- [x] Add Checkout Page
-- [x] Add Order Tracking, History & Cancellation
-- [x] Add Online Payment
-- [x] Add Grievances
-
-See the [open issues](https://github.com/ArmanKhanTech/Medicomm/issues) for a full list of proposed features (and known issues).
 
 ## Contributing
 
