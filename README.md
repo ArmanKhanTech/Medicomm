@@ -55,7 +55,7 @@
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
 
-**Now also available on <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker</b></a>**
+**Now also available on <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker.</b></a>**
 
 **Ideal to view only on 1920x1080p display since this website isn't responsive.**
 
@@ -70,7 +70,7 @@ This e-pharmacy is a business model that deals with the preparation and sale of 
 
 ## Getting Started
 
-Run the following command in your project directory's terminal
+Run the following command in your project directory's terminal:
   
   ```javascript
   npm install
@@ -162,7 +162,7 @@ Run the following command in your project directory's terminal
 
 **OR**
 
-Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHub</b></a>
+Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHub.</b></a>
 
 ## Features
 
