@@ -1,403 +1,401 @@
 body {
-    overflow: overlay;
-    font-size: 18px;
+  overflow: overlay;
+  font-size: 18px;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 input[type="text"],
 input[type="password"],
-input[type="email"], 
-input[type="url"], 
-input[type="number"], 
+input[type="email"],
+input[type="url"],
+input[type="number"],
 textarea {
-    font-size: 18px;
-    padding-left: 20px;
+  font-size: 18px;
+  padding-left: 20px;
 }
 
 #product-name {
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 800px;
-    margin-top: 20px;
-    text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 800px;
+  margin-top: 20px;
+  text-transform: capitalize;
 }
 
 #short-desc {
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 800px;
-    margin-top: 20px;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 800px;
+  margin-top: 20px;
 }
 
 textarea {
-    border-radius: 30px;
-    border: none;
-    height: 300px;
-    width: 800px;
-    padding-top: 10px;
-    margin-top: 20px;
+  border-radius: 30px;
+  border: none;
+  height: 300px;
+  width: 800px;
+  padding-top: 10px;
+  margin-top: 20px;
 }
 
 .add-product-form {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background: #1fa4cc4a;
-    padding: 20px 20px 20px 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #1fa4cc4a;
+  padding: 20px 20px 20px 50px;
 }
 
 .upload-pic {
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .img-upload-btn {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    border: none;
-    height: 45px;
-    width: 100px;
-    margin-left: 20px;
-    outline: none;
-    background-color: #1fa4cc;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+  height: 45px;
+  width: 100px;
+  margin-left: 20px;
+  outline: none;
+  background-color: #1fa4cc;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .product-images {
-    width: 100%;
-    height: 320px;
-    border: none;
-    display: grid;
-    margin-top: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
+  width: 100%;
+  height: 320px;
+  border: none;
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
 }
 
 .link-img-1 {
-    display: inline;
-    border-radius: 30px;
-    border: none;
-    min-height: 50px;
-    min-width: 500px;
-    padding: 10px;
-    margin-top: 5px;
+  display: inline;
+  border-radius: 30px;
+  border: none;
+  min-height: 50px;
+  min-width: 500px;
+  padding: 10px;
+  margin-top: 5px;
 }
 
 .link-img-2 {
-    display: inline;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 500px;
-    padding: 10px;
-    margin-top: 20px;
+  display: inline;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 500px;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .link-img-3 {
-    display: inline;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 500px;
-    padding: 10px;
-    margin-top: 20px;
+  display: inline;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 500px;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .link-img-4 {
-    display: inline;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 500px;
-    padding: 10px;
-    margin-top: 20px;
+  display: inline;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 500px;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .product-image-div-1 {
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    width: 320px;
-    height: 320px;
-    background-color: #fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image-div-1 img {
-    margin: auto;
+  margin: auto;
 }
 
 .product-image-div-2 {
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    width: 320px;
-    height: 320px;
-    background-color: #fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image-div-2 img {
-    margin: auto;
+  margin: auto;
 }
 
-
 .product-image-div-3 {
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    width: 320px;
-    height: 320px;
-    background-color: #fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image-div-3 img {
-    margin: auto;
+  margin: auto;
 }
 
-
 .product-image-div-4 {
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    width: 320px;
-    height: 320px;
-    background-color: #fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image-div-4 img {
-    margin: auto;
+  margin: auto;
 }
 
 .fileupload {
-    border: none;
-    width: 150px;
-    outline: none;
-    margin-top: 20px;
-    margin-left: 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    color: transparent;
+  border: none;
+  width: 150px;
+  outline: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  color: transparent;
 }
 
 .label {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 #sell-price {
-    display: inline;
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 175px;
-    margin-top: 20px;
-    margin-left: 20px;
+  display: inline;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 175px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 #discount {
-    display: inline;
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 175px;
-    margin-top: 20px;
-    margin-left: 20px;
+  display: inline;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 175px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 #actual-price {
-    display: inline;
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 175px;
-    margin-top: 20px;
+  display: inline;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 175px;
+  margin-top: 20px;
 }
 
 #stock {
-    display: inline;
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 185px;
-    margin-top: 20px;
-    margin-left: 20px;
-} 
+  display: inline;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 185px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
 #use {
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 400px;
-    margin-top: 20px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 400px;
+  margin-top: 20px;
 }
 
 #cate {
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 400px;
-    margin-top: 20px;
-    margin-left: 20px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 400px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 #exDate {
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 400px;
-    margin-top: 20px;
-    margin-left: 20px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 400px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 #manuDate {
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 400px;
-    margin-top: 20px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 400px;
+  margin-top: 20px;
 }
 
 #perscription {
-    text-transform: capitalize;
-    border-radius: 30px;
-    border: none;
-    height: 50px;
-    width: 500px;
-    margin-top: 20px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  border: none;
+  height: 50px;
+  width: 500px;
+  margin-top: 20px;
 }
 
 .checkbox {
-    width: 15px;
-    height: 15px;
-    border-radius: 2px;
-    background: #fff;
-    margin-top: 20px;
-    border: 1px solid #1fa4cc;
-    cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background: #fff;
+  margin-top: 20px;
+  border: 1px solid #1fa4cc;
+  cursor: pointer;
 }
 
 .checkbox:checked {
-    background: #1fa4cc;
+  background: #1fa4cc;
 }
 
 .checkbox::after {
-    content: '';
-    top: 60%;
-    left: 50%;
-    position: relative;;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 100%;
-    pointer-events: none;
-    background-image: url(../images/check.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: none;
+  content: "";
+  top: 60%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url(../images/check.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
 }
 
 .checkbox:checked::after {
-    display: block;
+  display: block;
 }
 
 label {
-    display: inline-block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: #383838;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #383838;
 }
 
 .loader {
-    position: absolute;
-    display: none;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 300px;
-    border-radius: 30px;
-    background: #fff;
-    border: 1px solid #1fa4cc;
+  position: absolute;
+  display: none;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 300px;
+  border-radius: 30px;
+  background: #fff;
+  border: 1px solid #1fa4cc;
 }
 
 .confirm-btn {
-    margin-top: 10px;
-    border: none;
-    width: 150px;
-    outline: none;
-    background-color: #1fa4cc;
-    border-radius: 20px;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
+  margin-top: 10px;
+  border: none;
+  width: 150px;
+  outline: none;
+  background-color: #1fa4cc;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .alert-box {
-    width: 310px;
-    min-height: 310px;
-    background: #fff;
-    border-radius: 30px;
-    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s;
+  width: 310px;
+  min-height: 310px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
 }
 
 .alert-box.show {
-    opacity: 1;
-    pointer-events: all;
-    top: 50%;
+  opacity: 1;
+  pointer-events: all;
+  top: 50%;
 }
 
 .alert-img {
-    display: block;
-    height: 50px;
-    margin-top: 28%;
-    margin-left: 40%;
-    margin-bottom: 10%;
+  display: block;
+  height: 50px;
+  margin-top: 28%;
+  margin-left: 40%;
+  margin-bottom: 10%;
 }
 
 .alert-msg {
-    color: #e24c4b;
-    font-size: 20px;
-    text-align: center;
-    line-height: 30px;
-    font-weight: 500;
+  color: #e24c4b;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 500;
 }

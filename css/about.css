@@ -1,27 +1,27 @@
 body {
-    overflow: overlay;
+  overflow: overlay;
 }
 
-::-webkit-scrollbar  {
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
 
 .about-section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background: #1fa4cc4a;
-    padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #1fa4cc4a;
+  padding: 20px;
 }
 
 .about-heading {
-    font-size: 40px;
-    font-weight: 600;
-    color: #000000;
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .about {
-    display: flex;
-    font-size: 20px;
+  display: flex;
+  font-size: 20px;
 }

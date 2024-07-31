@@ -1,286 +1,285 @@
 .order-section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background: #1fa4cc4a;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 40px;
-    padding-left: 40px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #1fa4cc4a;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .order-heading {
-    font-size: 30px;
-    margin: 20px 0;
-    border: #1fa4cc 1px solid;
-    padding: 15px;
-    border-radius: 25px;
-    width: fit-content;
+  font-size: 30px;
+  margin: 20px 0;
+  border: #1fa4cc 1px solid;
+  padding: 15px;
+  border-radius: 25px;
+  width: fit-content;
 }
 
 .no-orders-img-1 {
-    width: 400px;
-    height: 400px;
-    margin-top: 20px;
-    border: 1px solid #1fa4cc;
-    border-radius: 30px;
-    display: block;
-    padding: 20px;
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+  border: 1px solid #1fa4cc;
+  border-radius: 30px;
+  display: block;
+  padding: 20px;
 }
 
 .no-orders-img-2 {
-    width: 400px;
-    height: 400px;
-    margin-top: 20px;
-    border: 1px solid #1fa4cc;
-    border-radius: 30px;
-    display: block;
-    padding: 20px;
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+  border: 1px solid #1fa4cc;
+  border-radius: 30px;
+  display: block;
+  padding: 20px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .product-list {
-    width: 40%;
-    margin-left: 20px;
+  width: 40%;
+  margin-left: 20px;
 }
 
 .history-list {
-    width: 40%;
-    margin-right: 20px;
+  width: 40%;
+  margin-right: 20px;
 }
 
 .order .history {
-    width: 100%;
-    padding: 20px;
-    border-radius: 30px;
-    margin-bottom: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  margin-bottom: 20px;
 }
 
 .sm-product {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 20px;
-    border: 1px solid #1fa4cc;
-    padding: 20px;
-    padding-left: 0px;
-    border-radius: 25px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  border: 1px solid #1fa4cc;
+  padding: 20px;
+  padding-left: 0px;
+  border-radius: 25px;
 }
 
 .cart .sm-product:last-child {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .sm-product-img {
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .sm-text {
-    width: 50%;
-    margin-left: 20px;
+  width: 50%;
+  margin-left: 20px;
 }
 
 .sm-product-name {
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: capitalize;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 .status {
-    font-size: 18px;
-    text-transform: capitalize;
-    margin-top: 5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-top: 5px;
 }
 
 .status-ans {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .item-counter {
-    width: 90px;
-    height: 30px;
-    display: flex;
-    margin-right: 20px;
+  width: 90px;
+  height: 30px;
+  display: flex;
+  margin-right: 20px;
 }
 
 .sm-price {
-    font-size: 30px;
-    font-weight: 500;
-    color: black;
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
 }
 
 .sm-delete-btn {
-    position: absolute;
-    top: 5%;
-    left: 5px;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    background: #fff;
-    cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
 }
 
 .sm-delete-btn img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .quantity {
-    background: #1fa4cc;
-    color: white;
-    font-size: 15px;
-    padding: 3px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 5px;
-    align-items: center;
-    text-align: center;
-    border-radius: 3px 0px 0px 3px;
+  background: #1fa4cc;
+  color: white;
+  font-size: 15px;
+  padding: 3px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px 0px 0px 3px;
 }
 
 .item-count {
-    border-radius: 0px 3px 3px 0px;
-    text-align: center;
-    line-height: 30px;
-    background: #1fa4cc;
-    color: white;
-    font-weight: bold;
-    padding-right: 5px;
-    padding-left: 2px;
+  border-radius: 0px 3px 3px 0px;
+  text-align: center;
+  line-height: 30px;
+  background: #1fa4cc;
+  color: white;
+  font-weight: bold;
+  padding-right: 5px;
+  padding-left: 2px;
 }
 
 .loader {
-    position: absolute;
-    display: fixed;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 300px;
-    border-radius: 30px;
-    background: #fff;
-    border: 1px solid #1fa4cc;
+  position: absolute;
+  display: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 300px;
+  border-radius: 30px;
+  background: #fff;
+  border: 1px solid #1fa4cc;
 }
 
 .delete-alert {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top:0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .close-img {
-    height: 20px;
-    width: 20px;
-    border: none;
+  height: 20px;
+  width: 20px;
+  border: none;
 }
 
 .delete-alert {
-    display: none;
+  display: none;
 }
 
 .alert {
-    width: 350px;
-    height: auto;
-    border-radius: 30px;
-    background: #fff;
-    position: fixed;
-    padding: 15px;
+  width: 350px;
+  height: auto;
+  border-radius: 30px;
+  background: #fff;
+  position: fixed;
+  padding: 15px;
 }
 
 .close-btn-del {
-    position: absolute;
-    border: none;
-    top: 15px;
-    right: 15px;
-    background: none;
-    cursor: pointer;
+  position: absolute;
+  border: none;
+  top: 15px;
+  right: 15px;
+  background: none;
+  cursor: pointer;
 }
 
 .del-warn-img {
-    height: 200px;
-    width: 200px;
-    margin-left: 70px;
-    margin-top: 20px;
+  height: 200px;
+  width: 200px;
+  margin-left: 70px;
+  margin-top: 20px;
 }
 
 .del-warn-text {
-    margin: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .del-btn {
-    cursor: pointer;
-    padding: 10px;
-    margin-top: 10px;
-    background: #ff3e3e;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    margin-left: 125px;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 10px;
+  background: #ff3e3e;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 125px;
 }
 
 .alert-box {
-    width: 310px;
-    min-height: 310px;
-    background: #fff;
-    border-radius: 30px;
-    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s;
+  width: 310px;
+  min-height: 310px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
 }
 
 .alert-box.show {
-    opacity: 1;
-    pointer-events: all;
-    top: 50%;
+  opacity: 1;
+  pointer-events: all;
+  top: 50%;
 }
 
 .alert-img {
-    display: block;
-    height: 60px;
-    margin-top: 25%;
-    margin-left: 38%;
-    margin-bottom: 10%;
+  display: block;
+  height: 60px;
+  margin-top: 25%;
+  margin-left: 38%;
+  margin-bottom: 10%;
 }
 
 .alert-msg {
-    color: #e24c4b;
-    font-size: 20px;
-    text-align: center;
-    line-height: 30px;
-    font-weight: 500;
+  color: #e24c4b;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 500;
 }
-  

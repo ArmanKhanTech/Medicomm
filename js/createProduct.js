@@ -1,61 +1,60 @@
 let openEditor;
 
-const radio = document.querySelector('.tabs');
+const radio = document.querySelector(".tabs");
 
-radio.addEventListener('change', () => {
-    const radioVal = document.querySelector('input[name="tabs"]:checked').value;
-    if(radioVal == 'products') {
-        document.querySelector('.add-product').classList.remove('hide');
-        document.querySelector('.product-container').classList.remove('hide');
-        document.querySelector('.heading-4').classList.add('hide');
-        document.querySelector('.order-list').classList.add('hide');
-        document.querySelector('.heading-5').classList.add('hide');
-        document.querySelector('.order-history-list').classList.add('hide');
-    } else if(radioVal == 'orders') {
-        document.querySelector('.heading-4').classList.remove('hide');
-        document.querySelector('.order-list').classList.remove('hide');
-        document.querySelector('.add-product').classList.add('hide');
-        document.querySelector('.product-container').classList.add('hide');
-        document.querySelector('.heading-5').classList.add('hide');
-        document.querySelector('.order-history-list').classList.add('hide');
-    } else if(radioVal == 'history') {
-        document.querySelector('.heading-5').classList.remove('hide');
-        document.querySelector('.order-history-list').classList.remove('hide');
-        document.querySelector('.heading-4').classList.add('hide');
-        document.querySelector('.order-list').classList.add('hide');
-        document.querySelector('.add-product').classList.add('hide');
-        document.querySelector('.product-container').classList.add('hide');
-    }
-    
-})
+radio.addEventListener("change", () => {
+  const radioVal = document.querySelector('input[name="tabs"]:checked').value;
+  if (radioVal == "products") {
+    document.querySelector(".add-product").classList.remove("hide");
+    document.querySelector(".product-container").classList.remove("hide");
+    document.querySelector(".heading-4").classList.add("hide");
+    document.querySelector(".order-list").classList.add("hide");
+    document.querySelector(".heading-5").classList.add("hide");
+    document.querySelector(".order-history-list").classList.add("hide");
+  } else if (radioVal == "orders") {
+    document.querySelector(".heading-4").classList.remove("hide");
+    document.querySelector(".order-list").classList.remove("hide");
+    document.querySelector(".add-product").classList.add("hide");
+    document.querySelector(".product-container").classList.add("hide");
+    document.querySelector(".heading-5").classList.add("hide");
+    document.querySelector(".order-history-list").classList.add("hide");
+  } else if (radioVal == "history") {
+    document.querySelector(".heading-5").classList.remove("hide");
+    document.querySelector(".order-history-list").classList.remove("hide");
+    document.querySelector(".heading-4").classList.add("hide");
+    document.querySelector(".order-list").classList.add("hide");
+    document.querySelector(".add-product").classList.add("hide");
+    document.querySelector(".product-container").classList.add("hide");
+  }
+});
 
 const setUpColor = (data) => {
-    const proStatus = document.querySelectorAll('#product-status');
-    for(let i = 0; i < data.length; i++) {
-        if(data[i].status == 'Active') {
-            proStatus[i].style.color = '#1fa4cc';
-        }
+  const proStatus = document.querySelectorAll("#product-status");
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].status == "Active") {
+      proStatus[i].style.color = "#1fa4cc";
     }
-}
+  }
+};
 
 const createProduct = (data) => {
-    openEditor = (id) => {
-        sessionStorage.tempProduct = JSON.stringify(data);
-        location.href = `/add-product/${id}`;
-    }
+  openEditor = (id) => {
+    sessionStorage.tempProduct = JSON.stringify(data);
+    location.href = `/add-product/${id}`;
+  };
 
-    openProduct = (id) => {
-        sessionStorage.tempProduct = JSON.stringify(data);
-        location.href = `/product/${id}`;
-    }
+  openProduct = (id) => {
+    sessionStorage.tempProduct = JSON.stringify(data);
+    location.href = `/product/${id}`;
+  };
 
-    let active = 'Active';
-    let disabled = 'Disabled';
+  let active = "Active";
+  let disabled = "Disabled";
 
-    let proConatiner = document.querySelector('.product-container');
+  let proConatiner = document.querySelector(".product-container");
 
-    if(data.status == 'Active') {
-        proConatiner.innerHTML += `
+  if (data.status == "Active") {
+    proConatiner.innerHTML += `
             <div class="product-card">
                 <div class="product-image">
                     <span class="discount-tag">${data.discount}</span>
@@ -83,8 +82,8 @@ const createProduct = (data) => {
                 </div>
             </div> 
         `;
-    } else {
-        proConatiner.innerHTML += `
+  } else {
+    proConatiner.innerHTML += `
             <div class="product-card">
                 <div class="product-image">
                     <span class="discount-tag">${data.discount}</span>
@@ -112,20 +111,25 @@ const createProduct = (data) => {
                 </div>
             </div> 
         `;
-    }
-}
+  }
+};
 
 const createOrders = (data, seller) => {
-    let count = parseInt(1);
-    let orderArr = [];
+  let count = parseInt(1);
+  let orderArr = [];
 
-    let orderConatiner = document.querySelector('.order-container');
+  let orderConatiner = document.querySelector(".order-container");
 
-    for(let i = 0; i < data.length; i++) {
-        for(let j = 0; j < data[i].order.length; j++){
-            if(data[i].order[j].soldby == seller && data[i].order[j].status != 'Delivered' && data[i].order[j].status != 'Cancelled'
-            && data[i].order[j].status != 'Returned' &&  data[i].order[j].status != 'Failed') {
-                orderConatiner.innerHTML += `
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < data[i].order.length; j++) {
+      if (
+        data[i].order[j].soldby == seller &&
+        data[i].order[j].status != "Delivered" &&
+        data[i].order[j].status != "Cancelled" &&
+        data[i].order[j].status != "Returned" &&
+        data[i].order[j].status != "Failed"
+      ) {
+        orderConatiner.innerHTML += `
                     <div class="product-card-order">
                         <div class="product-image">
                         <span class="num">${count}</span>
@@ -149,55 +153,61 @@ const createOrders = (data, seller) => {
                             </div>
                         </div>
                     </div> 
-                `;  
-                orderArr.push(data[i]);
-                count++;
-            }
-        }
+                `;
+        orderArr.push(data[i]);
+        count++;
+      }
     }
-  
-    setUpHistory(data, seller);
-    setOrderCount(count);
-    setUpEventsForOrderStatUpdate(orderArr);
-}
+  }
+
+  setUpHistory(data, seller);
+  setOrderCount(count);
+  setUpEventsForOrderStatUpdate(orderArr);
+};
 
 const setUpEventsForOrderStatUpdate = (data) => {
-    let statUpdate = document.querySelectorAll('#change-status-btn');
+  let statUpdate = document.querySelectorAll("#change-status-btn");
 
-    for(let i = 0; i < data.length; i++) {
-        for(let j = 0; j < data[i].order.length; j++) {
-            if(statUpdate[i]){
-                statUpdate[i].addEventListener('click', () => {
-                    fetch('/update-status', {
-                        method: 'post',
-                        headers: new Headers({'Content-Type': 'application/json'}),
-                        body: JSON.stringify({
-                            order: data[i].order[j],
-                            email: data[i].email,
-                        })
-                    }).then(res => res.json())
-                    .then(data => {
-                        if(data == 'success') {
-                            location.reload();
-                            console.log('Order Updated');
-                        } 
-                    })
-                })
-            }
-        }
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < data[i].order.length; j++) {
+      if (statUpdate[i]) {
+        statUpdate[i].addEventListener("click", () => {
+          fetch("/update-status", {
+            method: "post",
+            headers: new Headers({ "Content-Type": "application/json" }),
+            body: JSON.stringify({
+              order: data[i].order[j],
+              email: data[i].email,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data == "success") {
+                location.reload();
+                console.log("Order Updated");
+              }
+            });
+        });
+      }
     }
-}
+  }
+};
 
 const setUpHistory = (data, seller) => {
-    let count = parseInt(1);
+  let count = parseInt(1);
 
-    let orderConatiner = document.querySelector('.order-history-container');
+  let orderConatiner = document.querySelector(".order-history-container");
 
-    for(let i = 0; i < data.length; i++) {
-        for(let j = 0; j < data[i].order.length; j++){
-            if(data[i].order[j].soldby == seller && data[i].order[j].status == 'Delivered' || data[i].order[j].status == 'Cancelled'
-            || data[i].order[j].status == 'Returned' || data[i].order[j].status == 'Failed'){
-                orderConatiner.innerHTML += `
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < data[i].order.length; j++) {
+      if (
+        (data[i].order[j].soldby == seller &&
+          data[i].order[j].status == "Delivered") ||
+        data[i].order[j].status == "Cancelled" ||
+        data[i].order[j].status == "Returned" ||
+        data[i].order[j].status == "Failed"
+      ) {
+        orderConatiner.innerHTML += `
                     <div class="product-card-order">
                         <div class="product-image">
                         <span class="num">${count}</span>
@@ -218,86 +228,92 @@ const setUpHistory = (data, seller) => {
                             </div>
                         </div>
                     </div> 
-                `;  
-                count++;
-            }
-        }
+                `;
+        count++;
+      }
     }
-    
-    setHistoryCount(count);
-}
+  }
+
+  setHistoryCount(count);
+};
 
 const openDelPopup = (id) => {
-    let deleteAlert = document.querySelector('.delete-alert');
-    deleteAlert.style.display = 'flex';
+  let deleteAlert = document.querySelector(".delete-alert");
+  deleteAlert.style.display = "flex";
 
-    let closeBtn = document.querySelector('.close-btn');
-    closeBtn.addEventListener('click', () =>  deleteAlert.style.display = 'none');
+  let closeBtn = document.querySelector(".close-btn");
+  closeBtn.addEventListener(
+    "click",
+    () => (deleteAlert.style.display = "none"),
+  );
 
-    let delBtn = document.querySelector('.del-btn');
-    delBtn.addEventListener('click', () =>  delProduct(id));
-}
+  let delBtn = document.querySelector(".del-btn");
+  delBtn.addEventListener("click", () => delProduct(id));
+};
 
 const disableProductSeller = (id, status) => {
-    let data = {
-        id: id,
-        status: status
-    }
+  let data = {
+    id: id,
+    status: status,
+  };
 
-    fetch('/toggle-product', {
-        method: 'post',
-        headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify({data: data})
-    }).then(res => res.json()).then(data => {
-        if(data == 'success') {
-            location.reload();
-        } else {
-            showAlert('Some problem occured. Please try again :)')
-        }
-    })
-}
+  fetch("/toggle-product", {
+    method: "post",
+    headers: new Headers({ "Content-Type": "application/json" }),
+    body: JSON.stringify({ data: data }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data == "success") {
+        location.reload();
+      } else {
+        showAlert("Some problem occured. Please try again :)");
+      }
+    });
+};
 
 const delProduct = (id) => {
-    fetch('/delete-product', {
-        method: 'post',
-        headers: new Headers({'Content-Type' : 'application/json'}),
-        body: JSON.stringify({id: id})
-    }).then(res => res.json()).then(data => {
-        if(data == 'success') {
-            location.reload();
-        } else {
-            showAlert('Some problem occured. Please try again :)')
-        }
-    })
-}
+  fetch("/delete-product", {
+    method: "post",
+    headers: new Headers({ "Content-Type": "application/json" }),
+    body: JSON.stringify({ id: id }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data == "success") {
+        location.reload();
+      } else {
+        showAlert("Some problem occured. Please try again :)");
+      }
+    });
+};
 
 const setProductCount = (pro) => {
-    const proCount = document.querySelector('.pro-count');
-    proCount.innerHTML = pro;
+  const proCount = document.querySelector(".pro-count");
+  proCount.innerHTML = pro;
 
-    if(pro == 0) {
-        document.querySelector('.no-products-img').classList.remove('hide');
-    }
-}
+  if (pro == 0) {
+    document.querySelector(".no-products-img").classList.remove("hide");
+  }
+};
 
 const setOrderCount = (order) => {
-    const orderCount = document.querySelector('.order-count');
-    orderCount.innerHTML = order - 1;
+  const orderCount = document.querySelector(".order-count");
+  orderCount.innerHTML = order - 1;
 
-    if(order-1 == 0) {
-        document.querySelector('.no-orders-img').classList.remove('hide'); 
-    }
-}
+  if (order - 1 == 0) {
+    document.querySelector(".no-orders-img").classList.remove("hide");
+  }
+};
 
 const setHistoryCount = (order) => {
-    const orderCount = document.querySelector('.order-history-count');
-    orderCount.innerHTML = order - 1;
+  const orderCount = document.querySelector(".order-history-count");
+  orderCount.innerHTML = order - 1;
 
-    if(order-1 == 0) {
-        document.querySelector('.no-history-img').classList.remove('hide');
-    }
-}
+  if (order - 1 == 0) {
+    document.querySelector(".no-history-img").classList.remove("hide");
+  }
+};
 
-document.querySelector('.add-product').classList.remove('hide');
-document.querySelector('.product-container').classList.remove('hide');
-
+document.querySelector(".add-product").classList.remove("hide");
+document.querySelector(".product-container").classList.remove("hide");

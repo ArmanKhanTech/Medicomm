@@ -1,5 +1,5 @@
 const createSmallCart = (data) => {
-    return `
+  return `
         <div class="sm-product">
             <img src="${data.image}" class="sm-product-img" alt="">
             <div class="sm-text">
@@ -15,10 +15,10 @@ const createSmallCart = (data) => {
             <button class="sm-delete-btn" id="sm-delete-btn"><img src="images/close.png"></button>
         </div>
     `;
-}
+};
 
 const createWishlist = (data) => {
-    return `
+  return `
         <div class="sm-product">
             <img src="${data.image}" class="sm-product-img" alt="">
             <div class="sm-text">
@@ -30,164 +30,163 @@ const createWishlist = (data) => {
             <button class="sm-delete-btn2" id="sm-delete-btn2"><img src="images/close.png"></button>
         </div>
     `;
-}
+};
 
 let totalBill = parseInt(0);
-let billPrice = document.querySelector('.bill');
-const checkoutSection = document.querySelector('.checkout-section');
+let billPrice = document.querySelector(".bill");
+const checkoutSection = document.querySelector(".checkout-section");
 
-const setProducts = (name) => {
-    const element = document.querySelector(`.${name}`);
-    let data = JSON.parse(localStorage.getItem(name));
-    
-    if(data == null || data.length == 0 && name == 'cart') {
-        element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
-        checkoutSection.style.display = 'none';
-    } else {
-        for(let i = 0; i < data.length; i++) {
-            element.innerHTML += createSmallCart(data[i]);
-            temp = data[i].name;
-            totalBill = parseInt(totalBill + (data[i].actualPrice  * data[i].quantity)); 
-        }
-        updateBill(totalBill, 'new');
+const setCart = (name) => {
+  const element = document.querySelector(`.${name}`);
+  let data = JSON.parse(localStorage.getItem(name));
+
+  if (data == null || (data.length == 0 && name == "cart")) {
+    element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
+    checkoutSection.style.display = "none";
+  } else {
+    for (let i = 0; i < data.length; i++) {
+      element.innerHTML += createSmallCart(data[i]);
+      temp = data[i].name;
+      totalBill = parseInt(totalBill + data[i].actualPrice * data[i].quantity);
     }
-    setupEvents(name);
-}
+    updateBill(totalBill, "new");
+  }
+  setupCartEvents(name);
+};
 
-const setProducts2 = (name) => {
-    const element = document.querySelector(`.${name}`);
-    let data = JSON.parse(localStorage.getItem(name));
+const setWishlist = (name) => {
+  const element = document.querySelector(`.${name}`);
+  let data = JSON.parse(localStorage.getItem(name));
 
-    if(data == null || data.length == 0 && name == 'wishlist') {
-        element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
-    } else {
-        for(let i = 0; i < data.length; i++){
-            element.innerHTML += createWishlist(data[i]);
-            temp = data[i].name;
-        }
+  if (data == null || (data.length == 0 && name == "wishlist")) {
+    element.innerHTML = `<img src="images/no-product.png" class="empty-cart" alt="">`;
+  } else {
+    for (let i = 0; i < data.length; i++) {
+      element.innerHTML += createWishlist(data[i]);
+      temp = data[i].name;
     }
-    setupEvents2(name);
-}
+  }
+  setupWishlistEvents(name);
+};
 
 const updateBill = (value, operation) => {
-    if(operation == 'add') {
-        totalBill = parseInt(totalBill) + parseInt(value);
-    } else if(operation == 'remove') {
-        totalBill = parseInt(totalBill) - parseInt(value);
-    } else if(operation == 'new') {
-        billPrice.innerHTML = `₹${parseInt(totalBill)}`;
-    }
-    billPrice.textContent= `₹${parseInt(totalBill)}`;
-}
+  if (operation == "add") {
+    totalBill = parseInt(totalBill) + parseInt(value);
+  } else if (operation == "remove") {
+    totalBill = parseInt(totalBill) - parseInt(value);
+  } else if (operation == "new") {
+    billPrice.innerHTML = `₹${parseInt(totalBill)}`;
+  }
+  billPrice.textContent = `₹${parseInt(totalBill)}`;
+};
 
-const setupEvents = (name) => {
-    const counterMinus = document.querySelectorAll('#decrement');
-    const counterPlus = document.querySelectorAll('#increment');
-    const counts = document.querySelectorAll('#item-count');
-    const price = document.querySelectorAll('#sm-price');
-    const deleteBtn = document.querySelectorAll('#sm-delete-btn');
+const setupCartEvents = (name) => {
+  const counterMinus = document.querySelectorAll("#decrement");
+  const counterPlus = document.querySelectorAll("#increment");
+  const counts = document.querySelectorAll("#item-count");
+  const price = document.querySelectorAll("#sm-price");
+  const deleteBtn = document.querySelectorAll("#sm-delete-btn");
 
-    let product = JSON.parse(localStorage.getItem(name));
+  let product = JSON.parse(localStorage.getItem(name));
 
-    if(name == 'cart') {
-        counts.forEach((item, i) => {
-            let cost = price[i].getAttribute('data-price');
+  if (name == "cart") {
+    counts.forEach((item, i) => {
+      let cost = price[i].getAttribute("data-price");
 
-            counterMinus[i].addEventListener('click', () => {
-                if(item.innerHTML > 1) {
-                    item.innerHTML--;
-                    totalBill -= parseInt(cost);
-                    price[i].innerHTML = `₹${cost * item.innerHTML}`;
-                    cost = parseInt(cost);
-                    updateBill(cost, 'remove');
-                }
-            });
+      counterMinus[i].addEventListener("click", () => {
+        if (item.innerHTML > 1) {
+          item.innerHTML--;
+          totalBill -= parseInt(cost);
+          price[i].innerHTML = `₹${cost * item.innerHTML}`;
+          cost = parseInt(cost);
+          updateBill(cost, "remove");
+        }
+      });
 
-            counterPlus[i].addEventListener('click', () => {
-                if(item.innerHTML < 100) {
-                    item.innerHTML++;
-                    totalBill += parseInt(cost);
-                    price[i].innerHTML = `₹${cost * item.innerHTML}`;
-                    cost = parseInt(cost);
-                    updateBill(cost, 'add');
-                }
-            });
+      counterPlus[i].addEventListener("click", () => {
+        if (item.innerHTML < 100) {
+          item.innerHTML++;
+          totalBill += parseInt(cost);
+          price[i].innerHTML = `₹${cost * item.innerHTML}`;
+          cost = parseInt(cost);
+          updateBill(cost, "add");
+        }
+      });
 
-            deleteBtn.forEach((item, i) => {
-                item.addEventListener('click', () => {
-                    product = product.filter((data, index) => index != i);
-                    localStorage.setItem(name, JSON.stringify(product));
-                    location.reload();
-                });
-            });
+      deleteBtn.forEach((item, i) => {
+        item.addEventListener("click", () => {
+          product = product.filter((data, index) => index != i);
+          localStorage.setItem(name, JSON.stringify(product));
+          location.reload();
         });
-    } 
-}
+      });
+    });
+  }
+};
 
-const setupEvents2 = (name) => {
-    const deleteBtn = document.querySelectorAll('#sm-delete-btn2');
-    const addToCartBtn = document.querySelectorAll('#add-to-cart');
+const setupWishlistEvents = (name) => {
+  const deleteBtn = document.querySelectorAll("#sm-delete-btn2");
+  const addToCartBtn = document.querySelectorAll("#add-to-cart");
 
-    let product = JSON.parse(localStorage.getItem(name));
+  let product = JSON.parse(localStorage.getItem(name));
 
-    let res;
-    let data = JSON.parse(localStorage.getItem(name));
+  let res;
+  let data = JSON.parse(localStorage.getItem(name));
 
-    if(name == 'wishlist') {
-        deleteBtn.forEach((item, i) => {
-            item.addEventListener('click', () => {
-                product = product.filter((data, index) => index != i);
-                localStorage.setItem(name, JSON.stringify(product));
-                location.reload();
-            });
-        });
-
-        addToCartBtn.forEach((item, i) => {
-            item.addEventListener('click', () => {
-                res = from_wish_to_cart('cart', data[i], 1, data[i].soldby);
-
-                if(res=='Added') {
-                    product = product.filter((data, index) => index != i);
-                    localStorage.setItem(name, JSON.stringify(product));
-                    location.reload();
-                } else if(res=='Already Added') {
-                    showAlert('Item Already Exists in Cart');
-                }   
-            });
-        });
-
-    }
-}
-
-if(sessionStorage.getItem('user') != null) {
-    setProducts('cart');
-    setProducts2('wishlist');
-} else {
-    location.href = 'login.html';
-}
-
-const checkoutBtn = document.querySelector('.checkout-btn');
-checkoutBtn.addEventListener('click', () => {
-    const counts = document.querySelectorAll('#item-count');
-    const price = document.querySelectorAll('#sm-price');
-
-    let orderArr = [];
-    let product = JSON.parse(localStorage.getItem('cart'));
-
-    product.forEach((item, i) => {
-        orderArr.push({
-            name: item.name,
-            quantity: counts[i].innerHTML,
-            price: price[i].innerHTML,
-            id: item.id,
-            soldby: item.soldby,
-            image: item.image,
-            status: 'Waiting for Dispatch',
-            orderid: Math.floor(Math.random() * 100000)
-        });
+  if (name == "wishlist") {
+    deleteBtn.forEach((item, i) => {
+      item.addEventListener("click", () => {
+        product = product.filter((data, index) => index != i);
+        localStorage.setItem(name, JSON.stringify(product));
+        location.reload();
+      });
     });
 
-    localStorage.setItem('order', JSON.stringify(orderArr));
-    localStorage.setItem('totalBill', totalBill);
-    location.href = 'checkout.html';
+    addToCartBtn.forEach((item, i) => {
+      item.addEventListener("click", () => {
+        res = from_wish_to_cart("cart", data[i], 1, data[i].soldby);
+
+        if (res == "Added") {
+          product = product.filter((data, index) => index != i);
+          localStorage.setItem(name, JSON.stringify(product));
+          location.reload();
+        } else if (res == "Already Added") {
+          showAlert("Item Already Exists in Cart");
+        }
+      });
+    });
+  }
+};
+
+if (sessionStorage.getItem("user") != null) {
+  setCart("cart");
+  setWishlist("wishlist");
+} else {
+  location.href = "login.html";
+}
+
+const checkoutBtn = document.querySelector(".checkout-btn");
+checkoutBtn.addEventListener("click", () => {
+  const counts = document.querySelectorAll("#item-count");
+  const price = document.querySelectorAll("#sm-price");
+
+  let orderArr = [];
+  let product = JSON.parse(localStorage.getItem("cart"));
+
+  product.forEach((item, i) => {
+    orderArr.push({
+      name: item.name,
+      quantity: counts[i].innerHTML,
+      price: price[i].innerHTML,
+      id: item.id,
+      soldby: item.soldby,
+      image: item.image,
+      status: "Waiting for Dispatch",
+      orderid: Math.floor(Math.random() * 100000),
+    });
+  });
+
+  localStorage.setItem("order", JSON.stringify(orderArr));
+  localStorage.setItem("totalBill", totalBill);
+  location.href = "checkout.html";
 });

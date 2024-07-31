@@ -5,8 +5,6 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <br>
 <div align="center">
   <a href="https://github.com/ArmanKhanTech/Medicomm/">
@@ -26,8 +24,6 @@
     <a href="https://github.com/ArmanKhanTech/Medicomm/issues">Request new Features</a>
   </p>
 </div>
-
-
 
 <details>
   <summary>Table of Contents</summary>
@@ -54,8 +50,6 @@
   </ol>
 </details>
 
-
-
 ## About the Project
 
 This e-pharmacy is a business model that deals with the preparation and sale of prescription and non-prescription drugs as in traditional pharmacies. However, online pharmacies take orders online and send the drugs to their destination by post.
@@ -66,23 +60,20 @@ This e-pharmacy is a business model that deals with the preparation and sale of 
 
 ### Built with
 
-* [![HTML][HTML]][HTML-url]
-* [![CSS][CSS]][CSS-url]
-* [![JS][JS]][JS-url]
-* [![Nodejs][Nodejs]][Nodejs-url]
-* [![Expreeejs][Expressjs]][Expressjs-url]
-* [![Firebase][Firebase]][Firebase-url]
-
-
+- [![HTML][HTML]][HTML-url]
+- [![CSS][CSS]][CSS-url]
+- [![JS][JS]][JS-url]
+- [![Nodejs][Nodejs]][Nodejs-url]
+- [![Expreeejs][Expressjs]][Expressjs-url]
+- [![Firebase][Firebase]][Firebase-url]
 
 ## Getting Started
 
-Run the following command in your project directory's terminal 
+Run the following command in your project directory's terminal
 
 ```javascript
 npm install
 ```
-
 
 ### Prerequisites
 
@@ -98,63 +89,69 @@ npm install
   </li>
 </ol>
 
-
-
 ### Installation
 
-1. Clone this repository 
-    ```sh
-    git clone https://github.com/ArmanKhanTech/Medicomm.git
-    ```
-    <br>
+1. Clone this repository
+   ```sh
+   git clone https://github.com/ArmanKhanTech/Medicomm.git
+   ```
+   <br>
 2. Make the following changes in<br>
-    <br>**a)  `/server.js`**<br><br>
-    `Line 8` : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
-    ```javascript
-    const Razorpay = require('razorpay')
-    const razorpay = new Razorpay({
-        key_id: 'YOUR RAZORPAY ID',
-        key_secret: 'YOUR RAZORPAY SECRET KEY'
-    })
-    ```
-    <br>`Line 13` : Enter the name of your firebase credential file here (the one you will download from your firebase console) 
-    ```javascript
-    let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
-    ```
-    <br>`Line 511` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order) 
-    ```javascript
-    let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        auth: {
-            user: 'YOUR EMAIL ID',
-            pass: 'YOUR EMAIL PASSWORD'
-        }
-    })
-    ```
-    
-    <br>**b)  `/js/product.js`**<br><br>
-    `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too) 
-    ```javascript
-    let url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
-    ```
-    
-    <br>**c)  `/js/checkout.js`**<br><br>
-    `Line 63` : Enter your Razorpay ID here :<br>
-    ```javascript
-    const onlineCheckout = () => {
-    var options = {
-        "key": "YOUR RAZORPAY KEY",
-    ```
-    <br>
+   <br>**a) `/server.js`**<br><br>
+   `Line 8` : Enter your Razorpay ID & SECRET ID here (nessecary for online payment) :
+
+   ```javascript
+   const Razorpay = require("razorpay");
+   const razorpay = new Razorpay({
+     key_id: "YOUR RAZORPAY ID",
+     key_secret: "YOUR RAZORPAY SECRET KEY",
+   });
+   ```
+
+   <br>`Line 13` : Enter the name of your firebase credential file here (the one you will download from your firebase console)
+
+   ```javascript
+   let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
+   ```
+
+   <br>`Line 511` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order)
+
+   ```javascript
+   let transporter = nodemailer.createTransport({
+     host: "smtp.gmail.com",
+     auth: {
+       user: "YOUR EMAIL ID",
+       pass: "YOUR EMAIL PASSWORD",
+     },
+   });
+   ```
+
+   <br>**b) `/js/product.js`**<br><br>
+   `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too)
+
+   ```javascript
+   let url =
+     "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
+   ```
+
+   <br>**c) `/js/checkout.js`**<br><br>
+   `Line 63` : Enter your Razorpay ID here :<br>
+
+   ```javascript
+   const onlineCheckout = () => {
+   var options = {
+       "key": "YOUR RAZORPAY KEY",
+   ```
+
+   <br>
+
 3. Run the project by typing localhost:3000/index.html in your browser.<br>
 
 **OR**
 
 Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHub<b></a>
 
-
-
-## Features 
+## Features
 
 <ol>
   <li>
@@ -186,8 +183,6 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
   </li>
 </ol>
 
-
-
 ## Roadmap
 
 - [x] Add Signup & Login
@@ -196,7 +191,7 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
 - [x] Add Search Page
 - [x] Add Cart & Wishlist
 - [x] Add Seller's Dashboard
-- [x] Add Invertory Management 
+- [x] Add Invertory Management
 - [x] Add Checkout Page
 - [x] Add Order Tracking, History & Cancellation
 - [x] Add Online Payment
@@ -204,25 +199,19 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
 
 See the [open issues](https://github.com/ArmanKhanTech/Medicomm/issues) for a full list of proposed features (and known issues).
 
-
-
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
-Don't forget to give the project a star! 
+Don't forget to give the project a star!
 
 Thanks again!
-
-
 
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
 
 ## Contact
 
@@ -231,8 +220,6 @@ Arman Khan - ak2341776@gmail.com
 Project Link - [https://github.com/ArmanKhanTech/Medicomm](https://github.com/ArmanKhanTech/Medicomm)
 
 DockerHub Link - https://hub.docker.com/r/armankhan792/medicomm
-
-
 
 [contributors-shield]: https://img.shields.io/github/contributors/ArmanKhanTech/Medicomm.svg?style=for-the-badge
 [contributors-url]: https://github.com/ArmanKhanTech/Medicomm/graphs/contributors

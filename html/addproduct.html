@@ -1,65 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Medicomm: New Product</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/nav.css">
-        <link rel="stylesheet" href="/css/footer.css">
-        <link rel="stylesheet" href="/css/addproduct.css">
-        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-        <nav class="navbar"></nav>
-        <div class="add-product-form">
-            <h1>Add Product</h1>
-            <input type="text" autocomplete="off" id="product-name" placeholder="Product Name"><br>
-            <input type="text" autocomplete="off" id="short-desc" placeholder="Short Description"><br>
-            <textarea id="descirption" placeholder="Description"></textarea><br>
-            <p class="upload-pic">Upload Images : </p>
-            <input type="url" class="link-img-1" id="link-img-1" placeholder="Link Image 1"><br>
-            <input type="url" class="link-img-2" id="link-img-2" placeholder="Link Image 2"><br>
-            <input type="url" class="link-img-3" id="link-img-3" placeholder="Link Image 3"><br>
-            <input type="url" class="link-img-4" id="link-img-4" placeholder="Link Image 4">
-            <button class="img-upload-btn" id="img-upload-btn">Upload</button>
-            <div class="product-images"> 
-                <div class="product-image-div-1">
-                    <img src="" class="product-image-1"/>
-                </div>
-                <div class="product-image-div-2">
-                    <img src="" class="product-image-2"/>
-                </div>
-                <div class="product-image-div-3">
-                    <img src="" class="product-image-3"/>
-                </div>
-                <div class="product-image-div-4">
-                    <img src="" class="product-image-4"/>
-                </div>
-            </div>
-            <input type="number" id="actual-price" placeholder="Actual Price">
-            <input type="number" id="discount" placeholder="Discount Percentage">
-            <input type="number" id="sell-price" placeholder="Selling Price"> 
-            <input type="number" id="stock" min="20" placeholder="In Stocks (Minimum 20)"><br>
-            <input type="text" id="use" placeholder="Usage, eg - Fever, Cold, Pain">
-            <input type="text" id="cate" placeholder="Category, eg - Tablet, Syrup "><br>
-            <input type="text" id="manuDate" placeholder="Manufacturing Date, eg - Thu 20 Dec 20">
-            <input type="text" id="exDate" placeholder="Expiry Date, eg - Thu 20 Dec 23"><br>
-            <input type="text" id="perscription" placeholder="Is perscription required for sale of this product? (Yes/No)"><br>
-            <input type="checkbox" class="checkbox" id="tac" checked>
-            <label for="tac" style="font-size: large;">Medicomm will deduct 30% from your total revenue.</label>
-            <div class="buttons">
-                <button class="confirm-btn" id="add-btn">Add Product</button>
-            </div>
+  <head>
+    <title>Medicomm: New Product</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/addProduct.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar"></nav>
+    <div class="add-product-form">
+      <h1>Add Product</h1>
+      <input
+        type="text"
+        autocomplete="off"
+        id="product-name"
+        placeholder="Product Name"
+      /><br />
+      <input
+        type="text"
+        autocomplete="off"
+        id="short-desc"
+        placeholder="Short Description"
+      /><br />
+      <textarea id="descirption" placeholder="Description"></textarea><br />
+      <p class="upload-pic">Upload Images :</p>
+      <input
+        type="url"
+        class="link-img-1"
+        id="link-img-1"
+        placeholder="Link Image 1"
+      /><br />
+      <input
+        type="url"
+        class="link-img-2"
+        id="link-img-2"
+        placeholder="Link Image 2"
+      /><br />
+      <input
+        type="url"
+        class="link-img-3"
+        id="link-img-3"
+        placeholder="Link Image 3"
+      /><br />
+      <input
+        type="url"
+        class="link-img-4"
+        id="link-img-4"
+        placeholder="Link Image 4"
+      />
+      <button class="img-upload-btn" id="img-upload-btn">Upload</button>
+      <div class="product-images">
+        <div class="product-image-div-1">
+          <img src="" class="product-image-1" />
         </div>
+        <div class="product-image-div-2">
+          <img src="" class="product-image-2" />
+        </div>
+        <div class="product-image-div-3">
+          <img src="" class="product-image-3" />
+        </div>
+        <div class="product-image-div-4">
+          <img src="" class="product-image-4" />
+        </div>
+      </div>
+      <input type="number" id="actual-price" placeholder="Actual Price" />
+      <input type="number" id="discount" placeholder="Discount Percentage" />
+      <input type="number" id="sell-price" placeholder="Selling Price" />
+      <input
+        type="number"
+        id="stock"
+        min="20"
+        placeholder="In Stocks (Minimum 20)"
+      /><br />
+      <input type="text" id="use" placeholder="Usage, eg - Fever, Cold, Pain" />
+      <input
+        type="text"
+        id="cate"
+        placeholder="Category, eg - Tablet, Syrup "
+      /><br />
+      <input
+        type="text"
+        id="manuDate"
+        placeholder="Manufacturing Date, eg - Thu 20 Dec 20"
+      />
+      <input
+        type="text"
+        id="exDate"
+        placeholder="Expiry Date, eg - Thu 20 Dec 23"
+      /><br />
+      <input
+        type="text"
+        id="perscription"
+        placeholder="Is perscription required for sale of this product? (Yes/No)"
+      /><br />
+      <input type="checkbox" class="checkbox" id="tac" checked />
+      <label for="tac" style="font-size: large"
+        >Medicomm will deduct 30% from your total revenue.</label
+      >
+      <div class="buttons">
+        <button class="confirm-btn" id="add-btn">Add Product</button>
+      </div>
     </div>
-        <img src="/images/loader.gif" class="loader" alt="">
-        <div class="alert-box">
-            <img src="/images/error.png" class="alert-img" alt="">
-            <p class="alert-msg"></p>
-        </div>
-        <script src="/js/addproduct.js"></script>
-        <script src="/js/nav.js"></script>
-        <script src="/js/token.js"></script>
-    </body>
+    <img src="/images/loader.gif" class="loader" alt="" />
+    <div class="alert-box">
+      <img src="/images/error.png" class="alert-img" alt="" />
+      <p class="alert-msg"></p>
+    </div>
+    <script src="/js/addProduct.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/token.js"></script>
+  </body>
 </html>

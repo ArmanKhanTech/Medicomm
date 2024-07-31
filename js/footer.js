@@ -1,7 +1,7 @@
 const createFooter = () => {
-    let footer = document.querySelector('.footer');
+  let footer = document.querySelector(".footer");
 
-    footer.innerHTML = `
+  footer.innerHTML = `
         <div class="footer-content">
             <img src="/images/mainlogo.png" class="logo" alt="">
             <div class="footer-content1">
@@ -27,6 +27,6 @@ const createFooter = () => {
             <p class="footer-credit">All Rights Reserved</p>
         </div>
     `;
-}
+};
 
 createFooter();
