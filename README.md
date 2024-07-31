@@ -114,17 +114,15 @@ Run the following command in your project directory's terminal
    });
    ```
 
-   <br>
    
-   `Line 13` : Enter the name of your firebase credential file here (the one you will download from your firebase console)
+   `Line 13` : Enter the name of your firebase credential file here (the one you will download from your firebase console):
 
    ```javascript
    let serviceAccount = require("./YOUR FIREBASE SERVICE ACCOUNT KEY.json");
    ```
 
-   <br>
    
-   `Line 511` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order)
+   `Line 511` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order):
 
    ```javascript
    let transporter = nodemailer.createTransport({
@@ -136,24 +134,22 @@ Run the following command in your project directory's terminal
    });
    ```
 
-   <br>
    
    **b) `/js/product.js`**
    <br />
    <br />
-   `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too)
+   `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too):
 
    ```javascript
    let url =
      "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
    ```
-
-   <br>
+   
    
    **c) `/js/checkout.js`**
    <br />
    <br />
-   `Line 63` : Enter your Razorpay ID here :<br>
+   `Line 63` : Enter your Razorpay ID here:
 
    ```javascript
    const onlineCheckout = () => {
@@ -161,7 +157,6 @@ Run the following command in your project directory's terminal
        "key": "YOUR RAZORPAY KEY",
    ```
 
-   <br>
 
 3. Run the project by typing localhost:3000/index.html in your browser.<br>
 
