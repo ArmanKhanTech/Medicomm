@@ -5,7 +5,7 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<br>
+<br />
 <div align="center">
   <a href="https://github.com/ArmanKhanTech/Medicomm/">
     <img src="https://github.com/ArmanKhanTech/Medicomm/assets/92728787/6e1b8187-48d7-40e9-8085-922471b1e1ca" alt="Logo" width="190" height="100">
