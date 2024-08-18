@@ -108,7 +108,7 @@ Run the following command in your project directory's terminal:
 2. Make the following changes in:
    <br/>
    <br />
-   **a) `/server.js`**
+   `a) /server.js:`
    <br />
    <br />
    `Line 8` : Enter your Razorpay ID & SECRET ID here (nessecary for online payment):
@@ -141,8 +141,9 @@ Run the following command in your project directory's terminal:
    });
    ```
 
+   <br />
    
-   **b) `/js/product.js`**
+   `b) /js/product.js:`
    <br />
    <br />
    `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too):
@@ -151,9 +152,10 @@ Run the following command in your project directory's terminal:
    let url =
      "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
    ```
+
+   <br />
    
-   
-   **c) `/js/checkout.js`**
+   `c) /js/checkout.js:`
    <br />
    <br />
    `Line 63` : Enter your Razorpay ID here:
@@ -180,7 +182,7 @@ Navigate to <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>DockerHu
     Purchase or sell medicines & other products.
   </li>
   <li>
-    Seller's dashboard with iventory management.
+    Seller's dashboard with inventory management.
   </li>
   <li>
     Order cart & wishlist.
