@@ -59,7 +59,7 @@ This e-pharmacy is a business model that deals with the preparation and sale of 
 
 **Now also available on <a href="https://hub.docker.com/r/armankhan792/medicomm"><b>Docker.</b></a>**
 
-**Ideal to view only on 1920x1080p display since this website isn't responsive.**
+**Ideal to view only on 1920x1080p 15-inch display since this website isn't responsive.**
 
 
 ### Built with
