@@ -89,7 +89,7 @@ Run the following command in your project directory's terminal:
     <p>Node.js</a>
   </li>
   <li>
-    <p>NPM</a>
+    <p>npm</a>
   </li>
   <li>
     <p>Firebase Account</a>
@@ -108,9 +108,7 @@ Run the following command in your project directory's terminal:
 2. Make the following changes in:
    <br/>
    <br />
-   `a) /server.js:`
-   <br />
-   <br />
+   `a) /server.js ->`
    `Line 8` : Enter your Razorpay ID & SECRET ID here (nessecary for online payment):
 
    ```javascript
@@ -140,24 +138,16 @@ Run the following command in your project directory's terminal:
      },
    });
    ```
-
-   <br />
    
-   `b) /js/product.js:`
-   <br />
-   <br />
+   `b) /js/product.js ->`
    `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too):
 
    ```javascript
    let url =
      "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=${sellerPin}&destinations=${userPin}&departure_time=now&key=YOUR TOKEN ID";
    ```
-
-   <br />
    
-   `c) /js/checkout.js:`
-   <br />
-   <br />
+   `c) /js/checkout.js ->`
    `Line 63` : Enter your Razorpay ID here:
 
    ```javascript
