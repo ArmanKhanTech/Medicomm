@@ -127,7 +127,7 @@ Run the following command in your project directory's terminal:
    ```
 
    
-   `Line 511` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order):
+   `Line 569` : Enter the E-mail ID & password here (it will be used to send notification to customers after placing order):
 
    ```javascript
    let transporter = nodemailer.createTransport({
@@ -140,7 +140,7 @@ Run the following command in your project directory's terminal:
    ```
    
    `b) /js/product.js ->`
-   `Line 57` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too):
+   `Line 59` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too):
 
    ```javascript
    let url =
@@ -148,7 +148,7 @@ Run the following command in your project directory's terminal:
    ```
    
    `c) /js/checkout.js ->`
-   `Line 63` : Enter your Razorpay ID here:
+   `Line 64` : Enter your Razorpay ID here:
 
    ```javascript
    const onlineCheckout = () => {
