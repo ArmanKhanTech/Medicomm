@@ -109,6 +109,7 @@ Run the following command in your project directory's terminal:
    <br/>
    <br />
    `a) /server.js ->`
+
    `Line 8` : Enter your Razorpay ID & SECRET ID here (nessecary for online payment):
 
    ```javascript
@@ -140,6 +141,7 @@ Run the following command in your project directory's terminal:
    ```
    
    `b) /js/product.js ->`
+
    `Line 59` : Enter your distancematrix.ai token here (or you can use Google Distance Matrix API too):
 
    ```javascript
@@ -148,6 +150,7 @@ Run the following command in your project directory's terminal:
    ```
    
    `c) /js/checkout.js ->`
+
    `Line 64` : Enter your Razorpay ID here:
 
    ```javascript
@@ -157,7 +160,7 @@ Run the following command in your project directory's terminal:
    ```
 
 
-3. Run the project by typing localhost:3000/index.html in your browser.<br>
+4. Run the project by typing localhost:3000/index.html in your browser.<br>
 
 **OR**
 
